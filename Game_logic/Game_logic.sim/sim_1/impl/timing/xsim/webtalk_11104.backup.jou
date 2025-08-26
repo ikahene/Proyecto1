@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Aug 26 12:00:48 2025
+# Process ID: 11104
+# Current directory: C:/Users/byane/OneDrive/Escritorio/Proyecto_1_modificado/Proyecto_1_SEP/Proyecto_1_SEP/Game_logic/Game_logic.sim/sim_1/impl/timing/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/byane/OneDrive/Escritorio/Proyecto_1_modificado/Proyecto_1_SEP/Proyecto_1_SEP/Game_logic/Game_logic.sim/sim_1/impl/timing/xsim/xsim.dir/main_tb_time_impl/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/byane/OneDrive/Escritorio/Proyecto_1_modificado/Proyecto_1_SEP/Proyecto_1_SEP/Game_logic/Game_logic.sim/sim_1/impl/timing/xsim/webtalk.log
+# Journal file: C:/Users/byane/OneDrive/Escritorio/Proyecto_1_modificado/Proyecto_1_SEP/Proyecto_1_SEP/Game_logic/Game_logic.sim/sim_1/impl/timing/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/byane/OneDrive/Escritorio/Proyecto_1_modificado/Proyecto_1_SEP/Proyecto_1_SEP/Game_logic/Game_logic.sim/sim_1/impl/timing/xsim/xsim.dir/main_tb_time_impl/webtalk/xsim_webtalk.tcl -notrace

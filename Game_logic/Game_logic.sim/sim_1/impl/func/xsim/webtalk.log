@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Aug 24 14:21:02 2025
+# Process ID: 18604
+# Current directory: C:/Users/Gabriela Rivera/Downloads/Proyecto_1_SEP/Proyecto_1_SEP/Game_logic/Game_logic.sim/sim_1/impl/func/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/Gabriela Rivera/Downloads/Proyecto_1_SEP/Proyecto_1_SEP/Game_logic/Game_logic.sim/sim_1/impl/func/xsim/xsim.dir/tb_main_behavioral_func_impl/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/Gabriela Rivera/Downloads/Proyecto_1_SEP/Proyecto_1_SEP/Game_logic/Game_logic.sim/sim_1/impl/func/xsim/webtalk.log
+# Journal file: C:/Users/Gabriela Rivera/Downloads/Proyecto_1_SEP/Proyecto_1_SEP/Game_logic/Game_logic.sim/sim_1/impl/func/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/Gabriela -notrace
+couldn't read file "C:/Users/Gabriela": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Sun Aug 24 14:21:02 2025...

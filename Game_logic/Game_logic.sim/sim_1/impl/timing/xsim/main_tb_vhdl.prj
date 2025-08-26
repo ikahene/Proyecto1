@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../Game_logic.srcs/sim_1/new/testbench_behavioral.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,22 @@
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Note: --- INICIO DEL TESTBENCH FUNCIONAL ---
+Time: 0 ps  Iteration: 0  Process: /tb_main_behavioral/stimulus_process  File: C:/Users/Gabriela Rivera/Downloads/Proyecto_1_SEP/Proyecto_1_SEP/Game_logic/Game_logic.srcs/sim_1/new/testbench_behavioral.vhd
+Note: Simulando pulsacion de BTN2 para iniciar el juego...
+Time: 200 ns  Iteration: 0  Process: /tb_main_behavioral/stimulus_process  File: C:/Users/Gabriela Rivera/Downloads/Proyecto_1_SEP/Proyecto_1_SEP/Game_logic/Game_logic.srcs/sim_1/new/testbench_behavioral.vhd
+Note: Juego iniciado. 'enable_1' deberia estar en '1'.
+Time: 840 ns  Iteration: 0  Process: /tb_main_behavioral/stimulus_process  File: C:/Users/Gabriela Rivera/Downloads/Proyecto_1_SEP/Proyecto_1_SEP/Game_logic/Game_logic.srcs/sim_1/new/testbench_behavioral.vhd
+Note: Activando SW0 para el jugador.
+Time: 840 ns  Iteration: 0  Process: /tb_main_behavioral/stimulus_process  File: C:/Users/Gabriela Rivera/Downloads/Proyecto_1_SEP/Proyecto_1_SEP/Game_logic/Game_logic.srcs/sim_1/new/testbench_behavioral.vhd
+Note: Esperando que el 'pez' (LED) llegue a la posicion 0...
+Time: 840 ns  Iteration: 0  Process: /tb_main_behavioral/stimulus_process  File: C:/Users/Gabriela Rivera/Downloads/Proyecto_1_SEP/Proyecto_1_SEP/Game_logic/Game_logic.srcs/sim_1/new/testbench_behavioral.vhd
+Note: --- INICIO DEL TESTBENCH FUNCIONAL ---
+Time: 0 ps  Iteration: 0  Process: /tb_main_behavioral/stimulus_process  File: C:/Users/Gabriela Rivera/Downloads/Proyecto_1_SEP/Proyecto_1_SEP/Game_logic/Game_logic.srcs/sim_1/new/testbench_behavioral.vhd
+Note: Simulando pulsacion de BTN2 para iniciar el juego...
+Time: 200 ns  Iteration: 0  Process: /tb_main_behavioral/stimulus_process  File: C:/Users/Gabriela Rivera/Downloads/Proyecto_1_SEP/Proyecto_1_SEP/Game_logic/Game_logic.srcs/sim_1/new/testbench_behavioral.vhd
+Note: Juego iniciado. 'enable_1' deberia estar en '1'.
+Time: 840 ns  Iteration: 0  Process: /tb_main_behavioral/stimulus_process  File: C:/Users/Gabriela Rivera/Downloads/Proyecto_1_SEP/Proyecto_1_SEP/Game_logic/Game_logic.srcs/sim_1/new/testbench_behavioral.vhd
+Note: Activando SW0 para el jugador.
+Time: 840 ns  Iteration: 0  Process: /tb_main_behavioral/stimulus_process  File: C:/Users/Gabriela Rivera/Downloads/Proyecto_1_SEP/Proyecto_1_SEP/Game_logic/Game_logic.srcs/sim_1/new/testbench_behavioral.vhd
+Note: Esperando que el 'pez' (LED) llegue a la posicion 0...
+Time: 840 ns  Iteration: 0  Process: /tb_main_behavioral/stimulus_process  File: C:/Users/Gabriela Rivera/Downloads/Proyecto_1_SEP/Proyecto_1_SEP/Game_logic/Game_logic.srcs/sim_1/new/testbench_behavioral.vhd
