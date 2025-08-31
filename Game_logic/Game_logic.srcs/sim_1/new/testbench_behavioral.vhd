@@ -57,25 +57,31 @@ begin
     comportamiento : process
     begin
         tb_btn <= "0000";-- Iniciamos con todo apagado
-        tb_sw  <= "0000";
-        wait for 100 ns; -- Esperamos para estabilizar
+        tb_sw  <= "0100";
+        wait for 500 ns; -- Esperamos para estabilizar
         -- Para iniciar, los switches deben estar en 0 y se debe presionar btn2.
         tb_btn(2) <= '1'; -- Simulamos que el jugador presiona el botón de inicio.
-        wait for 200 ns;  -- Mantenemos presionado (suficiente para el debouncer).
+        wait for 500 ns;  -- Mantenemos presionado (suficiente para el debouncer).
         tb_btn(2) <= '0'; -- Soltamos el botón.
-        -- Para empezar el juego como tal activamos un switch
+        wait for 500 ns;
+        tb_sw(2) <= '0'; --Bajamos el switch para que se cumpla la condición
+        wait for 500 ns;
+        tb_btn(2) <= '1'; -- Simulamos que el jugador presiona el botón de inicio.
+        wait for 500 ns;  -- Mantenemos presionado (suficiente para el debouncer).
+        tb_btn(2) <= '0'; -- Soltamos el botón.
+        wait for 500 ns;
         tb_sw(1) <= '1'; -- Activamos el switch 1
         wait for 500 ns;
         -- esperamos el led 1, pero dejamos pasar 1 ciclo
         wait until tb_led(1) = '1';
         --ahora la segunda vez atrapamos
         wait for 100 ns; 
-        wait until tb_led(1) = '1';
         tb_btn(1) <= '1';
-        wait for 20 * CLK_PERIOD; -- Mantenemos presionado el botón
+        wait for 500 ns; -- Mantenemos presionado el botón
         tb_btn(1) <= '0';
+        tb_sw(1) <= '0';
         --Detectamos que está atrapado y el juego finaliza!!!
-        wait for 1 us; -- Esperamos un tiempo para ver el resultado en la onda.
+        wait; -- Esperamos un tiempo para ver el resultado en la onda.
     end process;
 
 end behavioral;

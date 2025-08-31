@@ -18,7 +18,7 @@ architecture estructural of main is
 
 
 ---------- DECLARACIÓN de señales
-signal f: integer := 4; --Constante para el divisor de reloj
+signal f: integer := 50_000_000; --Constante para el divisor de reloj
 signal btn0_db, --Señales para guardar los botones debounceados
        btn1_db,
        btn2_db,

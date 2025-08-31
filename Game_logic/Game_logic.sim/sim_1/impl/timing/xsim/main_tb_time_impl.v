@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Tue Aug 26 12:00:37 2025
+// Date        : Sat Aug 30 20:36:13 2025
 // Host        : BenjaUni running 64-bit major release  (build 9200)
 // Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file
-//               C:/Users/byane/OneDrive/Escritorio/Proyecto_1_modificado/Proyecto_1_SEP/Proyecto_1_SEP/Game_logic/Game_logic.sim/sim_1/impl/timing/xsim/main_tb_time_impl.v
+//               C:/Users/byane/OneDrive/Escritorio/Proyecto1/Game_logic/Game_logic.sim/sim_1/impl/timing/xsim/main_tb_time_impl.v
 // Design      : main
 // Purpose     : This verilog netlist is a timing simulation representation of the design and should not be modified or
 //               synthesized. Please ensure that this netlist is used with the corresponding SDF file.
@@ -14,7 +14,7 @@
 `define XIL_TIMING
 
 module catch_fish
-   (catched_reg_0,
+   (game_end_reg_0,
     led0_OBUF,
     led1_OBUF,
     led2_OBUF,
@@ -27,8 +27,8 @@ module catch_fish
     enable_1_reg,
     sw2_IBUF,
     sw1_IBUF,
-    catched_reg_1);
-  output catched_reg_0;
+    game_end_reg_1);
+  output game_end_reg_0;
   output led0_OBUF;
   output led1_OBUF;
   output led2_OBUF;
@@ -41,21 +41,20 @@ module catch_fish
   input [0:0]enable_1_reg;
   input sw2_IBUF;
   input sw1_IBUF;
-  input [0:0]catched_reg_1;
+  input [0:0]game_end_reg_1;
 
   wire CLK;
   wire \FSM_onehot_estado[0]_i_1_n_0 ;
-  wire \FSM_onehot_estado[5]_i_1_n_0 ;
   wire \FSM_onehot_estado[5]_i_2_n_0 ;
   wire [0:0]Q;
-  wire catched_i_1_n_0;
-  wire catched_i_2_n_0;
-  wire catched_reg_0;
-  wire [0:0]catched_reg_1;
   wire divided_clk;
   wire [0:0]enable_1_reg;
   wire [5:0]estado;
   wire game_end;
+  wire game_end_i_1_n_0;
+  wire game_end_i_2_n_0;
+  wire game_end_reg_0;
+  wire [0:0]game_end_reg_1;
   wire led0_OBUF;
   wire led0_catch_fish;
   wire led1_OBUF;
@@ -66,6 +65,7 @@ module catch_fish
   wire led3_catch_fish;
   wire \led[1]_i_1_n_0 ;
   wire \led[2]_i_1_n_0 ;
+  wire led_reg0;
   wire state;
   wire sw0_IBUF;
   wire sw1_IBUF;
@@ -76,7 +76,7 @@ module catch_fish
     .INIT(32'h00000001)) 
     \FSM_onehot_estado[0]_i_1 
        (.I0(estado[3]),
-        .I1(led0_catch_fish),
+        .I1(estado[1]),
         .I2(estado[0]),
         .I3(led3_catch_fish),
         .I4(estado[2]),
@@ -90,11 +90,11 @@ module catch_fish
         .I3(\FSM_onehot_estado[5]_i_2_n_0 ),
         .I4(led3_catch_fish),
         .I5(estado[5]),
-        .O(\FSM_onehot_estado[5]_i_1_n_0 ));
+        .O(led_reg0));
   LUT2 #(
     .INIT(4'hE)) 
     \FSM_onehot_estado[5]_i_2 
-       (.I0(led0_catch_fish),
+       (.I0(estado[1]),
         .I1(estado[0]),
         .O(\FSM_onehot_estado[5]_i_2_n_0 ));
   (* FSM_ENCODED_STATES = "iSTATE:100000,iSTATE0:000001,iSTATE1:000010,iSTATE2:000100,iSTATE3:001000,iSTATE4:010000," *) 
@@ -102,17 +102,26 @@ module catch_fish
     .INIT(1'b1)) 
     \FSM_onehot_estado_reg[0] 
        (.C(divided_clk),
-        .CE(\FSM_onehot_estado[5]_i_1_n_0 ),
+        .CE(led_reg0),
         .D(\FSM_onehot_estado[0]_i_1_n_0 ),
         .Q(estado[0]),
         .R(1'b0));
   (* FSM_ENCODED_STATES = "iSTATE:100000,iSTATE0:000001,iSTATE1:000010,iSTATE2:000100,iSTATE3:001000,iSTATE4:010000," *) 
   FDRE #(
     .INIT(1'b0)) 
+    \FSM_onehot_estado_reg[1] 
+       (.C(divided_clk),
+        .CE(led_reg0),
+        .D(estado[0]),
+        .Q(estado[1]),
+        .R(1'b0));
+  (* FSM_ENCODED_STATES = "iSTATE:100000,iSTATE0:000001,iSTATE1:000010,iSTATE2:000100,iSTATE3:001000,iSTATE4:010000," *) 
+  FDRE #(
+    .INIT(1'b0)) 
     \FSM_onehot_estado_reg[2] 
        (.C(divided_clk),
-        .CE(\FSM_onehot_estado[5]_i_1_n_0 ),
-        .D(led0_catch_fish),
+        .CE(led_reg0),
+        .D(estado[1]),
         .Q(estado[2]),
         .R(1'b0));
   (* FSM_ENCODED_STATES = "iSTATE:100000,iSTATE0:000001,iSTATE1:000010,iSTATE2:000100,iSTATE3:001000,iSTATE4:010000," *) 
@@ -120,7 +129,7 @@ module catch_fish
     .INIT(1'b0)) 
     \FSM_onehot_estado_reg[3] 
        (.C(divided_clk),
-        .CE(\FSM_onehot_estado[5]_i_1_n_0 ),
+        .CE(led_reg0),
         .D(estado[2]),
         .Q(estado[3]),
         .R(1'b0));
@@ -129,37 +138,9 @@ module catch_fish
     .INIT(1'b0)) 
     \FSM_onehot_estado_reg[5] 
        (.C(divided_clk),
-        .CE(\FSM_onehot_estado[5]_i_1_n_0 ),
+        .CE(led_reg0),
         .D(led3_catch_fish),
         .Q(estado[5]),
-        .R(1'b0));
-  LUT6 #(
-    .INIT(64'hFF80FFFFFF800000)) 
-    catched_i_1
-       (.I0(sw0_IBUF),
-        .I1(led0_catch_fish),
-        .I2(Q),
-        .I3(catched_i_2_n_0),
-        .I4(state),
-        .I5(game_end),
-        .O(catched_i_1_n_0));
-  LUT6 #(
-    .INIT(64'hFF80808080808080)) 
-    catched_i_2
-       (.I0(sw2_IBUF),
-        .I1(led2_catch_fish),
-        .I2(enable_1_reg),
-        .I3(sw1_IBUF),
-        .I4(led1_catch_fish),
-        .I5(catched_reg_1),
-        .O(catched_i_2_n_0));
-  FDRE #(
-    .INIT(1'b0)) 
-    catched_reg
-       (.C(CLK),
-        .CE(1'b1),
-        .D(catched_i_1_n_0),
-        .Q(game_end),
         .R(1'b0));
   LUT6 #(
     .INIT(64'h4444444444444474)) 
@@ -170,7 +151,35 @@ module catch_fish
         .I3(sw2_IBUF),
         .I4(sw1_IBUF),
         .I5(sw0_IBUF),
-        .O(catched_reg_0));
+        .O(game_end_reg_0));
+  LUT6 #(
+    .INIT(64'hFF80FFFFFF800000)) 
+    game_end_i_1
+       (.I0(sw0_IBUF),
+        .I1(led0_catch_fish),
+        .I2(Q),
+        .I3(game_end_i_2_n_0),
+        .I4(state),
+        .I5(game_end),
+        .O(game_end_i_1_n_0));
+  LUT6 #(
+    .INIT(64'hFF80808080808080)) 
+    game_end_i_2
+       (.I0(sw2_IBUF),
+        .I1(led2_catch_fish),
+        .I2(enable_1_reg),
+        .I3(sw1_IBUF),
+        .I4(led1_catch_fish),
+        .I5(game_end_reg_1),
+        .O(game_end_i_2_n_0));
+  FDRE #(
+    .INIT(1'b0)) 
+    game_end_reg
+       (.C(CLK),
+        .CE(1'b1),
+        .D(game_end_i_1_n_0),
+        .Q(game_end),
+        .R(1'b0));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
     .INIT(4'h8)) 
@@ -203,7 +212,7 @@ module catch_fish
   LUT5 #(
     .INIT(32'hAAAAAAAB)) 
     \led[1]_i_1 
-       (.I0(led0_catch_fish),
+       (.I0(estado[1]),
         .I1(estado[2]),
         .I2(estado[0]),
         .I3(estado[3]),
@@ -216,10 +225,10 @@ module catch_fish
         .I1(led3_catch_fish),
         .O(\led[2]_i_1_n_0 ));
   FDRE #(
-    .INIT(1'b0)) 
+    .INIT(1'b1)) 
     \led_reg[0] 
        (.C(divided_clk),
-        .CE(\FSM_onehot_estado[5]_i_1_n_0 ),
+        .CE(led_reg0),
         .D(estado[0]),
         .Q(led0_catch_fish),
         .R(1'b0));
@@ -227,7 +236,7 @@ module catch_fish
     .INIT(1'b0)) 
     \led_reg[1] 
        (.C(divided_clk),
-        .CE(\FSM_onehot_estado[5]_i_1_n_0 ),
+        .CE(led_reg0),
         .D(\led[1]_i_1_n_0 ),
         .Q(led1_catch_fish),
         .R(1'b0));
@@ -235,7 +244,7 @@ module catch_fish
     .INIT(1'b0)) 
     \led_reg[2] 
        (.C(divided_clk),
-        .CE(\FSM_onehot_estado[5]_i_1_n_0 ),
+        .CE(led_reg0),
         .D(\led[2]_i_1_n_0 ),
         .Q(led2_catch_fish),
         .R(1'b0));
@@ -243,7 +252,7 @@ module catch_fish
     .INIT(1'b0)) 
     \led_reg[3] 
        (.C(divided_clk),
-        .CE(\FSM_onehot_estado[5]_i_1_n_0 ),
+        .CE(led_reg0),
         .D(estado[3]),
         .Q(led3_catch_fish),
         .R(1'b0));
@@ -344,28 +353,28 @@ module clk_div
         .O(NLW_contador0_carry__0_O_UNCONNECTED[3:0]),
         .S({contador0_carry__0_i_1_n_0,contador0_carry__0_i_2_n_0,contador0_carry__0_i_3_n_0,contador0_carry__0_i_4_n_0}));
   LUT3 #(
-    .INIT(8'h80)) 
+    .INIT(8'h01)) 
     contador0_carry__0_i_1
-       (.I0(contador_reg[21]),
-        .I1(contador_reg[23]),
-        .I2(contador_reg[22]),
+       (.I0(contador_reg[23]),
+        .I1(contador_reg[22]),
+        .I2(contador_reg[21]),
         .O(contador0_carry__0_i_1_n_0));
   LUT3 #(
-    .INIT(8'h20)) 
+    .INIT(8'h01)) 
     contador0_carry__0_i_2
-       (.I0(contador_reg[18]),
-        .I1(contador_reg[20]),
-        .I2(contador_reg[19]),
+       (.I0(contador_reg[20]),
+        .I1(contador_reg[19]),
+        .I2(contador_reg[18]),
         .O(contador0_carry__0_i_2_n_0));
   LUT3 #(
-    .INIT(8'h04)) 
+    .INIT(8'h01)) 
     contador0_carry__0_i_3
-       (.I0(contador_reg[16]),
-        .I1(contador_reg[17]),
+       (.I0(contador_reg[17]),
+        .I1(contador_reg[16]),
         .I2(contador_reg[15]),
         .O(contador0_carry__0_i_3_n_0));
   LUT3 #(
-    .INIT(8'h08)) 
+    .INIT(8'h01)) 
     contador0_carry__0_i_4
        (.I0(contador_reg[14]),
         .I1(contador_reg[13]),
@@ -400,32 +409,32 @@ module clk_div
         .I2(contador_reg[24]),
         .O(contador0_carry__1_i_3_n_0));
   LUT3 #(
-    .INIT(8'h20)) 
+    .INIT(8'h01)) 
     contador0_carry_i_1
-       (.I0(contador_reg[9]),
+       (.I0(contador_reg[11]),
         .I1(contador_reg[10]),
-        .I2(contador_reg[11]),
+        .I2(contador_reg[9]),
         .O(contador0_carry_i_1_n_0));
   LUT3 #(
-    .INIT(8'h04)) 
+    .INIT(8'h01)) 
     contador0_carry_i_2
-       (.I0(contador_reg[7]),
-        .I1(contador_reg[8]),
+       (.I0(contador_reg[8]),
+        .I1(contador_reg[7]),
         .I2(contador_reg[6]),
         .O(contador0_carry_i_2_n_0));
   LUT3 #(
-    .INIT(8'h20)) 
+    .INIT(8'h01)) 
     contador0_carry_i_3
-       (.I0(contador_reg[3]),
+       (.I0(contador_reg[5]),
         .I1(contador_reg[4]),
-        .I2(contador_reg[5]),
+        .I2(contador_reg[3]),
         .O(contador0_carry_i_3_n_0));
   LUT3 #(
-    .INIT(8'h01)) 
+    .INIT(8'h02)) 
     contador0_carry_i_4
-       (.I0(contador_reg[2]),
-        .I1(contador_reg[1]),
-        .I2(contador_reg[0]),
+       (.I0(contador_reg[0]),
+        .I1(contador_reg[2]),
+        .I2(contador_reg[1]),
         .O(contador0_carry_i_4_n_0));
   LUT1 #(
     .INIT(2'h1)) 
@@ -1065,7 +1074,7 @@ module debouncer_1
         .R(\pulsos[9]_i_1__1_n_0 ));
 endmodule
 
-(* ECO_CHECKSUM = "a192f60e" *) 
+(* ECO_CHECKSUM = "92833c43" *) 
 (* NotValidForBitStream *)
 module main
    (clk,
@@ -1131,10 +1140,10 @@ end
   catch_fish U_catch_fish
        (.CLK(clk_IBUF_BUFG),
         .Q(btn0_db),
-        .catched_reg_0(U_catch_fish_n_0),
-        .catched_reg_1(btn1_db),
         .divided_clk(divided_clk),
         .enable_1_reg(btn2_db),
+        .game_end_reg_0(U_catch_fish_n_0),
+        .game_end_reg_1(btn1_db),
         .led0_OBUF(led0_OBUF),
         .led1_OBUF(led1_OBUF),
         .led2_OBUF(led2_OBUF),
