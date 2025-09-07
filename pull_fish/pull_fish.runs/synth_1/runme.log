@@ -1,0 +1,295 @@
+
+*** Running vivado
+    with args -log temporal_main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source temporal_main.tcl
+
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source temporal_main.tcl -notrace
+Command: synth_design -top temporal_main -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 22212
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1060.504 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'temporal_main' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/temporal_main.vhd:15]
+INFO: [Synth 8-3491] module 'debouncer_start' declared at 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/debouncer_start.vhd:6' bound to instance 'Start_Debouncer' of component 'debouncer_start' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/temporal_main.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'debouncer_start' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/debouncer_start.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'debouncer_start' (1#1) [C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/debouncer_start.vhd:14]
+INFO: [Synth 8-3491] module 'clk_div' declared at 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/clk_divider.vhd:6' bound to instance 'Slow_Clk_Gen' of component 'clk_div' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/temporal_main.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'clk_div' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/clk_divider.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'clk_div' (2#1) [C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/clk_divider.vhd:15]
+INFO: [Synth 8-3491] module 'random_number' declared at 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/random_number.vhd:5' bound to instance 'Random_Gen' of component 'random_number' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/temporal_main.vhd:99]
+INFO: [Synth 8-638] synthesizing module 'random_number' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/random_number.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'random_number' (3#1) [C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/random_number.vhd:14]
+INFO: [Synth 8-3491] module 'temporal_memory' declared at 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/temporal_memory.vhd:5' bound to instance 'Sequence_Mem' of component 'temporal_memory' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/temporal_main.vhd:107]
+INFO: [Synth 8-638] synthesizing module 'temporal_memory' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/temporal_memory.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'temporal_memory' (4#1) [C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/temporal_memory.vhd:15]
+INFO: [Synth 8-3491] module 'led_rgb' declared at 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/led_rgb.vhd:5' bound to instance 'RGB_Control' of component 'led_rgb' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/temporal_main.vhd:115]
+INFO: [Synth 8-638] synthesizing module 'led_rgb' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/led_rgb.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'led_rgb' (5#1) [C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/led_rgb.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'temporal_main' (6#1) [C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/sources_1/new/temporal_main.vhd:15]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1060.504 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1060.504 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1060.504 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1060.504 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/constrs_1/new/Zybo-Z7-Master.xdc]
+Finished Parsing XDC File [C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/constrs_1/new/Zybo-Z7-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.srcs/constrs_1/new/Zybo-Z7-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/temporal_main_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/temporal_main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1155.246 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1155.246 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1155.246 ; gain = 94.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1155.246 ; gain = 94.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1155.246 ; gain = 94.742
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'estado_actual_reg' in module 'temporal_memory'
+INFO: [Synth 8-802] inferred FSM for state register 'estado_color_reg' in module 'led_rgb'
+INFO: [Synth 8-802] inferred FSM for state register 'estado_reg' in module 'temporal_main'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                            00001 |                              000
+                  show_1 |                            00010 |                              001
+                  show_2 |                            00100 |                              010
+                  show_3 |                            01000 |                              011
+                  finish |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'estado_actual_reg' using encoding 'one-hot' in module 'temporal_memory'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   green |                               00 |                               00
+                  yellow |                               01 |                               01
+                     red |                               10 |                               10
+                     off |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'estado_color_reg' using encoding 'sequential' in module 'led_rgb'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                          0000001 |                              000
+              gen_random |                          0000010 |                              001
+             show_random |                          0000100 |                              010
+           show_sequence |                          0001000 |                              011
+              start_time |                          0010000 |                              100
+                  timing |                          0100000 |                              101
+                    done |                          1000000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'estado_reg' using encoding 'one-hot' in module 'temporal_main'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1155.246 ; gain = 94.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input   31 Bit       Adders := 1     
+	   2 Input   29 Bit       Adders := 1     
+	   2 Input   27 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               27 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Multipliers : 
+	               3x30  Multipliers := 1     
++---Muxes : 
+	   2 Input   31 Bit        Muxes := 1     
+	   4 Input   30 Bit        Muxes := 1     
+	   2 Input   29 Bit        Muxes := 1     
+	   2 Input   27 Bit        Muxes := 1     
+	   4 Input   12 Bit        Muxes := 1     
+	   5 Input    5 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
+	   5 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 1     
+	   7 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 1     
+	   7 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1155.246 ; gain = 94.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1155.246 ; gain = 94.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1168.453 ; gain = 107.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1168.453 ; gain = 107.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1168.527 ; gain = 108.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1168.527 ; gain = 108.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1168.527 ; gain = 108.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1168.527 ; gain = 108.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1168.527 ; gain = 108.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1168.527 ; gain = 108.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   143|
+|3     |LUT1   |    42|
+|4     |LUT2   |    61|
+|5     |LUT3   |   142|
+|6     |LUT4   |   295|
+|7     |LUT5   |    61|
+|8     |LUT6   |    84|
+|9     |FDRE   |   181|
+|10    |FDSE   |     1|
+|11    |IBUF   |     2|
+|12    |OBUF   |     7|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1168.527 ; gain = 108.023
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 1168.527 ; gain = 13.281
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1168.527 ; gain = 108.023
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1168.527 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 143 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1168.527 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+38 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1168.527 ; gain = 108.023
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.runs/synth_1/temporal_main.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file temporal_main_utilization_synth.rpt -pb temporal_main_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Sep  7 12:10:42 2025...

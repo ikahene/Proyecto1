@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Sep  7 12:09:44 2025
+# Process ID: 11192
+# Current directory: C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.runs/synth_1
+# Command line: vivado.exe -log temporal_main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source temporal_main.tcl
+# Log file: C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.runs/synth_1/temporal_main.vds
+# Journal file: C:/Users/Gabriela Rivera/OneDrive/Escritorio/SEP/pull_fish/pull_fish.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source temporal_main.tcl -notrace
