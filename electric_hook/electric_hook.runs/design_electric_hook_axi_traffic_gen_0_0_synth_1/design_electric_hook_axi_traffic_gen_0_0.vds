@@ -1,0 +1,1672 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Sep 19 19:24:56 2025
+# Process ID: 21404
+# Current directory: C:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/design_electric_hook_axi_traffic_gen_0_0_synth_1
+# Command line: vivado.exe -log design_electric_hook_axi_traffic_gen_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_electric_hook_axi_traffic_gen_0_0.tcl
+# Log file: C:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/design_electric_hook_axi_traffic_gen_0_0_synth_1/design_electric_hook_axi_traffic_gen_0_0.vds
+# Journal file: C:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/design_electric_hook_axi_traffic_gen_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_electric_hook_axi_traffic_gen_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/byane/OneDrive/Escritorio/Proyecto1/Ip_cores'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.cache/ip 
+Command: synth_design -top design_electric_hook_axi_traffic_gen_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 14488
+WARNING: [Synth 8-2507] parameter declaration becomes local in axi_traffic_gen_v3_0_7_systeminit_dmg with formal parameter declaration list [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:13766]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1073.230 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_electric_hook_axi_traffic_gen_0_0' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ip/design_electric_hook_axi_traffic_gen_0_0/synth/design_electric_hook_axi_traffic_gen_0_0.v:62]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_top' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:15238]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_BASEADDR bound to: 1151336448 - type: integer 
+	Parameter C_HIGHADDR bound to: 1151401983 - type: integer 
+	Parameter C_ZERO_INVALID bound to: 1 - type: integer 
+	Parameter C_NO_EXCL bound to: 0 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 8 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXIS1_HAS_TKEEP bound to: 1 - type: integer 
+	Parameter C_AXIS1_HAS_TSTRB bound to: 1 - type: integer 
+	Parameter C_AXIS2_HAS_TKEEP bound to: 1 - type: integer 
+	Parameter C_AXIS2_HAS_TSTRB bound to: 1 - type: integer 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 8 - type: integer 
+	Parameter C_ATG_BASIC_AXI4 bound to: 0 - type: integer 
+	Parameter C_ATG_REPEAT_TYPE bound to: 0 - type: integer 
+	Parameter C_ATG_HLTP_MODE bound to: 0 - type: integer 
+	Parameter C_ATG_STATIC bound to: 0 - type: integer 
+	Parameter C_ATG_SYSTEM_INIT bound to: 0 - type: integer 
+	Parameter C_ATG_SYSTEM_TEST bound to: 0 - type: integer 
+	Parameter C_ATG_STREAMING bound to: 0 - type: integer 
+	Parameter C_ATG_STREAMING_MST_ONLY bound to: 0 - type: integer 
+	Parameter C_ATG_STREAMING_MST_LPBK bound to: 0 - type: integer 
+	Parameter C_ATG_STREAMING_SLV_LPBK bound to: 0 - type: integer 
+	Parameter C_ATG_STREAMING_MAX_LEN_BITS bound to: 16 - type: integer 
+	Parameter C_ATG_STREAMING_MEM_FILE bound to: no_mem_file_loaded - type: string 
+	Parameter C_ATG_AXIS_DATA_GEN_TYPE bound to: 0 - type: integer 
+	Parameter C_AXIS_SPARSE_EN bound to: 1 - type: integer 
+	Parameter C_ATG_SLAVE_ONLY bound to: 0 - type: integer 
+	Parameter C_ATG_STATIC_WR_ADDRESS bound to: 64'b0000000000000000000000000000000000010011101000000000111111111111 
+	Parameter C_ATG_STATIC_RD_ADDRESS bound to: 64'b0000000000000000000000000000000000010011101000000000111111111111 
+	Parameter C_ATG_STATIC_WR_HIGH_ADDRESS bound to: 64'b0000000000000000000000000000000000010011101000000000111111111111 
+	Parameter C_ATG_STATIC_RD_HIGH_ADDRESS bound to: 64'b0000000000000000000000000000000000010011101000000000111111111111 
+	Parameter C_ATG_STATIC_INCR bound to: 0 - type: integer 
+	Parameter C_ATG_STATIC_EN_READ bound to: 1 - type: integer 
+	Parameter C_ATG_STATIC_EN_WRITE bound to: 1 - type: integer 
+	Parameter C_ATG_STATIC_FREE_RUN bound to: 1 - type: integer 
+	Parameter C_ATG_STATIC_RD_PIPELINE bound to: 3 - type: integer 
+	Parameter C_ATG_STATIC_WR_PIPELINE bound to: 3 - type: integer 
+	Parameter C_ATG_STATIC_TRANGAP bound to: 0 - type: integer 
+	Parameter C_ATG_STATIC_LENGTH bound to: 16 - type: integer 
+	Parameter C_ATG_SYSTEM_INIT_DATA_MIF bound to: design_electric_hook_axi_traffic_gen_0_0_data.mem - type: string 
+	Parameter C_ATG_SYSTEM_INIT_ADDR_MIF bound to: design_electric_hook_axi_traffic_gen_0_0_addr.mem - type: string 
+	Parameter C_ATG_SYSTEM_INIT_CTRL_MIF bound to: design_electric_hook_axi_traffic_gen_0_0_ctrl.mem - type: string 
+	Parameter C_ATG_SYSTEM_INIT_MASK_MIF bound to: design_electric_hook_axi_traffic_gen_0_0_mask.mem - type: string 
+	Parameter C_ATG_MIF_DATA_DEPTH bound to: 16 - type: integer 
+	Parameter C_ATG_MIF_ADDR_BITS bound to: 4 - type: integer 
+	Parameter C_ATG_SYSTEM_CMD_MAX_RETRY bound to: 256 - type: integer 
+	Parameter C_ATG_SYSTEM_TEST_MAX_CLKS bound to: 5000 - type: integer 
+	Parameter C_ATG_SYSTEM_MAX_CHANNELS bound to: 1 - type: integer 
+	Parameter C_ATG_SYSTEM_CH1_LOW bound to: 0 - type: integer 
+	Parameter C_ATG_SYSTEM_CH1_HIGH bound to: -1 - type: integer 
+	Parameter C_ATG_SYSTEM_CH2_LOW bound to: 256 - type: integer 
+	Parameter C_ATG_SYSTEM_CH2_HIGH bound to: 511 - type: integer 
+	Parameter C_ATG_SYSTEM_CH3_LOW bound to: 512 - type: integer 
+	Parameter C_ATG_SYSTEM_CH3_HIGH bound to: 767 - type: integer 
+	Parameter C_ATG_SYSTEM_CH4_LOW bound to: 768 - type: integer 
+	Parameter C_ATG_SYSTEM_CH4_HIGH bound to: 1023 - type: integer 
+	Parameter C_ATG_SYSTEM_CH5_LOW bound to: 1024 - type: integer 
+	Parameter C_ATG_SYSTEM_CH5_HIGH bound to: 1279 - type: integer 
+	Parameter C_RAMINIT_CMDRAM0_F bound to: design_electric_hook_axi_traffic_gen_0_0_default_cmdram.mem - type: string 
+	Parameter C_RAMINIT_CMDRAM1_F bound to: NONE - type: string 
+	Parameter C_RAMINIT_CMDRAM2_F bound to: NONE - type: string 
+	Parameter C_RAMINIT_CMDRAM3_F bound to: NONE - type: string 
+	Parameter C_RAMINIT_SRAM0_F bound to: design_electric_hook_axi_traffic_gen_0_0_default_mstram.mem - type: string 
+	Parameter C_RAMINIT_PARAMRAM0_F bound to: design_electric_hook_axi_traffic_gen_0_0_default_prmram.mem - type: string 
+	Parameter C_RAMINIT_ADDRRAM0_F bound to: design_electric_hook_axi_traffic_gen_0_0_default_addrram.mem - type: string 
+	Parameter C_REPEAT_COUNT bound to: 254 - type: integer 
+	Parameter C_STRM_DATA_SEED bound to: 43981 - type: integer 
+	Parameter C_AXI_WR_ADDR_SEED bound to: 31899 - type: integer 
+	Parameter C_AXI_RD_ADDR_SEED bound to: 23130 - type: integer 
+	Parameter C_READ_ONLY bound to: 0 - type: integer 
+	Parameter C_WRITE_ONLY bound to: 0 - type: integer 
+	Parameter ATG_VERSAL_400 bound to: 0 - type: integer 
+	Parameter C_CMDRAM_F bound to: none - type: string 
+	Parameter C_SRAM_F bound to: none - type: string 
+	Parameter C_PRAM_F bound to: none - type: string 
+	Parameter C_ADDR_F bound to: none - type: string 
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_basic_n_full_top' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:11443]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_BASEADDR bound to: 1151336448 - type: integer 
+	Parameter C_HIGHADDR bound to: 1151401983 - type: integer 
+	Parameter C_ZERO_INVALID bound to: 1 - type: integer 
+	Parameter C_IS_AXI4 bound to: 0 - type: integer 
+	Parameter C_IS_COHERENT bound to: 0 - type: integer 
+	Parameter C_IS_AFI bound to: 0 - type: integer 
+	Parameter C_NO_EXCL bound to: 0 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 8 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 8 - type: integer 
+	Parameter C_ATG_AXI4LITE bound to: 0 - type: integer 
+	Parameter C_ATG_BASIC_AXI4 bound to: 0 - type: integer 
+	Parameter C_ATG_REPEAT_TYPE bound to: 0 - type: integer 
+	Parameter C_ATG_HLTP_MODE bound to: 0 - type: integer 
+	Parameter C_ATG_STATIC bound to: 0 - type: integer 
+	Parameter C_ATG_SLAVE_ONLY bound to: 0 - type: integer 
+	Parameter C_ATG_SYSTEM_INIT bound to: 0 - type: integer 
+	Parameter C_ATG_STREAMING bound to: 0 - type: integer 
+	Parameter C_RAMINIT_CMDRAM0_F bound to: none - type: string 
+	Parameter C_RAMINIT_CMDRAM1_F bound to: NONE - type: string 
+	Parameter C_RAMINIT_CMDRAM2_F bound to: NONE - type: string 
+	Parameter C_RAMINIT_CMDRAM3_F bound to: NONE - type: string 
+	Parameter C_RAMINIT_SRAM0_F bound to: none - type: string 
+	Parameter C_RAMINIT_PARAMRAM0_F bound to: none - type: string 
+	Parameter C_RAMINIT_ADDRRAM0_F bound to: none - type: string 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_REPEAT_COUNT bound to: 254 - type: integer 
+	Parameter C_AXI_WR_ADDR_SEED bound to: 31899 - type: integer 
+	Parameter C_AXI_RD_ADDR_SEED bound to: 23130 - type: integer 
+	Parameter ATG_VERSAL_400 bound to: 0 - type: integer 
+	Parameter INA_OFF bound to: 72 - type: integer 
+	Parameter ID_OFF bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_paramram_wrap' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:3876]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_RAMINIT_PARAMRAM0_F bound to: none - type: string 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_REPEAT_COUNT bound to: 254 - type: integer 
+	Parameter C_ATG_BASIC_AXI4 bound to: 0 - type: integer 
+	Parameter C_AXI_WR_ADDR_SEED bound to: 31899 - type: integer 
+	Parameter C_AXI_RD_ADDR_SEED bound to: 23130 - type: integer 
+	Parameter ATG_VERSAL_400 bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_slvram_v7' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:130]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_DATAWIDTH bound to: 32 - type: integer 
+	Parameter C_SIZE bound to: 512 - type: integer 
+	Parameter C_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_INITRAM_F bound to: none - type: string 
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_inferram' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:553]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_RAMINIT_F bound to: none - type: string 
+	Parameter SIZE bound to: 512 - type: integer 
+	Parameter ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter COL_WIDTH bound to: 8 - type: integer 
+	Parameter NB_COL bound to: 4 - type: integer 
+	Parameter INFER_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'axi_traffic_gen_v3_0_7_bmg_wrap' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.vhd:188]
+	Parameter c_family bound to: zynq - type: string 
+	Parameter c_xdevicefamily bound to: zynq - type: string 
+	Parameter c_elaboration_dir bound to: ./ - type: string 
+	Parameter c_mem_type bound to: 2 - type: integer 
+	Parameter c_algorithm bound to: 1 - type: integer 
+	Parameter c_prim_type bound to: 1 - type: integer 
+	Parameter c_byte_size bound to: 8 - type: integer 
+	Parameter c_sim_collision_check bound to: NONE - type: string 
+	Parameter c_common_clk bound to: 0 - type: integer 
+	Parameter c_disable_warn_bhv_coll bound to: 0 - type: integer 
+	Parameter c_disable_warn_bhv_range bound to: 0 - type: integer 
+	Parameter c_load_init_file bound to: 1 - type: integer 
+	Parameter c_init_file_name bound to: none - type: string 
+	Parameter c_use_default_data bound to: 1 - type: integer 
+	Parameter c_default_data bound to: 0 - type: string 
+	Parameter c_has_mem_output_regs_a bound to: 0 - type: integer 
+	Parameter c_has_mux_output_regs_a bound to: 0 - type: integer 
+	Parameter c_write_width_a bound to: 32 - type: integer 
+	Parameter c_read_width_a bound to: 32 - type: integer 
+	Parameter c_write_depth_a bound to: 512 - type: integer 
+	Parameter c_read_depth_a bound to: 512 - type: integer 
+	Parameter c_addra_width bound to: 9 - type: integer 
+	Parameter c_write_mode_a bound to: READ_FIRST - type: string 
+	Parameter c_has_ena bound to: 0 - type: integer 
+	Parameter c_has_regcea bound to: 0 - type: integer 
+	Parameter c_has_ssra bound to: 0 - type: integer 
+	Parameter c_sinita_val bound to: 0 - type: string 
+	Parameter c_use_byte_wea bound to: 1 - type: integer 
+	Parameter c_wea_width bound to: 4 - type: integer 
+	Parameter c_has_mem_output_regs_b bound to: 0 - type: integer 
+	Parameter c_has_mux_output_regs_b bound to: 0 - type: integer 
+	Parameter c_write_width_b bound to: 32 - type: integer 
+	Parameter c_read_width_b bound to: 32 - type: integer 
+	Parameter c_write_depth_b bound to: 512 - type: integer 
+	Parameter c_read_depth_b bound to: 512 - type: integer 
+	Parameter c_addrb_width bound to: 9 - type: integer 
+	Parameter c_write_mode_b bound to: READ_FIRST - type: string 
+	Parameter c_has_enb bound to: 0 - type: integer 
+	Parameter c_has_regceb bound to: 0 - type: integer 
+	Parameter c_has_ssrb bound to: 0 - type: integer 
+	Parameter c_sinitb_val bound to: 0 - type: string 
+	Parameter c_use_byte_web bound to: 1 - type: integer 
+	Parameter c_web_width bound to: 4 - type: integer 
+	Parameter c_mux_pipeline_stages bound to: 0 - type: integer 
+	Parameter c_use_ecc bound to: 0 - type: integer 
+	Parameter c_use_ramb16bwer_rst_bhv bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_wrapper' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/af67/hdl/lib_bmg_v1_0_rfs.vhd:196]
+	Parameter c_family bound to: zynq - type: string 
+	Parameter c_xdevicefamily bound to: zynq - type: string 
+	Parameter c_elaboration_dir bound to: ./ - type: string 
+	Parameter c_mem_type bound to: 2 - type: integer 
+	Parameter c_algorithm bound to: 1 - type: integer 
+	Parameter c_prim_type bound to: 1 - type: integer 
+	Parameter c_byte_size bound to: 8 - type: integer 
+	Parameter c_sim_collision_check bound to: NONE - type: string 
+	Parameter c_common_clk bound to: 0 - type: integer 
+	Parameter c_disable_warn_bhv_coll bound to: 0 - type: integer 
+	Parameter c_disable_warn_bhv_range bound to: 0 - type: integer 
+	Parameter c_load_init_file bound to: 1 - type: integer 
+	Parameter c_init_file_name bound to: none - type: string 
+	Parameter c_use_default_data bound to: 1 - type: integer 
+	Parameter c_default_data bound to: 0 - type: string 
+	Parameter c_has_mem_output_regs_a bound to: 0 - type: integer 
+	Parameter c_has_mux_output_regs_a bound to: 0 - type: integer 
+	Parameter c_write_width_a bound to: 32 - type: integer 
+	Parameter c_read_width_a bound to: 32 - type: integer 
+	Parameter c_write_depth_a bound to: 512 - type: integer 
+	Parameter c_read_depth_a bound to: 512 - type: integer 
+	Parameter c_addra_width bound to: 9 - type: integer 
+	Parameter c_write_mode_a bound to: READ_FIRST - type: string 
+	Parameter c_has_ena bound to: 0 - type: integer 
+	Parameter c_has_regcea bound to: 0 - type: integer 
+	Parameter c_has_ssra bound to: 0 - type: integer 
+	Parameter c_sinita_val bound to: 0 - type: string 
+	Parameter c_use_byte_wea bound to: 1 - type: integer 
+	Parameter c_wea_width bound to: 4 - type: integer 
+	Parameter c_has_mem_output_regs_b bound to: 0 - type: integer 
+	Parameter c_has_mux_output_regs_b bound to: 0 - type: integer 
+	Parameter c_write_width_b bound to: 32 - type: integer 
+	Parameter c_read_width_b bound to: 32 - type: integer 
+	Parameter c_write_depth_b bound to: 512 - type: integer 
+	Parameter c_read_depth_b bound to: 512 - type: integer 
+	Parameter c_addrb_width bound to: 9 - type: integer 
+	Parameter c_write_mode_b bound to: READ_FIRST - type: string 
+	Parameter c_has_enb bound to: 0 - type: integer 
+	Parameter c_has_regceb bound to: 0 - type: integer 
+	Parameter c_has_ssrb bound to: 0 - type: integer 
+	Parameter c_sinitb_val bound to: 0 - type: string 
+	Parameter c_use_byte_web bound to: 1 - type: integer 
+	Parameter c_web_width bound to: 4 - type: integer 
+	Parameter c_mux_pipeline_stages bound to: 0 - type: integer 
+	Parameter c_use_ecc bound to: 0 - type: integer 
+	Parameter c_use_ramb16bwer_rst_bhv bound to: 0 - type: integer 
+	Parameter bmg_xpm_sel bound to: 1 - type: integer 
+	Parameter MEMORY_SIZE bound to: 16384 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: independent_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter USE_MEM_INIT_MMI bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_PROTECT bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 9 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: READ_FIRST - type: string 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 9 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: READ_FIRST - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+INFO: [Synth 8-3491] module 'xpm_memory_tdpram' declared at 'C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8871' bound to instance 'xpm_memory_tdpram_inst' of component 'xpm_memory_tdpram' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/af67/hdl/lib_bmg_v1_0_rfs.vhd:683]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_tdpram' [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8871]
+	Parameter MEMORY_SIZE bound to: 16384 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: independent_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter USE_MEM_INIT_MMI bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_PROTECT bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 9 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: READ_FIRST - type: string 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 9 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: READ_FIRST - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: 2 - type: integer 
+	Parameter P_CLOCKING_MODE bound to: 1 - type: integer 
+	Parameter P_ECC_MODE bound to: 0 - type: integer 
+	Parameter P_WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter P_WRITE_MODE_A bound to: 1 - type: integer 
+	Parameter P_WRITE_MODE_B bound to: 1 - type: integer 
+	Parameter P_MEMORY_OPTIMIZATION bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+	Parameter MEMORY_TYPE bound to: 2 - type: integer 
+	Parameter MEMORY_SIZE bound to: 16384 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: 2 - type: integer 
+	Parameter CLOCKING_MODE bound to: 1 - type: integer 
+	Parameter ECC_MODE bound to: 0 - type: integer 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT_MMI bound to: 0 - type: integer 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_PROTECT bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 9 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: 1 - type: integer 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 9 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: 1 - type: integer 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter P_MIN_WIDTH_DATA_A bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_B bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_ECC bound to: 32 - type: integer 
+	Parameter P_MAX_DEPTH_DATA bound to: 512 - type: integer 
+	Parameter P_ECC_MODE bound to: no_ecc - type: string 
+	Parameter P_MEMORY_OPT bound to: yes - type: string 
+	Parameter P_WIDTH_COL_WRITE_A bound to: 8 - type: integer 
+	Parameter P_WIDTH_COL_WRITE_B bound to: 8 - type: integer 
+	Parameter P_NUM_COLS_WRITE_A bound to: 4 - type: integer 
+	Parameter P_NUM_COLS_WRITE_B bound to: 4 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_B bound to: 1 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_A bound to: 9 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_B bound to: 9 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_A bound to: 9 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_B bound to: 9 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_B bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_B bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_A bound to: 1 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_B bound to: 1 - type: integer 
+	Parameter P_SDP_WRITE_MODE bound to: yes - type: string 
+	Parameter rsta_loop_iter bound to: 32 - type: integer 
+	Parameter rstb_loop_iter bound to: 32 - type: integer 
+	Parameter NUM_CHAR_LOC bound to: 0 - type: integer 
+	Parameter MAX_NUM_CHAR bound to: 0 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 32 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's.   [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:490]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (1#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_tdpram' (2#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8871]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_wrapper' (3#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/af67/hdl/lib_bmg_v1_0_rfs.vhd:196]
+INFO: [Synth 8-256] done synthesizing module 'axi_traffic_gen_v3_0_7_bmg_wrap' (4#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.vhd:188]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_inferram' (5#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:553]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_slvram_v7' (6#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:130]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_regslice' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:402]
+	Parameter DWIDTH bound to: 32 - type: integer 
+	Parameter IDWIDTH bound to: 1 - type: integer 
+	Parameter DATADEPTH bound to: 1 - type: integer 
+	Parameter IDDEPTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_regslice' (7#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:402]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_randgen' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:906]
+	Parameter seed bound to: 23130 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_randgen' (8#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:906]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_randgen__parameterized0' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:906]
+	Parameter seed bound to: 31899 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_randgen__parameterized0' (8#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:906]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_paramram_wrap' (9#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:3876]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_s_w_channel' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1920]
+	Parameter C_BASEADDR bound to: 1151336448 - type: integer 
+	Parameter C_HIGHADDR bound to: 1151401983 - type: integer 
+	Parameter C_S_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter INA_OFF bound to: 72 - type: integer 
+	Parameter ID_OFF bound to: 16 - type: integer 
+	Parameter C_S_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_ZERO_INVALID bound to: 1 - type: integer 
+	Parameter C_NO_EXCL bound to: 0 - type: integer 
+	Parameter C_ATG_BASIC_AXI4 bound to: 0 - type: integer 
+	Parameter C_ATG_AXI4LITE bound to: 0 - type: integer 
+	Parameter ATG_VERSAL_400 bound to: 0 - type: integer 
+	Parameter BR bound to: 14 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+	Parameter WIDTH bound to: 20 - type: integer 
+	Parameter DEPTH bound to: 8 - type: integer 
+	Parameter DEPTHBITS bound to: 3 - type: integer 
+	Parameter HEADREG bound to: 0 - type: integer 
+	Parameter ZERO_INVALID bound to: 0 - type: integer 
+	Parameter FULL_LEVEL bound to: 6 - type: integer 
+	Parameter BLOCK_ACTIVE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo' (10#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo__parameterized0' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+	Parameter WIDTH bound to: 72 - type: integer 
+	Parameter DEPTH bound to: 8 - type: integer 
+	Parameter DEPTHBITS bound to: 3 - type: integer 
+	Parameter HEADREG bound to: 1 - type: integer 
+	Parameter ZERO_INVALID bound to: 0 - type: integer 
+	Parameter FULL_LEVEL bound to: 6 - type: integer 
+	Parameter BLOCK_ACTIVE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo__parameterized0' (10#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_addrgen' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1518]
+	Parameter USE_ADDR_OFFSET bound to: 0 - type: integer 
+	Parameter C_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ID_WIDTH bound to: 19 - type: integer 
+	Parameter IS_READ bound to: 0 - type: integer 
+	Parameter C_ATG_BASIC_AXI4 bound to: 0 - type: integer 
+	Parameter C_ATG_AXI4LITE bound to: 0 - type: integer 
+	Parameter ATG_VERSAL_400 bound to: 0 - type: integer 
+	Parameter ADDR_BITS bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_addrgen' (11#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1518]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo__parameterized1' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+	Parameter WIDTH bound to: 37 - type: integer 
+	Parameter DEPTH bound to: 8 - type: integer 
+	Parameter DEPTHBITS bound to: 3 - type: integer 
+	Parameter HEADREG bound to: 1 - type: integer 
+	Parameter ZERO_INVALID bound to: 0 - type: integer 
+	Parameter FULL_LEVEL bound to: 6 - type: integer 
+	Parameter BLOCK_ACTIVE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo__parameterized1' (11#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_id_track' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:991]
+	Parameter ID_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_id_track' (12#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:991]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo__parameterized2' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+	Parameter WIDTH bound to: 20 - type: integer 
+	Parameter DEPTH bound to: 8 - type: integer 
+	Parameter DEPTHBITS bound to: 3 - type: integer 
+	Parameter HEADREG bound to: 1 - type: integer 
+	Parameter ZERO_INVALID bound to: 1 - type: integer 
+	Parameter FULL_LEVEL bound to: 6 - type: integer 
+	Parameter BLOCK_ACTIVE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo__parameterized2' (12#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_regslice__parameterized0' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:402]
+	Parameter DWIDTH bound to: 83 - type: integer 
+	Parameter IDWIDTH bound to: 1 - type: integer 
+	Parameter DATADEPTH bound to: 1 - type: integer 
+	Parameter IDDEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_regslice__parameterized0' (12#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:402]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_s_w_channel' (13#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1920]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_s_r_channel' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:2624]
+	Parameter C_BASEADDR bound to: 1151336448 - type: integer 
+	Parameter C_HIGHADDR bound to: 1151401983 - type: integer 
+	Parameter C_ZERO_INVALID bound to: 1 - type: integer 
+	Parameter C_NO_EXCL bound to: 0 - type: integer 
+	Parameter C_S_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter INA_OFF bound to: 72 - type: integer 
+	Parameter ID_OFF bound to: 16 - type: integer 
+	Parameter C_S_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_ATG_BASIC_AXI4 bound to: 0 - type: integer 
+	Parameter C_ATG_AXI4LITE bound to: 0 - type: integer 
+	Parameter ATG_VERSAL_400 bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_addrgen__parameterized0' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1518]
+	Parameter USE_ADDR_OFFSET bound to: 0 - type: integer 
+	Parameter C_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ID_WIDTH bound to: 16 - type: integer 
+	Parameter IS_READ bound to: 1 - type: integer 
+	Parameter C_ATG_BASIC_AXI4 bound to: 0 - type: integer 
+	Parameter C_ATG_AXI4LITE bound to: 0 - type: integer 
+	Parameter ATG_VERSAL_400 bound to: 0 - type: integer 
+	Parameter ADDR_BITS bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_addrgen__parameterized0' (13#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1518]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_addrgen__parameterized1' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1518]
+	Parameter USE_ADDR_OFFSET bound to: 0 - type: integer 
+	Parameter C_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ID_WIDTH bound to: 18 - type: integer 
+	Parameter IS_READ bound to: 1 - type: integer 
+	Parameter C_ATG_BASIC_AXI4 bound to: 0 - type: integer 
+	Parameter C_ATG_AXI4LITE bound to: 0 - type: integer 
+	Parameter ATG_VERSAL_400 bound to: 0 - type: integer 
+	Parameter ADDR_BITS bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_addrgen__parameterized1' (13#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1518]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo__parameterized3' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+	Parameter WIDTH bound to: 56 - type: integer 
+	Parameter DEPTH bound to: 8 - type: integer 
+	Parameter DEPTHBITS bound to: 3 - type: integer 
+	Parameter HEADREG bound to: 1 - type: integer 
+	Parameter ZERO_INVALID bound to: 1 - type: integer 
+	Parameter FULL_LEVEL bound to: 6 - type: integer 
+	Parameter BLOCK_ACTIVE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo__parameterized3' (13#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_s_r_channel' (14#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:2624]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_m_w_channel' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:6883]
+	Parameter C_M_AXI_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_ZERO_INVALID bound to: 1 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 8 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_ATG_BASIC_AXI4 bound to: 0 - type: integer 
+	Parameter C_ATG_AXI4LITE bound to: 0 - type: integer 
+	Parameter ATG_VERSAL_400 bound to: 0 - type: integer 
+	Parameter EX_FIFO_DEPTH bound to: 8 - type: integer 
+	Parameter EX_FIFO_DEPTHBITS bound to: 3 - type: integer 
+	Parameter EX_FIFO_FULL_LEVEL bound to: 6 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo__parameterized4' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+	Parameter WIDTH bound to: 101 - type: integer 
+	Parameter DEPTH bound to: 8 - type: integer 
+	Parameter DEPTHBITS bound to: 3 - type: integer 
+	Parameter HEADREG bound to: 1 - type: integer 
+	Parameter ZERO_INVALID bound to: 1 - type: integer 
+	Parameter FULL_LEVEL bound to: 6 - type: integer 
+	Parameter BLOCK_ACTIVE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo__parameterized4' (14#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo__parameterized5' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+	Parameter WIDTH bound to: 21 - type: integer 
+	Parameter DEPTH bound to: 8 - type: integer 
+	Parameter DEPTHBITS bound to: 3 - type: integer 
+	Parameter HEADREG bound to: 1 - type: integer 
+	Parameter ZERO_INVALID bound to: 0 - type: integer 
+	Parameter FULL_LEVEL bound to: 6 - type: integer 
+	Parameter BLOCK_ACTIVE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo__parameterized5' (14#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_regslice__parameterized1' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:402]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter IDWIDTH bound to: 1 - type: integer 
+	Parameter DATADEPTH bound to: 4 - type: integer 
+	Parameter IDDEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_regslice__parameterized1' (14#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:402]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo__parameterized6' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+	Parameter WIDTH bound to: 78 - type: integer 
+	Parameter DEPTH bound to: 8 - type: integer 
+	Parameter DEPTHBITS bound to: 3 - type: integer 
+	Parameter HEADREG bound to: 1 - type: integer 
+	Parameter ZERO_INVALID bound to: 0 - type: integer 
+	Parameter FULL_LEVEL bound to: 6 - type: integer 
+	Parameter BLOCK_ACTIVE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo__parameterized6' (14#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_addrgen__parameterized2' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1518]
+	Parameter USE_ADDR_OFFSET bound to: 1 - type: integer 
+	Parameter C_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ID_WIDTH bound to: 16 - type: integer 
+	Parameter IS_READ bound to: 1 - type: integer 
+	Parameter C_ATG_BASIC_AXI4 bound to: 0 - type: integer 
+	Parameter C_ATG_AXI4LITE bound to: 0 - type: integer 
+	Parameter ATG_VERSAL_400 bound to: 0 - type: integer 
+	Parameter ADDR_BITS bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_addrgen__parameterized2' (14#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1518]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo__parameterized7' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+	Parameter WIDTH bound to: 43 - type: integer 
+	Parameter DEPTH bound to: 8 - type: integer 
+	Parameter DEPTHBITS bound to: 3 - type: integer 
+	Parameter HEADREG bound to: 1 - type: integer 
+	Parameter ZERO_INVALID bound to: 1 - type: integer 
+	Parameter FULL_LEVEL bound to: 6 - type: integer 
+	Parameter BLOCK_ACTIVE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo__parameterized7' (14#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_m_w_channel' (15#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:6883]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_m_r_channel' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:8112]
+	Parameter C_M_AXI_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 8 - type: integer 
+	Parameter C_ZERO_INVALID bound to: 1 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_ATG_BASIC_AXI4 bound to: 0 - type: integer 
+	Parameter C_ATG_AXI4LITE bound to: 0 - type: integer 
+	Parameter ATG_VERSAL_400 bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo__parameterized8' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+	Parameter WIDTH bound to: 89 - type: integer 
+	Parameter DEPTH bound to: 8 - type: integer 
+	Parameter DEPTHBITS bound to: 3 - type: integer 
+	Parameter HEADREG bound to: 1 - type: integer 
+	Parameter ZERO_INVALID bound to: 0 - type: integer 
+	Parameter FULL_LEVEL bound to: 6 - type: integer 
+	Parameter BLOCK_ACTIVE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo__parameterized8' (15#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo__parameterized9' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+	Parameter WIDTH bound to: 36 - type: integer 
+	Parameter DEPTH bound to: 8 - type: integer 
+	Parameter DEPTHBITS bound to: 3 - type: integer 
+	Parameter HEADREG bound to: 1 - type: integer 
+	Parameter ZERO_INVALID bound to: 0 - type: integer 
+	Parameter FULL_LEVEL bound to: 6 - type: integer 
+	Parameter BLOCK_ACTIVE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_ex_fifo__parameterized9' (15#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1125]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_regslice__parameterized2' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:402]
+	Parameter DWIDTH bound to: 47 - type: integer 
+	Parameter IDWIDTH bound to: 1 - type: integer 
+	Parameter DATADEPTH bound to: 1 - type: integer 
+	Parameter IDDEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_regslice__parameterized2' (15#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:402]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_m_r_channel' (16#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:8112]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_cmdram_wrap' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:9193]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_ATG_BASIC_AXI4 bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RAMINIT_CMDRAM0_F bound to: none - type: string 
+	Parameter C_RAMINIT_CMDRAM1_F bound to: NONE - type: string 
+	Parameter C_RAMINIT_CMDRAM2_F bound to: NONE - type: string 
+	Parameter C_RAMINIT_CMDRAM3_F bound to: NONE - type: string 
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_cmdram' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1306]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_INITRAM_0 bound to: none - type: string 
+	Parameter C_INITRAM_1 bound to: NONE - type: string 
+	Parameter C_INITRAM_2 bound to: NONE - type: string 
+	Parameter C_INITRAM_3 bound to: NONE - type: string 
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_inferram__parameterized0' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:553]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_RAMINIT_F bound to: none - type: string 
+	Parameter SIZE bound to: 512 - type: integer 
+	Parameter ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter COL_WIDTH bound to: 8 - type: integer 
+	Parameter NB_COL bound to: 16 - type: integer 
+	Parameter INFER_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'axi_traffic_gen_v3_0_7_bmg_wrap__parameterized0' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.vhd:188]
+	Parameter c_family bound to: zynq - type: string 
+	Parameter c_xdevicefamily bound to: zynq - type: string 
+	Parameter c_elaboration_dir bound to: ./ - type: string 
+	Parameter c_mem_type bound to: 2 - type: integer 
+	Parameter c_algorithm bound to: 1 - type: integer 
+	Parameter c_prim_type bound to: 1 - type: integer 
+	Parameter c_byte_size bound to: 8 - type: integer 
+	Parameter c_sim_collision_check bound to: NONE - type: string 
+	Parameter c_common_clk bound to: 0 - type: integer 
+	Parameter c_disable_warn_bhv_coll bound to: 0 - type: integer 
+	Parameter c_disable_warn_bhv_range bound to: 0 - type: integer 
+	Parameter c_load_init_file bound to: 1 - type: integer 
+	Parameter c_init_file_name bound to: none - type: string 
+	Parameter c_use_default_data bound to: 1 - type: integer 
+	Parameter c_default_data bound to: 0 - type: string 
+	Parameter c_has_mem_output_regs_a bound to: 0 - type: integer 
+	Parameter c_has_mux_output_regs_a bound to: 0 - type: integer 
+	Parameter c_write_width_a bound to: 128 - type: integer 
+	Parameter c_read_width_a bound to: 128 - type: integer 
+	Parameter c_write_depth_a bound to: 512 - type: integer 
+	Parameter c_read_depth_a bound to: 512 - type: integer 
+	Parameter c_addra_width bound to: 9 - type: integer 
+	Parameter c_write_mode_a bound to: READ_FIRST - type: string 
+	Parameter c_has_ena bound to: 0 - type: integer 
+	Parameter c_has_regcea bound to: 0 - type: integer 
+	Parameter c_has_ssra bound to: 0 - type: integer 
+	Parameter c_sinita_val bound to: 0 - type: string 
+	Parameter c_use_byte_wea bound to: 1 - type: integer 
+	Parameter c_wea_width bound to: 16 - type: integer 
+	Parameter c_has_mem_output_regs_b bound to: 0 - type: integer 
+	Parameter c_has_mux_output_regs_b bound to: 0 - type: integer 
+	Parameter c_write_width_b bound to: 128 - type: integer 
+	Parameter c_read_width_b bound to: 128 - type: integer 
+	Parameter c_write_depth_b bound to: 512 - type: integer 
+	Parameter c_read_depth_b bound to: 512 - type: integer 
+	Parameter c_addrb_width bound to: 9 - type: integer 
+	Parameter c_write_mode_b bound to: READ_FIRST - type: string 
+	Parameter c_has_enb bound to: 0 - type: integer 
+	Parameter c_has_regceb bound to: 0 - type: integer 
+	Parameter c_has_ssrb bound to: 0 - type: integer 
+	Parameter c_sinitb_val bound to: 0 - type: string 
+	Parameter c_use_byte_web bound to: 1 - type: integer 
+	Parameter c_web_width bound to: 16 - type: integer 
+	Parameter c_mux_pipeline_stages bound to: 0 - type: integer 
+	Parameter c_use_ecc bound to: 0 - type: integer 
+	Parameter c_use_ramb16bwer_rst_bhv bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_wrapper__parameterized0' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/af67/hdl/lib_bmg_v1_0_rfs.vhd:196]
+	Parameter c_family bound to: zynq - type: string 
+	Parameter c_xdevicefamily bound to: zynq - type: string 
+	Parameter c_elaboration_dir bound to: ./ - type: string 
+	Parameter c_mem_type bound to: 2 - type: integer 
+	Parameter c_algorithm bound to: 1 - type: integer 
+	Parameter c_prim_type bound to: 1 - type: integer 
+	Parameter c_byte_size bound to: 8 - type: integer 
+	Parameter c_sim_collision_check bound to: NONE - type: string 
+	Parameter c_common_clk bound to: 0 - type: integer 
+	Parameter c_disable_warn_bhv_coll bound to: 0 - type: integer 
+	Parameter c_disable_warn_bhv_range bound to: 0 - type: integer 
+	Parameter c_load_init_file bound to: 1 - type: integer 
+	Parameter c_init_file_name bound to: none - type: string 
+	Parameter c_use_default_data bound to: 1 - type: integer 
+	Parameter c_default_data bound to: 0 - type: string 
+	Parameter c_has_mem_output_regs_a bound to: 0 - type: integer 
+	Parameter c_has_mux_output_regs_a bound to: 0 - type: integer 
+	Parameter c_write_width_a bound to: 128 - type: integer 
+	Parameter c_read_width_a bound to: 128 - type: integer 
+	Parameter c_write_depth_a bound to: 512 - type: integer 
+	Parameter c_read_depth_a bound to: 512 - type: integer 
+	Parameter c_addra_width bound to: 9 - type: integer 
+	Parameter c_write_mode_a bound to: READ_FIRST - type: string 
+	Parameter c_has_ena bound to: 0 - type: integer 
+	Parameter c_has_regcea bound to: 0 - type: integer 
+	Parameter c_has_ssra bound to: 0 - type: integer 
+	Parameter c_sinita_val bound to: 0 - type: string 
+	Parameter c_use_byte_wea bound to: 1 - type: integer 
+	Parameter c_wea_width bound to: 16 - type: integer 
+	Parameter c_has_mem_output_regs_b bound to: 0 - type: integer 
+	Parameter c_has_mux_output_regs_b bound to: 0 - type: integer 
+	Parameter c_write_width_b bound to: 128 - type: integer 
+	Parameter c_read_width_b bound to: 128 - type: integer 
+	Parameter c_write_depth_b bound to: 512 - type: integer 
+	Parameter c_read_depth_b bound to: 512 - type: integer 
+	Parameter c_addrb_width bound to: 9 - type: integer 
+	Parameter c_write_mode_b bound to: READ_FIRST - type: string 
+	Parameter c_has_enb bound to: 0 - type: integer 
+	Parameter c_has_regceb bound to: 0 - type: integer 
+	Parameter c_has_ssrb bound to: 0 - type: integer 
+	Parameter c_sinitb_val bound to: 0 - type: string 
+	Parameter c_use_byte_web bound to: 1 - type: integer 
+	Parameter c_web_width bound to: 16 - type: integer 
+	Parameter c_mux_pipeline_stages bound to: 0 - type: integer 
+	Parameter c_use_ecc bound to: 0 - type: integer 
+	Parameter c_use_ramb16bwer_rst_bhv bound to: 0 - type: integer 
+	Parameter bmg_xpm_sel bound to: 1 - type: integer 
+	Parameter MEMORY_SIZE bound to: 65536 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: independent_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter USE_MEM_INIT_MMI bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_PROTECT bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 128 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 128 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 9 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: READ_FIRST - type: string 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 128 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 128 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 9 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: READ_FIRST - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+INFO: [Synth 8-3491] module 'xpm_memory_tdpram' declared at 'C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8871' bound to instance 'xpm_memory_tdpram_inst' of component 'xpm_memory_tdpram' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/af67/hdl/lib_bmg_v1_0_rfs.vhd:683]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_tdpram__parameterized1' [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8871]
+	Parameter MEMORY_SIZE bound to: 65536 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: independent_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter USE_MEM_INIT_MMI bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_PROTECT bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 128 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 128 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 9 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: READ_FIRST - type: string 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 128 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 128 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 9 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: READ_FIRST - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: 2 - type: integer 
+	Parameter P_CLOCKING_MODE bound to: 1 - type: integer 
+	Parameter P_ECC_MODE bound to: 0 - type: integer 
+	Parameter P_WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter P_WRITE_MODE_A bound to: 1 - type: integer 
+	Parameter P_WRITE_MODE_B bound to: 1 - type: integer 
+	Parameter P_MEMORY_OPTIMIZATION bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+	Parameter MEMORY_TYPE bound to: 2 - type: integer 
+	Parameter MEMORY_SIZE bound to: 65536 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: 2 - type: integer 
+	Parameter CLOCKING_MODE bound to: 1 - type: integer 
+	Parameter ECC_MODE bound to: 0 - type: integer 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT_MMI bound to: 0 - type: integer 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_PROTECT bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 128 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 128 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 9 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: 1 - type: integer 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 128 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 128 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 9 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: 1 - type: integer 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter P_MIN_WIDTH_DATA_A bound to: 128 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_B bound to: 128 - type: integer 
+	Parameter P_MIN_WIDTH_DATA bound to: 128 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_ECC bound to: 128 - type: integer 
+	Parameter P_MAX_DEPTH_DATA bound to: 512 - type: integer 
+	Parameter P_ECC_MODE bound to: no_ecc - type: string 
+	Parameter P_MEMORY_OPT bound to: yes - type: string 
+	Parameter P_WIDTH_COL_WRITE_A bound to: 8 - type: integer 
+	Parameter P_WIDTH_COL_WRITE_B bound to: 8 - type: integer 
+	Parameter P_NUM_COLS_WRITE_A bound to: 16 - type: integer 
+	Parameter P_NUM_COLS_WRITE_B bound to: 16 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_B bound to: 1 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_A bound to: 9 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_B bound to: 9 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_A bound to: 9 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_B bound to: 9 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_B bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_B bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_A bound to: 1 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_B bound to: 1 - type: integer 
+	Parameter P_SDP_WRITE_MODE bound to: yes - type: string 
+	Parameter rsta_loop_iter bound to: 128 - type: integer 
+	Parameter rstb_loop_iter bound to: 128 - type: integer 
+	Parameter NUM_CHAR_LOC bound to: 0 - type: integer 
+	Parameter MAX_NUM_CHAR bound to: 0 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 128 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's.   [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:490]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (16#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_tdpram__parameterized1' (16#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8871]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_wrapper__parameterized0' (16#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/af67/hdl/lib_bmg_v1_0_rfs.vhd:196]
+INFO: [Synth 8-256] done synthesizing module 'axi_traffic_gen_v3_0_7_bmg_wrap__parameterized0' (16#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.vhd:188]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_inferram__parameterized0' (16#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:553]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_cmdram' (17#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:1306]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_regslice__parameterized3' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:402]
+	Parameter DWIDTH bound to: 128 - type: integer 
+	Parameter IDWIDTH bound to: 10 - type: integer 
+	Parameter DATADEPTH bound to: 2 - type: integer 
+	Parameter IDDEPTH bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_regslice__parameterized3' (17#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:402]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_cmdram_wrap' (18#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:9193]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_sharedram_wrap' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:3188]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RAMINIT_SRAM0_F bound to: none - type: string 
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_slvram_v7__parameterized0' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:130]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_DATAWIDTH bound to: 64 - type: integer 
+	Parameter C_SIZE bound to: 1024 - type: integer 
+	Parameter C_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter C_INITRAM_F bound to: none - type: string 
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_inferram__parameterized1' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:553]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_RAMINIT_F bound to: none - type: string 
+	Parameter SIZE bound to: 1024 - type: integer 
+	Parameter ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter COL_WIDTH bound to: 8 - type: integer 
+	Parameter NB_COL bound to: 8 - type: integer 
+	Parameter INFER_TYPE bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'axi_traffic_gen_v3_0_7_bmg_wrap__parameterized1' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.vhd:188]
+	Parameter c_family bound to: zynq - type: string 
+	Parameter c_xdevicefamily bound to: zynq - type: string 
+	Parameter c_elaboration_dir bound to: ./ - type: string 
+	Parameter c_mem_type bound to: 2 - type: integer 
+	Parameter c_algorithm bound to: 1 - type: integer 
+	Parameter c_prim_type bound to: 1 - type: integer 
+	Parameter c_byte_size bound to: 8 - type: integer 
+	Parameter c_sim_collision_check bound to: NONE - type: string 
+	Parameter c_common_clk bound to: 0 - type: integer 
+	Parameter c_disable_warn_bhv_coll bound to: 0 - type: integer 
+	Parameter c_disable_warn_bhv_range bound to: 0 - type: integer 
+	Parameter c_load_init_file bound to: 1 - type: integer 
+	Parameter c_init_file_name bound to: none - type: string 
+	Parameter c_use_default_data bound to: 1 - type: integer 
+	Parameter c_default_data bound to: 0 - type: string 
+	Parameter c_has_mem_output_regs_a bound to: 0 - type: integer 
+	Parameter c_has_mux_output_regs_a bound to: 0 - type: integer 
+	Parameter c_write_width_a bound to: 64 - type: integer 
+	Parameter c_read_width_a bound to: 64 - type: integer 
+	Parameter c_write_depth_a bound to: 1024 - type: integer 
+	Parameter c_read_depth_a bound to: 1024 - type: integer 
+	Parameter c_addra_width bound to: 10 - type: integer 
+	Parameter c_write_mode_a bound to: READ_FIRST - type: string 
+	Parameter c_has_ena bound to: 0 - type: integer 
+	Parameter c_has_regcea bound to: 0 - type: integer 
+	Parameter c_has_ssra bound to: 0 - type: integer 
+	Parameter c_sinita_val bound to: 0 - type: string 
+	Parameter c_use_byte_wea bound to: 1 - type: integer 
+	Parameter c_wea_width bound to: 8 - type: integer 
+	Parameter c_has_mem_output_regs_b bound to: 0 - type: integer 
+	Parameter c_has_mux_output_regs_b bound to: 0 - type: integer 
+	Parameter c_write_width_b bound to: 64 - type: integer 
+	Parameter c_read_width_b bound to: 64 - type: integer 
+	Parameter c_write_depth_b bound to: 1024 - type: integer 
+	Parameter c_read_depth_b bound to: 1024 - type: integer 
+	Parameter c_addrb_width bound to: 10 - type: integer 
+	Parameter c_write_mode_b bound to: READ_FIRST - type: string 
+	Parameter c_has_enb bound to: 0 - type: integer 
+	Parameter c_has_regceb bound to: 0 - type: integer 
+	Parameter c_has_ssrb bound to: 0 - type: integer 
+	Parameter c_sinitb_val bound to: 0 - type: string 
+	Parameter c_use_byte_web bound to: 1 - type: integer 
+	Parameter c_web_width bound to: 8 - type: integer 
+	Parameter c_mux_pipeline_stages bound to: 0 - type: integer 
+	Parameter c_use_ecc bound to: 0 - type: integer 
+	Parameter c_use_ramb16bwer_rst_bhv bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_wrapper__parameterized1' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/af67/hdl/lib_bmg_v1_0_rfs.vhd:196]
+	Parameter c_family bound to: zynq - type: string 
+	Parameter c_xdevicefamily bound to: zynq - type: string 
+	Parameter c_elaboration_dir bound to: ./ - type: string 
+	Parameter c_mem_type bound to: 2 - type: integer 
+	Parameter c_algorithm bound to: 1 - type: integer 
+	Parameter c_prim_type bound to: 1 - type: integer 
+	Parameter c_byte_size bound to: 8 - type: integer 
+	Parameter c_sim_collision_check bound to: NONE - type: string 
+	Parameter c_common_clk bound to: 0 - type: integer 
+	Parameter c_disable_warn_bhv_coll bound to: 0 - type: integer 
+	Parameter c_disable_warn_bhv_range bound to: 0 - type: integer 
+	Parameter c_load_init_file bound to: 1 - type: integer 
+	Parameter c_init_file_name bound to: none - type: string 
+	Parameter c_use_default_data bound to: 1 - type: integer 
+	Parameter c_default_data bound to: 0 - type: string 
+	Parameter c_has_mem_output_regs_a bound to: 0 - type: integer 
+	Parameter c_has_mux_output_regs_a bound to: 0 - type: integer 
+	Parameter c_write_width_a bound to: 64 - type: integer 
+	Parameter c_read_width_a bound to: 64 - type: integer 
+	Parameter c_write_depth_a bound to: 1024 - type: integer 
+	Parameter c_read_depth_a bound to: 1024 - type: integer 
+	Parameter c_addra_width bound to: 10 - type: integer 
+	Parameter c_write_mode_a bound to: READ_FIRST - type: string 
+	Parameter c_has_ena bound to: 0 - type: integer 
+	Parameter c_has_regcea bound to: 0 - type: integer 
+	Parameter c_has_ssra bound to: 0 - type: integer 
+	Parameter c_sinita_val bound to: 0 - type: string 
+	Parameter c_use_byte_wea bound to: 1 - type: integer 
+	Parameter c_wea_width bound to: 8 - type: integer 
+	Parameter c_has_mem_output_regs_b bound to: 0 - type: integer 
+	Parameter c_has_mux_output_regs_b bound to: 0 - type: integer 
+	Parameter c_write_width_b bound to: 64 - type: integer 
+	Parameter c_read_width_b bound to: 64 - type: integer 
+	Parameter c_write_depth_b bound to: 1024 - type: integer 
+	Parameter c_read_depth_b bound to: 1024 - type: integer 
+	Parameter c_addrb_width bound to: 10 - type: integer 
+	Parameter c_write_mode_b bound to: READ_FIRST - type: string 
+	Parameter c_has_enb bound to: 0 - type: integer 
+	Parameter c_has_regceb bound to: 0 - type: integer 
+	Parameter c_has_ssrb bound to: 0 - type: integer 
+	Parameter c_sinitb_val bound to: 0 - type: string 
+	Parameter c_use_byte_web bound to: 1 - type: integer 
+	Parameter c_web_width bound to: 8 - type: integer 
+	Parameter c_mux_pipeline_stages bound to: 0 - type: integer 
+	Parameter c_use_ecc bound to: 0 - type: integer 
+	Parameter c_use_ramb16bwer_rst_bhv bound to: 0 - type: integer 
+	Parameter bmg_xpm_sel bound to: 1 - type: integer 
+	Parameter MEMORY_SIZE bound to: 65536 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: independent_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter USE_MEM_INIT_MMI bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_PROTECT bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 64 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 64 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 10 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: READ_FIRST - type: string 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 64 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 64 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 10 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: READ_FIRST - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+INFO: [Synth 8-3491] module 'xpm_memory_tdpram' declared at 'C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8871' bound to instance 'xpm_memory_tdpram_inst' of component 'xpm_memory_tdpram' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/af67/hdl/lib_bmg_v1_0_rfs.vhd:683]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_tdpram__parameterized3' [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8871]
+	Parameter MEMORY_SIZE bound to: 65536 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter CLOCKING_MODE bound to: independent_clock - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter USE_MEM_INIT_MMI bound to: 0 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_PROTECT bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 64 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 64 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 10 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: READ_FIRST - type: string 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 64 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 64 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 10 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: READ_FIRST - type: string 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: 2 - type: integer 
+	Parameter P_CLOCKING_MODE bound to: 1 - type: integer 
+	Parameter P_ECC_MODE bound to: 0 - type: integer 
+	Parameter P_WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter P_WRITE_MODE_A bound to: 1 - type: integer 
+	Parameter P_WRITE_MODE_B bound to: 1 - type: integer 
+	Parameter P_MEMORY_OPTIMIZATION bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized1' [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+	Parameter MEMORY_TYPE bound to: 2 - type: integer 
+	Parameter MEMORY_SIZE bound to: 65536 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: 2 - type: integer 
+	Parameter CLOCKING_MODE bound to: 1 - type: integer 
+	Parameter ECC_MODE bound to: 0 - type: integer 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
+	Parameter USE_MEM_INIT_MMI bound to: 0 - type: integer 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter VERSION bound to: 0 - type: integer 
+	Parameter USE_EMBEDDED_CONSTRAINT bound to: 0 - type: integer 
+	Parameter CASCADE_HEIGHT bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter WRITE_PROTECT bound to: 1 - type: integer 
+	Parameter WRITE_DATA_WIDTH_A bound to: 64 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 64 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 10 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: 1 - type: integer 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
+	Parameter WRITE_DATA_WIDTH_B bound to: 64 - type: integer 
+	Parameter READ_DATA_WIDTH_B bound to: 64 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_B bound to: 10 - type: integer 
+	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
+	Parameter READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter WRITE_MODE_B bound to: 1 - type: integer 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
+	Parameter P_MEMORY_PRIMITIVE bound to: block - type: string 
+	Parameter P_MIN_WIDTH_DATA_A bound to: 64 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_B bound to: 64 - type: integer 
+	Parameter P_MIN_WIDTH_DATA bound to: 64 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_ECC bound to: 64 - type: integer 
+	Parameter P_MAX_DEPTH_DATA bound to: 1024 - type: integer 
+	Parameter P_ECC_MODE bound to: no_ecc - type: string 
+	Parameter P_MEMORY_OPT bound to: yes - type: string 
+	Parameter P_WIDTH_COL_WRITE_A bound to: 8 - type: integer 
+	Parameter P_WIDTH_COL_WRITE_B bound to: 8 - type: integer 
+	Parameter P_NUM_COLS_WRITE_A bound to: 8 - type: integer 
+	Parameter P_NUM_COLS_WRITE_B bound to: 8 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_WRITE_B bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_A bound to: 1 - type: integer 
+	Parameter P_NUM_ROWS_READ_B bound to: 1 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_A bound to: 10 - type: integer 
+	Parameter P_WIDTH_ADDR_WRITE_B bound to: 10 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_A bound to: 10 - type: integer 
+	Parameter P_WIDTH_ADDR_READ_B bound to: 10 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_WRITE_B bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_A bound to: 0 - type: integer 
+	Parameter P_WIDTH_ADDR_LSB_READ_B bound to: 0 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_A bound to: 1 - type: integer 
+	Parameter P_ENABLE_BYTE_WRITE_B bound to: 1 - type: integer 
+	Parameter P_SDP_WRITE_MODE bound to: yes - type: string 
+	Parameter rsta_loop_iter bound to: 64 - type: integer 
+	Parameter rstb_loop_iter bound to: 64 - type: integer 
+	Parameter NUM_CHAR_LOC bound to: 0 - type: integer 
+	Parameter MAX_NUM_CHAR bound to: 0 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 64 - type: integer 
+	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's.   [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:490]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized1' (18#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_tdpram__parameterized3' (18#1) [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8871]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_wrapper__parameterized1' (18#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/af67/hdl/lib_bmg_v1_0_rfs.vhd:196]
+INFO: [Synth 8-256] done synthesizing module 'axi_traffic_gen_v3_0_7_bmg_wrap__parameterized1' (18#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.vhd:188]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_inferram__parameterized1' (18#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:553]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_slvram_v7__parameterized0' (18#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:130]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_sharedram_wrap' (19#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:3188]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_registers' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:3413]
+	Parameter C_IS_COHERENT bound to: 0 - type: integer 
+	Parameter C_IS_AFI bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_IS_AXI4 bound to: 0 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_ATG_BASIC_AXI4 bound to: 0 - type: integer 
+	Parameter C_ATG_REPEAT_TYPE bound to: 0 - type: integer 
+	Parameter C_ATG_HLTP_MODE bound to: 0 - type: integer 
+	Parameter C_ATG_STATIC bound to: 0 - type: integer 
+	Parameter C_ATG_SLAVE_ONLY bound to: 0 - type: integer 
+	Parameter C_ATG_SYSTEM_INIT bound to: 0 - type: integer 
+	Parameter C_ATG_STREAMING bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_regslice__parameterized4' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:402]
+	Parameter DWIDTH bound to: 1 - type: integer 
+	Parameter IDWIDTH bound to: 1 - type: integer 
+	Parameter DATADEPTH bound to: 6 - type: integer 
+	Parameter IDDEPTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_regslice__parameterized4' (19#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:402]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_registers' (20#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:3413]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_basic_n_full_top' (21#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:11443]
+INFO: [Synth 8-6157] synthesizing module 'axi_traffic_gen_v3_0_7_asynch_rst_ff' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_asynch_rst_ff' (22#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:56]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter C_CDC_TYPE bound to: 1 - type: integer 
+	Parameter C_RESET_STATE bound to: 0 - type: integer 
+	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
+	Parameter C_FLOP_INPUT bound to: 0 - type: integer 
+	Parameter C_VECTOR_WIDTH bound to: 1 - type: integer 
+	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (23#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-6155] done synthesizing module 'axi_traffic_gen_v3_0_7_top' (24#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ipshared/f2df/hdl/axi_traffic_gen_v3_0_rfs.v:15238]
+INFO: [Synth 8-6155] done synthesizing module 'design_electric_hook_axi_traffic_gen_0_0' (25#1) [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ip/design_electric_hook_axi_traffic_gen_0_0/synth/design_electric_hook_axi_traffic_gen_0_0.v:62]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1202.105 ; gain = 128.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1213.574 ; gain = 140.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1213.574 ; gain = 140.344
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.279 . Memory (MB): peak = 1213.574 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ip/design_electric_hook_axi_traffic_gen_0_0/design_electric_hook_axi_traffic_gen_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ip/design_electric_hook_axi_traffic_gen_0_0/design_electric_hook_axi_traffic_gen_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ip/design_electric_hook_axi_traffic_gen_0_0/design_electric_hook_axi_traffic_gen_0_0.xdc] for cell 'inst'
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ip/design_electric_hook_axi_traffic_gen_0_0/design_electric_hook_axi_traffic_gen_0_0.xdc:53]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ip/design_electric_hook_axi_traffic_gen_0_0/design_electric_hook_axi_traffic_gen_0_0.xdc:56]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ip/design_electric_hook_axi_traffic_gen_0_0/design_electric_hook_axi_traffic_gen_0_0.xdc:59]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ip/design_electric_hook_axi_traffic_gen_0_0/design_electric_hook_axi_traffic_gen_0_0.xdc:62]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ip/design_electric_hook_axi_traffic_gen_0_0/design_electric_hook_axi_traffic_gen_0_0.xdc:65]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ip/design_electric_hook_axi_traffic_gen_0_0/design_electric_hook_axi_traffic_gen_0_0.xdc:68]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ip/design_electric_hook_axi_traffic_gen_0_0/design_electric_hook_axi_traffic_gen_0_0.xdc:71]
+Finished Parsing XDC File [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ip/design_electric_hook_axi_traffic_gen_0_0/design_electric_hook_axi_traffic_gen_0_0.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ip/design_electric_hook_axi_traffic_gen_0_0/design_electric_hook_axi_traffic_gen_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_electric_hook_axi_traffic_gen_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_electric_hook_axi_traffic_gen_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/design_electric_hook_axi_traffic_gen_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/design_electric_hook_axi_traffic_gen_0_0_synth_1/dont_touch.xdc]
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/ATG_PARARAM_INST_YES.paramram_blk/PARAMRAM_ON_1.paramram/ram0/MEM_INFER_BLK_MEM.inst/proc_bmg/xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/ATG_PARARAM_INST_YES.paramram_blk/PARAMRAM_ON_1.paramram/ram0/MEM_INFER_BLK_MEM.inst/proc_bmg/xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/cmd_blk/Cmdram/cmd_ram0_3/MEM_INFER_BLK_MEM.inst/proc_bmg/xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/cmd_blk/Cmdram/cmd_ram0_3/MEM_INFER_BLK_MEM.inst/proc_bmg/xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/sharedram_blk/sharedram/ram0/MEM_INFER_BLK_MEM.inst/proc_bmg/xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst'
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/sharedram_blk/sharedram/ram0/MEM_INFER_BLK_MEM.inst/proc_bmg/xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_electric_hook_axi_traffic_gen_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_electric_hook_axi_traffic_gen_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1281.910 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 12 instances were transformed.
+  FDR => FDRE: 12 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.133 . Memory (MB): peak = 1284.164 ; gain = 2.254
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1284.164 ; gain = 210.934
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1284.164 ; gain = 210.934
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/design_electric_hook_axi_traffic_gen_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top /\ATG_PARARAM_INST_YES.paramram_blk /\PARAMRAM_ON_1.paramram /ram0/\MEM_INFER_BLK_MEM.inst /proc_bmg/\xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top /cmd_blk/Cmdram/cmd_ram0_3/\MEM_INFER_BLK_MEM.inst /proc_bmg/\xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top /sharedram_blk/sharedram/ram0/\MEM_INFER_BLK_MEM.inst /proc_bmg/\xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst . (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1284.164 ; gain = 210.934
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'PARAMRAM_ON_1.param_cmdr_state_ff_reg' in module 'axi_traffic_gen_v3_0_7_paramram_wrap'
+INFO: [Synth 8-802] inferred FSM for state register 'PARAMRAM_ON_2.param_cmdw_state_ff_reg' in module 'axi_traffic_gen_v3_0_7_paramram_wrap'
+INFO: [Synth 8-3971] The signal "xpm_memory_base:/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                                0 |                             0000
+                 iSTATE0 |                                1 |                             0001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'PARAMRAM_ON_2.param_cmdw_state_ff_reg' using encoding 'sequential' in module 'axi_traffic_gen_v3_0_7_paramram_wrap'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                                0 |                             0000
+                 iSTATE0 |                                1 |                             0001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'PARAMRAM_ON_1.param_cmdr_state_ff_reg' using encoding 'sequential' in module 'axi_traffic_gen_v3_0_7_paramram_wrap'
+INFO: [Synth 8-3971] The signal "xpm_memory_base__parameterized0:/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "xpm_memory_base__parameterized1:/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 1284.164 ; gain = 210.934
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 20    
+	   3 Input   32 Bit       Adders := 4     
+	   2 Input   24 Bit       Adders := 6     
+	   3 Input   24 Bit       Adders := 2     
+	   2 Input   13 Bit       Adders := 10    
+	   4 Input   13 Bit       Adders := 5     
+	   2 Input   12 Bit       Adders := 12    
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 6     
+	   2 Input    8 Bit       Adders := 10    
+	   2 Input    6 Bit       Adders := 10    
+	   2 Input    4 Bit       Adders := 64    
+	   2 Input    3 Bit       Adders := 44    
+	   2 Input    2 Bit       Adders := 20    
++---XORs : 
+	   4 Input      1 Bit         XORs := 2     
++---Registers : 
+	              128 Bit    Registers := 8     
+	              101 Bit    Registers := 4     
+	               89 Bit    Registers := 4     
+	               83 Bit    Registers := 1     
+	               78 Bit    Registers := 2     
+	               72 Bit    Registers := 4     
+	               64 Bit    Registers := 2     
+	               60 Bit    Registers := 1     
+	               56 Bit    Registers := 2     
+	               47 Bit    Registers := 1     
+	               43 Bit    Registers := 1     
+	               37 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
+	               32 Bit    Registers := 41    
+	               24 Bit    Registers := 6     
+	               21 Bit    Registers := 4     
+	               20 Bit    Registers := 1     
+	               19 Bit    Registers := 1     
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 32    
+	               13 Bit    Registers := 22    
+	               10 Bit    Registers := 14    
+	                9 Bit    Registers := 5     
+	                8 Bit    Registers := 10    
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 50    
+	                3 Bit    Registers := 12    
+	                2 Bit    Registers := 35    
+	                1 Bit    Registers := 211   
++---RAMs : 
+	              64K Bit	(512 X 128 bit)          RAMs := 1     
+	              64K Bit	(1024 X 64 bit)          RAMs := 1     
+	              16K Bit	(512 X 32 bit)          RAMs := 1     
+	              808 Bit	(8 X 101 bit)          RAMs := 2     
+	              712 Bit	(8 X 89 bit)          RAMs := 4     
+	              624 Bit	(8 X 78 bit)          RAMs := 1     
+	              576 Bit	(8 X 72 bit)          RAMs := 2     
+	              448 Bit	(8 X 56 bit)          RAMs := 1     
+	              344 Bit	(8 X 43 bit)          RAMs := 1     
+	              296 Bit	(8 X 37 bit)          RAMs := 1     
+	              288 Bit	(8 X 36 bit)          RAMs := 1     
+	              168 Bit	(8 X 21 bit)          RAMs := 4     
+	              160 Bit	(8 X 20 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input  128 Bit        Muxes := 32    
+	   2 Input  101 Bit        Muxes := 12    
+	   2 Input   89 Bit        Muxes := 20    
+	   2 Input   78 Bit        Muxes := 6     
+	   2 Input   72 Bit        Muxes := 15    
+	   2 Input   64 Bit        Muxes := 18    
+	   2 Input   60 Bit        Muxes := 1     
+	   2 Input   56 Bit        Muxes := 7     
+	   2 Input   43 Bit        Muxes := 6     
+	   2 Input   37 Bit        Muxes := 5     
+	   2 Input   36 Bit        Muxes := 5     
+	   2 Input   32 Bit        Muxes := 60    
+	   2 Input   24 Bit        Muxes := 20    
+	   2 Input   21 Bit        Muxes := 20    
+	   2 Input   20 Bit        Muxes := 11    
+	   2 Input   19 Bit        Muxes := 2     
+	   2 Input   18 Bit        Muxes := 3     
+	   2 Input   16 Bit        Muxes := 102   
+	   4 Input   16 Bit        Muxes := 1     
+	   2 Input   13 Bit        Muxes := 40    
+	   3 Input   13 Bit        Muxes := 20    
+	   2 Input   12 Bit        Muxes := 52    
+	   2 Input   10 Bit        Muxes := 39    
+	   2 Input    9 Bit        Muxes := 101   
+	   2 Input    8 Bit        Muxes := 24    
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 79    
+	   6 Input    4 Bit        Muxes := 4     
+	   5 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 39    
+	   2 Input    2 Bit        Muxes := 133   
+	  16 Input    1 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 67    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:01:18 . Memory (MB): peak = 1284.164 ; gain = 210.934
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping	Report (see note below)
++---------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                      | RTL Object                                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|xpm_memory_base:                 | gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg | 512 x 32(READ_FIRST)   | W | R | 512 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|xpm_memory_base__parameterized0: | gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg | 512 x 128(READ_FIRST)  | W | R | 512 x 128(READ_FIRST)  | W | R | Port A and B     | 0      | 4      | 
+|xpm_memory_base__parameterized1: | gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg | 1 K x 64(READ_FIRST)   | W | R | 1 K x 64(READ_FIRST)   | W | R | Port A and B     | 0      | 2      | 
++---------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++------------------------------------------------------------------------------------+-----------------------------------------+-----------+----------------------+--------------+
+|Module Name                                                                         | RTL Object                              | Inference | Size (Depth x Width) | Primitives   | 
++------------------------------------------------------------------------------------+-----------------------------------------+-----------+----------------------+--------------+
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/slv_wr                               | Awfifo/data_ff_reg                      | Implied   | 8 x 72               | RAM32M x 12	 | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/slv_wr                               | Wfifo/data_ff_reg                       | Implied   | 8 x 37               | RAM32M x 7	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/slv_wr                               | Bfifo/data_ff_reg                       | Implied   | 8 x 20               | RAM32M x 4	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/slv_wr                               | ATG_S_W_OOO_F_YES.B_fifo1/data_ff_reg   | Implied   | 8 x 20               | RAM32M x 4	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/slv_wr                               | ATG_S_W_OOO_F_YES.B_fifo2/data_ff_reg   | Implied   | 8 x 20               | RAM32M x 4	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/slv_wr                               | ATG_S_W_OOO_F_YES.B_fifo3/data_ff_reg   | Implied   | 8 x 20               | RAM32M x 4	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/slv_wr                               | B_fifo0/data_ff_reg                     | Implied   | 8 x 20               | RAM32M x 4	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/slv_rd                               | Arfifo/data_ff_reg                      | Implied   | 8 x 72               | RAM32M x 12	 | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/slv_rd                               | Rdataout/data_ff_reg                    | Implied   | 8 x 56               | RAM32M x 10	 | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr                               | AXI4_AW_BASIC2_NO.Maw_fifo/data_ff_reg  | Implied   | 8 x 101              | RAM32M x 17	 | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr                               | Maw_fifow/data_ff_reg                   | Implied   | 8 x 78               | RAM32M x 13	 | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr                               | Mw_fifo/data_ff_reg                     | Implied   | 8 x 43               | RAM32M x 8	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr                               | ATG_M_W_OOO_F_YES.Maw_fifo1/data_ff_reg | Implied   | 8 x 21               | RAM32M x 4	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr                               | ATG_M_W_OOO_F_YES.Maw_fifo2/data_ff_reg | Implied   | 8 x 21               | RAM32M x 4	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr                               | ATG_M_W_OOO_F_YES.Maw_fifo3/data_ff_reg | Implied   | 8 x 21               | RAM32M x 4	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr                               | Maw_fifo0/data_ff_reg                   | Implied   | 8 x 21               | RAM32M x 4	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd /\AXI4_AR_BASIC2_NO.Mar_fifo  | data_ff_reg                             | Implied   | 8 x 101              | RAM32M x 17	 | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd /Mr_fifo                      | data_ff_reg                             | Implied   | 8 x 36               | RAM32M x 6	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd                               | ATG_M_R_OOO_F_YES.Mar_fifo1/data_ff_reg | Implied   | 8 x 89               | RAM32M x 15	 | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd                               | ATG_M_R_OOO_F_YES.Mar_fifo2/data_ff_reg | Implied   | 8 x 89               | RAM32M x 15	 | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd                               | ATG_M_R_OOO_F_YES.Mar_fifo3/data_ff_reg | Implied   | 8 x 89               | RAM32M x 15	 | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd                               | Mar_fifo0/data_ff_reg                   | Implied   | 8 x 89               | RAM32M x 15	 | 
++------------------------------------------------------------------------------------+-----------------------------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:15 ; elapsed = 00:01:26 . Memory (MB): peak = 1284.164 ; gain = 210.934
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:01:32 . Memory (MB): peak = 1287.176 ; gain = 213.945
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++---------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                      | RTL Object                                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|xpm_memory_base:                 | gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg | 512 x 32(READ_FIRST)   | W | R | 512 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|xpm_memory_base__parameterized0: | gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg | 512 x 128(READ_FIRST)  | W | R | 512 x 128(READ_FIRST)  | W | R | Port A and B     | 0      | 4      | 
+|xpm_memory_base__parameterized1: | gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg | 1 K x 64(READ_FIRST)   | W | R | 1 K x 64(READ_FIRST)   | W | R | Port A and B     | 0      | 2      | 
++---------------------------------+--------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping	Report
++------------------------------------------------------------------------------------+-----------------------------------------+-----------+----------------------+--------------+
+|Module Name                                                                         | RTL Object                              | Inference | Size (Depth x Width) | Primitives   | 
++------------------------------------------------------------------------------------+-----------------------------------------+-----------+----------------------+--------------+
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/slv_wr                               | Awfifo/data_ff_reg                      | Implied   | 8 x 72               | RAM32M x 12	 | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/slv_wr                               | Wfifo/data_ff_reg                       | Implied   | 8 x 37               | RAM32M x 7	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/slv_wr                               | Bfifo/data_ff_reg                       | Implied   | 8 x 20               | RAM32M x 4	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/slv_wr                               | ATG_S_W_OOO_F_YES.B_fifo1/data_ff_reg   | Implied   | 8 x 20               | RAM32M x 4	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/slv_wr                               | ATG_S_W_OOO_F_YES.B_fifo2/data_ff_reg   | Implied   | 8 x 20               | RAM32M x 4	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/slv_wr                               | ATG_S_W_OOO_F_YES.B_fifo3/data_ff_reg   | Implied   | 8 x 20               | RAM32M x 4	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/slv_wr                               | B_fifo0/data_ff_reg                     | Implied   | 8 x 20               | RAM32M x 4	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/slv_rd                               | Arfifo/data_ff_reg                      | Implied   | 8 x 72               | RAM32M x 12	 | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/slv_rd                               | Rdataout/data_ff_reg                    | Implied   | 8 x 56               | RAM32M x 10	 | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr                               | AXI4_AW_BASIC2_NO.Maw_fifo/data_ff_reg  | Implied   | 8 x 101              | RAM32M x 17	 | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr                               | Maw_fifow/data_ff_reg                   | Implied   | 8 x 78               | RAM32M x 13	 | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr                               | Mw_fifo/data_ff_reg                     | Implied   | 8 x 43               | RAM32M x 8	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr                               | ATG_M_W_OOO_F_YES.Maw_fifo1/data_ff_reg | Implied   | 8 x 21               | RAM32M x 4	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr                               | ATG_M_W_OOO_F_YES.Maw_fifo2/data_ff_reg | Implied   | 8 x 21               | RAM32M x 4	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr                               | ATG_M_W_OOO_F_YES.Maw_fifo3/data_ff_reg | Implied   | 8 x 21               | RAM32M x 4	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_wr                               | Maw_fifo0/data_ff_reg                   | Implied   | 8 x 21               | RAM32M x 4	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd /\AXI4_AR_BASIC2_NO.Mar_fifo  | data_ff_reg                             | Implied   | 8 x 101              | RAM32M x 17	 | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd /Mr_fifo                      | data_ff_reg                             | Implied   | 8 x 36               | RAM32M x 6	  | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd                               | ATG_M_R_OOO_F_YES.Mar_fifo1/data_ff_reg | Implied   | 8 x 89               | RAM32M x 15	 | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd                               | ATG_M_R_OOO_F_YES.Mar_fifo2/data_ff_reg | Implied   | 8 x 89               | RAM32M x 15	 | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd                               | ATG_M_R_OOO_F_YES.Mar_fifo3/data_ff_reg | Implied   | 8 x 89               | RAM32M x 15	 | 
+|inst/\ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/mst_rd                               | Mar_fifo0/data_ff_reg                   | Implied   | 8 x 89               | RAM32M x 15	 | 
++------------------------------------------------------------------------------------+-----------------------------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/ATG_PARARAM_INST_YES.paramram_blk/PARAMRAM_ON_1.paramram/ram0/MEM_INFER_BLK_MEM.inst/proc_bmg/xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/ATG_PARARAM_INST_YES.paramram_blk/PARAMRAM_ON_1.paramram/ram0/MEM_INFER_BLK_MEM.inst/proc_bmg/xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/cmd_blk/Cmdram/cmd_ram0_3/MEM_INFER_BLK_MEM.inst/proc_bmg/xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/cmd_blk/Cmdram/cmd_ram0_3/MEM_INFER_BLK_MEM.inst/proc_bmg/xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/cmd_blk/Cmdram/cmd_ram0_3/MEM_INFER_BLK_MEM.inst/proc_bmg/xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/cmd_blk/Cmdram/cmd_ram0_3/MEM_INFER_BLK_MEM.inst/proc_bmg/xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/cmd_blk/Cmdram/cmd_ram0_3/MEM_INFER_BLK_MEM.inst/proc_bmg/xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/cmd_blk/Cmdram/cmd_ram0_3/MEM_INFER_BLK_MEM.inst/proc_bmg/xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/cmd_blk/Cmdram/cmd_ram0_3/MEM_INFER_BLK_MEM.inst/proc_bmg/xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/cmd_blk/Cmdram/cmd_ram0_3/MEM_INFER_BLK_MEM.inst/proc_bmg/xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/sharedram_blk/sharedram/ram0/MEM_INFER_BLK_MEM.inst/proc_bmg/xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/sharedram_blk/sharedram/ram0/MEM_INFER_BLK_MEM.inst/proc_bmg/xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/sharedram_blk/sharedram/ram0/MEM_INFER_BLK_MEM.inst/proc_bmg/xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/ATG_MODE_AXI_BASIC_FULL.basic_n_full_top/sharedram_blk/sharedram/ram0/MEM_INFER_BLK_MEM.inst/proc_bmg/xpm_mem.xpm_tdpram_mem.xpm_memory_tdpram_inst/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:25 ; elapsed = 00:01:37 . Memory (MB): peak = 1359.738 ; gain = 286.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:29 ; elapsed = 00:01:40 . Memory (MB): peak = 1365.457 ; gain = 292.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:29 ; elapsed = 00:01:40 . Memory (MB): peak = 1365.457 ; gain = 292.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:30 ; elapsed = 00:01:41 . Memory (MB): peak = 1365.457 ; gain = 292.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:30 ; elapsed = 00:01:42 . Memory (MB): peak = 1365.457 ; gain = 292.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:30 ; elapsed = 00:01:42 . Memory (MB): peak = 1365.512 ; gain = 292.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:30 ; elapsed = 00:01:42 . Memory (MB): peak = 1365.512 ; gain = 292.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   392|
+|2     |LUT1     |   283|
+|3     |LUT2     |  1108|
+|4     |LUT3     |   389|
+|5     |LUT4     |   903|
+|6     |LUT5     |  1355|
+|7     |LUT6     |  1292|
+|8     |RAM32M   |   141|
+|9     |RAMB36E1 |     7|
+|10    |FDPE     |     4|
+|11    |FDR      |     8|
+|12    |FDRE     |  4170|
+|13    |FDSE     |   151|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:30 ; elapsed = 00:01:42 . Memory (MB): peak = 1365.512 ; gain = 292.281
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:08 ; elapsed = 00:01:36 . Memory (MB): peak = 1365.512 ; gain = 221.691
+Synthesis Optimization Complete : Time (s): cpu = 00:01:31 ; elapsed = 00:01:42 . Memory (MB): peak = 1365.512 ; gain = 292.281
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.199 . Memory (MB): peak = 1366.066 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 548 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1377.355 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 149 instances were transformed.
+  FDR => FDRE: 8 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 141 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+164 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:38 ; elapsed = 00:01:53 . Memory (MB): peak = 1377.355 ; gain = 304.125
+INFO: [Common 17-1381] The checkpoint 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/design_electric_hook_axi_traffic_gen_0_0_synth_1/design_electric_hook_axi_traffic_gen_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_electric_hook_axi_traffic_gen_0_0, cache-ID = 35ce4576936db6bc
+INFO: [Coretcl 2-1174] Renamed 81 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/design_electric_hook_axi_traffic_gen_0_0_synth_1/design_electric_hook_axi_traffic_gen_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_electric_hook_axi_traffic_gen_0_0_utilization_synth.rpt -pb design_electric_hook_axi_traffic_gen_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 19 19:27:07 2025...
