@@ -36,9 +36,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_electric
 # IP: bd/design_electric_hook/ip/design_electric_hook_pull_fish_0_0/design_electric_hook_pull_fish_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_electric_hook_pull_fish_0_0 || ORIG_REF_NAME==design_electric_hook_pull_fish_0_0} -quiet] -quiet
 
-# IP: bd/design_electric_hook/ip/design_electric_hook_xlconstant_0_0/design_electric_hook_xlconstant_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_electric_hook_xlconstant_0_0 || ORIG_REF_NAME==design_electric_hook_xlconstant_0_0} -quiet] -quiet
-
 # IP: bd/design_electric_hook/ip/design_electric_hook_ila_0_0/design_electric_hook_ila_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_electric_hook_ila_0_0 || ORIG_REF_NAME==design_electric_hook_ila_0_0} -quiet] -quiet
 

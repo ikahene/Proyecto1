@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Sat Sep 20 00:14:09 2025
+// Date        : Sat Sep 20 10:29:01 2025
 // Host        : BenjaUni running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ip/design_electric_hook_ram_pull_fish_0_0/design_electric_hook_ram_pull_fish_0_0_sim_netlist.v
@@ -57,7 +57,7 @@ module design_electric_hook_ram_pull_fish_0_0
     s00_pull_fish_axi_rvalid,
     s00_pull_fish_axi_rready);
   input [3:0]addr;
-  output [31:0]seq;
+  output [15:0]seq;
   (* x_interface_info = "xilinx.com:signal:clock:1.0 S00_pull_fish_AXI_CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_pull_fish_AXI_CLK, ASSOCIATED_BUSIF S00_pull_fish_AXI, ASSOCIATED_RESET s00_pull_fish_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, INSERT_VIP 0" *) input s00_pull_fish_axi_aclk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 S00_pull_fish_AXI_RST RST" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_pull_fish_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s00_pull_fish_axi_aresetn;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_pull_fish_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_pull_fish_AXI, WIZ_DATA_WIDTH 32, WIZ_MEMORY_SIZE 64, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 6, AWUSER_WIDTH 8, ARUSER_WIDTH 8, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 7, NUM_WRITE_OUTSTANDING 7, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [5:0]s00_pull_fish_axi_awaddr;
@@ -123,7 +123,7 @@ module design_electric_hook_ram_pull_fish_0_0
   wire s00_pull_fish_axi_wready;
   wire [3:0]s00_pull_fish_axi_wstrb;
   wire s00_pull_fish_axi_wvalid;
-  wire [31:0]seq;
+  wire [15:0]seq;
 
   assign s00_pull_fish_axi_bresp[1] = \<const0> ;
   assign s00_pull_fish_axi_bresp[0] = \<const0> ;
@@ -188,7 +188,7 @@ module design_electric_hook_ram_pull_fish_0_0_ram_pull_fish_v1_0
     s00_pull_fish_axi_bready);
   output axi_arready_reg;
   output axi_awready_reg;
-  output [31:0]seq;
+  output [15:0]seq;
   output axi_rvalid_reg;
   output axi_wready_reg;
   output [31:0]s00_pull_fish_axi_rdata;
@@ -236,7 +236,7 @@ module design_electric_hook_ram_pull_fish_0_0_ram_pull_fish_v1_0
   wire s00_pull_fish_axi_wlast;
   wire [3:0]s00_pull_fish_axi_wstrb;
   wire s00_pull_fish_axi_wvalid;
-  wire [31:0]seq;
+  wire [15:0]seq;
 
   design_electric_hook_ram_pull_fish_0_0_ram_pull_fish_v1_0_S00_pull_fish_AXI ram_pull_fish_v1_0_S00_pull_fish_AXI_inst
        (.addr(addr),
@@ -295,7 +295,7 @@ module design_electric_hook_ram_pull_fish_0_0_ram_pull_fish_v1_0_S00_pull_fish_A
     s00_pull_fish_axi_bready);
   output axi_arready_reg_0;
   output axi_awready_reg_0;
-  output [31:0]seq;
+  output [15:0]seq;
   output axi_rvalid_reg_0;
   output axi_wready_reg_0;
   output [31:0]s00_pull_fish_axi_rdata;
@@ -456,14 +456,10 @@ module design_electric_hook_ram_pull_fish_0_0_ram_pull_fish_v1_0_S00_pull_fish_A
   wire s00_pull_fish_axi_wlast;
   wire [3:0]s00_pull_fish_axi_wstrb;
   wire s00_pull_fish_axi_wvalid;
-  wire [31:0]seq;
+  wire [15:0]seq;
   wire [1:0]\NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_0_5_DOD_UNCONNECTED ;
-  wire [1:0]\NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_17_DOD_UNCONNECTED ;
-  wire [1:0]\NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_18_23_DOD_UNCONNECTED ;
-  wire [1:0]\NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_24_29_DOD_UNCONNECTED ;
-  wire [1:0]\NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_DOB_UNCONNECTED ;
-  wire [1:0]\NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_DOC_UNCONNECTED ;
-  wire [1:0]\NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_DOD_UNCONNECTED ;
+  wire [1:0]\NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15_DOC_UNCONNECTED ;
+  wire [1:0]\NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15_DOD_UNCONNECTED ;
   wire [1:0]\NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_6_11_DOD_UNCONNECTED ;
   wire [3:0]NLW_axi_araddr3_carry_O_UNCONNECTED;
   wire [3:0]NLW_axi_awaddr3_carry_O_UNCONNECTED;
@@ -685,7 +681,7 @@ module design_electric_hook_ram_pull_fish_0_0_ram_pull_fish_v1_0_S00_pull_fish_A
         .Q(\BRAM_GEN[0].BYTE_BRAM_GEN[0].mem_data_out_reg[0] [7]),
         .R(1'b0));
   (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "512" *) 
+  (* RTL_RAM_BITS = "256" *) 
   (* RTL_RAM_NAME = "U0/ram_pull_fish_v1_0_S00_pull_fish_AXI_inst/BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in" *) 
   (* RTL_RAM_TYPE = "RAM_SDP" *) 
   (* ram_addr_begin = "0" *) 
@@ -709,111 +705,39 @@ module design_electric_hook_ram_pull_fish_0_0_ram_pull_fish_v1_0_S00_pull_fish_A
         .WCLK(s00_pull_fish_axi_aclk),
         .WE(p_0_in20_out));
   (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "512" *) 
+  (* RTL_RAM_BITS = "256" *) 
   (* RTL_RAM_NAME = "U0/ram_pull_fish_v1_0_S00_pull_fish_AXI_inst/BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in" *) 
   (* RTL_RAM_TYPE = "RAM_SDP" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "12" *) 
-  (* ram_slice_end = "17" *) 
-  RAM32M \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_17 
+  (* ram_slice_end = "15" *) 
+  RAM32M \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15 
        (.ADDRA({1'b0,addr}),
         .ADDRB({1'b0,addr}),
         .ADDRC({1'b0,addr}),
         .ADDRD({1'b0,mem_address}),
         .DIA(s00_pull_fish_axi_wdata[13:12]),
         .DIB(s00_pull_fish_axi_wdata[15:14]),
-        .DIC(s00_pull_fish_axi_wdata[17:16]),
+        .DIC({1'b0,1'b0}),
         .DID({1'b0,1'b0}),
         .DOA(seq[13:12]),
         .DOB(seq[15:14]),
-        .DOC(seq[17:16]),
-        .DOD(\NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_17_DOD_UNCONNECTED [1:0]),
-        .WCLK(s00_pull_fish_axi_aclk),
-        .WE(p_0_in20_out));
-  (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "512" *) 
-  (* RTL_RAM_NAME = "U0/ram_pull_fish_v1_0_S00_pull_fish_AXI_inst/BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in" *) 
-  (* RTL_RAM_TYPE = "RAM_SDP" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "15" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "18" *) 
-  (* ram_slice_end = "23" *) 
-  RAM32M \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_18_23 
-       (.ADDRA({1'b0,addr}),
-        .ADDRB({1'b0,addr}),
-        .ADDRC({1'b0,addr}),
-        .ADDRD({1'b0,mem_address}),
-        .DIA(s00_pull_fish_axi_wdata[19:18]),
-        .DIB(s00_pull_fish_axi_wdata[21:20]),
-        .DIC(s00_pull_fish_axi_wdata[23:22]),
-        .DID({1'b0,1'b0}),
-        .DOA(seq[19:18]),
-        .DOB(seq[21:20]),
-        .DOC(seq[23:22]),
-        .DOD(\NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_18_23_DOD_UNCONNECTED [1:0]),
-        .WCLK(s00_pull_fish_axi_aclk),
-        .WE(p_0_in20_out));
-  (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "512" *) 
-  (* RTL_RAM_NAME = "U0/ram_pull_fish_v1_0_S00_pull_fish_AXI_inst/BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in" *) 
-  (* RTL_RAM_TYPE = "RAM_SDP" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "15" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "24" *) 
-  (* ram_slice_end = "29" *) 
-  RAM32M \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_24_29 
-       (.ADDRA({1'b0,addr}),
-        .ADDRB({1'b0,addr}),
-        .ADDRC({1'b0,addr}),
-        .ADDRD({1'b0,mem_address}),
-        .DIA(s00_pull_fish_axi_wdata[25:24]),
-        .DIB(s00_pull_fish_axi_wdata[27:26]),
-        .DIC(s00_pull_fish_axi_wdata[29:28]),
-        .DID({1'b0,1'b0}),
-        .DOA(seq[25:24]),
-        .DOB(seq[27:26]),
-        .DOC(seq[29:28]),
-        .DOD(\NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_24_29_DOD_UNCONNECTED [1:0]),
-        .WCLK(s00_pull_fish_axi_aclk),
-        .WE(p_0_in20_out));
-  (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "512" *) 
-  (* RTL_RAM_NAME = "U0/ram_pull_fish_v1_0_S00_pull_fish_AXI_inst/BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in" *) 
-  (* RTL_RAM_TYPE = "RAM_SDP" *) 
-  (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "15" *) 
-  (* ram_offset = "0" *) 
-  (* ram_slice_begin = "30" *) 
-  (* ram_slice_end = "31" *) 
-  RAM32M \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31 
-       (.ADDRA({1'b0,addr}),
-        .ADDRB({1'b0,addr}),
-        .ADDRC({1'b0,addr}),
-        .ADDRD({1'b0,mem_address}),
-        .DIA(s00_pull_fish_axi_wdata[31:30]),
-        .DIB({1'b0,1'b0}),
-        .DIC({1'b0,1'b0}),
-        .DID({1'b0,1'b0}),
-        .DOA(seq[31:30]),
-        .DOB(\NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_DOB_UNCONNECTED [1:0]),
-        .DOC(\NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_DOC_UNCONNECTED [1:0]),
-        .DOD(\NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_DOD_UNCONNECTED [1:0]),
+        .DOC(\NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15_DOC_UNCONNECTED [1:0]),
+        .DOD(\NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15_DOD_UNCONNECTED [1:0]),
         .WCLK(s00_pull_fish_axi_aclk),
         .WE(p_0_in20_out));
   LUT3 #(
     .INIT(8'h80)) 
-    \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_i_1 
+    \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15_i_1 
        (.I0(s00_pull_fish_axi_wstrb[0]),
         .I1(axi_wready_reg_0),
         .I2(s00_pull_fish_axi_wvalid),
         .O(p_0_in20_out));
   LUT4 #(
     .INIT(16'hB888)) 
-    \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_i_2 
+    \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15_i_2 
        (.I0(L[5]),
         .I1(axi_arv_arr_flag),
         .I2(axi_awv_awr_flag),
@@ -821,7 +745,7 @@ module design_electric_hook_ram_pull_fish_0_0_ram_pull_fish_v1_0_S00_pull_fish_A
         .O(mem_address[3]));
   LUT4 #(
     .INIT(16'hB888)) 
-    \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_i_3 
+    \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15_i_3 
        (.I0(L[4]),
         .I1(axi_arv_arr_flag),
         .I2(axi_awv_awr_flag),
@@ -829,7 +753,7 @@ module design_electric_hook_ram_pull_fish_0_0_ram_pull_fish_v1_0_S00_pull_fish_A
         .O(mem_address[2]));
   LUT4 #(
     .INIT(16'hB888)) 
-    \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_i_4 
+    \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15_i_4 
        (.I0(L[3]),
         .I1(axi_arv_arr_flag),
         .I2(axi_awv_awr_flag),
@@ -837,14 +761,14 @@ module design_electric_hook_ram_pull_fish_0_0_ram_pull_fish_v1_0_S00_pull_fish_A
         .O(mem_address[1]));
   LUT4 #(
     .INIT(16'hB888)) 
-    \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_i_5 
+    \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15_i_5 
        (.I0(L[2]),
         .I1(axi_arv_arr_flag),
         .I2(axi_awv_awr_flag),
         .I3(\axi_awaddr_reg_n_0_[2] ),
         .O(mem_address[0]));
   (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "512" *) 
+  (* RTL_RAM_BITS = "256" *) 
   (* RTL_RAM_NAME = "U0/ram_pull_fish_v1_0_S00_pull_fish_AXI_inst/BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in" *) 
   (* RTL_RAM_TYPE = "RAM_SDP" *) 
   (* ram_addr_begin = "0" *) 

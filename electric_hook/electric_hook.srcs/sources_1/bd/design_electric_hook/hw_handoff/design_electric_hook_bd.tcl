@@ -197,15 +197,22 @@ proc create_root_design { parentCell } {
 
   # Create instance: clk_wiz, and set properties
   set clk_wiz [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz ]
+  set_property -dict [ list \
+   CONFIG.CLKOUT1_JITTER {124.615} \
+   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {100.000} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {10.000} \
+   CONFIG.USE_RESET {true} \
+ ] $clk_wiz
 
   # Create instance: ila_0, and set properties
   set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
   set_property -dict [ list \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {2} \
+   CONFIG.C_NUM_OF_PROBES {3} \
    CONFIG.C_PROBE0_WIDTH {4} \
-   CONFIG.C_PROBE1_WIDTH {32} \
+   CONFIG.C_PROBE1_WIDTH {16} \
+   CONFIG.C_PROBE2_WIDTH {4} \
  ] $ila_0
 
   # Create instance: main_0, and set properties
@@ -225,14 +232,9 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.C_EN_PROBE_IN_ACTIVITY {0} \
    CONFIG.C_NUM_PROBE_IN {0} \
-   CONFIG.C_PROBE_OUT0_WIDTH {16} \
+   CONFIG.C_NUM_PROBE_OUT {2} \
+   CONFIG.C_PROBE_OUT0_WIDTH {4} \
  ] $vio_0
-
-  # Create instance: xlconstant_0, and set properties
-  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
-  set_property -dict [ list \
-   CONFIG.CONST_VAL {0} \
- ] $xlconstant_0
 
   # Create interface connections
   connect_bd_intf_net -intf_net axi_smc_1_M00_AXI [get_bd_intf_pins axi_smc_1/M00_AXI] [get_bd_intf_pins ram_pull_fish_0/S00_pull_fish_AXI]
@@ -256,13 +258,13 @@ proc create_root_design { parentCell } {
   connect_bd_net -net pull_fish_0_led [get_bd_pins main_0/led_pull_fish] [get_bd_pins pull_fish_0/led]
   connect_bd_net -net pull_fish_0_lost [get_bd_pins main_0/game_lost_pull_fish] [get_bd_pins pull_fish_0/lost]
   connect_bd_net -net pull_fish_0_rgb_color [get_bd_pins main_0/rgb_pull_fish] [get_bd_pins pull_fish_0/rgb_color]
-  connect_bd_net -net pull_fish_0_seq_addr [get_bd_pins ila_0/probe0] [get_bd_pins pull_fish_0/seq_addr] [get_bd_pins ram_pull_fish_0/addr]
+  connect_bd_net -net pull_fish_0_seq_addr [get_bd_pins ila_0/probe0] [get_bd_pins pull_fish_0/seq_addr]
   connect_bd_net -net pull_fish_0_won [get_bd_pins main_0/game_won_pull_fish] [get_bd_pins pull_fish_0/won]
-  connect_bd_net -net ram_pull_fish_0_seq [get_bd_pins ila_0/probe1] [get_bd_pins ram_pull_fish_0/seq]
+  connect_bd_net -net ram_pull_fish_0_seq [get_bd_pins ila_0/probe1] [get_bd_pins pull_fish_0/seq] [get_bd_pins ram_pull_fish_0/seq]
   connect_bd_net -net rst_clk_wiz_100M_peripheral_aresetn [get_bd_pins axi_smc/aresetn] [get_bd_pins axi_smc_1/aresetn] [get_bd_pins axi_traffic_gen_0/s_axi_aresetn] [get_bd_pins axi_traffic_gen_1/s_axi_aresetn] [get_bd_pins ram_pull_fish_0/s00_pull_fish_axi_aresetn] [get_bd_pins rst_clk_wiz_100M/peripheral_aresetn]
   connect_bd_net -net sw_0_1 [get_bd_ports sw] [get_bd_pins catch_fish_0/sw] [get_bd_pins main_0/sw]
-  connect_bd_net -net vio_0_probe_out0 [get_bd_pins pull_fish_0/seq] [get_bd_pins vio_0/probe_out0]
-  connect_bd_net -net xlconstant_0_dout [get_bd_pins clk_wiz/reset] [get_bd_pins rst_clk_wiz_100M/ext_reset_in] [get_bd_pins xlconstant_0/dout]
+  connect_bd_net -net vio_0_probe_out0 [get_bd_pins ila_0/probe2] [get_bd_pins ram_pull_fish_0/addr] [get_bd_pins vio_0/probe_out0]
+  connect_bd_net -net vio_0_probe_out1 [get_bd_pins clk_wiz/reset] [get_bd_pins rst_clk_wiz_100M/ext_reset_in] [get_bd_pins vio_0/probe_out1]
 
   # Create address segments
   assign_bd_address -offset 0x76000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces axi_traffic_gen_0/Data] [get_bd_addr_segs ram_pull_fish_0/S00_pull_fish_AXI/S00_pull_fish_AXI_mem] -force

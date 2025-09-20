@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Fri Sep 19 19:26:46 2025
+-- Date        : Fri Sep 19 19:26:45 2025
 -- Host        : BenjaUni running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ip/design_electric_hook_clk_wiz_0/design_electric_hook_clk_wiz_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_electric_hook_clk_wiz_0 -prefix
+--               design_electric_hook_clk_wiz_0_ design_electric_hook_clk_wiz_0_sim_netlist.vhdl
 -- Design      : design_electric_hook_clk_wiz_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -21,8 +21,6 @@ entity design_electric_hook_clk_wiz_0_design_electric_hook_clk_wiz_0_clk_wiz is
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_clk_wiz_0_design_electric_hook_clk_wiz_0_clk_wiz : entity is "design_electric_hook_clk_wiz_0_clk_wiz";
 end design_electric_hook_clk_wiz_0_design_electric_hook_clk_wiz_0_clk_wiz;
 
 architecture STRUCTURE of design_electric_hook_clk_wiz_0_design_electric_hook_clk_wiz_0_clk_wiz is

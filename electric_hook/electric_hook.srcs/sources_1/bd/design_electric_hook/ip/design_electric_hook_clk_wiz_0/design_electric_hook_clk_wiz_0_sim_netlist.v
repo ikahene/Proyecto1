@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Fri Sep 19 19:26:46 2025
+// Date        : Fri Sep 19 19:26:45 2025
 // Host        : BenjaUni running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ip/design_electric_hook_clk_wiz_0/design_electric_hook_clk_wiz_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_electric_hook_clk_wiz_0 -prefix
+//               design_electric_hook_clk_wiz_0_ design_electric_hook_clk_wiz_0_sim_netlist.v
 // Design      : design_electric_hook_clk_wiz_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -35,7 +35,6 @@ module design_electric_hook_clk_wiz_0
         .reset(reset));
 endmodule
 
-(* ORIG_REF_NAME = "design_electric_hook_clk_wiz_0_clk_wiz" *) 
 module design_electric_hook_clk_wiz_0_design_electric_hook_clk_wiz_0_clk_wiz
    (clk_out1,
     reset,

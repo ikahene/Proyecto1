@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1758338011">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1758378296">
   <File Type="BITSTR-BMM" Name="design_electric_hook_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="design_electric_hook_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="design_electric_hook_wrapper_timing_summary_init.rpt"/>
@@ -152,14 +152,10 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_catch_fish_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_pull_fish_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_clk_wiz_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_axi_traffic_gen_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_ram_pull_fish_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_rst_clk_wiz_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_axi_traffic_gen_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_ila_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_catch_fish_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_main_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_ram_pull_fish_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_vio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_ila_0_0"/>
 </GenRun>

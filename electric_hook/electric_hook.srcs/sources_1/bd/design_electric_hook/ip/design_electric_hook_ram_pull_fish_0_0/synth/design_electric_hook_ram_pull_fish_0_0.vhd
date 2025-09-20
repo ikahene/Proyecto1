@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:user:ram_pull_fish:1.0
--- IP Revision: 5
+-- IP Revision: 6
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -56,7 +56,7 @@ USE ieee.numeric_std.ALL;
 ENTITY design_electric_hook_ram_pull_fish_0_0 IS
   PORT (
     addr : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    seq : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    seq : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
     s00_pull_fish_axi_aclk : IN STD_LOGIC;
     s00_pull_fish_axi_aresetn : IN STD_LOGIC;
     s00_pull_fish_axi_awaddr : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
@@ -115,7 +115,7 @@ ARCHITECTURE design_electric_hook_ram_pull_fish_0_0_arch OF design_electric_hook
     );
     PORT (
       addr : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-      seq : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      seq : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
       s00_pull_fish_axi_aclk : IN STD_LOGIC;
       s00_pull_fish_axi_aresetn : IN STD_LOGIC;
       s00_pull_fish_axi_awid : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
@@ -169,7 +169,7 @@ ARCHITECTURE design_electric_hook_ram_pull_fish_0_0_arch OF design_electric_hook
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_electric_hook_ram_pull_fish_0_0_arch : ARCHITECTURE IS "design_electric_hook_ram_pull_fish_0_0,ram_pull_fish_v1_0,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_electric_hook_ram_pull_fish_0_0_arch: ARCHITECTURE IS "design_electric_hook_ram_pull_fish_0_0,ram_pull_fish_v1_0,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=ram_pull_fish,x_ipVersion=1.0,x_ipCoreRevision=5,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_S00_pull_fish_AXI_ID_WIDTH=0,C_S00_pull_fish_AXI_DATA_WIDTH=32,C_S00_pull_fish_AXI_ADDR_WIDTH=6,C_S00_pull_fish_AXI_AWUSER_WIDTH=8,C_S00_pull_fish_AXI_ARUSER_WIDTH=8,C_S00_pull_fish_AXI_WUSER_WIDTH=0,C_S00_pull_fish_AXI_RUSER_WIDTH=0,C_S00_pull_fish_AXI_BUSER_WIDTH=0}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_electric_hook_ram_pull_fish_0_0_arch: ARCHITECTURE IS "design_electric_hook_ram_pull_fish_0_0,ram_pull_fish_v1_0,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=ram_pull_fish,x_ipVersion=1.0,x_ipCoreRevision=6,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_S00_pull_fish_AXI_ID_WIDTH=0,C_S00_pull_fish_AXI_DATA_WIDTH=32,C_S00_pull_fish_AXI_ADDR_WIDTH=6,C_S00_pull_fish_AXI_AWUSER_WIDTH=8,C_S00_pull_fish_AXI_ARUSER_WIDTH=8,C_S00_pull_fish_AXI_WUSER_WIDTH=0,C_S00_pull_fish_AXI_RUSER_WIDTH=0,C_S00_pull_fish_AXI_BUSER_WIDTH=0}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF s00_pull_fish_axi_rready: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_pull_fish_AXI RREADY";

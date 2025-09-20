@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Fri Sep 19 19:26:06 2025
+-- Date        : Sat Sep 20 10:29:08 2025
 -- Host        : BenjaUni running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ip/design_electric_hook_axi_traffic_gen_1_0/design_electric_hook_axi_traffic_gen_1_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_electric_hook_axi_traffic_gen_1_0 -prefix
+--               design_electric_hook_axi_traffic_gen_1_0_ design_electric_hook_axi_traffic_gen_1_0_sim_netlist.vhdl
 -- Design      : design_electric_hook_axi_traffic_gen_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -21,8 +21,6 @@ entity design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_asynch_rs
     reset : in STD_LOGIC;
     q : out STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_asynch_rst_ff : entity is "axi_traffic_gen_v3_0_7_asynch_rst_ff";
   attribute dont_touch : string;
   attribute dont_touch of design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_asynch_rst_ff : entity is "true";
 end design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_asynch_rst_ff;
@@ -227,8 +225,6 @@ entity design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_systemini
     \wdata_m_reg[31]_0\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
     \ATG_SYSTEST_NXT_PTR.nxt_rom_ptr_reg[7]_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_systeminit_mrdwr : entity is "axi_traffic_gen_v3_0_7_systeminit_mrdwr";
 end design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_systeminit_mrdwr;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_systeminit_mrdwr is
@@ -5293,8 +5289,6 @@ entity design_electric_hook_axi_traffic_gen_1_0_xpm_memory_base is
   attribute MESSAGE_CONTROL of design_electric_hook_axi_traffic_gen_1_0_xpm_memory_base : entity is 0;
   attribute NUM_CHAR_LOC : integer;
   attribute NUM_CHAR_LOC of design_electric_hook_axi_traffic_gen_1_0_xpm_memory_base : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_1_0_xpm_memory_base : entity is "xpm_memory_base";
   attribute P_ECC_MODE : string;
   attribute P_ECC_MODE of design_electric_hook_axi_traffic_gen_1_0_xpm_memory_base : entity is "no_ecc";
   attribute P_ENABLE_BYTE_WRITE_A : integer;
@@ -9945,7 +9939,7 @@ GND: unisim.vcomponents.GND
     );
 \gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_0_31_2_2\: unisim.vcomponents.RAM32X1S
     generic map(
-      INIT => X"00282300"
+      INIT => X"00282302"
     )
         port map (
       A0 => addra(0),
@@ -9990,7 +9984,7 @@ GND: unisim.vcomponents.GND
     );
 \gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_0_31_3_3\: unisim.vcomponents.RAM32X1S
     generic map(
-      INIT => X"00208000"
+      INIT => X"00208002"
     )
         port map (
       A0 => addra(0),
@@ -10132,8 +10126,6 @@ entity design_electric_hook_axi_traffic_gen_1_0_xpm_memory_spram is
     cur_trn_status_reg_1 : in STD_LOGIC_VECTOR ( 0 to 0 );
     cur_trn_status_reg_2 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_1_0_xpm_memory_spram : entity is "xpm_memory_spram";
 end design_electric_hook_axi_traffic_gen_1_0_xpm_memory_spram;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_1_0_xpm_memory_spram is
@@ -12279,8 +12271,6 @@ entity design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_systemini
     cur_trn_status_reg_1 : in STD_LOGIC_VECTOR ( 0 to 0 );
     cur_trn_status_reg_2 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_systeminit_dmg : entity is "axi_traffic_gen_v3_0_7_systeminit_dmg";
 end design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_systeminit_dmg;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_systeminit_dmg is
@@ -12456,8 +12446,6 @@ entity design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_systemini
     m_axi_lite_ch1_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     m_axi_lite_ch1_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_systeminit_top : entity is "axi_traffic_gen_v3_0_7_systeminit_top";
 end design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_systeminit_top;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_systeminit_top is
@@ -13204,8 +13192,6 @@ entity design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_top is
   attribute C_ZERO_INVALID of design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_top : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_top : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_top : entity is "axi_traffic_gen_v3_0_7_top";
 end design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_top;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_1_0_axi_traffic_gen_v3_0_7_top is

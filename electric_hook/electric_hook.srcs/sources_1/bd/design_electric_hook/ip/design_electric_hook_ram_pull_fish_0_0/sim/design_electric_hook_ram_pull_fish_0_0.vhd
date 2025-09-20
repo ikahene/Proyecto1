@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:user:ram_pull_fish:1.0
--- IP Revision: 5
+-- IP Revision: 6
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -56,7 +56,7 @@ USE ieee.numeric_std.ALL;
 ENTITY design_electric_hook_ram_pull_fish_0_0 IS
   PORT (
     addr : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    seq : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    seq : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
     s00_pull_fish_axi_aclk : IN STD_LOGIC;
     s00_pull_fish_axi_aresetn : IN STD_LOGIC;
     s00_pull_fish_axi_awaddr : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
@@ -115,7 +115,7 @@ ARCHITECTURE design_electric_hook_ram_pull_fish_0_0_arch OF design_electric_hook
     );
     PORT (
       addr : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-      seq : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      seq : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
       s00_pull_fish_axi_aclk : IN STD_LOGIC;
       s00_pull_fish_axi_aresetn : IN STD_LOGIC;
       s00_pull_fish_axi_awid : IN STD_LOGIC_VECTOR(0 DOWNTO 0);

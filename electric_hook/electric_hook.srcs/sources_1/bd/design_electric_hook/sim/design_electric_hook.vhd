@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Sat Sep 20 00:13:22 2025
+--Date        : Sat Sep 20 11:24:44 2025
 --Host        : BenjaUni running 64-bit major release  (build 9200)
 --Command     : generate_target design_electric_hook.bd
 --Design      : design_electric_hook
@@ -20,7 +20,7 @@ entity design_electric_hook is
     sw : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_electric_hook : entity is "design_electric_hook,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_electric_hook,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=13,numReposBlks=13,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_electric_hook : entity is "design_electric_hook,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_electric_hook,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=12,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_electric_hook : entity is "design_electric_hook.hwdef";
 end design_electric_hook;
@@ -304,16 +304,12 @@ architecture STRUCTURE of design_electric_hook is
     enable : in STD_LOGIC
   );
   end component design_electric_hook_catch_fish_0_0;
-  component design_electric_hook_xlconstant_0_0 is
-  port (
-    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component design_electric_hook_xlconstant_0_0;
   component design_electric_hook_ila_0_0 is
   port (
     clk : in STD_LOGIC;
     probe0 : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 31 downto 0 )
+    probe1 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component design_electric_hook_ila_0_0;
   component design_electric_hook_main_0_0 is
@@ -351,7 +347,7 @@ architecture STRUCTURE of design_electric_hook is
   component design_electric_hook_ram_pull_fish_0_0 is
   port (
     addr : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    seq : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    seq : out STD_LOGIC_VECTOR ( 15 downto 0 );
     s00_pull_fish_axi_aclk : in STD_LOGIC;
     s00_pull_fish_axi_aresetn : in STD_LOGIC;
     s00_pull_fish_axi_awaddr : in STD_LOGIC_VECTOR ( 5 downto 0 );
@@ -396,7 +392,8 @@ architecture STRUCTURE of design_electric_hook is
   component design_electric_hook_vio_0_0 is
   port (
     clk : in STD_LOGIC;
-    probe_out0 : out STD_LOGIC_VECTOR ( 15 downto 0 )
+    probe_out0 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe_out1 : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_electric_hook_vio_0_0;
   signal axi_smc_1_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 5 downto 0 );
@@ -541,11 +538,11 @@ architecture STRUCTURE of design_electric_hook is
   signal pull_fish_0_rgb_color : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal pull_fish_0_seq_addr : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal pull_fish_0_won : STD_LOGIC;
-  signal ram_pull_fish_0_seq : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal ram_pull_fish_0_seq : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal rst_clk_wiz_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal sw_0_1 : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal vio_0_probe_out0 : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal vio_0_probe_out0 : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal vio_0_probe_out1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_traffic_gen_0_err_out_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_traffic_gen_0_irq_out_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_traffic_gen_1_done_UNCONNECTED : STD_LOGIC;
@@ -820,13 +817,14 @@ clk_wiz: component design_electric_hook_clk_wiz_0
       clk_in1 => clk_0_1,
       clk_out1 => clk_wiz_clk_out1,
       locked => clk_wiz_locked,
-      reset => xlconstant_0_dout(0)
+      reset => vio_0_probe_out1(0)
     );
 ila_0: component design_electric_hook_ila_0_0
      port map (
       clk => clk_0_1,
       probe0(3 downto 0) => pull_fish_0_seq_addr(3 downto 0),
-      probe1(31 downto 0) => ram_pull_fish_0_seq(31 downto 0)
+      probe1(15 downto 0) => ram_pull_fish_0_seq(15 downto 0),
+      probe2(3 downto 0) => vio_0_probe_out0(3 downto 0)
     );
 main_0: component design_electric_hook_main_0_0
      port map (
@@ -854,13 +852,13 @@ pull_fish_0: component design_electric_hook_pull_fish_0_0
       led(3 downto 0) => pull_fish_0_led(3 downto 0),
       lost => pull_fish_0_lost,
       rgb_color(1 downto 0) => pull_fish_0_rgb_color(1 downto 0),
-      seq(15 downto 0) => vio_0_probe_out0(15 downto 0),
+      seq(15 downto 0) => ram_pull_fish_0_seq(15 downto 0),
       seq_addr(3 downto 0) => pull_fish_0_seq_addr(3 downto 0),
       won => pull_fish_0_won
     );
 ram_pull_fish_0: component design_electric_hook_ram_pull_fish_0_0
      port map (
-      addr(3 downto 0) => pull_fish_0_seq_addr(3 downto 0),
+      addr(3 downto 0) => vio_0_probe_out0(3 downto 0),
       s00_pull_fish_axi_aclk => clk_wiz_clk_out1,
       s00_pull_fish_axi_araddr(5 downto 0) => axi_smc_1_M00_AXI_ARADDR(5 downto 0),
       s00_pull_fish_axi_arburst(1 downto 0) => axi_smc_1_M00_AXI_ARBURST(1 downto 0),
@@ -900,14 +898,14 @@ ram_pull_fish_0: component design_electric_hook_ram_pull_fish_0_0
       s00_pull_fish_axi_wready => axi_smc_1_M00_AXI_WREADY,
       s00_pull_fish_axi_wstrb(3 downto 0) => axi_smc_1_M00_AXI_WSTRB(3 downto 0),
       s00_pull_fish_axi_wvalid => axi_smc_1_M00_AXI_WVALID,
-      seq(31 downto 0) => ram_pull_fish_0_seq(31 downto 0)
+      seq(15 downto 0) => ram_pull_fish_0_seq(15 downto 0)
     );
 rst_clk_wiz_100M: component design_electric_hook_rst_clk_wiz_100M_0
      port map (
       aux_reset_in => '1',
       bus_struct_reset(0) => NLW_rst_clk_wiz_100M_bus_struct_reset_UNCONNECTED(0),
       dcm_locked => clk_wiz_locked,
-      ext_reset_in => xlconstant_0_dout(0),
+      ext_reset_in => vio_0_probe_out1(0),
       interconnect_aresetn(0) => NLW_rst_clk_wiz_100M_interconnect_aresetn_UNCONNECTED(0),
       mb_debug_sys_rst => '0',
       mb_reset => NLW_rst_clk_wiz_100M_mb_reset_UNCONNECTED,
@@ -918,10 +916,7 @@ rst_clk_wiz_100M: component design_electric_hook_rst_clk_wiz_100M_0
 vio_0: component design_electric_hook_vio_0_0
      port map (
       clk => clk_0_1,
-      probe_out0(15 downto 0) => vio_0_probe_out0(15 downto 0)
-    );
-xlconstant_0: component design_electric_hook_xlconstant_0_0
-     port map (
-      dout(0) => xlconstant_0_dout(0)
+      probe_out0(3 downto 0) => vio_0_probe_out0(3 downto 0),
+      probe_out1(0) => vio_0_probe_out1(0)
     );
 end STRUCTURE;

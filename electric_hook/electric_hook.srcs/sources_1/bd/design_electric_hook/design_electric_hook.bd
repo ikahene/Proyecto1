@@ -17,7 +17,6 @@
       "rst_clk_wiz_100M": "",
       "axi_smc_1": "",
       "catch_fish_0": "",
-      "xlconstant_0": "",
       "ila_0": "",
       "main_0": "",
       "pull_fish_0": "",
@@ -220,7 +219,21 @@
       },
       "clk_wiz": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "xci_name": "design_electric_hook_clk_wiz_0"
+        "xci_name": "design_electric_hook_clk_wiz_0",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "124.615"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "100.000"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "10.000"
+          },
+          "USE_RESET": {
+            "value": "true"
+          }
+        }
       },
       "rst_clk_wiz_100M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
@@ -290,15 +303,6 @@
         "vlnv": "xilinx.com:user:catch_fish:1.0",
         "xci_name": "design_electric_hook_catch_fish_0_0"
       },
-      "xlconstant_0": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "design_electric_hook_xlconstant_0_0",
-        "parameters": {
-          "CONST_VAL": {
-            "value": "0"
-          }
-        }
-      },
       "ila_0": {
         "vlnv": "xilinx.com:ip:ila:6.2",
         "xci_name": "design_electric_hook_ila_0_0",
@@ -310,13 +314,16 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "2"
+            "value": "3"
           },
           "C_PROBE0_WIDTH": {
             "value": "4"
           },
           "C_PROBE1_WIDTH": {
-            "value": "32"
+            "value": "16"
+          },
+          "C_PROBE2_WIDTH": {
+            "value": "4"
           }
         }
       },
@@ -339,8 +346,11 @@
           "C_NUM_PROBE_IN": {
             "value": "0"
           },
+          "C_NUM_PROBE_OUT": {
+            "value": "2"
+          },
           "C_PROBE_OUT0_WIDTH": {
-            "value": "16"
+            "value": "4"
           }
         }
       }
@@ -350,12 +360,6 @@
         "interface_ports": [
           "axi_traffic_gen_0/M_AXI",
           "axi_smc_1/S00_AXI"
-        ]
-      },
-      "axi_traffic_gen_1_M_AXI_LITE_CH1": {
-        "interface_ports": [
-          "axi_traffic_gen_1/M_AXI_LITE_CH1",
-          "axi_smc/S00_AXI"
         ]
       },
       "axi_smc_M00_AXI": {
@@ -368,6 +372,12 @@
         "interface_ports": [
           "axi_smc_1/M00_AXI",
           "ram_pull_fish_0/S00_pull_fish_AXI"
+        ]
+      },
+      "axi_traffic_gen_1_M_AXI_LITE_CH1": {
+        "interface_ports": [
+          "axi_traffic_gen_1/M_AXI_LITE_CH1",
+          "axi_smc/S00_AXI"
         ]
       }
     },
@@ -478,13 +488,6 @@
           "main_0/game_lost_pull_fish"
         ]
       },
-      "pull_fish_0_seq_addr": {
-        "ports": [
-          "pull_fish_0/seq_addr",
-          "ila_0/probe0",
-          "ram_pull_fish_0/addr"
-        ]
-      },
       "main_0_enable_pull_fish": {
         "ports": [
           "main_0/enable_pull_fish",
@@ -503,9 +506,22 @@
           "main_0/rgb_pull_fish"
         ]
       },
-      "xlconstant_0_dout": {
+      "vio_0_probe_out0": {
         "ports": [
-          "xlconstant_0/dout",
+          "vio_0/probe_out0",
+          "ram_pull_fish_0/addr",
+          "ila_0/probe2"
+        ]
+      },
+      "pull_fish_0_seq_addr": {
+        "ports": [
+          "pull_fish_0/seq_addr",
+          "ila_0/probe0"
+        ]
+      },
+      "vio_0_probe_out1": {
+        "ports": [
+          "vio_0/probe_out1",
           "clk_wiz/reset",
           "rst_clk_wiz_100M/ext_reset_in"
         ]
@@ -513,12 +529,7 @@
       "ram_pull_fish_0_seq": {
         "ports": [
           "ram_pull_fish_0/seq",
-          "ila_0/probe1"
-        ]
-      },
-      "vio_0_probe_out0": {
-        "ports": [
-          "vio_0/probe_out0",
+          "ila_0/probe1",
           "pull_fish_0/seq"
         ]
       }

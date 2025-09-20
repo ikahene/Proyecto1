@@ -1,0 +1,58 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.448258",
+   "Default View_TopLeft":"468,-375",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port clk -pg 1 -lvl 0 -x -210 -y 160 -defaultsOSRD
+preplace portBus btn -pg 1 -lvl 0 -x -210 -y 260 -defaultsOSRD
+preplace portBus rgb -pg 1 -lvl 10 -x 2940 -y 310 -defaultsOSRD
+preplace portBus led -pg 1 -lvl 10 -x 2940 -y 280 -defaultsOSRD
+preplace portBus sw -pg 1 -lvl 0 -x -210 -y 290 -defaultsOSRD
+preplace inst axi_traffic_gen_0 -pg 1 -lvl 6 -x 1550 -y 120 -defaultsOSRD
+preplace inst axi_traffic_gen_1 -pg 1 -lvl 4 -x 980 -y 150 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 5 -x 1300 -y 90 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 2 -x 350 -y 140 -defaultsOSRD
+preplace inst rst_clk_wiz_100M -pg 1 -lvl 3 -x 630 -y 110 -defaultsOSRD
+preplace inst axi_smc_1 -pg 1 -lvl 7 -x 1810 -y 120 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 8 -x 2110 -y -90 -defaultsOSRD
+preplace inst ila_1 -pg 1 -lvl 7 -x 1810 -y 360 -defaultsOSRD
+preplace inst vio_0 -pg 1 -lvl 7 -x 1810 -y 520 -defaultsOSRD
+preplace inst ram_pull_fish_0 -pg 1 -lvl 8 -x 2110 -y 150 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x -30 -y 30 -defaultsOSRD
+preplace inst main_0 -pg 1 -lvl 9 -x 2700 -y 330 -defaultsOSRD
+preplace inst pull_fish_0 -pg 1 -lvl 9 -x 2700 -y 20 -defaultsOSRD
+preplace inst catch_fish_0 -pg 1 -lvl 9 -x 2700 -y 590 -defaultsOSRD
+preplace netloc clk_wiz_clk_out1 1 2 6 450 210 810 240 1130 170 1430 210 1660 210 1950J
+preplace netloc clk_wiz_locked 1 2 1 N 150
+preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 3 5 800 230 1140 180 1440 220 1670 200 1960J
+preplace netloc reset_0_1 1 1 2 50 70 440
+preplace netloc ram_pull_fish_0_seq 1 6 3 1670 270 NJ 270 2250
+preplace netloc clk_1 1 0 9 N 160 50 250 N 250 800 270 N 270 N 270 1660 280 N 280 2270
+preplace netloc catch_fish_0_game_end 1 8 2 2350 470 2860
+preplace netloc pull_fish_0_won 1 8 2 2340 -80 2860
+preplace netloc pull_fish_0_lost 1 8 2 2280 -100 2890
+preplace netloc pull_fish_0_led 1 8 2 2300 -110 2880
+preplace netloc catch_fish_0_led_out 1 8 2 2350 170 2890
+preplace netloc pull_fish_0_rgb_color 1 8 2 2330 -90 2870
+preplace netloc pull_fish_0_seq_addr 1 7 3 1970 240 2260J 150 2870
+preplace netloc main_0_btn_debounced 1 8 2 2290 160 2870
+preplace netloc main_0_enable_pull_fish 1 8 2 2320 -120 2900
+preplace netloc main_0_clk_div_catch_fish 1 8 2 2310 180 2880
+preplace netloc main_0_enable_catch_fish 1 8 2 2320 190 2860
+preplace netloc btn_0_1 1 0 9 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 2260J
+preplace netloc main_0_rgb 1 9 1 2910 300n
+preplace netloc main_0_led 1 9 1 N 280
+preplace netloc sw_0_1 1 0 9 NJ 290 NJ 290 NJ 290 NJ 290 NJ 290 NJ 290 NJ 290 NJ 290 2260J
+preplace netloc axi_smc_M00_AXI 1 5 1 N 90
+preplace netloc axi_traffic_gen_1_M_AXI_LITE_CH1 1 4 1 1120 70n
+preplace netloc axi_smc_1_M00_AXI 1 7 1 1940 -100n
+preplace netloc axi_traffic_gen_0_M_AXI 1 6 1 N 100
+levelinfo -pg 1 -210 -30 350 630 980 1300 1550 1810 2110 2700 2940
+pagesize -pg 1 -db -bbox -sgen -310 -490 3040 690
+"
+}
+{
+   "da_axi4_cnt":"2"
+}

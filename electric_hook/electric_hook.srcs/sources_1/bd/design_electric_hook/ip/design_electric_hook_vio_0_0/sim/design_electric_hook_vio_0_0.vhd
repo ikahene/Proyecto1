@@ -54,7 +54,8 @@ ENTITY design_electric_hook_vio_0_0 IS
 PORT (
 CLK : IN STD_LOGIC;
 
-probe_out0 : OUT STD_LOGIC_VECTOR(15 DOWNTO 0) := "0000000000000000"
+probe_out0 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0) := "0000";
+probe_out1 : OUT STD_LOGIC_VECTOR(0 DOWNTO 0) := "0" 
 );
 END design_electric_hook_vio_0_0;
 ARCHITECTURE design_electric_hook_vio_0_0_arch OF design_electric_hook_vio_0_0 IS

@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Sat Sep 20 00:14:45 2025
+-- Date        : Sat Sep 20 11:26:05 2025
 -- Host        : BenjaUni running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ip/design_electric_hook_ila_0_0/design_electric_hook_ila_0_0_stub.vhdl
@@ -16,7 +16,8 @@ entity design_electric_hook_ila_0_0 is
   Port ( 
     clk : in STD_LOGIC;
     probe0 : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 31 downto 0 )
+    probe1 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
 
 end design_electric_hook_ila_0_0;
@@ -25,7 +26,7 @@ architecture stub of design_electric_hook_ila_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clk,probe0[3:0],probe1[31:0]";
+attribute black_box_pad_pin of stub : architecture is "clk,probe0[3:0],probe1[15:0],probe2[3:0]";
 attribute x_core_info : string;
 attribute x_core_info of stub : architecture is "ila,Vivado 2020.1";
 begin

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1758338010">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1758378296">
   <File Type="PA-TCL" Name="design_electric_hook_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="design_electric_hook_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_electric_hook_wrapper_reports.tcl"/>
@@ -78,14 +78,10 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_catch_fish_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_pull_fish_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_clk_wiz_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_axi_traffic_gen_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_ram_pull_fish_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_rst_clk_wiz_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_axi_traffic_gen_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_ila_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_catch_fish_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_main_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_ram_pull_fish_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_vio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_electric_hook_ila_0_0"/>
 </GenRun>

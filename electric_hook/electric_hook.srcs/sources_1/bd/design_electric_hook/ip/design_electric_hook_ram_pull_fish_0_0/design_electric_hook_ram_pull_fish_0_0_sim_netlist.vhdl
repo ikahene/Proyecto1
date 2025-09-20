@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Sat Sep 20 00:14:09 2025
+-- Date        : Sat Sep 20 10:29:01 2025
 -- Host        : BenjaUni running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ip/design_electric_hook_ram_pull_fish_0_0/design_electric_hook_ram_pull_fish_0_0_sim_netlist.vhdl
@@ -18,7 +18,7 @@ entity design_electric_hook_ram_pull_fish_0_0_ram_pull_fish_v1_0_S00_pull_fish_A
   port (
     axi_arready_reg_0 : out STD_LOGIC;
     axi_awready_reg_0 : out STD_LOGIC;
-    seq : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    seq : out STD_LOGIC_VECTOR ( 15 downto 0 );
     axi_rvalid_reg_0 : out STD_LOGIC;
     axi_wready_reg_0 : out STD_LOGIC;
     s00_pull_fish_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -167,12 +167,8 @@ architecture STRUCTURE of design_electric_hook_ram_pull_fish_0_0_ram_pull_fish_v
   signal \^s00_pull_fish_axi_bvalid\ : STD_LOGIC;
   signal \^s00_pull_fish_axi_rlast\ : STD_LOGIC;
   signal \NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_0_5_DOD_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal \NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_17_DOD_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal \NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_18_23_DOD_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal \NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_24_29_DOD_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal \NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_DOB_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal \NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_DOC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal \NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_DOD_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15_DOC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15_DOD_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_6_11_DOD_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_axi_araddr3_carry_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_axi_awaddr3_carry_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -259,7 +255,7 @@ architecture STRUCTURE of design_electric_hook_ram_pull_fish_0_0_ram_pull_fish_v
   attribute ram_slice_end of \BRAM_GEN[0].BYTE_BRAM_GEN[0].byte_ram_reg_0_15_7_7\ : label is 7;
   attribute METHODOLOGY_DRC_VIOS : string;
   attribute METHODOLOGY_DRC_VIOS of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_0_5\ : label is "";
-  attribute RTL_RAM_BITS of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_0_5\ : label is 512;
+  attribute RTL_RAM_BITS of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_0_5\ : label is 256;
   attribute RTL_RAM_NAME of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_0_5\ : label is "U0/ram_pull_fish_v1_0_S00_pull_fish_AXI_inst/BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in";
   attribute RTL_RAM_TYPE of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_0_5\ : label is "RAM_SDP";
   attribute ram_addr_begin of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_0_5\ : label is 0;
@@ -267,44 +263,17 @@ architecture STRUCTURE of design_electric_hook_ram_pull_fish_0_0_ram_pull_fish_v
   attribute ram_offset of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_0_5\ : label is 0;
   attribute ram_slice_begin of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_0_5\ : label is 0;
   attribute ram_slice_end of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_0_5\ : label is 5;
-  attribute METHODOLOGY_DRC_VIOS of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_17\ : label is "";
-  attribute RTL_RAM_BITS of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_17\ : label is 512;
-  attribute RTL_RAM_NAME of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_17\ : label is "U0/ram_pull_fish_v1_0_S00_pull_fish_AXI_inst/BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in";
-  attribute RTL_RAM_TYPE of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_17\ : label is "RAM_SDP";
-  attribute ram_addr_begin of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_17\ : label is 0;
-  attribute ram_addr_end of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_17\ : label is 15;
-  attribute ram_offset of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_17\ : label is 0;
-  attribute ram_slice_begin of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_17\ : label is 12;
-  attribute ram_slice_end of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_17\ : label is 17;
-  attribute METHODOLOGY_DRC_VIOS of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_18_23\ : label is "";
-  attribute RTL_RAM_BITS of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_18_23\ : label is 512;
-  attribute RTL_RAM_NAME of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_18_23\ : label is "U0/ram_pull_fish_v1_0_S00_pull_fish_AXI_inst/BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in";
-  attribute RTL_RAM_TYPE of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_18_23\ : label is "RAM_SDP";
-  attribute ram_addr_begin of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_18_23\ : label is 0;
-  attribute ram_addr_end of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_18_23\ : label is 15;
-  attribute ram_offset of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_18_23\ : label is 0;
-  attribute ram_slice_begin of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_18_23\ : label is 18;
-  attribute ram_slice_end of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_18_23\ : label is 23;
-  attribute METHODOLOGY_DRC_VIOS of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_24_29\ : label is "";
-  attribute RTL_RAM_BITS of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_24_29\ : label is 512;
-  attribute RTL_RAM_NAME of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_24_29\ : label is "U0/ram_pull_fish_v1_0_S00_pull_fish_AXI_inst/BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in";
-  attribute RTL_RAM_TYPE of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_24_29\ : label is "RAM_SDP";
-  attribute ram_addr_begin of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_24_29\ : label is 0;
-  attribute ram_addr_end of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_24_29\ : label is 15;
-  attribute ram_offset of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_24_29\ : label is 0;
-  attribute ram_slice_begin of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_24_29\ : label is 24;
-  attribute ram_slice_end of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_24_29\ : label is 29;
-  attribute METHODOLOGY_DRC_VIOS of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31\ : label is "";
-  attribute RTL_RAM_BITS of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31\ : label is 512;
-  attribute RTL_RAM_NAME of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31\ : label is "U0/ram_pull_fish_v1_0_S00_pull_fish_AXI_inst/BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in";
-  attribute RTL_RAM_TYPE of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31\ : label is "RAM_SDP";
-  attribute ram_addr_begin of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31\ : label is 0;
-  attribute ram_addr_end of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31\ : label is 15;
-  attribute ram_offset of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31\ : label is 0;
-  attribute ram_slice_begin of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31\ : label is 30;
-  attribute ram_slice_end of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31\ : label is 31;
+  attribute METHODOLOGY_DRC_VIOS of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15\ : label is "";
+  attribute RTL_RAM_BITS of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15\ : label is 256;
+  attribute RTL_RAM_NAME of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15\ : label is "U0/ram_pull_fish_v1_0_S00_pull_fish_AXI_inst/BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in";
+  attribute RTL_RAM_TYPE of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15\ : label is "RAM_SDP";
+  attribute ram_addr_begin of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15\ : label is 0;
+  attribute ram_addr_end of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15\ : label is 15;
+  attribute ram_offset of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15\ : label is 0;
+  attribute ram_slice_begin of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15\ : label is 12;
+  attribute ram_slice_end of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15\ : label is 15;
   attribute METHODOLOGY_DRC_VIOS of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_6_11\ : label is "";
-  attribute RTL_RAM_BITS of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_6_11\ : label is 512;
+  attribute RTL_RAM_BITS of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_6_11\ : label is 256;
   attribute RTL_RAM_NAME of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_6_11\ : label is "U0/ram_pull_fish_v1_0_S00_pull_fish_AXI_inst/BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in";
   attribute RTL_RAM_TYPE of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_6_11\ : label is "RAM_SDP";
   attribute ram_addr_begin of \BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_6_11\ : label is 0;
@@ -800,7 +769,7 @@ begin
       WCLK => s00_pull_fish_axi_aclk,
       WE => p_0_in20_out
     );
-\BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_17\: unisim.vcomponents.RAM32M
+\BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15\: unisim.vcomponents.RAM32M
      port map (
       ADDRA(4) => '0',
       ADDRA(3 downto 0) => addr(3 downto 0),
@@ -812,79 +781,16 @@ begin
       ADDRD(3 downto 0) => mem_address(3 downto 0),
       DIA(1 downto 0) => s00_pull_fish_axi_wdata(13 downto 12),
       DIB(1 downto 0) => s00_pull_fish_axi_wdata(15 downto 14),
-      DIC(1 downto 0) => s00_pull_fish_axi_wdata(17 downto 16),
+      DIC(1 downto 0) => B"00",
       DID(1 downto 0) => B"00",
       DOA(1 downto 0) => seq(13 downto 12),
       DOB(1 downto 0) => seq(15 downto 14),
-      DOC(1 downto 0) => seq(17 downto 16),
-      DOD(1 downto 0) => \NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_17_DOD_UNCONNECTED\(1 downto 0),
+      DOC(1 downto 0) => \NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15_DOC_UNCONNECTED\(1 downto 0),
+      DOD(1 downto 0) => \NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15_DOD_UNCONNECTED\(1 downto 0),
       WCLK => s00_pull_fish_axi_aclk,
       WE => p_0_in20_out
     );
-\BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_18_23\: unisim.vcomponents.RAM32M
-     port map (
-      ADDRA(4) => '0',
-      ADDRA(3 downto 0) => addr(3 downto 0),
-      ADDRB(4) => '0',
-      ADDRB(3 downto 0) => addr(3 downto 0),
-      ADDRC(4) => '0',
-      ADDRC(3 downto 0) => addr(3 downto 0),
-      ADDRD(4) => '0',
-      ADDRD(3 downto 0) => mem_address(3 downto 0),
-      DIA(1 downto 0) => s00_pull_fish_axi_wdata(19 downto 18),
-      DIB(1 downto 0) => s00_pull_fish_axi_wdata(21 downto 20),
-      DIC(1 downto 0) => s00_pull_fish_axi_wdata(23 downto 22),
-      DID(1 downto 0) => B"00",
-      DOA(1 downto 0) => seq(19 downto 18),
-      DOB(1 downto 0) => seq(21 downto 20),
-      DOC(1 downto 0) => seq(23 downto 22),
-      DOD(1 downto 0) => \NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_18_23_DOD_UNCONNECTED\(1 downto 0),
-      WCLK => s00_pull_fish_axi_aclk,
-      WE => p_0_in20_out
-    );
-\BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_24_29\: unisim.vcomponents.RAM32M
-     port map (
-      ADDRA(4) => '0',
-      ADDRA(3 downto 0) => addr(3 downto 0),
-      ADDRB(4) => '0',
-      ADDRB(3 downto 0) => addr(3 downto 0),
-      ADDRC(4) => '0',
-      ADDRC(3 downto 0) => addr(3 downto 0),
-      ADDRD(4) => '0',
-      ADDRD(3 downto 0) => mem_address(3 downto 0),
-      DIA(1 downto 0) => s00_pull_fish_axi_wdata(25 downto 24),
-      DIB(1 downto 0) => s00_pull_fish_axi_wdata(27 downto 26),
-      DIC(1 downto 0) => s00_pull_fish_axi_wdata(29 downto 28),
-      DID(1 downto 0) => B"00",
-      DOA(1 downto 0) => seq(25 downto 24),
-      DOB(1 downto 0) => seq(27 downto 26),
-      DOC(1 downto 0) => seq(29 downto 28),
-      DOD(1 downto 0) => \NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_24_29_DOD_UNCONNECTED\(1 downto 0),
-      WCLK => s00_pull_fish_axi_aclk,
-      WE => p_0_in20_out
-    );
-\BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31\: unisim.vcomponents.RAM32M
-     port map (
-      ADDRA(4) => '0',
-      ADDRA(3 downto 0) => addr(3 downto 0),
-      ADDRB(4) => '0',
-      ADDRB(3 downto 0) => addr(3 downto 0),
-      ADDRC(4) => '0',
-      ADDRC(3 downto 0) => addr(3 downto 0),
-      ADDRD(4) => '0',
-      ADDRD(3 downto 0) => mem_address(3 downto 0),
-      DIA(1 downto 0) => s00_pull_fish_axi_wdata(31 downto 30),
-      DIB(1 downto 0) => B"00",
-      DIC(1 downto 0) => B"00",
-      DID(1 downto 0) => B"00",
-      DOA(1 downto 0) => seq(31 downto 30),
-      DOB(1 downto 0) => \NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_DOB_UNCONNECTED\(1 downto 0),
-      DOC(1 downto 0) => \NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_DOC_UNCONNECTED\(1 downto 0),
-      DOD(1 downto 0) => \NLW_BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_DOD_UNCONNECTED\(1 downto 0),
-      WCLK => s00_pull_fish_axi_aclk,
-      WE => p_0_in20_out
-    );
-\BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_i_1\: unisim.vcomponents.LUT3
+\BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"80"
     )
@@ -894,7 +800,7 @@ begin
       I2 => s00_pull_fish_axi_wvalid,
       O => p_0_in20_out
     );
-\BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_i_2\: unisim.vcomponents.LUT4
+\BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15_i_2\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"B888"
     )
@@ -905,7 +811,7 @@ begin
       I3 => \axi_awaddr_reg_n_0_[5]\,
       O => mem_address(3)
     );
-\BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_i_3\: unisim.vcomponents.LUT4
+\BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15_i_3\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"B888"
     )
@@ -916,7 +822,7 @@ begin
       I3 => \axi_awaddr_reg_n_0_[4]\,
       O => mem_address(2)
     );
-\BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_i_4\: unisim.vcomponents.LUT4
+\BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15_i_4\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"B888"
     )
@@ -927,7 +833,7 @@ begin
       I3 => \axi_awaddr_reg_n_0_[3]\,
       O => mem_address(1)
     );
-\BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_30_31_i_5\: unisim.vcomponents.LUT4
+\BRAM_GEN[0].BYTE_BRAM_GEN[0].reg_in_reg_0_15_12_15_i_5\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"B888"
     )
@@ -3244,7 +3150,7 @@ entity design_electric_hook_ram_pull_fish_0_0_ram_pull_fish_v1_0 is
   port (
     axi_arready_reg : out STD_LOGIC;
     axi_awready_reg : out STD_LOGIC;
-    seq : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    seq : out STD_LOGIC_VECTOR ( 15 downto 0 );
     axi_rvalid_reg : out STD_LOGIC;
     axi_wready_reg : out STD_LOGIC;
     s00_pull_fish_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -3300,7 +3206,7 @@ ram_pull_fish_v1_0_S00_pull_fish_AXI_inst: entity work.design_electric_hook_ram_
       s00_pull_fish_axi_wlast => s00_pull_fish_axi_wlast,
       s00_pull_fish_axi_wstrb(3 downto 0) => s00_pull_fish_axi_wstrb(3 downto 0),
       s00_pull_fish_axi_wvalid => s00_pull_fish_axi_wvalid,
-      seq(31 downto 0) => seq(31 downto 0)
+      seq(15 downto 0) => seq(15 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -3310,7 +3216,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_electric_hook_ram_pull_fish_0_0 is
   port (
     addr : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    seq : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    seq : out STD_LOGIC_VECTOR ( 15 downto 0 );
     s00_pull_fish_axi_aclk : in STD_LOGIC;
     s00_pull_fish_axi_aresetn : in STD_LOGIC;
     s00_pull_fish_axi_awaddr : in STD_LOGIC_VECTOR ( 5 downto 0 );
@@ -3442,6 +3348,6 @@ U0: entity work.design_electric_hook_ram_pull_fish_0_0_ram_pull_fish_v1_0
       s00_pull_fish_axi_wlast => s00_pull_fish_axi_wlast,
       s00_pull_fish_axi_wstrb(3 downto 0) => s00_pull_fish_axi_wstrb(3 downto 0),
       s00_pull_fish_axi_wvalid => s00_pull_fish_axi_wvalid,
-      seq(31 downto 0) => seq(31 downto 0)
+      seq(15 downto 0) => seq(15 downto 0)
     );
 end STRUCTURE;

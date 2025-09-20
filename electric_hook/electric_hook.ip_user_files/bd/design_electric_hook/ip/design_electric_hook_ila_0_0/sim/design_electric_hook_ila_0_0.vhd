@@ -56,7 +56,7 @@ clk : IN STD_LOGIC;
 
 
 probe0 : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    probe1 : IN STD_LOGIC_VECTOR(15 DOWNTO 0)
+    probe1 : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
 );
 END design_electric_hook_ila_0_0;
 

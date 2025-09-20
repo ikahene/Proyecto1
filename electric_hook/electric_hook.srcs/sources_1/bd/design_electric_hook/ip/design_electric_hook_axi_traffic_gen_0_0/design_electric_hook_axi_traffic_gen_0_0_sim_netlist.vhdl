@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Fri Sep 19 19:27:06 2025
+-- Date        : Fri Sep 19 19:27:03 2025
 -- Host        : BenjaUni running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/design_electric_hook/ip/design_electric_hook_axi_traffic_gen_0_0/design_electric_hook_axi_traffic_gen_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_electric_hook_axi_traffic_gen_0_0 -prefix
+--               design_electric_hook_axi_traffic_gen_0_0_ design_electric_hook_axi_traffic_gen_0_0_sim_netlist.vhdl
 -- Design      : design_electric_hook_axi_traffic_gen_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -131,8 +131,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_addrgen i
     \ATG_FF_0.id_ff_reg[0]_1\ : in STD_LOGIC;
     \ATG_FF_0.be_ff_reg[3]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_addrgen : entity is "axi_traffic_gen_v3_0_7_addrgen";
 end design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_addrgen;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_addrgen is
@@ -20191,8 +20189,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_asynch_rs
     reset : in STD_LOGIC;
     q : out STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_asynch_rst_ff : entity is "axi_traffic_gen_v3_0_7_asynch_rst_ff";
   attribute dont_touch : string;
   attribute dont_touch of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_asynch_rst_ff : entity is "true";
 end design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_asynch_rst_ff;
@@ -20364,8 +20360,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_ex_fifo i
     notfull_ff_i_3_3 : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_ex_fifo : entity is "axi_traffic_gen_v3_0_7_ex_fifo";
 end design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_ex_fifo;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_ex_fifo is
@@ -57123,8 +57117,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_id_track 
     \in_clear_pos_ff_reg[1]_0\ : in STD_LOGIC;
     \in_clear_pos_ff_reg[0]_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_id_track : entity is "axi_traffic_gen_v3_0_7_id_track";
 end design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_id_track;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_id_track is
@@ -60551,8 +60543,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_randgen i
     \PARAMRAM_RD_ADVANCED_400_OFF.rand_addr_n_reg[8]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \PARAMRAM_RD_ADVANCED_400_OFF.rand_addr_n_reg[12]\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_randgen : entity is "axi_traffic_gen_v3_0_7_randgen";
 end design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_randgen;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_randgen is
@@ -65038,8 +65028,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_regslice 
     s_axi_aclk : in STD_LOGIC;
     \datapath_reg[0][31]_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_regslice : entity is "axi_traffic_gen_v3_0_7_regslice";
 end design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_regslice;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_regslice is
@@ -77566,8 +77554,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_cdc_sync is
     prmry_in : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_cdc_sync : entity is "cdc_sync";
 end design_electric_hook_axi_traffic_gen_0_0_cdc_sync;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_0_0_cdc_sync is
@@ -77780,8 +77766,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_xpm_memory_base is
   attribute MESSAGE_CONTROL of design_electric_hook_axi_traffic_gen_0_0_xpm_memory_base : entity is 0;
   attribute NUM_CHAR_LOC : integer;
   attribute NUM_CHAR_LOC of design_electric_hook_axi_traffic_gen_0_0_xpm_memory_base : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_xpm_memory_base : entity is "xpm_memory_base";
   attribute P_ECC_MODE : string;
   attribute P_ECC_MODE of design_electric_hook_axi_traffic_gen_0_0_xpm_memory_base : entity is "no_ecc";
   attribute P_ENABLE_BYTE_WRITE_A : integer;
@@ -84400,8 +84384,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_m_r_chann
     \headreg_ff_reg[35]\ : in STD_LOGIC_VECTOR ( 35 downto 0 );
     m_axi_arready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_m_r_channel : entity is "axi_traffic_gen_v3_0_7_m_r_channel";
 end design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_m_r_channel;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_m_r_channel is
@@ -88708,8 +88690,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_m_w_chann
     \maw_cnt_ff_reg[0]_0\ : in STD_LOGIC;
     \maw_ptr_new_ff_reg[9]_0\ : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_m_w_channel : entity is "axi_traffic_gen_v3_0_7_m_w_channel";
 end design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_m_w_channel;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_m_w_channel is
@@ -93745,8 +93725,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_registers
     \reg0_mw_ptr_ff_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \reg0_mr_ptr_ff_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_registers : entity is "axi_traffic_gen_v3_0_7_registers";
 end design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_registers;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_registers is
@@ -95424,8 +95402,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_s_r_chann
     D : in STD_LOGIC_VECTOR ( 7 downto 0 );
     reset_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_s_r_channel : entity is "axi_traffic_gen_v3_0_7_s_r_channel";
 end design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_s_r_channel;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_s_r_channel is
@@ -99183,8 +99159,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_s_w_chann
     \datapath_reg[0][82]\ : in STD_LOGIC;
     \headreg_ff_reg[36]\ : in STD_LOGIC_VECTOR ( 36 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_s_w_channel : entity is "axi_traffic_gen_v3_0_7_s_w_channel";
 end design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_s_w_channel;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_s_w_channel is
@@ -100089,8 +100063,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_xpm_memory_tdpram is
   attribute MEMORY_SIZE of design_electric_hook_axi_traffic_gen_0_0_xpm_memory_tdpram : entity is 16384;
   attribute MESSAGE_CONTROL : integer;
   attribute MESSAGE_CONTROL of design_electric_hook_axi_traffic_gen_0_0_xpm_memory_tdpram : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_xpm_memory_tdpram : entity is "xpm_memory_tdpram";
   attribute P_CLOCKING_MODE : integer;
   attribute P_CLOCKING_MODE of design_electric_hook_axi_traffic_gen_0_0_xpm_memory_tdpram : entity is 1;
   attribute P_ECC_MODE : integer;
@@ -100895,8 +100867,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_blk_mem_gen_wrapper is
     wfifo_valid : in STD_LOGIC;
     mar_ptr_new_ff : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_blk_mem_gen_wrapper : entity is "blk_mem_gen_wrapper";
 end design_electric_hook_axi_traffic_gen_0_0_blk_mem_gen_wrapper;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_0_0_blk_mem_gen_wrapper is
@@ -102312,8 +102282,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_bmg_wrap 
     wfifo_valid : in STD_LOGIC;
     mar_ptr_new_ff : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_bmg_wrap : entity is "axi_traffic_gen_v3_0_7_bmg_wrap";
 end design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_bmg_wrap;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_bmg_wrap is
@@ -102559,8 +102527,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_inferram 
     wfifo_valid : in STD_LOGIC;
     mar_ptr_new_ff : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_inferram : entity is "axi_traffic_gen_v3_0_7_inferram";
 end design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_inferram;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_inferram is
@@ -102841,8 +102807,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_cmdram is
     arfifo_valid : in STD_LOGIC;
     arfifo_out : in STD_LOGIC_VECTOR ( 8 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_cmdram : entity is "axi_traffic_gen_v3_0_7_cmdram";
 end design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_cmdram;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_cmdram is
@@ -102981,8 +102945,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_slvram_v7
     wfifo_valid : in STD_LOGIC;
     mar_ptr_new_ff : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_slvram_v7 : entity is "axi_traffic_gen_v3_0_7_slvram_v7";
 end design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_slvram_v7;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_slvram_v7 is
@@ -103241,8 +103203,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_cmdram_wr
     \PARAMRAM_RD_ADVANCED_400_OFF.rand_base_chkr_t_ff_reg[13]\ : in STD_LOGIC;
     \PARAMRAM_RD_ADVANCED_400_OFF.rand_base_chkr_t_ff_reg[13]_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_cmdram_wrap : entity is "axi_traffic_gen_v3_0_7_cmdram_wrap";
 end design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_cmdram_wrap;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_cmdram_wrap is
@@ -103568,8 +103528,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_paramram_
     awfifo_out : in STD_LOGIC_VECTOR ( 8 downto 0 );
     \datapath_reg[0][31]\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_paramram_wrap : entity is "axi_traffic_gen_v3_0_7_paramram_wrap";
 end design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_paramram_wrap;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_paramram_wrap is
@@ -126379,8 +126337,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_sharedram
     \gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg_1_0\ : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 14 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_sharedram_wrap : entity is "axi_traffic_gen_v3_0_7_sharedram_wrap";
 end design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_sharedram_wrap;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_sharedram_wrap is
@@ -127271,8 +127227,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_basic_n_f
     scndry_out : in STD_LOGIC;
     global_stop_1ff_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_basic_n_full_top : entity is "axi_traffic_gen_v3_0_7_basic_n_full_top";
 end design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_basic_n_full_top;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_basic_n_full_top is
@@ -130026,8 +129980,6 @@ entity design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_top is
   attribute C_ZERO_INVALID of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_top : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_top : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_top : entity is "axi_traffic_gen_v3_0_7_top";
 end design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_top;
 
 architecture STRUCTURE of design_electric_hook_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_top is
