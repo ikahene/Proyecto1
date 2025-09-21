@@ -21,9 +21,9 @@
       "vio_0": "",
       "ram_pull_fish_0": "",
       "xlconstant_0": "",
-      "main_0": "",
       "pull_fish_0": "",
-      "catch_fish_0": ""
+      "catch_fish_0": "",
+      "main_0": ""
     },
     "ports": {
       "clk": {
@@ -344,10 +344,6 @@
           }
         }
       },
-      "main_0": {
-        "vlnv": "xilinx.com:user:main:1.0",
-        "xci_name": "design_1_main_0_0"
-      },
       "pull_fish_0": {
         "vlnv": "xilinx.com:user:pull_fish:1.0",
         "xci_name": "design_1_pull_fish_0_0"
@@ -355,19 +351,23 @@
       "catch_fish_0": {
         "vlnv": "xilinx.com:user:catch_fish:1.0",
         "xci_name": "design_1_catch_fish_0_0"
+      },
+      "main_0": {
+        "vlnv": "xilinx.com:user:main:1.0",
+        "xci_name": "design_1_main_0_0"
       }
     },
     "interface_nets": {
+      "axi_traffic_gen_1_M_AXI_LITE_CH1": {
+        "interface_ports": [
+          "axi_traffic_gen_1/M_AXI_LITE_CH1",
+          "axi_smc/S00_AXI"
+        ]
+      },
       "axi_traffic_gen_0_M_AXI": {
         "interface_ports": [
           "axi_traffic_gen_0/M_AXI",
           "axi_smc_1/S00_AXI"
-        ]
-      },
-      "axi_smc_M00_AXI": {
-        "interface_ports": [
-          "axi_smc/M00_AXI",
-          "axi_traffic_gen_0/S_AXI"
         ]
       },
       "axi_smc_1_M00_AXI": {
@@ -377,10 +377,10 @@
           "ila_0/SLOT_0_AXI"
         ]
       },
-      "axi_traffic_gen_1_M_AXI_LITE_CH1": {
+      "axi_smc_M00_AXI": {
         "interface_ports": [
-          "axi_traffic_gen_1/M_AXI_LITE_CH1",
-          "axi_smc/S00_AXI"
+          "axi_smc/M00_AXI",
+          "axi_traffic_gen_0/S_AXI"
         ]
       }
     },
@@ -435,8 +435,8 @@
           "ila_1/clk",
           "vio_0/clk",
           "catch_fish_0/clk",
-          "main_0/clk",
-          "pull_fish_0/clk"
+          "pull_fish_0/clk",
+          "main_0/clk"
         ]
       },
       "catch_fish_0_game_end": {
@@ -527,8 +527,8 @@
       "sw_0_1": {
         "ports": [
           "sw",
-          "main_0/sw",
-          "catch_fish_0/sw"
+          "catch_fish_0/sw",
+          "main_0/sw"
         ]
       }
     },

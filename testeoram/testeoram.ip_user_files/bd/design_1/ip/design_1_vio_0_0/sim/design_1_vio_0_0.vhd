@@ -53,8 +53,8 @@ USE ieee.numeric_std.ALL;
 ENTITY design_1_vio_0_0 IS
 PORT (
 CLK : IN STD_LOGIC;
-probe_in0 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-probe_out0 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0) := "0000"
+probe_in0 : IN STD_LOGIC_VECTOR(15 DOWNTO 0)
+
 );
 END design_1_vio_0_0;
 ARCHITECTURE design_1_vio_0_0_arch OF design_1_vio_0_0 IS

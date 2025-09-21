@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Sat Sep 20 10:12:21 2025
+// Date        : Sat Sep 20 11:37:25 2025
 // Host        : BenjaUni running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/ip/design_1_axi_traffic_gen_1_0/design_1_axi_traffic_gen_1_0_sim_netlist.v
@@ -9547,7 +9547,7 @@ module design_1_axi_traffic_gen_1_0_xpm_memory_base__parameterized2
   (* ram_slice_begin = "2" *) 
   (* ram_slice_end = "2" *) 
   RAM32X1S #(
-    .INIT(32'h00282300)) 
+    .INIT(32'h00282302)) 
     \gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_0_31_2_2 
        (.A0(addra[0]),
         .A1(addra[1]),
@@ -9607,7 +9607,7 @@ module design_1_axi_traffic_gen_1_0_xpm_memory_base__parameterized2
   (* ram_slice_begin = "3" *) 
   (* ram_slice_end = "3" *) 
   RAM32X1S #(
-    .INIT(32'h00208000)) 
+    .INIT(32'h00208002)) 
     \gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_0_31_3_3 
        (.A0(addra[0]),
         .A1(addra[1]),

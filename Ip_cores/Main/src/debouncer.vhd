@@ -13,6 +13,7 @@ end debouncer;
 ---------- ARQUITECTURA : definimos una variable y comportamiento ---------
 architecture Behavioral of debouncer is
 
+signal internal_btn: std_logic;
 begin
     process(clk, btn)
     variable pulsos: std_logic_vector(9 downto 0); -- tenemos una variable que guarda los pulsos de botón
@@ -25,7 +26,31 @@ begin
                 pulsos := "0000000000";
             end if;
        end if;
-    btn_valido <= pulsos(9); -- Finalmente asignamos la variable a la señal
+    internal_btn <= pulsos(9); -- Finalmente asignamos la variable a la señal
+    end process;
+    
+    process(clk, internal_btn)
+    variable state: std_logic := '0';
+    begin 
+        if rising_edge(clk) then
+            if state = '0' then
+                if internal_btn = '1' then
+                    state := '1';
+                    btn_valido <= '1';
+                elsif internal_btn = '0' then
+                    state := '0';
+                    btn_valido <= '0';
+                end if;
+            elsif state = '1' then
+                if internal_btn = '1' then
+                    state := '1';
+                    btn_valido <= '0';
+                elsif internal_btn = '0' then
+                    state := '0';
+                    btn_valido <= '0';
+                end if;
+            end if;
+        end if;
     end process;
 end Behavioral;
 -------- FIN ARQUITECTURA ---------

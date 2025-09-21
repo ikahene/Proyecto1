@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Sat Sep 20 10:12:21 2025
+-- Date        : Sat Sep 20 11:37:25 2025
 -- Host        : BenjaUni running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/ip/design_1_axi_traffic_gen_1_0/design_1_axi_traffic_gen_1_0_sim_netlist.vhdl
@@ -9945,7 +9945,7 @@ GND: unisim.vcomponents.GND
     );
 \gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_0_31_2_2\: unisim.vcomponents.RAM32X1S
     generic map(
-      INIT => X"00282300"
+      INIT => X"00282302"
     )
         port map (
       A0 => addra(0),
@@ -9990,7 +9990,7 @@ GND: unisim.vcomponents.GND
     );
 \gen_wr_a.gen_byte_narrow.for_mem_cols[1].mem_reg_0_31_3_3\: unisim.vcomponents.RAM32X1S
     generic map(
-      INIT => X"00208000"
+      INIT => X"00208002"
     )
         port map (
       A0 => addra(0),

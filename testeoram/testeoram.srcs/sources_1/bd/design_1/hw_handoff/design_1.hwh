@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Sep 20 11:50:14 2025" VIVADOVERSION="2020.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Sep 21 17:22:18 2025" VIVADOVERSION="2020.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.2" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -10,8 +10,8 @@
         <CONNECTION INSTANCE="ila_1" PORT="clk"/>
         <CONNECTION INSTANCE="vio_0" PORT="clk"/>
         <CONNECTION INSTANCE="catch_fish_0" PORT="clk"/>
-        <CONNECTION INSTANCE="main_0" PORT="clk"/>
         <CONNECTION INSTANCE="pull_fish_0" PORT="clk"/>
+        <CONNECTION INSTANCE="main_0" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="3" NAME="btn" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_btn">
@@ -31,8 +31,8 @@
     </PORT>
     <PORT DIR="I" LEFT="3" NAME="sw" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sw">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="main_0" PORT="sw"/>
         <CONNECTION INSTANCE="catch_fish_0" PORT="sw"/>
+        <CONNECTION INSTANCE="main_0" PORT="sw"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>

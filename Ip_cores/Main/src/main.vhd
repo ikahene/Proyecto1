@@ -103,17 +103,20 @@ begin
         if rising_edge(clk) then
 ----------- Máquina de estados          
             -- Tenemos los switches en 0 antes de entrar en el juego, además apretamos el btn 2 para iniciar
-            if (state = "00" and btn_db(2) = '1' and condition = '1') then
-                enable_catch_fish_sig <= '1';
-                state := "01";
+            if state = "00" then
+                if btn_db(2) = '1' and condition = '1' then
+                    enable_catch_fish_sig <= '1';
+                    state := "01";
+                else
+                    enable_catch_fish_sig <= '0';
+                    enable_pull_fish_sig <= '0';
+                end if;
             -- El volver al menú sólo depende del estado actual y de que el juego acabe 
             elsif (state = "01" and game_end_catch_fish = '1') then
                 enable_catch_fish_sig <= '0';
-                state := "10";
-            elsif (state = "10") then 
                 enable_pull_fish_sig <= '1';
-                state := "11";
-            elsif (state = "11" and (game_lost_pull_fish = '1' or game_won_pull_fish = '1')) then
+                state := "10";
+            elsif (state = "10" and (game_lost_pull_fish = '1' or game_won_pull_fish = '1')) then 
                 enable_pull_fish_sig <= '0';
                 state := "00";
             end if;

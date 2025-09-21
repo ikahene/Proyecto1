@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Sat Sep 20 11:51:13 2025
+-- Date        : Sun Sep 21 17:23:07 2025
 -- Host        : BenjaUni running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/ip/design_1_main_0_0/design_1_main_0_0_sim_netlist.vhdl
@@ -777,17 +777,37 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_main_0_0_debouncer is
   port (
     btn_debounced : out STD_LOGIC_VECTOR ( 0 to 0 );
-    btn : in STD_LOGIC_VECTOR ( 0 to 0 );
-    clk : in STD_LOGIC
+    clk : in STD_LOGIC;
+    btn : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_1_main_0_0_debouncer : entity is "debouncer";
 end design_1_main_0_0_debouncer;
 
 architecture STRUCTURE of design_1_main_0_0_debouncer is
+  signal btn_valido_i_1_n_0 : STD_LOGIC;
+  signal internal_btn : STD_LOGIC;
   signal p_0_in : STD_LOGIC;
   signal p_1_in : STD_LOGIC_VECTOR ( 9 downto 2 );
+  signal state : STD_LOGIC;
 begin
+btn_valido_i_1: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => internal_btn,
+      I1 => state,
+      O => btn_valido_i_1_n_0
+    );
+btn_valido_reg: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => '1',
+      D => btn_valido_i_1_n_0,
+      Q => btn_debounced(0),
+      R => '0'
+    );
 \pulsos[9]_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
@@ -865,8 +885,19 @@ begin
       C => clk,
       CE => '1',
       D => p_1_in(9),
-      Q => btn_debounced(0),
+      Q => internal_btn,
       R => p_0_in
+    );
+state_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => internal_btn,
+      Q => state,
+      R => '0'
     );
 end STRUCTURE;
 library IEEE;
@@ -876,14 +907,15 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_main_0_0_debouncer_0 is
   port (
     btn_debounced : out STD_LOGIC_VECTOR ( 0 to 0 );
-    btn : in STD_LOGIC_VECTOR ( 0 to 0 );
-    clk : in STD_LOGIC
+    clk : in STD_LOGIC;
+    btn : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_1_main_0_0_debouncer_0 : entity is "debouncer";
 end design_1_main_0_0_debouncer_0;
 
 architecture STRUCTURE of design_1_main_0_0_debouncer_0 is
+  signal \btn_valido_i_1__0_n_0\ : STD_LOGIC;
   signal \pulsos[9]_i_1__0_n_0\ : STD_LOGIC;
   signal \pulsos_reg_n_0_[1]\ : STD_LOGIC;
   signal \pulsos_reg_n_0_[2]\ : STD_LOGIC;
@@ -893,7 +925,26 @@ architecture STRUCTURE of design_1_main_0_0_debouncer_0 is
   signal \pulsos_reg_n_0_[6]\ : STD_LOGIC;
   signal \pulsos_reg_n_0_[7]\ : STD_LOGIC;
   signal \pulsos_reg_n_0_[8]\ : STD_LOGIC;
+  signal \pulsos_reg_n_0_[9]\ : STD_LOGIC;
+  signal state_reg_n_0 : STD_LOGIC;
 begin
+\btn_valido_i_1__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => \pulsos_reg_n_0_[9]\,
+      I1 => state_reg_n_0,
+      O => \btn_valido_i_1__0_n_0\
+    );
+btn_valido_reg: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => '1',
+      D => \btn_valido_i_1__0_n_0\,
+      Q => btn_debounced(0),
+      R => '0'
+    );
 \pulsos[9]_i_1__0\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
@@ -971,8 +1022,19 @@ begin
       C => clk,
       CE => '1',
       D => \pulsos_reg_n_0_[8]\,
-      Q => btn_debounced(0),
+      Q => \pulsos_reg_n_0_[9]\,
       R => \pulsos[9]_i_1__0_n_0\
+    );
+state_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => \pulsos_reg_n_0_[9]\,
+      Q => state_reg_n_0,
+      R => '0'
     );
 end STRUCTURE;
 library IEEE;
@@ -981,26 +1043,35 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_main_0_0_debouncer_1 is
   port (
-    \state_reg[0]\ : out STD_LOGIC;
-    \state_reg[0]_0\ : out STD_LOGIC;
-    \state_reg[0]_1\ : out STD_LOGIC;
     btn_debounced : out STD_LOGIC_VECTOR ( 0 to 0 );
-    state : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    game_end_catch_fish_0 : out STD_LOGIC;
+    \FSM_onehot_state_reg[0]\ : out STD_LOGIC;
+    game_end_catch_fish_1 : out STD_LOGIC;
+    enable_catch_fish_sig_reg : out STD_LOGIC;
+    enable_pull_fish_sig_reg : out STD_LOGIC;
+    clk : in STD_LOGIC;
     game_end_catch_fish : in STD_LOGIC;
-    enable_catch_fish_sig_reg : in STD_LOGIC;
-    game_won_pull_fish : in STD_LOGIC;
+    \FSM_onehot_state_reg[2]\ : in STD_LOGIC;
+    \FSM_onehot_state_reg[2]_0\ : in STD_LOGIC;
+    \FSM_onehot_state_reg[2]_1\ : in STD_LOGIC;
+    enable_catch_fish_sig_reg_0 : in STD_LOGIC;
+    enable_pull_fish_sig_reg_0 : in STD_LOGIC;
+    enable_pull_fish_sig_reg_1 : in STD_LOGIC;
+    enable_catch_fish_sig0 : in STD_LOGIC;
     game_lost_pull_fish : in STD_LOGIC;
+    game_won_pull_fish : in STD_LOGIC;
     sw : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    btn : in STD_LOGIC_VECTOR ( 0 to 0 );
-    clk : in STD_LOGIC
+    btn : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_1_main_0_0_debouncer_1 : entity is "debouncer";
 end design_1_main_0_0_debouncer_1;
 
 architecture STRUCTURE of design_1_main_0_0_debouncer_1 is
+  signal \FSM_onehot_state[2]_i_2_n_0\ : STD_LOGIC;
   signal \^btn_debounced\ : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal enable_catch_fish_sig_i_2_n_0 : STD_LOGIC;
+  signal \btn_valido_i_1__1_n_0\ : STD_LOGIC;
+  signal enable_catch_fish_sig01_out : STD_LOGIC;
   signal \pulsos[9]_i_1__1_n_0\ : STD_LOGIC;
   signal \pulsos_reg_n_0_[1]\ : STD_LOGIC;
   signal \pulsos_reg_n_0_[2]\ : STD_LOGIC;
@@ -1010,32 +1081,112 @@ architecture STRUCTURE of design_1_main_0_0_debouncer_1 is
   signal \pulsos_reg_n_0_[6]\ : STD_LOGIC;
   signal \pulsos_reg_n_0_[7]\ : STD_LOGIC;
   signal \pulsos_reg_n_0_[8]\ : STD_LOGIC;
+  signal \pulsos_reg_n_0_[9]\ : STD_LOGIC;
+  signal state_reg_n_0 : STD_LOGIC;
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \FSM_onehot_state[0]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \FSM_onehot_state[2]_i_1\ : label is "soft_lutpair0";
 begin
   btn_debounced(0) <= \^btn_debounced\(0);
+\FSM_onehot_state[0]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0F70"
+    )
+        port map (
+      I0 => game_end_catch_fish,
+      I1 => \FSM_onehot_state_reg[2]\,
+      I2 => \FSM_onehot_state[2]_i_2_n_0\,
+      I3 => \FSM_onehot_state_reg[2]_0\,
+      O => game_end_catch_fish_1
+    );
+\FSM_onehot_state[1]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => \FSM_onehot_state_reg[2]_0\,
+      I1 => \FSM_onehot_state[2]_i_2_n_0\,
+      I2 => \FSM_onehot_state_reg[2]\,
+      O => \FSM_onehot_state_reg[0]\
+    );
+\FSM_onehot_state[2]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"08FF0800"
+    )
+        port map (
+      I0 => game_end_catch_fish,
+      I1 => \FSM_onehot_state_reg[2]\,
+      I2 => \FSM_onehot_state_reg[2]_0\,
+      I3 => \FSM_onehot_state[2]_i_2_n_0\,
+      I4 => \FSM_onehot_state_reg[2]_1\,
+      O => game_end_catch_fish_0
+    );
+\FSM_onehot_state[2]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BBBBBBB8B8B8B8B8"
+    )
+        port map (
+      I0 => enable_catch_fish_sig01_out,
+      I1 => \FSM_onehot_state_reg[2]_0\,
+      I2 => enable_catch_fish_sig0,
+      I3 => game_lost_pull_fish,
+      I4 => game_won_pull_fish,
+      I5 => \FSM_onehot_state_reg[2]_1\,
+      O => \FSM_onehot_state[2]_i_2_n_0\
+    );
+\btn_valido_i_1__1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => \pulsos_reg_n_0_[9]\,
+      I1 => state_reg_n_0,
+      O => \btn_valido_i_1__1_n_0\
+    );
+btn_valido_reg: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => '1',
+      D => \btn_valido_i_1__1_n_0\,
+      Q => \^btn_debounced\(0),
+      R => '0'
+    );
 enable_catch_fish_sig_i_1: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"F3FF2222"
+      INIT => X"C0CACACA"
     )
         port map (
-      I0 => enable_catch_fish_sig_i_2_n_0,
-      I1 => state(0),
-      I2 => state(1),
-      I3 => game_end_catch_fish,
-      I4 => enable_catch_fish_sig_reg,
-      O => \state_reg[0]\
+      I0 => enable_catch_fish_sig_reg_0,
+      I1 => enable_catch_fish_sig01_out,
+      I2 => \FSM_onehot_state_reg[2]_0\,
+      I3 => \FSM_onehot_state_reg[2]\,
+      I4 => game_end_catch_fish,
+      O => enable_catch_fish_sig_reg
     );
-enable_catch_fish_sig_i_2: unisim.vcomponents.LUT6
+enable_pull_fish_sig_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000100000000"
+      INIT => X"E2220000E222E222"
     )
         port map (
-      I0 => state(1),
-      I1 => sw(0),
+      I0 => enable_pull_fish_sig_reg_0,
+      I1 => enable_pull_fish_sig_reg_1,
+      I2 => game_end_catch_fish,
+      I3 => \FSM_onehot_state_reg[2]\,
+      I4 => enable_catch_fish_sig01_out,
+      I5 => \FSM_onehot_state_reg[2]_0\,
+      O => enable_pull_fish_sig_reg
+    );
+enable_pull_fish_sig_i_3: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00000002"
+    )
+        port map (
+      I0 => \^btn_debounced\(0),
+      I1 => sw(2),
       I2 => sw(1),
-      I3 => sw(2),
+      I3 => sw(0),
       I4 => sw(3),
-      I5 => \^btn_debounced\(0),
-      O => enable_catch_fish_sig_i_2_n_0
+      O => enable_catch_fish_sig01_out
     );
 \pulsos[9]_i_1__1\: unisim.vcomponents.LUT1
     generic map(
@@ -1114,34 +1265,19 @@ enable_catch_fish_sig_i_2: unisim.vcomponents.LUT6
       C => clk,
       CE => '1',
       D => \pulsos_reg_n_0_[8]\,
-      Q => \^btn_debounced\(0),
+      Q => \pulsos_reg_n_0_[9]\,
       R => \pulsos[9]_i_1__1_n_0\
     );
-\state[0]_i_1\: unisim.vcomponents.LUT6
+state_reg: unisim.vcomponents.FDRE
     generic map(
-      INIT => X"323E323E323EF2FE"
+      INIT => '0'
     )
         port map (
-      I0 => enable_catch_fish_sig_i_2_n_0,
-      I1 => state(0),
-      I2 => state(1),
-      I3 => game_end_catch_fish,
-      I4 => game_won_pull_fish,
-      I5 => game_lost_pull_fish,
-      O => \state_reg[0]_0\
-    );
-\state[1]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"1C101C101C10DCD0"
-    )
-        port map (
-      I0 => enable_catch_fish_sig_i_2_n_0,
-      I1 => state(0),
-      I2 => state(1),
-      I3 => game_end_catch_fish,
-      I4 => game_won_pull_fish,
-      I5 => game_lost_pull_fish,
-      O => \state_reg[0]_1\
+      C => clk,
+      CE => '1',
+      D => \pulsos_reg_n_0_[9]\,
+      Q => state_reg_n_0,
+      R => '0'
     );
 end STRUCTURE;
 library IEEE;
@@ -1151,14 +1287,15 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_main_0_0_debouncer_2 is
   port (
     btn_debounced : out STD_LOGIC_VECTOR ( 0 to 0 );
-    btn : in STD_LOGIC_VECTOR ( 0 to 0 );
-    clk : in STD_LOGIC
+    clk : in STD_LOGIC;
+    btn : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_1_main_0_0_debouncer_2 : entity is "debouncer";
 end design_1_main_0_0_debouncer_2;
 
 architecture STRUCTURE of design_1_main_0_0_debouncer_2 is
+  signal \btn_valido_i_1__2_n_0\ : STD_LOGIC;
   signal \pulsos[9]_i_1__2_n_0\ : STD_LOGIC;
   signal \pulsos_reg_n_0_[1]\ : STD_LOGIC;
   signal \pulsos_reg_n_0_[2]\ : STD_LOGIC;
@@ -1168,7 +1305,26 @@ architecture STRUCTURE of design_1_main_0_0_debouncer_2 is
   signal \pulsos_reg_n_0_[6]\ : STD_LOGIC;
   signal \pulsos_reg_n_0_[7]\ : STD_LOGIC;
   signal \pulsos_reg_n_0_[8]\ : STD_LOGIC;
+  signal \pulsos_reg_n_0_[9]\ : STD_LOGIC;
+  signal state_reg_n_0 : STD_LOGIC;
 begin
+\btn_valido_i_1__2\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => \pulsos_reg_n_0_[9]\,
+      I1 => state_reg_n_0,
+      O => \btn_valido_i_1__2_n_0\
+    );
+btn_valido_reg: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => '1',
+      D => \btn_valido_i_1__2_n_0\,
+      Q => btn_debounced(0),
+      R => '0'
+    );
 \pulsos[9]_i_1__2\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
@@ -1246,8 +1402,19 @@ begin
       C => clk,
       CE => '1',
       D => \pulsos_reg_n_0_[8]\,
-      Q => btn_debounced(0),
+      Q => \pulsos_reg_n_0_[9]\,
       R => \pulsos[9]_i_1__2_n_0\
+    );
+state_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => \pulsos_reg_n_0_[9]\,
+      Q => state_reg_n_0,
+      R => '0'
     );
 end STRUCTURE;
 library IEEE;
@@ -1469,44 +1636,29 @@ architecture STRUCTURE of design_1_main_0_0_rgb_controller is
   signal \contador_r_reg[8]_i_1_n_5\ : STD_LOGIC;
   signal \contador_r_reg[8]_i_1_n_6\ : STD_LOGIC;
   signal \contador_r_reg[8]_i_1_n_7\ : STD_LOGIC;
-  signal \rgb2__15_carry__0_i_1_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry__0_i_2_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry__0_i_3_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry__0_i_4_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry__0_i_5_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry__0_i_6_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry__0_i_7_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry__0_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry__0_n_1\ : STD_LOGIC;
-  signal \rgb2__15_carry__0_n_2\ : STD_LOGIC;
-  signal \rgb2__15_carry__0_n_3\ : STD_LOGIC;
-  signal \rgb2__15_carry__1_i_1_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry__1_i_2_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry__1_i_3_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry__1_i_4_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry__1_i_5_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry__1_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry__1_n_1\ : STD_LOGIC;
-  signal \rgb2__15_carry__1_n_2\ : STD_LOGIC;
-  signal \rgb2__15_carry__1_n_3\ : STD_LOGIC;
-  signal \rgb2__15_carry__2_i_1_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry__2_i_2_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry__2_i_3_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry__2_i_4_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry__2_n_1\ : STD_LOGIC;
-  signal \rgb2__15_carry__2_n_2\ : STD_LOGIC;
-  signal \rgb2__15_carry__2_n_3\ : STD_LOGIC;
-  signal \rgb2__15_carry_i_1_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry_i_2_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry_i_3_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry_i_4_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry_i_5_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry_i_6_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry_i_7_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry_n_0\ : STD_LOGIC;
-  signal \rgb2__15_carry_n_1\ : STD_LOGIC;
-  signal \rgb2__15_carry_n_2\ : STD_LOGIC;
-  signal \rgb2__15_carry_n_3\ : STD_LOGIC;
+  signal \i__carry__0_i_1_n_0\ : STD_LOGIC;
+  signal \i__carry__0_i_2_n_0\ : STD_LOGIC;
+  signal \i__carry__0_i_3_n_0\ : STD_LOGIC;
+  signal \i__carry__0_i_4_n_0\ : STD_LOGIC;
+  signal \i__carry__0_i_5_n_0\ : STD_LOGIC;
+  signal \i__carry__0_i_6_n_0\ : STD_LOGIC;
+  signal \i__carry__0_i_7_n_0\ : STD_LOGIC;
+  signal \i__carry__1_i_1_n_0\ : STD_LOGIC;
+  signal \i__carry__1_i_2_n_0\ : STD_LOGIC;
+  signal \i__carry__1_i_3_n_0\ : STD_LOGIC;
+  signal \i__carry__1_i_4_n_0\ : STD_LOGIC;
+  signal \i__carry__1_i_5_n_0\ : STD_LOGIC;
+  signal \i__carry__2_i_1_n_0\ : STD_LOGIC;
+  signal \i__carry__2_i_2_n_0\ : STD_LOGIC;
+  signal \i__carry__2_i_3_n_0\ : STD_LOGIC;
+  signal \i__carry__2_i_4_n_0\ : STD_LOGIC;
+  signal \i__carry_i_1_n_0\ : STD_LOGIC;
+  signal \i__carry_i_2_n_0\ : STD_LOGIC;
+  signal \i__carry_i_3_n_0\ : STD_LOGIC;
+  signal \i__carry_i_4_n_0\ : STD_LOGIC;
+  signal \i__carry_i_5_n_0\ : STD_LOGIC;
+  signal \i__carry_i_6_n_0\ : STD_LOGIC;
+  signal \i__carry_i_7_n_0\ : STD_LOGIC;
   signal \rgb2_carry__0_i_1_n_0\ : STD_LOGIC;
   signal \rgb2_carry__0_i_2_n_0\ : STD_LOGIC;
   signal \rgb2_carry__0_i_3_n_0\ : STD_LOGIC;
@@ -1545,6 +1697,21 @@ architecture STRUCTURE of design_1_main_0_0_rgb_controller is
   signal rgb2_carry_n_1 : STD_LOGIC;
   signal rgb2_carry_n_2 : STD_LOGIC;
   signal rgb2_carry_n_3 : STD_LOGIC;
+  signal \rgb2_inferred__0/i__carry__0_n_0\ : STD_LOGIC;
+  signal \rgb2_inferred__0/i__carry__0_n_1\ : STD_LOGIC;
+  signal \rgb2_inferred__0/i__carry__0_n_2\ : STD_LOGIC;
+  signal \rgb2_inferred__0/i__carry__0_n_3\ : STD_LOGIC;
+  signal \rgb2_inferred__0/i__carry__1_n_0\ : STD_LOGIC;
+  signal \rgb2_inferred__0/i__carry__1_n_1\ : STD_LOGIC;
+  signal \rgb2_inferred__0/i__carry__1_n_2\ : STD_LOGIC;
+  signal \rgb2_inferred__0/i__carry__1_n_3\ : STD_LOGIC;
+  signal \rgb2_inferred__0/i__carry__2_n_1\ : STD_LOGIC;
+  signal \rgb2_inferred__0/i__carry__2_n_2\ : STD_LOGIC;
+  signal \rgb2_inferred__0/i__carry__2_n_3\ : STD_LOGIC;
+  signal \rgb2_inferred__0/i__carry_n_0\ : STD_LOGIC;
+  signal \rgb2_inferred__0/i__carry_n_1\ : STD_LOGIC;
+  signal \rgb2_inferred__0/i__carry_n_2\ : STD_LOGIC;
+  signal \rgb2_inferred__0/i__carry_n_3\ : STD_LOGIC;
   signal NLW_contador_g1_carry_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_contador_g1_carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_contador_g1_carry__1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -1557,14 +1724,14 @@ architecture STRUCTURE of design_1_main_0_0_rgb_controller is
   signal \NLW_contador_r1_carry__2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   signal \NLW_contador_r1_carry__2_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \NLW_contador_r_reg[28]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
-  signal \NLW_rgb2__15_carry_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal \NLW_rgb2__15_carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal \NLW_rgb2__15_carry__1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal \NLW_rgb2__15_carry__2_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_rgb2_carry_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_rgb2_carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_rgb2_carry__1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_rgb2_carry__2_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_rgb2_inferred__0/i__carry_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_rgb2_inferred__0/i__carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_rgb2_inferred__0/i__carry__1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_rgb2_inferred__0/i__carry__2_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \contador_g_reg[0]_i_1\ : label is 11;
   attribute ADDER_THRESHOLD of \contador_g_reg[12]_i_1\ : label is 11;
@@ -1583,14 +1750,14 @@ architecture STRUCTURE of design_1_main_0_0_rgb_controller is
   attribute ADDER_THRESHOLD of \contador_r_reg[4]_i_1\ : label is 11;
   attribute ADDER_THRESHOLD of \contador_r_reg[8]_i_1\ : label is 11;
   attribute COMPARATOR_THRESHOLD : integer;
-  attribute COMPARATOR_THRESHOLD of \rgb2__15_carry\ : label is 11;
-  attribute COMPARATOR_THRESHOLD of \rgb2__15_carry__0\ : label is 11;
-  attribute COMPARATOR_THRESHOLD of \rgb2__15_carry__1\ : label is 11;
-  attribute COMPARATOR_THRESHOLD of \rgb2__15_carry__2\ : label is 11;
   attribute COMPARATOR_THRESHOLD of rgb2_carry : label is 11;
   attribute COMPARATOR_THRESHOLD of \rgb2_carry__0\ : label is 11;
   attribute COMPARATOR_THRESHOLD of \rgb2_carry__1\ : label is 11;
   attribute COMPARATOR_THRESHOLD of \rgb2_carry__2\ : label is 11;
+  attribute COMPARATOR_THRESHOLD of \rgb2_inferred__0/i__carry\ : label is 11;
+  attribute COMPARATOR_THRESHOLD of \rgb2_inferred__0/i__carry__0\ : label is 11;
+  attribute COMPARATOR_THRESHOLD of \rgb2_inferred__0/i__carry__1\ : label is 11;
+  attribute COMPARATOR_THRESHOLD of \rgb2_inferred__0/i__carry__2\ : label is 11;
 begin
 contador_g1_carry: unisim.vcomponents.CARRY4
      port map (
@@ -3064,278 +3231,210 @@ contador_r1_carry_i_6: unisim.vcomponents.LUT2
       Q => contador_r_reg(9),
       R => clear
     );
-\rgb2__15_carry\: unisim.vcomponents.CARRY4
-     port map (
-      CI => '0',
-      CO(3) => \rgb2__15_carry_n_0\,
-      CO(2) => \rgb2__15_carry_n_1\,
-      CO(1) => \rgb2__15_carry_n_2\,
-      CO(0) => \rgb2__15_carry_n_3\,
-      CYINIT => '0',
-      DI(3) => '0',
-      DI(2) => \rgb2__15_carry_i_1_n_0\,
-      DI(1) => \rgb2__15_carry_i_2_n_0\,
-      DI(0) => \rgb2__15_carry_i_3_n_0\,
-      O(3 downto 0) => \NLW_rgb2__15_carry_O_UNCONNECTED\(3 downto 0),
-      S(3) => \rgb2__15_carry_i_4_n_0\,
-      S(2) => \rgb2__15_carry_i_5_n_0\,
-      S(1) => \rgb2__15_carry_i_6_n_0\,
-      S(0) => \rgb2__15_carry_i_7_n_0\
-    );
-\rgb2__15_carry__0\: unisim.vcomponents.CARRY4
-     port map (
-      CI => \rgb2__15_carry_n_0\,
-      CO(3) => \rgb2__15_carry__0_n_0\,
-      CO(2) => \rgb2__15_carry__0_n_1\,
-      CO(1) => \rgb2__15_carry__0_n_2\,
-      CO(0) => \rgb2__15_carry__0_n_3\,
-      CYINIT => '0',
-      DI(3) => '0',
-      DI(2) => \rgb2__15_carry__0_i_1_n_0\,
-      DI(1) => \rgb2__15_carry__0_i_2_n_0\,
-      DI(0) => \rgb2__15_carry__0_i_3_n_0\,
-      O(3 downto 0) => \NLW_rgb2__15_carry__0_O_UNCONNECTED\(3 downto 0),
-      S(3) => \rgb2__15_carry__0_i_4_n_0\,
-      S(2) => \rgb2__15_carry__0_i_5_n_0\,
-      S(1) => \rgb2__15_carry__0_i_6_n_0\,
-      S(0) => \rgb2__15_carry__0_i_7_n_0\
-    );
-\rgb2__15_carry__0_i_1\: unisim.vcomponents.LUT2
+\i__carry__0_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"1"
     )
         port map (
       I0 => contador_g_reg(12),
       I1 => contador_g_reg(13),
-      O => \rgb2__15_carry__0_i_1_n_0\
+      O => \i__carry__0_i_1_n_0\
     );
-\rgb2__15_carry__0_i_2\: unisim.vcomponents.LUT2
+\i__carry__0_i_2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"7"
     )
         port map (
       I0 => contador_g_reg(10),
       I1 => contador_g_reg(11),
-      O => \rgb2__15_carry__0_i_2_n_0\
+      O => \i__carry__0_i_2_n_0\
     );
-\rgb2__15_carry__0_i_3\: unisim.vcomponents.LUT2
+\i__carry__0_i_3\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"7"
     )
         port map (
       I0 => contador_g_reg(8),
       I1 => contador_g_reg(9),
-      O => \rgb2__15_carry__0_i_3_n_0\
+      O => \i__carry__0_i_3_n_0\
     );
-\rgb2__15_carry__0_i_4\: unisim.vcomponents.LUT2
+\i__carry__0_i_4\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"1"
     )
         port map (
       I0 => contador_g_reg(14),
       I1 => contador_g_reg(15),
-      O => \rgb2__15_carry__0_i_4_n_0\
+      O => \i__carry__0_i_4_n_0\
     );
-\rgb2__15_carry__0_i_5\: unisim.vcomponents.LUT2
+\i__carry__0_i_5\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"2"
     )
         port map (
       I0 => contador_g_reg(12),
       I1 => contador_g_reg(13),
-      O => \rgb2__15_carry__0_i_5_n_0\
+      O => \i__carry__0_i_5_n_0\
     );
-\rgb2__15_carry__0_i_6\: unisim.vcomponents.LUT2
+\i__carry__0_i_6\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
         port map (
       I0 => contador_g_reg(10),
       I1 => contador_g_reg(11),
-      O => \rgb2__15_carry__0_i_6_n_0\
+      O => \i__carry__0_i_6_n_0\
     );
-\rgb2__15_carry__0_i_7\: unisim.vcomponents.LUT2
+\i__carry__0_i_7\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
         port map (
       I0 => contador_g_reg(8),
       I1 => contador_g_reg(9),
-      O => \rgb2__15_carry__0_i_7_n_0\
+      O => \i__carry__0_i_7_n_0\
     );
-\rgb2__15_carry__1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => \rgb2__15_carry__0_n_0\,
-      CO(3) => \rgb2__15_carry__1_n_0\,
-      CO(2) => \rgb2__15_carry__1_n_1\,
-      CO(1) => \rgb2__15_carry__1_n_2\,
-      CO(0) => \rgb2__15_carry__1_n_3\,
-      CYINIT => '0',
-      DI(3 downto 1) => B"000",
-      DI(0) => \rgb2__15_carry__1_i_1_n_0\,
-      O(3 downto 0) => \NLW_rgb2__15_carry__1_O_UNCONNECTED\(3 downto 0),
-      S(3) => \rgb2__15_carry__1_i_2_n_0\,
-      S(2) => \rgb2__15_carry__1_i_3_n_0\,
-      S(1) => \rgb2__15_carry__1_i_4_n_0\,
-      S(0) => \rgb2__15_carry__1_i_5_n_0\
-    );
-\rgb2__15_carry__1_i_1\: unisim.vcomponents.LUT2
+\i__carry__1_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"1"
     )
         port map (
       I0 => contador_g_reg(16),
       I1 => contador_g_reg(17),
-      O => \rgb2__15_carry__1_i_1_n_0\
+      O => \i__carry__1_i_1_n_0\
     );
-\rgb2__15_carry__1_i_2\: unisim.vcomponents.LUT2
+\i__carry__1_i_2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"1"
     )
         port map (
       I0 => contador_g_reg(22),
       I1 => contador_g_reg(23),
-      O => \rgb2__15_carry__1_i_2_n_0\
+      O => \i__carry__1_i_2_n_0\
     );
-\rgb2__15_carry__1_i_3\: unisim.vcomponents.LUT2
+\i__carry__1_i_3\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"1"
     )
         port map (
       I0 => contador_g_reg(20),
       I1 => contador_g_reg(21),
-      O => \rgb2__15_carry__1_i_3_n_0\
+      O => \i__carry__1_i_3_n_0\
     );
-\rgb2__15_carry__1_i_4\: unisim.vcomponents.LUT2
+\i__carry__1_i_4\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"1"
     )
         port map (
       I0 => contador_g_reg(18),
       I1 => contador_g_reg(19),
-      O => \rgb2__15_carry__1_i_4_n_0\
+      O => \i__carry__1_i_4_n_0\
     );
-\rgb2__15_carry__1_i_5\: unisim.vcomponents.LUT2
+\i__carry__1_i_5\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"2"
     )
         port map (
       I0 => contador_g_reg(16),
       I1 => contador_g_reg(17),
-      O => \rgb2__15_carry__1_i_5_n_0\
+      O => \i__carry__1_i_5_n_0\
     );
-\rgb2__15_carry__2\: unisim.vcomponents.CARRY4
-     port map (
-      CI => \rgb2__15_carry__1_n_0\,
-      CO(3) => \contador_g_reg[31]_0\(0),
-      CO(2) => \rgb2__15_carry__2_n_1\,
-      CO(1) => \rgb2__15_carry__2_n_2\,
-      CO(0) => \rgb2__15_carry__2_n_3\,
-      CYINIT => '0',
-      DI(3) => contador_g_reg(31),
-      DI(2 downto 0) => B"000",
-      O(3 downto 0) => \NLW_rgb2__15_carry__2_O_UNCONNECTED\(3 downto 0),
-      S(3) => \rgb2__15_carry__2_i_1_n_0\,
-      S(2) => \rgb2__15_carry__2_i_2_n_0\,
-      S(1) => \rgb2__15_carry__2_i_3_n_0\,
-      S(0) => \rgb2__15_carry__2_i_4_n_0\
-    );
-\rgb2__15_carry__2_i_1\: unisim.vcomponents.LUT2
+\i__carry__2_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"1"
     )
         port map (
       I0 => contador_g_reg(30),
       I1 => contador_g_reg(31),
-      O => \rgb2__15_carry__2_i_1_n_0\
+      O => \i__carry__2_i_1_n_0\
     );
-\rgb2__15_carry__2_i_2\: unisim.vcomponents.LUT2
+\i__carry__2_i_2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"1"
     )
         port map (
       I0 => contador_g_reg(28),
       I1 => contador_g_reg(29),
-      O => \rgb2__15_carry__2_i_2_n_0\
+      O => \i__carry__2_i_2_n_0\
     );
-\rgb2__15_carry__2_i_3\: unisim.vcomponents.LUT2
+\i__carry__2_i_3\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"1"
     )
         port map (
       I0 => contador_g_reg(26),
       I1 => contador_g_reg(27),
-      O => \rgb2__15_carry__2_i_3_n_0\
+      O => \i__carry__2_i_3_n_0\
     );
-\rgb2__15_carry__2_i_4\: unisim.vcomponents.LUT2
+\i__carry__2_i_4\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"1"
     )
         port map (
       I0 => contador_g_reg(24),
       I1 => contador_g_reg(25),
-      O => \rgb2__15_carry__2_i_4_n_0\
+      O => \i__carry__2_i_4_n_0\
     );
-\rgb2__15_carry_i_1\: unisim.vcomponents.LUT2
+\i__carry_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"7"
     )
         port map (
       I0 => contador_g_reg(4),
       I1 => contador_g_reg(5),
-      O => \rgb2__15_carry_i_1_n_0\
+      O => \i__carry_i_1_n_0\
     );
-\rgb2__15_carry_i_2\: unisim.vcomponents.LUT1
+\i__carry_i_2\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
       I0 => contador_g_reg(3),
-      O => \rgb2__15_carry_i_2_n_0\
+      O => \i__carry_i_2_n_0\
     );
-\rgb2__15_carry_i_3\: unisim.vcomponents.LUT1
+\i__carry_i_3\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
       I0 => contador_g_reg(1),
-      O => \rgb2__15_carry_i_3_n_0\
+      O => \i__carry_i_3_n_0\
     );
-\rgb2__15_carry_i_4\: unisim.vcomponents.LUT2
+\i__carry_i_4\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"1"
     )
         port map (
       I0 => contador_g_reg(6),
       I1 => contador_g_reg(7),
-      O => \rgb2__15_carry_i_4_n_0\
+      O => \i__carry_i_4_n_0\
     );
-\rgb2__15_carry_i_5\: unisim.vcomponents.LUT2
+\i__carry_i_5\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
         port map (
       I0 => contador_g_reg(4),
       I1 => contador_g_reg(5),
-      O => \rgb2__15_carry_i_5_n_0\
+      O => \i__carry_i_5_n_0\
     );
-\rgb2__15_carry_i_6\: unisim.vcomponents.LUT2
+\i__carry_i_6\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"2"
     )
         port map (
       I0 => contador_g_reg(3),
       I1 => contador_g_reg(2),
-      O => \rgb2__15_carry_i_6_n_0\
+      O => \i__carry_i_6_n_0\
     );
-\rgb2__15_carry_i_7\: unisim.vcomponents.LUT2
+\i__carry_i_7\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"2"
     )
         port map (
       I0 => contador_g_reg(1),
       I1 => contador_g_reg(0),
-      O => \rgb2__15_carry_i_7_n_0\
+      O => \i__carry_i_7_n_0\
     );
 rgb2_carry: unisim.vcomponents.CARRY4
      port map (
@@ -3610,6 +3709,74 @@ rgb2_carry_i_7: unisim.vcomponents.LUT2
       I1 => contador_r_reg(0),
       O => rgb2_carry_i_7_n_0
     );
+\rgb2_inferred__0/i__carry\: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => \rgb2_inferred__0/i__carry_n_0\,
+      CO(2) => \rgb2_inferred__0/i__carry_n_1\,
+      CO(1) => \rgb2_inferred__0/i__carry_n_2\,
+      CO(0) => \rgb2_inferred__0/i__carry_n_3\,
+      CYINIT => '0',
+      DI(3) => '0',
+      DI(2) => \i__carry_i_1_n_0\,
+      DI(1) => \i__carry_i_2_n_0\,
+      DI(0) => \i__carry_i_3_n_0\,
+      O(3 downto 0) => \NLW_rgb2_inferred__0/i__carry_O_UNCONNECTED\(3 downto 0),
+      S(3) => \i__carry_i_4_n_0\,
+      S(2) => \i__carry_i_5_n_0\,
+      S(1) => \i__carry_i_6_n_0\,
+      S(0) => \i__carry_i_7_n_0\
+    );
+\rgb2_inferred__0/i__carry__0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \rgb2_inferred__0/i__carry_n_0\,
+      CO(3) => \rgb2_inferred__0/i__carry__0_n_0\,
+      CO(2) => \rgb2_inferred__0/i__carry__0_n_1\,
+      CO(1) => \rgb2_inferred__0/i__carry__0_n_2\,
+      CO(0) => \rgb2_inferred__0/i__carry__0_n_3\,
+      CYINIT => '0',
+      DI(3) => '0',
+      DI(2) => \i__carry__0_i_1_n_0\,
+      DI(1) => \i__carry__0_i_2_n_0\,
+      DI(0) => \i__carry__0_i_3_n_0\,
+      O(3 downto 0) => \NLW_rgb2_inferred__0/i__carry__0_O_UNCONNECTED\(3 downto 0),
+      S(3) => \i__carry__0_i_4_n_0\,
+      S(2) => \i__carry__0_i_5_n_0\,
+      S(1) => \i__carry__0_i_6_n_0\,
+      S(0) => \i__carry__0_i_7_n_0\
+    );
+\rgb2_inferred__0/i__carry__1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \rgb2_inferred__0/i__carry__0_n_0\,
+      CO(3) => \rgb2_inferred__0/i__carry__1_n_0\,
+      CO(2) => \rgb2_inferred__0/i__carry__1_n_1\,
+      CO(1) => \rgb2_inferred__0/i__carry__1_n_2\,
+      CO(0) => \rgb2_inferred__0/i__carry__1_n_3\,
+      CYINIT => '0',
+      DI(3 downto 1) => B"000",
+      DI(0) => \i__carry__1_i_1_n_0\,
+      O(3 downto 0) => \NLW_rgb2_inferred__0/i__carry__1_O_UNCONNECTED\(3 downto 0),
+      S(3) => \i__carry__1_i_2_n_0\,
+      S(2) => \i__carry__1_i_3_n_0\,
+      S(1) => \i__carry__1_i_4_n_0\,
+      S(0) => \i__carry__1_i_5_n_0\
+    );
+\rgb2_inferred__0/i__carry__2\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \rgb2_inferred__0/i__carry__1_n_0\,
+      CO(3) => \contador_g_reg[31]_0\(0),
+      CO(2) => \rgb2_inferred__0/i__carry__2_n_1\,
+      CO(1) => \rgb2_inferred__0/i__carry__2_n_2\,
+      CO(0) => \rgb2_inferred__0/i__carry__2_n_3\,
+      CYINIT => '0',
+      DI(3) => contador_g_reg(31),
+      DI(2 downto 0) => B"000",
+      O(3 downto 0) => \NLW_rgb2_inferred__0/i__carry__2_O_UNCONNECTED\(3 downto 0),
+      S(3) => \i__carry__2_i_1_n_0\,
+      S(2) => \i__carry__2_i_2_n_0\,
+      S(1) => \i__carry__2_i_3_n_0\,
+      S(0) => \i__carry__2_i_4_n_0\
+    );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -3617,15 +3784,15 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_main_0_0_main is
   port (
-    enable_catch_fish_sig_reg_0 : out STD_LOGIC;
     clk_div_catch_fish : out STD_LOGIC;
-    btn_debounced : out STD_LOGIC_VECTOR ( 3 downto 0 );
     led : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    enable_catch_fish_sig_reg_0 : out STD_LOGIC;
     enable_pull_fish_sig_reg_0 : out STD_LOGIC;
     rgb : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    game_end_catch_fish : in STD_LOGIC;
+    btn_debounced : out STD_LOGIC_VECTOR ( 3 downto 0 );
     game_won_pull_fish : in STD_LOGIC;
     game_lost_pull_fish : in STD_LOGIC;
+    game_end_catch_fish : in STD_LOGIC;
     clk : in STD_LOGIC;
     led_catch_fish : in STD_LOGIC_VECTOR ( 3 downto 0 );
     led_pull_fish : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -3638,21 +3805,72 @@ entity design_1_main_0_0_main is
 end design_1_main_0_0_main;
 
 architecture STRUCTURE of design_1_main_0_0_main is
-  signal debounce2_n_0 : STD_LOGIC;
+  signal \FSM_onehot_state_reg_n_0_[0]\ : STD_LOGIC;
+  signal \FSM_onehot_state_reg_n_0_[1]\ : STD_LOGIC;
+  signal \FSM_onehot_state_reg_n_0_[2]\ : STD_LOGIC;
   signal debounce2_n_1 : STD_LOGIC;
   signal debounce2_n_2 : STD_LOGIC;
+  signal debounce2_n_3 : STD_LOGIC;
+  signal debounce2_n_4 : STD_LOGIC;
+  signal debounce2_n_5 : STD_LOGIC;
+  signal enable_catch_fish_sig0 : STD_LOGIC;
   signal \^enable_catch_fish_sig_reg_0\ : STD_LOGIC;
-  signal enable_pull_fish_sig_i_1_n_0 : STD_LOGIC;
+  signal enable_pull_fish_sig_i_2_n_0 : STD_LOGIC;
   signal \^enable_pull_fish_sig_reg_0\ : STD_LOGIC;
   signal rgb2 : STD_LOGIC;
   signal rgb20_in : STD_LOGIC;
-  signal state : STD_LOGIC_VECTOR ( 1 downto 0 );
+  attribute FSM_ENCODED_STATES : string;
+  attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[0]\ : label is "iSTATE:010,iSTATE0:001,iSTATE1:100";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[1]\ : label is "iSTATE:010,iSTATE0:001,iSTATE1:100";
+  attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[2]\ : label is "iSTATE:010,iSTATE0:001,iSTATE1:100";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \rgb[1]_INST_0\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \rgb[2]_INST_0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \rgb[1]_INST_0\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \rgb[2]_INST_0\ : label is "soft_lutpair1";
 begin
   enable_catch_fish_sig_reg_0 <= \^enable_catch_fish_sig_reg_0\;
   enable_pull_fish_sig_reg_0 <= \^enable_pull_fish_sig_reg_0\;
+\FSM_onehot_state[2]_i_3\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \FSM_onehot_state_reg_n_0_[1]\,
+      I1 => game_end_catch_fish,
+      O => enable_catch_fish_sig0
+    );
+\FSM_onehot_state_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => debounce2_n_3,
+      Q => \FSM_onehot_state_reg_n_0_[0]\,
+      R => '0'
+    );
+\FSM_onehot_state_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => debounce2_n_2,
+      Q => \FSM_onehot_state_reg_n_0_[1]\,
+      R => '0'
+    );
+\FSM_onehot_state_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => debounce2_n_1,
+      Q => \FSM_onehot_state_reg_n_0_[2]\,
+      R => '0'
+    );
 clk_divider: entity work.design_1_main_0_0_clk_div
      port map (
       clk => clk,
@@ -3672,17 +3890,24 @@ debounce1: entity work.design_1_main_0_0_debouncer_0
     );
 debounce2: entity work.design_1_main_0_0_debouncer_1
      port map (
+      \FSM_onehot_state_reg[0]\ => debounce2_n_2,
+      \FSM_onehot_state_reg[2]\ => \FSM_onehot_state_reg_n_0_[1]\,
+      \FSM_onehot_state_reg[2]_0\ => \FSM_onehot_state_reg_n_0_[0]\,
+      \FSM_onehot_state_reg[2]_1\ => \FSM_onehot_state_reg_n_0_[2]\,
       btn(0) => btn(2),
       btn_debounced(0) => btn_debounced(2),
       clk => clk,
-      enable_catch_fish_sig_reg => \^enable_catch_fish_sig_reg_0\,
+      enable_catch_fish_sig0 => enable_catch_fish_sig0,
+      enable_catch_fish_sig_reg => debounce2_n_4,
+      enable_catch_fish_sig_reg_0 => \^enable_catch_fish_sig_reg_0\,
+      enable_pull_fish_sig_reg => debounce2_n_5,
+      enable_pull_fish_sig_reg_0 => \^enable_pull_fish_sig_reg_0\,
+      enable_pull_fish_sig_reg_1 => enable_pull_fish_sig_i_2_n_0,
       game_end_catch_fish => game_end_catch_fish,
+      game_end_catch_fish_0 => debounce2_n_1,
+      game_end_catch_fish_1 => debounce2_n_3,
       game_lost_pull_fish => game_lost_pull_fish,
       game_won_pull_fish => game_won_pull_fish,
-      state(1 downto 0) => state(1 downto 0),
-      \state_reg[0]\ => debounce2_n_0,
-      \state_reg[0]_0\ => debounce2_n_1,
-      \state_reg[0]_1\ => debounce2_n_2,
       sw(3 downto 0) => sw(3 downto 0)
     );
 debounce3: entity work.design_1_main_0_0_debouncer_2
@@ -3698,21 +3923,22 @@ enable_catch_fish_sig_reg: unisim.vcomponents.FDRE
         port map (
       C => clk,
       CE => '1',
-      D => debounce2_n_0,
+      D => debounce2_n_4,
       Q => \^enable_catch_fish_sig_reg_0\,
       R => '0'
     );
-enable_pull_fish_sig_i_1: unisim.vcomponents.LUT5
+enable_pull_fish_sig_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5755FF00"
+      INIT => X"00000000FFA8A8A8"
     )
         port map (
-      I0 => state(0),
-      I1 => game_lost_pull_fish,
-      I2 => game_won_pull_fish,
-      I3 => \^enable_pull_fish_sig_reg_0\,
-      I4 => state(1),
-      O => enable_pull_fish_sig_i_1_n_0
+      I0 => \FSM_onehot_state_reg_n_0_[2]\,
+      I1 => game_won_pull_fish,
+      I2 => game_lost_pull_fish,
+      I3 => \FSM_onehot_state_reg_n_0_[1]\,
+      I4 => game_end_catch_fish,
+      I5 => \FSM_onehot_state_reg_n_0_[0]\,
+      O => enable_pull_fish_sig_i_2_n_0
     );
 enable_pull_fish_sig_reg: unisim.vcomponents.FDRE
     generic map(
@@ -3721,7 +3947,7 @@ enable_pull_fish_sig_reg: unisim.vcomponents.FDRE
         port map (
       C => clk,
       CE => '1',
-      D => enable_pull_fish_sig_i_1_n_0,
+      D => debounce2_n_5,
       Q => \^enable_pull_fish_sig_reg_0\,
       R => '0'
     );
@@ -3795,28 +4021,6 @@ rgb_control: entity work.design_1_main_0_0_rgb_controller
       CO(0) => rgb2,
       clk => clk,
       \contador_g_reg[31]_0\(0) => rgb20_in
-    );
-\state_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk,
-      CE => '1',
-      D => debounce2_n_1,
-      Q => state(0),
-      R => '0'
-    );
-\state_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk,
-      CE => '1',
-      D => debounce2_n_2,
-      Q => state(1),
-      R => '0'
     );
 end STRUCTURE;
 library IEEE;

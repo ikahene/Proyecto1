@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Sat Sep 20 11:51:13 2025
+// Date        : Sun Sep 21 17:23:07 2025
 // Host        : BenjaUni running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/ip/design_1_main_0_0/design_1_main_0_0_sim_netlist.v
@@ -621,18 +621,33 @@ endmodule
 (* ORIG_REF_NAME = "debouncer" *) 
 module design_1_main_0_0_debouncer
    (btn_debounced,
-    btn,
-    clk);
+    clk,
+    btn);
   output [0:0]btn_debounced;
-  input [0:0]btn;
   input clk;
+  input [0:0]btn;
 
   wire [0:0]btn;
   wire [0:0]btn_debounced;
+  wire btn_valido_i_1_n_0;
   wire clk;
+  wire internal_btn;
   wire p_0_in;
   wire [9:2]p_1_in;
+  wire state;
 
+  LUT2 #(
+    .INIT(4'h2)) 
+    btn_valido_i_1
+       (.I0(internal_btn),
+        .I1(state),
+        .O(btn_valido_i_1_n_0));
+  FDRE btn_valido_reg
+       (.C(clk),
+        .CE(1'b1),
+        .D(btn_valido_i_1_n_0),
+        .Q(btn_debounced),
+        .R(1'b0));
   LUT1 #(
     .INIT(2'h1)) 
     \pulsos[9]_i_1 
@@ -690,21 +705,30 @@ module design_1_main_0_0_debouncer
        (.C(clk),
         .CE(1'b1),
         .D(p_1_in[9]),
-        .Q(btn_debounced),
+        .Q(internal_btn),
         .R(p_0_in));
+  FDRE #(
+    .INIT(1'b0)) 
+    state_reg
+       (.C(clk),
+        .CE(1'b1),
+        .D(internal_btn),
+        .Q(state),
+        .R(1'b0));
 endmodule
 
 (* ORIG_REF_NAME = "debouncer" *) 
 module design_1_main_0_0_debouncer_0
    (btn_debounced,
-    btn,
-    clk);
+    clk,
+    btn);
   output [0:0]btn_debounced;
-  input [0:0]btn;
   input clk;
+  input [0:0]btn;
 
   wire [0:0]btn;
   wire [0:0]btn_debounced;
+  wire btn_valido_i_1__0_n_0;
   wire clk;
   wire \pulsos[9]_i_1__0_n_0 ;
   wire \pulsos_reg_n_0_[1] ;
@@ -715,7 +739,21 @@ module design_1_main_0_0_debouncer_0
   wire \pulsos_reg_n_0_[6] ;
   wire \pulsos_reg_n_0_[7] ;
   wire \pulsos_reg_n_0_[8] ;
+  wire \pulsos_reg_n_0_[9] ;
+  wire state_reg_n_0;
 
+  LUT2 #(
+    .INIT(4'h2)) 
+    btn_valido_i_1__0
+       (.I0(\pulsos_reg_n_0_[9] ),
+        .I1(state_reg_n_0),
+        .O(btn_valido_i_1__0_n_0));
+  FDRE btn_valido_reg
+       (.C(clk),
+        .CE(1'b1),
+        .D(btn_valido_i_1__0_n_0),
+        .Q(btn_debounced),
+        .R(1'b0));
   LUT1 #(
     .INIT(2'h1)) 
     \pulsos[9]_i_1__0 
@@ -773,43 +811,78 @@ module design_1_main_0_0_debouncer_0
        (.C(clk),
         .CE(1'b1),
         .D(\pulsos_reg_n_0_[8] ),
-        .Q(btn_debounced),
+        .Q(\pulsos_reg_n_0_[9] ),
         .R(\pulsos[9]_i_1__0_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    state_reg
+       (.C(clk),
+        .CE(1'b1),
+        .D(\pulsos_reg_n_0_[9] ),
+        .Q(state_reg_n_0),
+        .R(1'b0));
 endmodule
 
 (* ORIG_REF_NAME = "debouncer" *) 
 module design_1_main_0_0_debouncer_1
-   (\state_reg[0] ,
-    \state_reg[0]_0 ,
-    \state_reg[0]_1 ,
-    btn_debounced,
-    state,
-    game_end_catch_fish,
+   (btn_debounced,
+    game_end_catch_fish_0,
+    \FSM_onehot_state_reg[0] ,
+    game_end_catch_fish_1,
     enable_catch_fish_sig_reg,
-    game_won_pull_fish,
+    enable_pull_fish_sig_reg,
+    clk,
+    game_end_catch_fish,
+    \FSM_onehot_state_reg[2] ,
+    \FSM_onehot_state_reg[2]_0 ,
+    \FSM_onehot_state_reg[2]_1 ,
+    enable_catch_fish_sig_reg_0,
+    enable_pull_fish_sig_reg_0,
+    enable_pull_fish_sig_reg_1,
+    enable_catch_fish_sig0,
     game_lost_pull_fish,
+    game_won_pull_fish,
     sw,
-    btn,
-    clk);
-  output \state_reg[0] ;
-  output \state_reg[0]_0 ;
-  output \state_reg[0]_1 ;
+    btn);
   output [0:0]btn_debounced;
-  input [1:0]state;
+  output game_end_catch_fish_0;
+  output \FSM_onehot_state_reg[0] ;
+  output game_end_catch_fish_1;
+  output enable_catch_fish_sig_reg;
+  output enable_pull_fish_sig_reg;
+  input clk;
   input game_end_catch_fish;
-  input enable_catch_fish_sig_reg;
-  input game_won_pull_fish;
+  input \FSM_onehot_state_reg[2] ;
+  input \FSM_onehot_state_reg[2]_0 ;
+  input \FSM_onehot_state_reg[2]_1 ;
+  input enable_catch_fish_sig_reg_0;
+  input enable_pull_fish_sig_reg_0;
+  input enable_pull_fish_sig_reg_1;
+  input enable_catch_fish_sig0;
   input game_lost_pull_fish;
+  input game_won_pull_fish;
   input [3:0]sw;
   input [0:0]btn;
-  input clk;
 
+  wire \FSM_onehot_state[2]_i_2_n_0 ;
+  wire \FSM_onehot_state_reg[0] ;
+  wire \FSM_onehot_state_reg[2] ;
+  wire \FSM_onehot_state_reg[2]_0 ;
+  wire \FSM_onehot_state_reg[2]_1 ;
   wire [0:0]btn;
   wire [0:0]btn_debounced;
+  wire btn_valido_i_1__1_n_0;
   wire clk;
-  wire enable_catch_fish_sig_i_2_n_0;
+  wire enable_catch_fish_sig0;
+  wire enable_catch_fish_sig01_out;
   wire enable_catch_fish_sig_reg;
+  wire enable_catch_fish_sig_reg_0;
+  wire enable_pull_fish_sig_reg;
+  wire enable_pull_fish_sig_reg_0;
+  wire enable_pull_fish_sig_reg_1;
   wire game_end_catch_fish;
+  wire game_end_catch_fish_0;
+  wire game_end_catch_fish_1;
   wire game_lost_pull_fish;
   wire game_won_pull_fish;
   wire \pulsos[9]_i_1__1_n_0 ;
@@ -821,31 +894,86 @@ module design_1_main_0_0_debouncer_1
   wire \pulsos_reg_n_0_[6] ;
   wire \pulsos_reg_n_0_[7] ;
   wire \pulsos_reg_n_0_[8] ;
-  wire [1:0]state;
-  wire \state_reg[0] ;
-  wire \state_reg[0]_0 ;
-  wire \state_reg[0]_1 ;
+  wire \pulsos_reg_n_0_[9] ;
+  wire state_reg_n_0;
   wire [3:0]sw;
 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT4 #(
+    .INIT(16'h0F70)) 
+    \FSM_onehot_state[0]_i_1 
+       (.I0(game_end_catch_fish),
+        .I1(\FSM_onehot_state_reg[2] ),
+        .I2(\FSM_onehot_state[2]_i_2_n_0 ),
+        .I3(\FSM_onehot_state_reg[2]_0 ),
+        .O(game_end_catch_fish_1));
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \FSM_onehot_state[1]_i_1 
+       (.I0(\FSM_onehot_state_reg[2]_0 ),
+        .I1(\FSM_onehot_state[2]_i_2_n_0 ),
+        .I2(\FSM_onehot_state_reg[2] ),
+        .O(\FSM_onehot_state_reg[0] ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
-    .INIT(32'hF3FF2222)) 
-    enable_catch_fish_sig_i_1
-       (.I0(enable_catch_fish_sig_i_2_n_0),
-        .I1(state[0]),
-        .I2(state[1]),
-        .I3(game_end_catch_fish),
-        .I4(enable_catch_fish_sig_reg),
-        .O(\state_reg[0] ));
+    .INIT(32'h08FF0800)) 
+    \FSM_onehot_state[2]_i_1 
+       (.I0(game_end_catch_fish),
+        .I1(\FSM_onehot_state_reg[2] ),
+        .I2(\FSM_onehot_state_reg[2]_0 ),
+        .I3(\FSM_onehot_state[2]_i_2_n_0 ),
+        .I4(\FSM_onehot_state_reg[2]_1 ),
+        .O(game_end_catch_fish_0));
   LUT6 #(
-    .INIT(64'h0000000100000000)) 
-    enable_catch_fish_sig_i_2
-       (.I0(state[1]),
-        .I1(sw[0]),
+    .INIT(64'hBBBBBBB8B8B8B8B8)) 
+    \FSM_onehot_state[2]_i_2 
+       (.I0(enable_catch_fish_sig01_out),
+        .I1(\FSM_onehot_state_reg[2]_0 ),
+        .I2(enable_catch_fish_sig0),
+        .I3(game_lost_pull_fish),
+        .I4(game_won_pull_fish),
+        .I5(\FSM_onehot_state_reg[2]_1 ),
+        .O(\FSM_onehot_state[2]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h2)) 
+    btn_valido_i_1__1
+       (.I0(\pulsos_reg_n_0_[9] ),
+        .I1(state_reg_n_0),
+        .O(btn_valido_i_1__1_n_0));
+  FDRE btn_valido_reg
+       (.C(clk),
+        .CE(1'b1),
+        .D(btn_valido_i_1__1_n_0),
+        .Q(btn_debounced),
+        .R(1'b0));
+  LUT5 #(
+    .INIT(32'hC0CACACA)) 
+    enable_catch_fish_sig_i_1
+       (.I0(enable_catch_fish_sig_reg_0),
+        .I1(enable_catch_fish_sig01_out),
+        .I2(\FSM_onehot_state_reg[2]_0 ),
+        .I3(\FSM_onehot_state_reg[2] ),
+        .I4(game_end_catch_fish),
+        .O(enable_catch_fish_sig_reg));
+  LUT6 #(
+    .INIT(64'hE2220000E222E222)) 
+    enable_pull_fish_sig_i_1
+       (.I0(enable_pull_fish_sig_reg_0),
+        .I1(enable_pull_fish_sig_reg_1),
+        .I2(game_end_catch_fish),
+        .I3(\FSM_onehot_state_reg[2] ),
+        .I4(enable_catch_fish_sig01_out),
+        .I5(\FSM_onehot_state_reg[2]_0 ),
+        .O(enable_pull_fish_sig_reg));
+  LUT5 #(
+    .INIT(32'h00000002)) 
+    enable_pull_fish_sig_i_3
+       (.I0(btn_debounced),
+        .I1(sw[2]),
         .I2(sw[1]),
-        .I3(sw[2]),
+        .I3(sw[0]),
         .I4(sw[3]),
-        .I5(btn_debounced),
-        .O(enable_catch_fish_sig_i_2_n_0));
+        .O(enable_catch_fish_sig01_out));
   LUT1 #(
     .INIT(2'h1)) 
     \pulsos[9]_i_1__1 
@@ -903,41 +1031,30 @@ module design_1_main_0_0_debouncer_1
        (.C(clk),
         .CE(1'b1),
         .D(\pulsos_reg_n_0_[8] ),
-        .Q(btn_debounced),
+        .Q(\pulsos_reg_n_0_[9] ),
         .R(\pulsos[9]_i_1__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h323E323E323EF2FE)) 
-    \state[0]_i_1 
-       (.I0(enable_catch_fish_sig_i_2_n_0),
-        .I1(state[0]),
-        .I2(state[1]),
-        .I3(game_end_catch_fish),
-        .I4(game_won_pull_fish),
-        .I5(game_lost_pull_fish),
-        .O(\state_reg[0]_0 ));
-  LUT6 #(
-    .INIT(64'h1C101C101C10DCD0)) 
-    \state[1]_i_1 
-       (.I0(enable_catch_fish_sig_i_2_n_0),
-        .I1(state[0]),
-        .I2(state[1]),
-        .I3(game_end_catch_fish),
-        .I4(game_won_pull_fish),
-        .I5(game_lost_pull_fish),
-        .O(\state_reg[0]_1 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    state_reg
+       (.C(clk),
+        .CE(1'b1),
+        .D(\pulsos_reg_n_0_[9] ),
+        .Q(state_reg_n_0),
+        .R(1'b0));
 endmodule
 
 (* ORIG_REF_NAME = "debouncer" *) 
 module design_1_main_0_0_debouncer_2
    (btn_debounced,
-    btn,
-    clk);
+    clk,
+    btn);
   output [0:0]btn_debounced;
-  input [0:0]btn;
   input clk;
+  input [0:0]btn;
 
   wire [0:0]btn;
   wire [0:0]btn_debounced;
+  wire btn_valido_i_1__2_n_0;
   wire clk;
   wire \pulsos[9]_i_1__2_n_0 ;
   wire \pulsos_reg_n_0_[1] ;
@@ -948,7 +1065,21 @@ module design_1_main_0_0_debouncer_2
   wire \pulsos_reg_n_0_[6] ;
   wire \pulsos_reg_n_0_[7] ;
   wire \pulsos_reg_n_0_[8] ;
+  wire \pulsos_reg_n_0_[9] ;
+  wire state_reg_n_0;
 
+  LUT2 #(
+    .INIT(4'h2)) 
+    btn_valido_i_1__2
+       (.I0(\pulsos_reg_n_0_[9] ),
+        .I1(state_reg_n_0),
+        .O(btn_valido_i_1__2_n_0));
+  FDRE btn_valido_reg
+       (.C(clk),
+        .CE(1'b1),
+        .D(btn_valido_i_1__2_n_0),
+        .Q(btn_debounced),
+        .R(1'b0));
   LUT1 #(
     .INIT(2'h1)) 
     \pulsos[9]_i_1__2 
@@ -1006,36 +1137,44 @@ module design_1_main_0_0_debouncer_2
        (.C(clk),
         .CE(1'b1),
         .D(\pulsos_reg_n_0_[8] ),
-        .Q(btn_debounced),
+        .Q(\pulsos_reg_n_0_[9] ),
         .R(\pulsos[9]_i_1__2_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    state_reg
+       (.C(clk),
+        .CE(1'b1),
+        .D(\pulsos_reg_n_0_[9] ),
+        .Q(state_reg_n_0),
+        .R(1'b0));
 endmodule
 
 (* ORIG_REF_NAME = "main" *) 
 module design_1_main_0_0_main
-   (enable_catch_fish_sig_reg_0,
-    clk_div_catch_fish,
-    btn_debounced,
+   (clk_div_catch_fish,
     led,
+    enable_catch_fish_sig_reg_0,
     enable_pull_fish_sig_reg_0,
     rgb,
-    game_end_catch_fish,
+    btn_debounced,
     game_won_pull_fish,
     game_lost_pull_fish,
+    game_end_catch_fish,
     clk,
     led_catch_fish,
     led_pull_fish,
     rgb_pull_fish,
     sw,
     btn);
-  output enable_catch_fish_sig_reg_0;
   output clk_div_catch_fish;
-  output [3:0]btn_debounced;
   output [3:0]led;
+  output enable_catch_fish_sig_reg_0;
   output enable_pull_fish_sig_reg_0;
   output [1:0]rgb;
-  input game_end_catch_fish;
+  output [3:0]btn_debounced;
   input game_won_pull_fish;
   input game_lost_pull_fish;
+  input game_end_catch_fish;
   input clk;
   input [3:0]led_catch_fish;
   input [3:0]led_pull_fish;
@@ -1043,15 +1182,21 @@ module design_1_main_0_0_main
   input [3:0]sw;
   input [3:0]btn;
 
+  wire \FSM_onehot_state_reg_n_0_[0] ;
+  wire \FSM_onehot_state_reg_n_0_[1] ;
+  wire \FSM_onehot_state_reg_n_0_[2] ;
   wire [3:0]btn;
   wire [3:0]btn_debounced;
   wire clk;
   wire clk_div_catch_fish;
-  wire debounce2_n_0;
   wire debounce2_n_1;
   wire debounce2_n_2;
+  wire debounce2_n_3;
+  wire debounce2_n_4;
+  wire debounce2_n_5;
+  wire enable_catch_fish_sig0;
   wire enable_catch_fish_sig_reg_0;
-  wire enable_pull_fish_sig_i_1_n_0;
+  wire enable_pull_fish_sig_i_2_n_0;
   wire enable_pull_fish_sig_reg_0;
   wire game_end_catch_fish;
   wire game_lost_pull_fish;
@@ -1063,9 +1208,41 @@ module design_1_main_0_0_main
   wire rgb2;
   wire rgb20_in;
   wire [1:0]rgb_pull_fish;
-  wire [1:0]state;
   wire [3:0]sw;
 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \FSM_onehot_state[2]_i_3 
+       (.I0(\FSM_onehot_state_reg_n_0_[1] ),
+        .I1(game_end_catch_fish),
+        .O(enable_catch_fish_sig0));
+  (* FSM_ENCODED_STATES = "iSTATE:010,iSTATE0:001,iSTATE1:100" *) 
+  FDRE #(
+    .INIT(1'b1)) 
+    \FSM_onehot_state_reg[0] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(debounce2_n_3),
+        .Q(\FSM_onehot_state_reg_n_0_[0] ),
+        .R(1'b0));
+  (* FSM_ENCODED_STATES = "iSTATE:010,iSTATE0:001,iSTATE1:100" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \FSM_onehot_state_reg[1] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(debounce2_n_2),
+        .Q(\FSM_onehot_state_reg_n_0_[1] ),
+        .R(1'b0));
+  (* FSM_ENCODED_STATES = "iSTATE:010,iSTATE0:001,iSTATE1:100" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \FSM_onehot_state_reg[2] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(debounce2_n_1),
+        .Q(\FSM_onehot_state_reg_n_0_[2] ),
+        .R(1'b0));
   design_1_main_0_0_clk_div clk_divider
        (.clk(clk),
         .clk_div_catch_fish(clk_div_catch_fish));
@@ -1078,17 +1255,24 @@ module design_1_main_0_0_main
         .btn_debounced(btn_debounced[1]),
         .clk(clk));
   design_1_main_0_0_debouncer_1 debounce2
-       (.btn(btn[2]),
+       (.\FSM_onehot_state_reg[0] (debounce2_n_2),
+        .\FSM_onehot_state_reg[2] (\FSM_onehot_state_reg_n_0_[1] ),
+        .\FSM_onehot_state_reg[2]_0 (\FSM_onehot_state_reg_n_0_[0] ),
+        .\FSM_onehot_state_reg[2]_1 (\FSM_onehot_state_reg_n_0_[2] ),
+        .btn(btn[2]),
         .btn_debounced(btn_debounced[2]),
         .clk(clk),
-        .enable_catch_fish_sig_reg(enable_catch_fish_sig_reg_0),
+        .enable_catch_fish_sig0(enable_catch_fish_sig0),
+        .enable_catch_fish_sig_reg(debounce2_n_4),
+        .enable_catch_fish_sig_reg_0(enable_catch_fish_sig_reg_0),
+        .enable_pull_fish_sig_reg(debounce2_n_5),
+        .enable_pull_fish_sig_reg_0(enable_pull_fish_sig_reg_0),
+        .enable_pull_fish_sig_reg_1(enable_pull_fish_sig_i_2_n_0),
         .game_end_catch_fish(game_end_catch_fish),
+        .game_end_catch_fish_0(debounce2_n_1),
+        .game_end_catch_fish_1(debounce2_n_3),
         .game_lost_pull_fish(game_lost_pull_fish),
         .game_won_pull_fish(game_won_pull_fish),
-        .state(state),
-        .\state_reg[0] (debounce2_n_0),
-        .\state_reg[0]_0 (debounce2_n_1),
-        .\state_reg[0]_1 (debounce2_n_2),
         .sw(sw));
   design_1_main_0_0_debouncer_2 debounce3
        (.btn(btn[3]),
@@ -1099,24 +1283,25 @@ module design_1_main_0_0_main
     enable_catch_fish_sig_reg
        (.C(clk),
         .CE(1'b1),
-        .D(debounce2_n_0),
+        .D(debounce2_n_4),
         .Q(enable_catch_fish_sig_reg_0),
         .R(1'b0));
-  LUT5 #(
-    .INIT(32'h5755FF00)) 
-    enable_pull_fish_sig_i_1
-       (.I0(state[0]),
-        .I1(game_lost_pull_fish),
-        .I2(game_won_pull_fish),
-        .I3(enable_pull_fish_sig_reg_0),
-        .I4(state[1]),
-        .O(enable_pull_fish_sig_i_1_n_0));
+  LUT6 #(
+    .INIT(64'h00000000FFA8A8A8)) 
+    enable_pull_fish_sig_i_2
+       (.I0(\FSM_onehot_state_reg_n_0_[2] ),
+        .I1(game_won_pull_fish),
+        .I2(game_lost_pull_fish),
+        .I3(\FSM_onehot_state_reg_n_0_[1] ),
+        .I4(game_end_catch_fish),
+        .I5(\FSM_onehot_state_reg_n_0_[0] ),
+        .O(enable_pull_fish_sig_i_2_n_0));
   FDRE #(
     .INIT(1'b0)) 
     enable_pull_fish_sig_reg
        (.C(clk),
         .CE(1'b1),
-        .D(enable_pull_fish_sig_i_1_n_0),
+        .D(debounce2_n_5),
         .Q(enable_pull_fish_sig_reg_0),
         .R(1'b0));
   LUT4 #(
@@ -1151,7 +1336,7 @@ module design_1_main_0_0_main
         .I2(enable_pull_fish_sig_reg_0),
         .I3(led_pull_fish[3]),
         .O(led[3]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'h20)) 
     \rgb[1]_INST_0 
@@ -1159,7 +1344,7 @@ module design_1_main_0_0_main
         .I1(rgb_pull_fish[1]),
         .I2(rgb20_in),
         .O(rgb[0]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'h2800)) 
     \rgb[2]_INST_0 
@@ -1172,22 +1357,6 @@ module design_1_main_0_0_main
        (.CO(rgb2),
         .clk(clk),
         .\contador_g_reg[31]_0 (rgb20_in));
-  FDRE #(
-    .INIT(1'b0)) 
-    \state_reg[0] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(debounce2_n_1),
-        .Q(state[0]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \state_reg[1] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(debounce2_n_2),
-        .Q(state[1]),
-        .R(1'b0));
 endmodule
 
 (* ORIG_REF_NAME = "rgb_controller" *) 
@@ -1406,44 +1575,29 @@ module design_1_main_0_0_rgb_controller
   wire \contador_r_reg[8]_i_1_n_5 ;
   wire \contador_r_reg[8]_i_1_n_6 ;
   wire \contador_r_reg[8]_i_1_n_7 ;
-  wire rgb2__15_carry__0_i_1_n_0;
-  wire rgb2__15_carry__0_i_2_n_0;
-  wire rgb2__15_carry__0_i_3_n_0;
-  wire rgb2__15_carry__0_i_4_n_0;
-  wire rgb2__15_carry__0_i_5_n_0;
-  wire rgb2__15_carry__0_i_6_n_0;
-  wire rgb2__15_carry__0_i_7_n_0;
-  wire rgb2__15_carry__0_n_0;
-  wire rgb2__15_carry__0_n_1;
-  wire rgb2__15_carry__0_n_2;
-  wire rgb2__15_carry__0_n_3;
-  wire rgb2__15_carry__1_i_1_n_0;
-  wire rgb2__15_carry__1_i_2_n_0;
-  wire rgb2__15_carry__1_i_3_n_0;
-  wire rgb2__15_carry__1_i_4_n_0;
-  wire rgb2__15_carry__1_i_5_n_0;
-  wire rgb2__15_carry__1_n_0;
-  wire rgb2__15_carry__1_n_1;
-  wire rgb2__15_carry__1_n_2;
-  wire rgb2__15_carry__1_n_3;
-  wire rgb2__15_carry__2_i_1_n_0;
-  wire rgb2__15_carry__2_i_2_n_0;
-  wire rgb2__15_carry__2_i_3_n_0;
-  wire rgb2__15_carry__2_i_4_n_0;
-  wire rgb2__15_carry__2_n_1;
-  wire rgb2__15_carry__2_n_2;
-  wire rgb2__15_carry__2_n_3;
-  wire rgb2__15_carry_i_1_n_0;
-  wire rgb2__15_carry_i_2_n_0;
-  wire rgb2__15_carry_i_3_n_0;
-  wire rgb2__15_carry_i_4_n_0;
-  wire rgb2__15_carry_i_5_n_0;
-  wire rgb2__15_carry_i_6_n_0;
-  wire rgb2__15_carry_i_7_n_0;
-  wire rgb2__15_carry_n_0;
-  wire rgb2__15_carry_n_1;
-  wire rgb2__15_carry_n_2;
-  wire rgb2__15_carry_n_3;
+  wire i__carry__0_i_1_n_0;
+  wire i__carry__0_i_2_n_0;
+  wire i__carry__0_i_3_n_0;
+  wire i__carry__0_i_4_n_0;
+  wire i__carry__0_i_5_n_0;
+  wire i__carry__0_i_6_n_0;
+  wire i__carry__0_i_7_n_0;
+  wire i__carry__1_i_1_n_0;
+  wire i__carry__1_i_2_n_0;
+  wire i__carry__1_i_3_n_0;
+  wire i__carry__1_i_4_n_0;
+  wire i__carry__1_i_5_n_0;
+  wire i__carry__2_i_1_n_0;
+  wire i__carry__2_i_2_n_0;
+  wire i__carry__2_i_3_n_0;
+  wire i__carry__2_i_4_n_0;
+  wire i__carry_i_1_n_0;
+  wire i__carry_i_2_n_0;
+  wire i__carry_i_3_n_0;
+  wire i__carry_i_4_n_0;
+  wire i__carry_i_5_n_0;
+  wire i__carry_i_6_n_0;
+  wire i__carry_i_7_n_0;
   wire rgb2_carry__0_i_1_n_0;
   wire rgb2_carry__0_i_2_n_0;
   wire rgb2_carry__0_i_3_n_0;
@@ -1482,6 +1636,21 @@ module design_1_main_0_0_rgb_controller
   wire rgb2_carry_n_1;
   wire rgb2_carry_n_2;
   wire rgb2_carry_n_3;
+  wire \rgb2_inferred__0/i__carry__0_n_0 ;
+  wire \rgb2_inferred__0/i__carry__0_n_1 ;
+  wire \rgb2_inferred__0/i__carry__0_n_2 ;
+  wire \rgb2_inferred__0/i__carry__0_n_3 ;
+  wire \rgb2_inferred__0/i__carry__1_n_0 ;
+  wire \rgb2_inferred__0/i__carry__1_n_1 ;
+  wire \rgb2_inferred__0/i__carry__1_n_2 ;
+  wire \rgb2_inferred__0/i__carry__1_n_3 ;
+  wire \rgb2_inferred__0/i__carry__2_n_1 ;
+  wire \rgb2_inferred__0/i__carry__2_n_2 ;
+  wire \rgb2_inferred__0/i__carry__2_n_3 ;
+  wire \rgb2_inferred__0/i__carry_n_0 ;
+  wire \rgb2_inferred__0/i__carry_n_1 ;
+  wire \rgb2_inferred__0/i__carry_n_2 ;
+  wire \rgb2_inferred__0/i__carry_n_3 ;
   wire [3:0]NLW_contador_g1_carry_O_UNCONNECTED;
   wire [3:0]NLW_contador_g1_carry__0_O_UNCONNECTED;
   wire [3:0]NLW_contador_g1_carry__1_O_UNCONNECTED;
@@ -1494,14 +1663,14 @@ module design_1_main_0_0_rgb_controller
   wire [3:3]NLW_contador_r1_carry__2_CO_UNCONNECTED;
   wire [2:0]NLW_contador_r1_carry__2_O_UNCONNECTED;
   wire [3:3]\NLW_contador_r_reg[28]_i_1_CO_UNCONNECTED ;
-  wire [3:0]NLW_rgb2__15_carry_O_UNCONNECTED;
-  wire [3:0]NLW_rgb2__15_carry__0_O_UNCONNECTED;
-  wire [3:0]NLW_rgb2__15_carry__1_O_UNCONNECTED;
-  wire [3:0]NLW_rgb2__15_carry__2_O_UNCONNECTED;
   wire [3:0]NLW_rgb2_carry_O_UNCONNECTED;
   wire [3:0]NLW_rgb2_carry__0_O_UNCONNECTED;
   wire [3:0]NLW_rgb2_carry__1_O_UNCONNECTED;
   wire [3:0]NLW_rgb2_carry__2_O_UNCONNECTED;
+  wire [3:0]\NLW_rgb2_inferred__0/i__carry_O_UNCONNECTED ;
+  wire [3:0]\NLW_rgb2_inferred__0/i__carry__0_O_UNCONNECTED ;
+  wire [3:0]\NLW_rgb2_inferred__0/i__carry__1_O_UNCONNECTED ;
+  wire [3:0]\NLW_rgb2_inferred__0/i__carry__2_O_UNCONNECTED ;
 
   CARRY4 contador_g1_carry
        (.CI(1'b0),
@@ -2455,174 +2624,142 @@ module design_1_main_0_0_rgb_controller
         .D(\contador_r_reg[8]_i_1_n_6 ),
         .Q(contador_r_reg[9]),
         .R(clear));
-  (* COMPARATOR_THRESHOLD = "11" *) 
-  CARRY4 rgb2__15_carry
-       (.CI(1'b0),
-        .CO({rgb2__15_carry_n_0,rgb2__15_carry_n_1,rgb2__15_carry_n_2,rgb2__15_carry_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,rgb2__15_carry_i_1_n_0,rgb2__15_carry_i_2_n_0,rgb2__15_carry_i_3_n_0}),
-        .O(NLW_rgb2__15_carry_O_UNCONNECTED[3:0]),
-        .S({rgb2__15_carry_i_4_n_0,rgb2__15_carry_i_5_n_0,rgb2__15_carry_i_6_n_0,rgb2__15_carry_i_7_n_0}));
-  (* COMPARATOR_THRESHOLD = "11" *) 
-  CARRY4 rgb2__15_carry__0
-       (.CI(rgb2__15_carry_n_0),
-        .CO({rgb2__15_carry__0_n_0,rgb2__15_carry__0_n_1,rgb2__15_carry__0_n_2,rgb2__15_carry__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,rgb2__15_carry__0_i_1_n_0,rgb2__15_carry__0_i_2_n_0,rgb2__15_carry__0_i_3_n_0}),
-        .O(NLW_rgb2__15_carry__0_O_UNCONNECTED[3:0]),
-        .S({rgb2__15_carry__0_i_4_n_0,rgb2__15_carry__0_i_5_n_0,rgb2__15_carry__0_i_6_n_0,rgb2__15_carry__0_i_7_n_0}));
   LUT2 #(
     .INIT(4'h1)) 
-    rgb2__15_carry__0_i_1
+    i__carry__0_i_1
        (.I0(contador_g_reg[12]),
         .I1(contador_g_reg[13]),
-        .O(rgb2__15_carry__0_i_1_n_0));
+        .O(i__carry__0_i_1_n_0));
   LUT2 #(
     .INIT(4'h7)) 
-    rgb2__15_carry__0_i_2
+    i__carry__0_i_2
        (.I0(contador_g_reg[10]),
         .I1(contador_g_reg[11]),
-        .O(rgb2__15_carry__0_i_2_n_0));
+        .O(i__carry__0_i_2_n_0));
   LUT2 #(
     .INIT(4'h7)) 
-    rgb2__15_carry__0_i_3
+    i__carry__0_i_3
        (.I0(contador_g_reg[8]),
         .I1(contador_g_reg[9]),
-        .O(rgb2__15_carry__0_i_3_n_0));
+        .O(i__carry__0_i_3_n_0));
   LUT2 #(
     .INIT(4'h1)) 
-    rgb2__15_carry__0_i_4
+    i__carry__0_i_4
        (.I0(contador_g_reg[14]),
         .I1(contador_g_reg[15]),
-        .O(rgb2__15_carry__0_i_4_n_0));
+        .O(i__carry__0_i_4_n_0));
   LUT2 #(
     .INIT(4'h2)) 
-    rgb2__15_carry__0_i_5
+    i__carry__0_i_5
        (.I0(contador_g_reg[12]),
         .I1(contador_g_reg[13]),
-        .O(rgb2__15_carry__0_i_5_n_0));
+        .O(i__carry__0_i_5_n_0));
   LUT2 #(
     .INIT(4'h8)) 
-    rgb2__15_carry__0_i_6
+    i__carry__0_i_6
        (.I0(contador_g_reg[10]),
         .I1(contador_g_reg[11]),
-        .O(rgb2__15_carry__0_i_6_n_0));
+        .O(i__carry__0_i_6_n_0));
   LUT2 #(
     .INIT(4'h8)) 
-    rgb2__15_carry__0_i_7
+    i__carry__0_i_7
        (.I0(contador_g_reg[8]),
         .I1(contador_g_reg[9]),
-        .O(rgb2__15_carry__0_i_7_n_0));
-  (* COMPARATOR_THRESHOLD = "11" *) 
-  CARRY4 rgb2__15_carry__1
-       (.CI(rgb2__15_carry__0_n_0),
-        .CO({rgb2__15_carry__1_n_0,rgb2__15_carry__1_n_1,rgb2__15_carry__1_n_2,rgb2__15_carry__1_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,rgb2__15_carry__1_i_1_n_0}),
-        .O(NLW_rgb2__15_carry__1_O_UNCONNECTED[3:0]),
-        .S({rgb2__15_carry__1_i_2_n_0,rgb2__15_carry__1_i_3_n_0,rgb2__15_carry__1_i_4_n_0,rgb2__15_carry__1_i_5_n_0}));
+        .O(i__carry__0_i_7_n_0));
   LUT2 #(
     .INIT(4'h1)) 
-    rgb2__15_carry__1_i_1
+    i__carry__1_i_1
        (.I0(contador_g_reg[16]),
         .I1(contador_g_reg[17]),
-        .O(rgb2__15_carry__1_i_1_n_0));
+        .O(i__carry__1_i_1_n_0));
   LUT2 #(
     .INIT(4'h1)) 
-    rgb2__15_carry__1_i_2
+    i__carry__1_i_2
        (.I0(contador_g_reg[22]),
         .I1(contador_g_reg[23]),
-        .O(rgb2__15_carry__1_i_2_n_0));
+        .O(i__carry__1_i_2_n_0));
   LUT2 #(
     .INIT(4'h1)) 
-    rgb2__15_carry__1_i_3
+    i__carry__1_i_3
        (.I0(contador_g_reg[20]),
         .I1(contador_g_reg[21]),
-        .O(rgb2__15_carry__1_i_3_n_0));
+        .O(i__carry__1_i_3_n_0));
   LUT2 #(
     .INIT(4'h1)) 
-    rgb2__15_carry__1_i_4
+    i__carry__1_i_4
        (.I0(contador_g_reg[18]),
         .I1(contador_g_reg[19]),
-        .O(rgb2__15_carry__1_i_4_n_0));
+        .O(i__carry__1_i_4_n_0));
   LUT2 #(
     .INIT(4'h2)) 
-    rgb2__15_carry__1_i_5
+    i__carry__1_i_5
        (.I0(contador_g_reg[16]),
         .I1(contador_g_reg[17]),
-        .O(rgb2__15_carry__1_i_5_n_0));
-  (* COMPARATOR_THRESHOLD = "11" *) 
-  CARRY4 rgb2__15_carry__2
-       (.CI(rgb2__15_carry__1_n_0),
-        .CO({\contador_g_reg[31]_0 ,rgb2__15_carry__2_n_1,rgb2__15_carry__2_n_2,rgb2__15_carry__2_n_3}),
-        .CYINIT(1'b0),
-        .DI({contador_g_reg[31],1'b0,1'b0,1'b0}),
-        .O(NLW_rgb2__15_carry__2_O_UNCONNECTED[3:0]),
-        .S({rgb2__15_carry__2_i_1_n_0,rgb2__15_carry__2_i_2_n_0,rgb2__15_carry__2_i_3_n_0,rgb2__15_carry__2_i_4_n_0}));
+        .O(i__carry__1_i_5_n_0));
   LUT2 #(
     .INIT(4'h1)) 
-    rgb2__15_carry__2_i_1
+    i__carry__2_i_1
        (.I0(contador_g_reg[30]),
         .I1(contador_g_reg[31]),
-        .O(rgb2__15_carry__2_i_1_n_0));
+        .O(i__carry__2_i_1_n_0));
   LUT2 #(
     .INIT(4'h1)) 
-    rgb2__15_carry__2_i_2
+    i__carry__2_i_2
        (.I0(contador_g_reg[28]),
         .I1(contador_g_reg[29]),
-        .O(rgb2__15_carry__2_i_2_n_0));
+        .O(i__carry__2_i_2_n_0));
   LUT2 #(
     .INIT(4'h1)) 
-    rgb2__15_carry__2_i_3
+    i__carry__2_i_3
        (.I0(contador_g_reg[26]),
         .I1(contador_g_reg[27]),
-        .O(rgb2__15_carry__2_i_3_n_0));
+        .O(i__carry__2_i_3_n_0));
   LUT2 #(
     .INIT(4'h1)) 
-    rgb2__15_carry__2_i_4
+    i__carry__2_i_4
        (.I0(contador_g_reg[24]),
         .I1(contador_g_reg[25]),
-        .O(rgb2__15_carry__2_i_4_n_0));
+        .O(i__carry__2_i_4_n_0));
   LUT2 #(
     .INIT(4'h7)) 
-    rgb2__15_carry_i_1
+    i__carry_i_1
        (.I0(contador_g_reg[4]),
         .I1(contador_g_reg[5]),
-        .O(rgb2__15_carry_i_1_n_0));
+        .O(i__carry_i_1_n_0));
   LUT1 #(
     .INIT(2'h1)) 
-    rgb2__15_carry_i_2
+    i__carry_i_2
        (.I0(contador_g_reg[3]),
-        .O(rgb2__15_carry_i_2_n_0));
+        .O(i__carry_i_2_n_0));
   LUT1 #(
     .INIT(2'h1)) 
-    rgb2__15_carry_i_3
+    i__carry_i_3
        (.I0(contador_g_reg[1]),
-        .O(rgb2__15_carry_i_3_n_0));
+        .O(i__carry_i_3_n_0));
   LUT2 #(
     .INIT(4'h1)) 
-    rgb2__15_carry_i_4
+    i__carry_i_4
        (.I0(contador_g_reg[6]),
         .I1(contador_g_reg[7]),
-        .O(rgb2__15_carry_i_4_n_0));
+        .O(i__carry_i_4_n_0));
   LUT2 #(
     .INIT(4'h8)) 
-    rgb2__15_carry_i_5
+    i__carry_i_5
        (.I0(contador_g_reg[4]),
         .I1(contador_g_reg[5]),
-        .O(rgb2__15_carry_i_5_n_0));
+        .O(i__carry_i_5_n_0));
   LUT2 #(
     .INIT(4'h2)) 
-    rgb2__15_carry_i_6
+    i__carry_i_6
        (.I0(contador_g_reg[3]),
         .I1(contador_g_reg[2]),
-        .O(rgb2__15_carry_i_6_n_0));
+        .O(i__carry_i_6_n_0));
   LUT2 #(
     .INIT(4'h2)) 
-    rgb2__15_carry_i_7
+    i__carry_i_7
        (.I0(contador_g_reg[1]),
         .I1(contador_g_reg[0]),
-        .O(rgb2__15_carry_i_7_n_0));
+        .O(i__carry_i_7_n_0));
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 rgb2_carry
        (.CI(1'b0),
@@ -2791,6 +2928,38 @@ module design_1_main_0_0_rgb_controller
        (.I0(contador_r_reg[1]),
         .I1(contador_r_reg[0]),
         .O(rgb2_carry_i_7_n_0));
+  (* COMPARATOR_THRESHOLD = "11" *) 
+  CARRY4 \rgb2_inferred__0/i__carry 
+       (.CI(1'b0),
+        .CO({\rgb2_inferred__0/i__carry_n_0 ,\rgb2_inferred__0/i__carry_n_1 ,\rgb2_inferred__0/i__carry_n_2 ,\rgb2_inferred__0/i__carry_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,i__carry_i_1_n_0,i__carry_i_2_n_0,i__carry_i_3_n_0}),
+        .O(\NLW_rgb2_inferred__0/i__carry_O_UNCONNECTED [3:0]),
+        .S({i__carry_i_4_n_0,i__carry_i_5_n_0,i__carry_i_6_n_0,i__carry_i_7_n_0}));
+  (* COMPARATOR_THRESHOLD = "11" *) 
+  CARRY4 \rgb2_inferred__0/i__carry__0 
+       (.CI(\rgb2_inferred__0/i__carry_n_0 ),
+        .CO({\rgb2_inferred__0/i__carry__0_n_0 ,\rgb2_inferred__0/i__carry__0_n_1 ,\rgb2_inferred__0/i__carry__0_n_2 ,\rgb2_inferred__0/i__carry__0_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,i__carry__0_i_1_n_0,i__carry__0_i_2_n_0,i__carry__0_i_3_n_0}),
+        .O(\NLW_rgb2_inferred__0/i__carry__0_O_UNCONNECTED [3:0]),
+        .S({i__carry__0_i_4_n_0,i__carry__0_i_5_n_0,i__carry__0_i_6_n_0,i__carry__0_i_7_n_0}));
+  (* COMPARATOR_THRESHOLD = "11" *) 
+  CARRY4 \rgb2_inferred__0/i__carry__1 
+       (.CI(\rgb2_inferred__0/i__carry__0_n_0 ),
+        .CO({\rgb2_inferred__0/i__carry__1_n_0 ,\rgb2_inferred__0/i__carry__1_n_1 ,\rgb2_inferred__0/i__carry__1_n_2 ,\rgb2_inferred__0/i__carry__1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,i__carry__1_i_1_n_0}),
+        .O(\NLW_rgb2_inferred__0/i__carry__1_O_UNCONNECTED [3:0]),
+        .S({i__carry__1_i_2_n_0,i__carry__1_i_3_n_0,i__carry__1_i_4_n_0,i__carry__1_i_5_n_0}));
+  (* COMPARATOR_THRESHOLD = "11" *) 
+  CARRY4 \rgb2_inferred__0/i__carry__2 
+       (.CI(\rgb2_inferred__0/i__carry__1_n_0 ),
+        .CO({\contador_g_reg[31]_0 ,\rgb2_inferred__0/i__carry__2_n_1 ,\rgb2_inferred__0/i__carry__2_n_2 ,\rgb2_inferred__0/i__carry__2_n_3 }),
+        .CYINIT(1'b0),
+        .DI({contador_g_reg[31],1'b0,1'b0,1'b0}),
+        .O(\NLW_rgb2_inferred__0/i__carry__2_O_UNCONNECTED [3:0]),
+        .S({i__carry__2_i_1_n_0,i__carry__2_i_2_n_0,i__carry__2_i_3_n_0,i__carry__2_i_4_n_0}));
 endmodule
 `ifndef GLBL
 `define GLBL

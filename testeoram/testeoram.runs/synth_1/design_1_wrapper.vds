@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Sat Sep 20 11:51:52 2025
-# Process ID: 20308
+# Start of session at: Sun Sep 21 17:23:09 2025
+# Process ID: 3184
 # Current directory: C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/design_1_wrapper.vds
@@ -20,39 +20,39 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 12844
+INFO: [Synth 8-7075] Helper process launched with PID 18328
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1059.637 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1063.316 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:24]
 INFO: [Synth 8-3491] module 'design_1' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:14' bound to instance 'design_1_i' of component 'design_1' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:35]
 INFO: [Synth 8-638] synthesizing module 'design_1' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:28]
-INFO: [Synth 8-3491] module 'design_1_axi_smc_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_axi_smc_0_stub.vhdl:5' bound to instance 'axi_smc' of component 'design_1_axi_smc_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:614]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_smc_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_axi_smc_0_stub.vhdl:65]
-INFO: [Synth 8-3491] module 'design_1_axi_smc_1_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_axi_smc_1_0_stub.vhdl:5' bound to instance 'axi_smc_1' of component 'design_1_axi_smc_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:671]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_smc_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_axi_smc_1_0_stub.vhdl:87]
-INFO: [Synth 8-3491] module 'design_1_axi_traffic_gen_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_axi_traffic_gen_0_0_stub.vhdl:5' bound to instance 'axi_traffic_gen_0' of component 'design_1_axi_traffic_gen_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:750]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_traffic_gen_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_axi_traffic_gen_0_0_stub.vhdl:88]
-INFO: [Synth 8-3491] module 'design_1_axi_traffic_gen_1_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_axi_traffic_gen_1_0_stub.vhdl:5' bound to instance 'axi_traffic_gen_1' of component 'design_1_axi_traffic_gen_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:830]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_traffic_gen_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_axi_traffic_gen_1_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'design_1_catch_fish_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_catch_fish_0_0_stub.vhdl:5' bound to instance 'catch_fish_0' of component 'design_1_catch_fish_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:855]
-INFO: [Synth 8-638] synthesizing module 'design_1_catch_fish_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_catch_fish_0_0_stub.vhdl:18]
-INFO: [Synth 8-3491] module 'design_1_clk_wiz_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_clk_wiz_0_stub.vhdl:5' bound to instance 'clk_wiz' of component 'design_1_clk_wiz_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:865]
-INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_clk_wiz_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'design_1_ila_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_ila_0_0_stub.vhdl:5' bound to instance 'ila_0' of component 'design_1_ila_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:872]
-INFO: [Synth 8-638] synthesizing module 'design_1_ila_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_ila_0_0_stub.vhdl:56]
-INFO: [Synth 8-3491] module 'design_1_ila_1_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_ila_1_0_stub.vhdl:5' bound to instance 'ila_1' of component 'design_1_ila_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:920]
-INFO: [Synth 8-638] synthesizing module 'design_1_ila_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_ila_1_0_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'design_1_main_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_main_0_0_stub.vhdl:5' bound to instance 'main_0' of component 'design_1_main_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:925]
-INFO: [Synth 8-638] synthesizing module 'design_1_main_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_main_0_0_stub.vhdl:26]
-INFO: [Synth 8-3491] module 'design_1_pull_fish_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_pull_fish_0_0_stub.vhdl:5' bound to instance 'pull_fish_0' of component 'design_1_pull_fish_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:943]
-INFO: [Synth 8-638] synthesizing module 'design_1_pull_fish_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_pull_fish_0_0_stub.vhdl:20]
-INFO: [Synth 8-3491] module 'design_1_ram_pull_fish_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_ram_pull_fish_0_0_stub.vhdl:5' bound to instance 'ram_pull_fish_0' of component 'design_1_ram_pull_fish_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:955]
-INFO: [Synth 8-638] synthesizing module 'design_1_ram_pull_fish_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_ram_pull_fish_0_0_stub.vhdl:52]
-INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_100M_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_rst_clk_wiz_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_100M' of component 'design_1_rst_clk_wiz_100M_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:999]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_100M_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_rst_clk_wiz_100M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_vio_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_vio_0_0_stub.vhdl:5' bound to instance 'vio_0' of component 'design_1_vio_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:1012]
-INFO: [Synth 8-638] synthesizing module 'design_1_vio_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-20308-BenjaUni/realtime/design_1_vio_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'design_1_axi_smc_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_axi_smc_0_stub.vhdl:5' bound to instance 'axi_smc' of component 'design_1_axi_smc_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:614]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_smc_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_axi_smc_0_stub.vhdl:65]
+INFO: [Synth 8-3491] module 'design_1_axi_smc_1_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_axi_smc_1_0_stub.vhdl:5' bound to instance 'axi_smc_1' of component 'design_1_axi_smc_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:671]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_smc_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_axi_smc_1_0_stub.vhdl:87]
+INFO: [Synth 8-3491] module 'design_1_axi_traffic_gen_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_axi_traffic_gen_0_0_stub.vhdl:5' bound to instance 'axi_traffic_gen_0' of component 'design_1_axi_traffic_gen_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:750]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_traffic_gen_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_axi_traffic_gen_0_0_stub.vhdl:88]
+INFO: [Synth 8-3491] module 'design_1_axi_traffic_gen_1_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_axi_traffic_gen_1_0_stub.vhdl:5' bound to instance 'axi_traffic_gen_1' of component 'design_1_axi_traffic_gen_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:830]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_traffic_gen_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_axi_traffic_gen_1_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'design_1_catch_fish_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_catch_fish_0_0_stub.vhdl:5' bound to instance 'catch_fish_0' of component 'design_1_catch_fish_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:855]
+INFO: [Synth 8-638] synthesizing module 'design_1_catch_fish_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_catch_fish_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'design_1_clk_wiz_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_clk_wiz_0_stub.vhdl:5' bound to instance 'clk_wiz' of component 'design_1_clk_wiz_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:865]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_clk_wiz_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_ila_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_ila_0_0_stub.vhdl:5' bound to instance 'ila_0' of component 'design_1_ila_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:872]
+INFO: [Synth 8-638] synthesizing module 'design_1_ila_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_ila_0_0_stub.vhdl:56]
+INFO: [Synth 8-3491] module 'design_1_ila_1_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_ila_1_0_stub.vhdl:5' bound to instance 'ila_1' of component 'design_1_ila_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:920]
+INFO: [Synth 8-638] synthesizing module 'design_1_ila_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_ila_1_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'design_1_main_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_main_0_0_stub.vhdl:5' bound to instance 'main_0' of component 'design_1_main_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:925]
+INFO: [Synth 8-638] synthesizing module 'design_1_main_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_main_0_0_stub.vhdl:26]
+INFO: [Synth 8-3491] module 'design_1_pull_fish_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_pull_fish_0_0_stub.vhdl:5' bound to instance 'pull_fish_0' of component 'design_1_pull_fish_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:943]
+INFO: [Synth 8-638] synthesizing module 'design_1_pull_fish_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_pull_fish_0_0_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'design_1_ram_pull_fish_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_ram_pull_fish_0_0_stub.vhdl:5' bound to instance 'ram_pull_fish_0' of component 'design_1_ram_pull_fish_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:955]
+INFO: [Synth 8-638] synthesizing module 'design_1_ram_pull_fish_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_ram_pull_fish_0_0_stub.vhdl:52]
+INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_100M_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_rst_clk_wiz_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_100M' of component 'design_1_rst_clk_wiz_100M_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:999]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_100M_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_rst_clk_wiz_100M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_vio_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_vio_0_0_stub.vhdl:5' bound to instance 'vio_0' of component 'design_1_vio_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:1012]
+INFO: [Synth 8-638] synthesizing module 'design_1_vio_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/.Xil/Vivado-3184-BenjaUni/realtime/design_1_vio_0_0_stub.vhdl:13]
 INFO: [Synth 8-3491] module 'design_1_xlconstant_0_0' declared at 'c:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:1017]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_0_0' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
@@ -63,18 +63,18 @@ INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_0' (2#1) [c
 INFO: [Synth 8-256] done synthesizing module 'design_1' (3#1) [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/synth/design_1.vhd:28]
 INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (4#1) [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:24]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1090.242 ; gain = 30.605
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1090.977 ; gain = 27.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1090.242 ; gain = 30.605
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1090.977 ; gain = 27.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1090.242 ; gain = 30.605
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1090.977 ; gain = 27.660
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1090.242 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1099.926 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -115,20 +115,20 @@ Parsing XDC File [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeor
 Finished Parsing XDC File [C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1151.785 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1151.305 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1151.785 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1151.305 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1151.785 ; gain = 92.148
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1151.305 ; gain = 87.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1151.785 ; gain = 92.148
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1151.305 ; gain = 87.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -151,10 +151,10 @@ Applied set_property DONT_TOUCH = true for design_1_i/main_0. (constraint file  
 Applied set_property DONT_TOUCH = true for design_1_i/pull_fish_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/catch_fish_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1151.785 ; gain = 92.148
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1151.305 ; gain = 87.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1151.785 ; gain = 92.148
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1151.305 ; gain = 87.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -176,25 +176,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1151.785 ; gain = 92.148
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1151.305 ; gain = 87.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1166.457 ; gain = 106.820
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1165.250 ; gain = 101.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1166.605 ; gain = 106.969
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1165.324 ; gain = 102.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1186.594 ; gain = 126.957
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1185.828 ; gain = 122.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -212,37 +212,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1191.371 ; gain = 131.734
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1189.613 ; gain = 126.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1191.371 ; gain = 131.734
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1189.613 ; gain = 126.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1191.371 ; gain = 131.734
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1189.613 ; gain = 126.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1191.371 ; gain = 131.734
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1189.613 ; gain = 126.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1191.371 ; gain = 131.734
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1189.613 ; gain = 126.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1191.371 ; gain = 131.734
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1189.613 ; gain = 126.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -289,25 +289,25 @@ Report Cell Usage:
 |16    |OBUF                              |     7|
 +------+----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1191.371 ; gain = 131.734
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1189.613 ; gain = 126.297
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1191.371 ; gain = 70.191
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1191.371 ; gain = 131.734
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1189.613 ; gain = 65.969
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1189.613 ; gain = 126.297
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1191.371 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1189.613 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1205.395 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1203.691 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 52 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1205.395 ; gain = 145.758
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1203.691 ; gain = 140.375
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/testeoram/testeoram.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Sep 20 11:52:25 2025...
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 21 17:23:43 2025...
