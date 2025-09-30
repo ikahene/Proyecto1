@@ -3,12 +3,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
 
 entity pull_fish is
-    Port (clk: in std_logic;
-          btn: in std_logic_vector(3 downto 0);
-          led: out std_logic_vector(3 downto 0);
-          rgb_color: out std_logic_vector(1 downto 0); -- 00~Verde, 01~Amarillo, 10~rojo
-          seq : in std_logic_vector(15 downto 0); --Sequencia que entra del axi
-          seq_addr : out std_logic_vector(3 downto 0); --adrress de la secuencia
+    Port (clk: in std_logic; -- clk de la Zybo
+          btn: in std_logic_vector(3 downto 0); -- señales de botones desde el main
+          led: out std_logic_vector(3 downto 0); -- señales de leds de salida
+          rgb_color: out std_logic_vector(1 downto 0); -- señales rgb de salida 00~Verde, 01~Amarillo, 10~rojo
+          seq : in std_logic_vector(15 downto 0); -- Secuencia que entra del axi
+          seq_addr : out std_logic_vector(3 downto 0); --address de la secuencia
           enable: in std_logic; --Activa el modulo o lo desactiva/reinicia
           won : out std_logic; --Marca 1 si se gana, 0 si el juego sigue.
           lost : out std_logic --Marca 1 si se pierde, 0 si se gana.
@@ -17,6 +17,7 @@ end pull_fish;
 
 architecture Behavioral of pull_fish is
 
+-- llamamos al componente random number
 component random_number is
     Port (
         clk             : in  std_logic;
@@ -26,6 +27,7 @@ component random_number is
     );
 end component random_number;
 
+-- Hacemos una función para transformar el valor de los leds en un entero--
 function leds_to_num(led : std_logic_vector(3 downto 0)) return integer is
     begin
         case led is
@@ -38,27 +40,28 @@ function leds_to_num(led : std_logic_vector(3 downto 0)) return integer is
     end function leds_to_num;
 
 -----Señales del generador de numero aleatorio----
-signal active_rand : std_logic := '1';
-signal dificultad : std_logic_vector(3 downto 0);
-signal addr : std_logic_vector(3 downto 0);
+signal active_rand : std_logic := '1'; -- Mientras este en '1' se va a generar un numero aleatorio en cada clock en '0' deja de hacerlo
+signal dificultad : std_logic_vector(3 downto 0); -- Valor de la dificultad 0001 (facil) - 0011 (medio) - 0111 (dificil) - 1111 (muy dificil)
+signal addr : std_logic_vector(3 downto 0); -- Address que sale del generador de numeros aleatorios
 
 ------------Señales del pull fish ----------------
 constant segundos: integer := 2; --Segundos disponible para presionar el boton
-constant max_count: integer := 125_000_000;
-signal contador_clk : integer := 0;
-signal contador_segundos : integer := 0;
-signal reset_segundos : std_logic := '0';
-signal start_game_counter : std_logic := '0';
+constant max_count: integer := 125_000_000; -- hasta cuanto se debe contar para hacer 1 segundo
+signal contador_clk : integer := 0; -- contador de ciclos de clock
+signal contador_segundos : integer := 0; -- contador de segundos
+signal reset_segundos : std_logic := '0'; -- reset de segundos, en '1' el contador_segundos pasa a 0 en '0', no pasa nada
+signal start_game_counter : std_logic := '0'; -- En '1' empieza el contador del juego, tiempo de cada secuencia
 signal time_over : std_logic := '0'; -- Marca 1 si se acabo  el tiempo, marca 0 si el juego sigue-
 signal game_won : std_logic := '0'; -- Marca 1 si se gana, marca 0 si el juego sigue.
 
 ------------Vectores de botones/leds---------------
 signal parpadeo : std_logic := '0'; --indica si se hace parpadear los leds o no
-signal led_sig  : std_logic_vector (3 downto 0):= "0000";
+signal led_sig  : std_logic_vector (3 downto 0):= "0000"; -- Indica la secuencia de leds a mostrar
 
 ------------Contador dificultad--------------------
-signal contador_dificultad : integer := 0; --Contador para mostrar la dificultad al inicio
-signal max_boton : integer := 1;
+signal contador_dificultad : integer := 0; --Contador para mostrar la dificultad al inicio del juego
+signal max_boton : integer := 1; -- Máxima cantidad de veces que hay que presionar el boton
+                                 -- Cambia con la dificultad facil = 1, medio = 2, dificil = 3, muy dificil = 4 
 
 
 begin
@@ -76,9 +79,9 @@ variable seq_state : std_logic_vector(2 downto 0);
 variable contador_boton : integer := 0;
 begin
     if rising_edge(clk) then
-        if enable = '1' then
-            if time_over = '0' then
-                if seq_state = "000" then
+        if enable = '1' then --Si esta activado el módulo pull_fish entonces el proceso funciona
+            if time_over = '0' then -- Si el tiempo de juego no se ha acabado entonces funciona
+                if seq_state = "000" then -- El primer estado, muestra la dificultad actual en los leds e inicia el contador del juego
                     if contador_dificultad < 2*max_count then
                         contador_dificultad <= contador_dificultad + 1;
                     else
@@ -89,7 +92,7 @@ begin
                     end if;
                     led_sig <= dificultad;
                     
-                elsif seq_state = "001" then
+                elsif seq_state = "001" then -- Este y los estado que quedan se aseguran de que el bóton de la secuencia sea presionado max_boton veces
                     if seq(3 downto 0) = btn then
                         contador_boton := contador_boton + 1;
                     end if;
@@ -133,7 +136,7 @@ begin
                     
                     led_sig <= seq(11 downto 8);
                     
-                elsif seq_state = "100" then
+                elsif seq_state = "100" then --Este es el ultimo estado de la secuencia, si este se logra, el juego se gana.
                     if seq(15 downto 12) = btn then
                         contador_boton := contador_boton + 1;
                     end if;
@@ -142,6 +145,7 @@ begin
                         start_game_counter <= '0';
                         game_won <= '1';
                         parpadeo <= '0';
+                        contador_boton := 0;
                     elsif contador_boton < max_boton then
                         reset_segundos <= '0';
                     end if;
@@ -152,7 +156,7 @@ begin
             end if;
         
         --Reset del proceso pull_fish
-        elsif enable = '0' then
+        elsif enable = '0' then -- Cuando el módulo este apagado reinicia sus valores
             contador_boton := 0;
             seq_state := "000";
             contador_dificultad <= 0;
@@ -208,7 +212,7 @@ begin
     end if;
 end process;
 
--------------Proceso que mantiene activo el generador de n mero aleatorio------------
+-------------Proceso que mantiene activo el generador de numero aleatorio------------
 process(clk)
 begin
     if rising_edge(clk) then
@@ -227,7 +231,7 @@ variable contador_parpadeo : integer := 0;
 variable estado: std_logic:= '0';
 begin
     if rising_edge(clk) then
-        if parpadeo = '1' then
+        if parpadeo = '1' then --Si el parpadeo de leds esta encendido, entonces los leds que se muestren parpadean 5 Hz
             if contador_parpadeo < max_contador_parpadeo then
                 contador_parpadeo := contador_parpadeo + 1;
             else
@@ -241,7 +245,7 @@ begin
                 led <= "0000";
             end if;
         elsif parpadeo = '0' then
-            led <= led_sig;
+            led <= led_sig; -- Si el parpadeo de leds esta apagado, se muestra la secuencia de leds sin parpadear
         end if;
     end if;
 end process;
