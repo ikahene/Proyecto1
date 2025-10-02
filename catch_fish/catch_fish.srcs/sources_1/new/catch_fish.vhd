@@ -22,7 +22,7 @@ architecture Behavioral of catch_fish is
 begin
     process(clk_div, clk)
     variable catched: std_logic:='0'; -- Señal que avisa si el pez fue atrapado o no
-    variable led: std_logic_vector(3 downto 0) := "0001"; -- Definimos el led que se enciende
+    variable led: std_logic_vector(3 downto 0) := "0001"; -- Definimos la secuencia de leds que se enciende
     variable estado: integer := 0; -- Máquina de estado para el cambio de leds
     
     

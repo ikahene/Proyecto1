@@ -364,8 +364,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>main_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-09-21T20:20:05Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>3</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-10-02T10:22:39Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@6ec40f99_ARCHIVE_LOCATION">c:/Users/byane/OneDrive/Escritorio/Proyecto1/Ip_cores/Main</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@51c7780d_ARCHIVE_LOCATION">c:/Users/byane/OneDrive/Escritorio/Proyecto1/Ip_cores/Main</xilinx:tag>
@@ -373,6 +373,12 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2123572f_ARCHIVE_LOCATION">c:/Users/byane/OneDrive/Escritorio/Proyecto1/Ip_cores/Main</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@33a00611_ARCHIVE_LOCATION">c:/Users/byane/OneDrive/Escritorio/Proyecto1/Ip_cores/Main</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@4e6bc6bd_ARCHIVE_LOCATION">c:/Users/byane/OneDrive/Escritorio/Proyecto1/Ip_cores/Main</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cc5a785_ARCHIVE_LOCATION">c:/Users/byane/OneDrive/Escritorio/Proyecto1/Ip_cores/Main</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75a3eaa7_ARCHIVE_LOCATION">c:/Users/byane/OneDrive/Escritorio/Proyecto1/Ip_cores/Main</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dd7fd6d_ARCHIVE_LOCATION">c:/Users/byane/OneDrive/Escritorio/Proyecto1/Ip_cores/Main</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@624a1548_ARCHIVE_LOCATION">c:/Users/byane/OneDrive/Escritorio/Proyecto1/Ip_cores/Main</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16b8df6_ARCHIVE_LOCATION">c:/Users/byane/OneDrive/Escritorio/Proyecto1/Ip_cores/Main</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45bd4c65_ARCHIVE_LOCATION">c:/Users/byane/OneDrive/Escritorio/Proyecto1/Ip_cores/Main</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

@@ -21,9 +21,9 @@
       "vio_0": "",
       "ram_pull_fish_0": "",
       "xlconstant_0": "",
-      "pull_fish_0": "",
       "catch_fish_0": "",
-      "main_0": ""
+      "main_0": "",
+      "pull_fish_0": ""
     },
     "ports": {
       "clk": {
@@ -344,10 +344,6 @@
           }
         }
       },
-      "pull_fish_0": {
-        "vlnv": "xilinx.com:user:pull_fish:1.0",
-        "xci_name": "design_1_pull_fish_0_0"
-      },
       "catch_fish_0": {
         "vlnv": "xilinx.com:user:catch_fish:1.0",
         "xci_name": "design_1_catch_fish_0_0"
@@ -355,6 +351,10 @@
       "main_0": {
         "vlnv": "xilinx.com:user:main:1.0",
         "xci_name": "design_1_main_0_0"
+      },
+      "pull_fish_0": {
+        "vlnv": "xilinx.com:user:pull_fish:1.0",
+        "xci_name": "design_1_pull_fish_0_0"
       }
     },
     "interface_nets": {
@@ -370,17 +370,17 @@
           "axi_smc_1/S00_AXI"
         ]
       },
+      "axi_smc_M00_AXI": {
+        "interface_ports": [
+          "axi_smc/M00_AXI",
+          "axi_traffic_gen_0/S_AXI"
+        ]
+      },
       "axi_smc_1_M00_AXI": {
         "interface_ports": [
           "axi_smc_1/M00_AXI",
           "ram_pull_fish_0/S00_pull_fish_AXI",
           "ila_0/SLOT_0_AXI"
-        ]
-      },
-      "axi_smc_M00_AXI": {
-        "interface_ports": [
-          "axi_smc/M00_AXI",
-          "axi_traffic_gen_0/S_AXI"
         ]
       }
     },
@@ -435,8 +435,8 @@
           "ila_1/clk",
           "vio_0/clk",
           "catch_fish_0/clk",
-          "pull_fish_0/clk",
-          "main_0/clk"
+          "main_0/clk",
+          "pull_fish_0/clk"
         ]
       },
       "catch_fish_0_game_end": {
@@ -484,8 +484,8 @@
       "main_0_btn_debounced": {
         "ports": [
           "main_0/btn_debounced",
-          "pull_fish_0/btn",
-          "catch_fish_0/btn"
+          "catch_fish_0/btn",
+          "pull_fish_0/btn"
         ]
       },
       "main_0_enable_pull_fish": {

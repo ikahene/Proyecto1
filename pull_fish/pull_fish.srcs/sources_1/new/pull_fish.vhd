@@ -208,6 +208,7 @@ begin
             contador_clk <= 0;
             contador_segundos <= 0;
             time_over <= '0';
+            rgb_color <= "00";
         end if;
     end if;
 end process;

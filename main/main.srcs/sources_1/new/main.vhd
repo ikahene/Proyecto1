@@ -116,6 +116,7 @@ begin
                 enable_catch_fish_sig <= '0';
                 enable_pull_fish_sig <= '1';
                 state := "10";
+            -- Si se gana o pierde en el pull_fish, se vuelve al menu prinicpal
             elsif (state = "10" and (game_lost_pull_fish = '1' or game_won_pull_fish = '1')) then 
                 enable_pull_fish_sig <= '0';
                 state := "00";
@@ -124,9 +125,11 @@ begin
     end process; 
  ------- Asignación de las salidas, los leds sólo se prenden durante el juego
     condition <= '0' when (sw(0) = '1' or sw(1) = '1' or sw(2) = '1' or sw(3) = '1') else '1';
+    -- Control de las salidas de leds, si son controlados por pull_fish o catch_fish
     led <= led_catch_fish when enable_catch_fish_sig = '1' and enable_pull_fish_sig = '0' else
            led_pull_fish  when enable_pull_fish_sig = '1' and enable_catch_fish_sig = '0' else
            "0000";     
+    -- Control rgb a partir de pull_fish cuando esta activado
     rgb <= rgb_signal when enable_pull_fish_sig = '1' else "000";  
     btn_debounced <= btn_db;
     clk_div_catch_fish <= divided_clk;

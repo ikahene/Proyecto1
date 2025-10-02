@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Sun Sep 21 17:22:13 2025
+--Date        : Thu Oct  2 07:24:09 2025
 --Host        : BenjaUni running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -404,19 +404,6 @@ architecture STRUCTURE of design_1 is
     dout : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1_xlconstant_0_0;
-  component design_1_pull_fish_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    led : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    rgb_color : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    seq : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    seq_addr : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    enable : in STD_LOGIC;
-    won : out STD_LOGIC;
-    lost : out STD_LOGIC
-  );
-  end component design_1_pull_fish_0_0;
   component design_1_catch_fish_0_0 is
   port (
     btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -447,6 +434,19 @@ architecture STRUCTURE of design_1 is
     clk_div_catch_fish : out STD_LOGIC
   );
   end component design_1_main_0_0;
+  component design_1_pull_fish_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    led : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    rgb_color : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    seq : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    seq_addr : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    enable : in STD_LOGIC;
+    won : out STD_LOGIC;
+    lost : out STD_LOGIC
+  );
+  end component design_1_pull_fish_0_0;
   signal axi_smc_1_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal axi_smc_1_M00_AXI_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_smc_1_M00_AXI_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
