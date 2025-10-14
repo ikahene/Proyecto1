@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Tue Oct 14 14:55:44 2025
---Host        : BenjaUni running 64-bit major release  (build 9200)
+--Date        : Tue Oct 14 16:52:31 2025
+--Host        : DESKTOP-MSDSPQ7 running 64-bit major release  (build 9200)
 --Command     : generate_target Electric_hook_bd.bd
 --Design      : Electric_hook_bd
 --Purpose     : IP block netlist
@@ -20,7 +20,7 @@ entity Electric_hook_bd is
     sw : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of Electric_hook_bd : entity is "Electric_hook_bd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Electric_hook_bd,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=11,numReposBlks=11,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of Electric_hook_bd : entity is "Electric_hook_bd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Electric_hook_bd,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=16,numReposBlks=16,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of Electric_hook_bd : entity is "Electric_hook_bd.hwdef";
 end Electric_hook_bd;
@@ -338,25 +338,6 @@ architecture STRUCTURE of Electric_hook_bd is
     M00_AXI_rready : out STD_LOGIC
   );
   end component Electric_hook_bd_axi_smc_1_0;
-  component Electric_hook_bd_main_0_1 is
-  port (
-    clk : in STD_LOGIC;
-    btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    sw : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    led : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    rgb : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    led_catch_fish : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    led_pull_fish : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    rgb_pull_fish : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    btn_debounced : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    enable_pull_fish : out STD_LOGIC;
-    enable_catch_fish : out STD_LOGIC;
-    game_end_catch_fish : in STD_LOGIC;
-    game_won_pull_fish : in STD_LOGIC;
-    game_lost_pull_fish : in STD_LOGIC;
-    clk_div_catch_fish : out STD_LOGIC
-  );
-  end component Electric_hook_bd_main_0_1;
   component Electric_hook_bd_catch_fish_0_0 is
   port (
     btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -368,6 +349,115 @@ architecture STRUCTURE of Electric_hook_bd is
     enable : in STD_LOGIC
   );
   end component Electric_hook_bd_catch_fish_0_0;
+  component Electric_hook_bd_vio_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    probe_out0 : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component Electric_hook_bd_vio_0_0;
+  component Electric_hook_bd_c_accum_0_0 is
+  port (
+    B : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    CLK : in STD_LOGIC;
+    CE : in STD_LOGIC;
+    SCLR : in STD_LOGIC;
+    Q : out STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  end component Electric_hook_bd_c_accum_0_0;
+  component Electric_hook_bd_xlconstant_0_0 is
+  port (
+    dout : out STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  end component Electric_hook_bd_xlconstant_0_0;
+  component Electric_hook_bd_puntaje_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    enable_puntaje : in STD_LOGIC;
+    game_won_pull_fish : in STD_LOGIC;
+    num : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    leds : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    racha_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s00_axi_aclk : in STD_LOGIC;
+    s00_axi_aresetn : in STD_LOGIC;
+    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_awvalid : in STD_LOGIC;
+    s00_axi_awready : out STD_LOGIC;
+    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_wvalid : in STD_LOGIC;
+    s00_axi_wready : out STD_LOGIC;
+    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_bvalid : out STD_LOGIC;
+    s00_axi_bready : in STD_LOGIC;
+    s00_axi_araddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_arvalid : in STD_LOGIC;
+    s00_axi_arready : out STD_LOGIC;
+    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_rvalid : out STD_LOGIC;
+    s00_axi_rready : in STD_LOGIC
+  );
+  end component Electric_hook_bd_puntaje_0_0;
+  component Electric_hook_bd_axi_traffic_gen_2_0 is
+  port (
+    s_axi_aclk : in STD_LOGIC;
+    s_axi_aresetn : in STD_LOGIC;
+    m_axi_lite_ch1_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_lite_ch1_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    m_axi_lite_ch1_awvalid : out STD_LOGIC;
+    m_axi_lite_ch1_awready : in STD_LOGIC;
+    m_axi_lite_ch1_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_lite_ch1_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axi_lite_ch1_wvalid : out STD_LOGIC;
+    m_axi_lite_ch1_wready : in STD_LOGIC;
+    m_axi_lite_ch1_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_lite_ch1_bvalid : in STD_LOGIC;
+    m_axi_lite_ch1_bready : out STD_LOGIC;
+    m_axi_lite_ch1_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_lite_ch1_arvalid : out STD_LOGIC;
+    m_axi_lite_ch1_arready : in STD_LOGIC;
+    m_axi_lite_ch1_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_lite_ch1_rvalid : in STD_LOGIC;
+    m_axi_lite_ch1_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axi_lite_ch1_rready : out STD_LOGIC;
+    done : out STD_LOGIC;
+    status : out STD_LOGIC_VECTOR ( 31 downto 0 )
+  );
+  end component Electric_hook_bd_axi_traffic_gen_2_0;
+  component Electric_hook_bd_main_0_1 is
+  port (
+    clk : in STD_LOGIC;
+    btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    sw : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    led : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    rgb : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    led_catch_fish : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    led_pull_fish : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    rgb_pull_fish : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    led_puntaje : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    btn_debounced : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    enable_pull_fish : out STD_LOGIC;
+    enable_catch_fish : out STD_LOGIC;
+    enable_puntaje : out STD_LOGIC;
+    estado_pull : out STD_LOGIC;
+    num : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    game_end_catch_fish : in STD_LOGIC;
+    game_won_pull_fish : in STD_LOGIC;
+    game_lost_pull_fish : in STD_LOGIC;
+    clk_div_catch_fish : out STD_LOGIC;
+    seq_adress : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    racha_sumar : out STD_LOGIC;
+    racha_reiniciar : out STD_LOGIC
+  );
+  end component Electric_hook_bd_main_0_1;
+  component Electric_hook_bd_ila_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 15 downto 0 )
+  );
+  end component Electric_hook_bd_ila_0_0;
   component Electric_hook_bd_pull_fish_0_1 is
   port (
     clk : in STD_LOGIC;
@@ -381,12 +471,6 @@ architecture STRUCTURE of Electric_hook_bd is
     lost : out STD_LOGIC
   );
   end component Electric_hook_bd_pull_fish_0_1;
-  component Electric_hook_bd_vio_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    probe_out0 : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component Electric_hook_bd_vio_0_0;
   signal axi_smc_1_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal axi_smc_1_M00_AXI_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_smc_1_M00_AXI_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -512,7 +596,26 @@ architecture STRUCTURE of Electric_hook_bd is
   signal axi_traffic_gen_1_M_AXI_WREADY : STD_LOGIC;
   signal axi_traffic_gen_1_M_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_traffic_gen_1_M_AXI_WVALID : STD_LOGIC;
+  signal axi_traffic_gen_2_M_AXI_LITE_CH1_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal axi_traffic_gen_2_M_AXI_LITE_CH1_ARREADY : STD_LOGIC;
+  signal axi_traffic_gen_2_M_AXI_LITE_CH1_ARVALID : STD_LOGIC;
+  signal axi_traffic_gen_2_M_AXI_LITE_CH1_AWADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal axi_traffic_gen_2_M_AXI_LITE_CH1_AWPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal axi_traffic_gen_2_M_AXI_LITE_CH1_AWREADY : STD_LOGIC;
+  signal axi_traffic_gen_2_M_AXI_LITE_CH1_AWVALID : STD_LOGIC;
+  signal axi_traffic_gen_2_M_AXI_LITE_CH1_BREADY : STD_LOGIC;
+  signal axi_traffic_gen_2_M_AXI_LITE_CH1_BRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal axi_traffic_gen_2_M_AXI_LITE_CH1_BVALID : STD_LOGIC;
+  signal axi_traffic_gen_2_M_AXI_LITE_CH1_RDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal axi_traffic_gen_2_M_AXI_LITE_CH1_RREADY : STD_LOGIC;
+  signal axi_traffic_gen_2_M_AXI_LITE_CH1_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal axi_traffic_gen_2_M_AXI_LITE_CH1_RVALID : STD_LOGIC;
+  signal axi_traffic_gen_2_M_AXI_LITE_CH1_WDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal axi_traffic_gen_2_M_AXI_LITE_CH1_WREADY : STD_LOGIC;
+  signal axi_traffic_gen_2_M_AXI_LITE_CH1_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal axi_traffic_gen_2_M_AXI_LITE_CH1_WVALID : STD_LOGIC;
   signal btn_0_1 : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal c_accum_0_Q : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal catch_fish_0_game_end : STD_LOGIC;
   signal catch_fish_0_led_out : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal clk_in1_0_1 : STD_LOGIC;
@@ -522,21 +625,30 @@ architecture STRUCTURE of Electric_hook_bd is
   signal main_0_clk_div_catch_fish : STD_LOGIC;
   signal main_0_enable_catch_fish : STD_LOGIC;
   signal main_0_enable_pull_fish : STD_LOGIC;
+  signal main_0_enable_puntaje : STD_LOGIC;
+  signal main_0_estado_pull : STD_LOGIC;
   signal main_0_led : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal main_0_num : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal main_0_racha_reiniciar : STD_LOGIC;
+  signal main_0_racha_sumar : STD_LOGIC;
   signal main_0_rgb : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal pull_fish_0_led : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal pull_fish_0_lost : STD_LOGIC;
   signal pull_fish_0_rgb_color : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal pull_fish_0_seq_addr : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal pull_fish_0_won : STD_LOGIC;
+  signal puntaje_0_leds : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal ram_pull_fish_0_seq : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal reset_0_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_clk_wiz_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal sw_0_1 : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_axi_traffic_gen_0_done_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_traffic_gen_0_status_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_axi_traffic_gen_1_err_out_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_traffic_gen_1_irq_out_UNCONNECTED : STD_LOGIC;
+  signal NLW_axi_traffic_gen_2_done_UNCONNECTED : STD_LOGIC;
+  signal NLW_axi_traffic_gen_2_status_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_rst_clk_wiz_100M_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_clk_wiz_100M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_clk_wiz_100M_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -544,7 +656,7 @@ architecture STRUCTURE of Electric_hook_bd is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 CLK.CLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN Electric_hook_bd_clk_in1_0, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000";
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN Electric_hook_bd_clk_in1_0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000";
 begin
   btn_0_1(3 downto 0) <= btn(3 downto 0);
   clk_in1_0_1 <= clk;
@@ -792,6 +904,39 @@ axi_traffic_gen_1: component Electric_hook_bd_axi_traffic_gen_1_0
       s_axi_wstrb(3 downto 0) => axi_smc_M00_AXI_WSTRB(3 downto 0),
       s_axi_wvalid => axi_smc_M00_AXI_WVALID
     );
+axi_traffic_gen_2: component Electric_hook_bd_axi_traffic_gen_2_0
+     port map (
+      done => NLW_axi_traffic_gen_2_done_UNCONNECTED,
+      m_axi_lite_ch1_araddr(31 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_ARADDR(31 downto 0),
+      m_axi_lite_ch1_arready => axi_traffic_gen_2_M_AXI_LITE_CH1_ARREADY,
+      m_axi_lite_ch1_arvalid => axi_traffic_gen_2_M_AXI_LITE_CH1_ARVALID,
+      m_axi_lite_ch1_awaddr(31 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_AWADDR(31 downto 0),
+      m_axi_lite_ch1_awprot(2 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_AWPROT(2 downto 0),
+      m_axi_lite_ch1_awready => axi_traffic_gen_2_M_AXI_LITE_CH1_AWREADY,
+      m_axi_lite_ch1_awvalid => axi_traffic_gen_2_M_AXI_LITE_CH1_AWVALID,
+      m_axi_lite_ch1_bready => axi_traffic_gen_2_M_AXI_LITE_CH1_BREADY,
+      m_axi_lite_ch1_bresp(1 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_BRESP(1 downto 0),
+      m_axi_lite_ch1_bvalid => axi_traffic_gen_2_M_AXI_LITE_CH1_BVALID,
+      m_axi_lite_ch1_rdata(31 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_RDATA(31 downto 0),
+      m_axi_lite_ch1_rready => axi_traffic_gen_2_M_AXI_LITE_CH1_RREADY,
+      m_axi_lite_ch1_rresp(1 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_RRESP(1 downto 0),
+      m_axi_lite_ch1_rvalid => axi_traffic_gen_2_M_AXI_LITE_CH1_RVALID,
+      m_axi_lite_ch1_wdata(31 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_WDATA(31 downto 0),
+      m_axi_lite_ch1_wready => axi_traffic_gen_2_M_AXI_LITE_CH1_WREADY,
+      m_axi_lite_ch1_wstrb(3 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_WSTRB(3 downto 0),
+      m_axi_lite_ch1_wvalid => axi_traffic_gen_2_M_AXI_LITE_CH1_WVALID,
+      s_axi_aclk => clk_wiz_clk_out1,
+      s_axi_aresetn => rst_clk_wiz_100M_peripheral_aresetn(0),
+      status(31 downto 0) => NLW_axi_traffic_gen_2_status_UNCONNECTED(31 downto 0)
+    );
+c_accum_0: component Electric_hook_bd_c_accum_0_0
+     port map (
+      B(7 downto 0) => xlconstant_0_dout(7 downto 0),
+      CE => main_0_racha_sumar,
+      CLK => clk_in1_0_1,
+      Q(7 downto 0) => c_accum_0_Q(7 downto 0),
+      SCLR => main_0_racha_reiniciar
+    );
 catch_fish_0: component Electric_hook_bd_catch_fish_0_0
      port map (
       btn(3 downto 0) => main_0_btn_debounced(3 downto 0),
@@ -809,6 +954,11 @@ clk_wiz: component Electric_hook_bd_clk_wiz_0
       locked => clk_wiz_locked,
       reset => reset_0_1(0)
     );
+ila_0: component Electric_hook_bd_ila_0_0
+     port map (
+      clk => clk_in1_0_1,
+      probe0(15 downto 0) => ram_pull_fish_0_seq(15 downto 0)
+    );
 main_0: component Electric_hook_bd_main_0_1
      port map (
       btn(3 downto 0) => btn_0_1(3 downto 0),
@@ -817,14 +967,21 @@ main_0: component Electric_hook_bd_main_0_1
       clk_div_catch_fish => main_0_clk_div_catch_fish,
       enable_catch_fish => main_0_enable_catch_fish,
       enable_pull_fish => main_0_enable_pull_fish,
+      enable_puntaje => main_0_enable_puntaje,
+      estado_pull => main_0_estado_pull,
       game_end_catch_fish => catch_fish_0_game_end,
       game_lost_pull_fish => pull_fish_0_lost,
       game_won_pull_fish => pull_fish_0_won,
       led(3 downto 0) => main_0_led(3 downto 0),
       led_catch_fish(3 downto 0) => catch_fish_0_led_out(3 downto 0),
       led_pull_fish(3 downto 0) => pull_fish_0_led(3 downto 0),
+      led_puntaje(3 downto 0) => puntaje_0_leds(3 downto 0),
+      num(3 downto 0) => main_0_num(3 downto 0),
+      racha_reiniciar => main_0_racha_reiniciar,
+      racha_sumar => main_0_racha_sumar,
       rgb(2 downto 0) => main_0_rgb(2 downto 0),
       rgb_pull_fish(1 downto 0) => pull_fish_0_rgb_color(1 downto 0),
+      seq_adress(3 downto 0) => pull_fish_0_seq_addr(3 downto 0),
       sw(3 downto 0) => sw_0_1(3 downto 0)
     );
 pull_fish_0: component Electric_hook_bd_pull_fish_0_1
@@ -838,6 +995,36 @@ pull_fish_0: component Electric_hook_bd_pull_fish_0_1
       seq(15 downto 0) => ram_pull_fish_0_seq(15 downto 0),
       seq_addr(3 downto 0) => pull_fish_0_seq_addr(3 downto 0),
       won => pull_fish_0_won
+    );
+puntaje_0: component Electric_hook_bd_puntaje_0_0
+     port map (
+      clk => clk_in1_0_1,
+      enable_puntaje => main_0_enable_puntaje,
+      game_won_pull_fish => main_0_estado_pull,
+      leds(3 downto 0) => puntaje_0_leds(3 downto 0),
+      num(3 downto 0) => main_0_num(3 downto 0),
+      racha_in(7 downto 0) => c_accum_0_Q(7 downto 0),
+      s00_axi_aclk => clk_wiz_clk_out1,
+      s00_axi_araddr(3 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_ARADDR(3 downto 0),
+      s00_axi_aresetn => rst_clk_wiz_100M_peripheral_aresetn(0),
+      s00_axi_arprot(2 downto 0) => B"000",
+      s00_axi_arready => axi_traffic_gen_2_M_AXI_LITE_CH1_ARREADY,
+      s00_axi_arvalid => axi_traffic_gen_2_M_AXI_LITE_CH1_ARVALID,
+      s00_axi_awaddr(3 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_AWADDR(3 downto 0),
+      s00_axi_awprot(2 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_AWPROT(2 downto 0),
+      s00_axi_awready => axi_traffic_gen_2_M_AXI_LITE_CH1_AWREADY,
+      s00_axi_awvalid => axi_traffic_gen_2_M_AXI_LITE_CH1_AWVALID,
+      s00_axi_bready => axi_traffic_gen_2_M_AXI_LITE_CH1_BREADY,
+      s00_axi_bresp(1 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_BRESP(1 downto 0),
+      s00_axi_bvalid => axi_traffic_gen_2_M_AXI_LITE_CH1_BVALID,
+      s00_axi_rdata(31 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_RDATA(31 downto 0),
+      s00_axi_rready => axi_traffic_gen_2_M_AXI_LITE_CH1_RREADY,
+      s00_axi_rresp(1 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_RRESP(1 downto 0),
+      s00_axi_rvalid => axi_traffic_gen_2_M_AXI_LITE_CH1_RVALID,
+      s00_axi_wdata(31 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_WDATA(31 downto 0),
+      s00_axi_wready => axi_traffic_gen_2_M_AXI_LITE_CH1_WREADY,
+      s00_axi_wstrb(3 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_WSTRB(3 downto 0),
+      s00_axi_wvalid => axi_traffic_gen_2_M_AXI_LITE_CH1_WVALID
     );
 ram_pull_fish_0: component Electric_hook_bd_ram_pull_fish_0_0
      port map (
@@ -900,5 +1087,9 @@ vio_0: component Electric_hook_bd_vio_0_0
      port map (
       clk => clk_in1_0_1,
       probe_out0(0) => reset_0_1(0)
+    );
+xlconstant_0: component Electric_hook_bd_xlconstant_0_0
+     port map (
+      dout(7 downto 0) => xlconstant_0_dout(7 downto 0)
     );
 end STRUCTURE;

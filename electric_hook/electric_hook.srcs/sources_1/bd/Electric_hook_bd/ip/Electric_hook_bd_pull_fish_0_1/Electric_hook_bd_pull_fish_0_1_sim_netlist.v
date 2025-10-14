@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Tue Oct 14 14:57:00 2025
-// Host        : BenjaUni running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/byane/OneDrive/Escritorio/Proyecto1/Electric_Hook/Electric_Hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_pull_fish_0_1/Electric_hook_bd_pull_fish_0_1_sim_netlist.v
+// Date        : Tue Oct 14 17:03:37 2025
+// Host        : DESKTOP-MSDSPQ7 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim {c:/Users/Gabriela
+//               Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_pull_fish_0_1/Electric_hook_bd_pull_fish_0_1_sim_netlist.v}
 // Design      : Electric_hook_bd_pull_fish_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,7 +25,7 @@ module Electric_hook_bd_pull_fish_0_1
     enable,
     won,
     lost);
-  input clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, INSERT_VIP 0" *) input clk;
   input [3:0]btn;
   output [3:0]led;
   output [1:0]rgb_color;
@@ -5789,8 +5789,8 @@ module Electric_hook_bd_pull_fish_0_1_random_number
   wire \led_sig_reg[1] ;
   wire \led_sig_reg[2] ;
   wire \led_sig_reg[3] ;
+  wire [0:0]lfsr_out;
   wire [2:0]max_boton;
-  wire [3:3]next_lfsr_state;
   wire [3:0]\reset_segundos0_inferred__0/i__carry ;
   wire [2:0]seq;
   wire seq_state0_carry_i_9_n_0;
@@ -6017,13 +6017,13 @@ module Electric_hook_bd_pull_fish_0_1_random_number
     \lfsr_state[0]_i_1 
        (.I0(Q[0]),
         .I1(Q[3]),
-        .O(next_lfsr_state));
+        .O(lfsr_out));
   FDRE #(
     .INIT(1'b1)) 
     \lfsr_state_reg[0] 
        (.C(clk),
         .CE(E),
-        .D(next_lfsr_state),
+        .D(lfsr_out),
         .Q(Q[0]),
         .R(1'b0));
   FDRE #(

@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Tue Oct 14 14:58:06 2025
+// Date        : Tue Oct 14 14:58:05 2025
 // Host        : BenjaUni running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/byane/OneDrive/Escritorio/Proyecto1/Electric_Hook/Electric_Hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_traffic_gen_0_0/Electric_hook_bd_axi_traffic_gen_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top Electric_hook_bd_axi_traffic_gen_0_0 -prefix
+//               Electric_hook_bd_axi_traffic_gen_0_0_ Electric_hook_bd_axi_traffic_gen_0_0_stub.v
 // Design      : Electric_hook_bd_axi_traffic_gen_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1

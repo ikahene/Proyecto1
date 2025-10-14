@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Tue Oct 14 14:57:52 2025
+-- Date        : Tue Oct 14 14:57:49 2025
 -- Host        : BenjaUni running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/byane/OneDrive/Escritorio/Proyecto1/Electric_Hook/Electric_Hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/Electric_hook_bd_axi_smc_1_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Electric_hook_bd_axi_smc_1_0 -prefix
+--               Electric_hook_bd_axi_smc_1_0_ Electric_hook_bd_axi_smc_1_0_sim_netlist.vhdl
 -- Design      : Electric_hook_bd_axi_smc_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -20,8 +20,6 @@ entity Electric_hook_bd_axi_smc_1_0_cdc_sync is
     aresetn : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_cdc_sync : entity is "cdc_sync";
 end Electric_hook_bd_axi_smc_1_0_cdc_sync;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_cdc_sync is
@@ -109,8 +107,6 @@ entity Electric_hook_bd_axi_smc_1_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_upcnt_n : entity is "upcnt_n";
 end Electric_hook_bd_axi_smc_1_0_upcnt_n;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_upcnt_n is
@@ -328,8 +324,6 @@ entity Electric_hook_bd_axi_smc_1_0_xpm_memory_base is
   attribute MESSAGE_CONTROL of Electric_hook_bd_axi_smc_1_0_xpm_memory_base : entity is 0;
   attribute NUM_CHAR_LOC : integer;
   attribute NUM_CHAR_LOC of Electric_hook_bd_axi_smc_1_0_xpm_memory_base : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_xpm_memory_base : entity is "xpm_memory_base";
   attribute P_ECC_MODE : string;
   attribute P_ECC_MODE of Electric_hook_bd_axi_smc_1_0_xpm_memory_base : entity is "no_ecc";
   attribute P_ENABLE_BYTE_WRITE_A : integer;
@@ -10552,8 +10546,6 @@ entity Electric_hook_bd_axi_smc_1_0_sc_axi2sc_v1_0_7_top is
   attribute LP_RUSER_INDEX of Electric_hook_bd_axi_smc_1_0_sc_axi2sc_v1_0_7_top : entity is 0;
   attribute LP_WUSER_INDEX : integer;
   attribute LP_WUSER_INDEX of Electric_hook_bd_axi_smc_1_0_sc_axi2sc_v1_0_7_top : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_sc_axi2sc_v1_0_7_top : entity is "sc_axi2sc_v1_0_7_top";
   attribute T_SC_ADDR_WIDTH : integer;
   attribute T_SC_ADDR_WIDTH of Electric_hook_bd_axi_smc_1_0_sc_axi2sc_v1_0_7_top : entity is 32;
   attribute T_SC_ARUSER_WIDTH : integer;
@@ -13039,8 +13031,6 @@ entity Electric_hook_bd_axi_smc_1_0_sc_mmu_v1_0_9_top is
   attribute C_WRITE_ACCEPTANCE of Electric_hook_bd_axi_smc_1_0_sc_mmu_v1_0_9_top : entity is 32;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of Electric_hook_bd_axi_smc_1_0_sc_mmu_v1_0_9_top : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_sc_mmu_v1_0_9_top : entity is "sc_mmu_v1_0_9_top";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of Electric_hook_bd_axi_smc_1_0_sc_mmu_v1_0_9_top : entity is 1;
   attribute P_AXI4 : integer;
@@ -17093,8 +17083,6 @@ entity Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_si_handler is
     s_sc_aclk : in STD_LOGIC;
     s_sc_send : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_si_handler : entity is "sc_node_v1_0_11_si_handler";
 end Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_si_handler;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_si_handler is
@@ -17455,8 +17443,6 @@ entity Electric_hook_bd_axi_smc_1_0_sc_sc2axi_v1_0_7_top is
   attribute LP_RUSER_INDEX of Electric_hook_bd_axi_smc_1_0_sc_sc2axi_v1_0_7_top : entity is 0;
   attribute LP_WUSER_INDEX : integer;
   attribute LP_WUSER_INDEX of Electric_hook_bd_axi_smc_1_0_sc_sc2axi_v1_0_7_top : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_sc_sc2axi_v1_0_7_top : entity is "sc_sc2axi_v1_0_7_top";
   attribute T_SC_ADDR_WIDTH : integer;
   attribute T_SC_ADDR_WIDTH of Electric_hook_bd_axi_smc_1_0_sc_sc2axi_v1_0_7_top : entity is 32;
   attribute T_SC_ARUSER_WIDTH : integer;
@@ -25621,8 +25607,6 @@ entity Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_counter is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_sc_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_counter : entity is "sc_util_v1_0_4_counter";
 end Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_counter;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_counter is
@@ -29590,8 +29574,6 @@ entity Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_srl_rtl is
     \gen_pipelined.load_mesg\ : in STD_LOGIC;
     s_axi_bid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_srl_rtl : entity is "sc_util_v1_0_4_srl_rtl";
 end Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_srl_rtl;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_srl_rtl is
@@ -37135,8 +37117,6 @@ entity Electric_hook_bd_axi_smc_1_0_bd_becb_m00s2a_0 is
     s_axi_ruser : in STD_LOGIC_VECTOR ( 12 downto 0 );
     s_axi_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_bd_becb_m00s2a_0 : entity is "bd_becb_m00s2a_0";
 end Electric_hook_bd_axi_smc_1_0_bd_becb_m00s2a_0;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_bd_becb_m00s2a_0 is
@@ -37376,8 +37356,6 @@ entity Electric_hook_bd_axi_smc_1_0_bd_becb_s00a2s_0 is
     m_axi_arvalid : in STD_LOGIC;
     m_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_bd_becb_s00a2s_0 : entity is "bd_becb_s00a2s_0";
 end Electric_hook_bd_axi_smc_1_0_bd_becb_s00a2s_0;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_bd_becb_s00a2s_0 is
@@ -37650,8 +37628,6 @@ entity Electric_hook_bd_axi_smc_1_0_bd_becb_s00mmu_0 is
     s_axi_rlast : in STD_LOGIC;
     s_axi_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_bd_becb_s00mmu_0 : entity is "bd_becb_s00mmu_0";
 end Electric_hook_bd_axi_smc_1_0_bd_becb_s00mmu_0;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_bd_becb_s00mmu_0 is
@@ -37879,8 +37855,6 @@ entity Electric_hook_bd_axi_smc_1_0_lpf is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_lpf : entity is "lpf";
 end Electric_hook_bd_axi_smc_1_0_lpf;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_lpf is
@@ -37957,8 +37931,6 @@ entity Electric_hook_bd_axi_smc_1_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_sequence_psr : entity is "sequence_psr";
 end Electric_hook_bd_axi_smc_1_0_sequence_psr;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_sequence_psr is
@@ -38231,8 +38203,6 @@ entity Electric_hook_bd_axi_smc_1_0_xpm_memory_sdpram is
   attribute MEMORY_SIZE of Electric_hook_bd_axi_smc_1_0_xpm_memory_sdpram : entity is 5216;
   attribute MESSAGE_CONTROL : integer;
   attribute MESSAGE_CONTROL of Electric_hook_bd_axi_smc_1_0_xpm_memory_sdpram : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_xpm_memory_sdpram : entity is "xpm_memory_sdpram";
   attribute P_CLOCKING_MODE : integer;
   attribute P_CLOCKING_MODE of Electric_hook_bd_axi_smc_1_0_xpm_memory_sdpram : entity is 0;
   attribute P_ECC_MODE : integer;
@@ -39439,8 +39409,6 @@ entity Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_axic_reg_srl_fifo is
     m_axi_arready : in STD_LOGIC;
     first_r_beat_n : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_axic_reg_srl_fifo : entity is "sc_util_v1_0_4_axic_reg_srl_fifo";
 end Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_axic_reg_srl_fifo;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_axic_reg_srl_fifo is
@@ -46045,8 +46013,6 @@ entity Electric_hook_bd_axi_smc_1_0_proc_sys_reset is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_proc_sys_reset : entity is "proc_sys_reset";
 end Electric_hook_bd_axi_smc_1_0_proc_sys_reset;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_proc_sys_reset is
@@ -46111,8 +46077,6 @@ entity Electric_hook_bd_axi_smc_1_0_sc_exit_v1_0_10_exit is
     m_axi_bvalid : in STD_LOGIC;
     s_axi_bready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_sc_exit_v1_0_10_exit : entity is "sc_exit_v1_0_10_exit";
 end Electric_hook_bd_axi_smc_1_0_sc_exit_v1_0_10_exit;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_sc_exit_v1_0_10_exit is
@@ -46211,8 +46175,6 @@ entity Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_offset_fifo is
     \skid_buffer_reg[1127]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_offset_fifo : entity is "sc_si_converter_v1_0_9_offset_fifo";
 end Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_offset_fifo;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_offset_fifo is
@@ -49816,8 +49778,6 @@ entity Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_splitter is
     m_axi_wready : in STD_LOGIC;
     \gen_pipelined.state_reg[0]_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_splitter : entity is "sc_si_converter_v1_0_9_splitter";
 end Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_splitter;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_splitter is
@@ -49875,8 +49835,6 @@ entity Electric_hook_bd_axi_smc_1_0_sc_transaction_regulator_v1_0_8_singleorder 
     m_axi_rlast : in STD_LOGIC;
     SS : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_sc_transaction_regulator_v1_0_8_singleorder : entity is "sc_transaction_regulator_v1_0_8_singleorder";
 end Electric_hook_bd_axi_smc_1_0_sc_transaction_regulator_v1_0_8_singleorder;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_sc_transaction_regulator_v1_0_8_singleorder is
@@ -49951,8 +49909,6 @@ entity Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_xpm_memory_fifo is
     m_sc_recv : in STD_LOGIC_VECTOR ( 0 to 0 );
     \count_r_reg[1]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_xpm_memory_fifo : entity is "sc_util_v1_0_4_xpm_memory_fifo";
 end Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_xpm_memory_fifo;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_xpm_memory_fifo is
@@ -52058,8 +52014,6 @@ entity Electric_hook_bd_axi_smc_1_0_bd_becb_psr_aclk_0 is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_bd_becb_psr_aclk_0 : entity is "bd_becb_psr_aclk_0";
 end Electric_hook_bd_axi_smc_1_0_bd_becb_psr_aclk_0;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_bd_becb_psr_aclk_0 is
@@ -52224,8 +52178,6 @@ entity Electric_hook_bd_axi_smc_1_0_sc_exit_v1_0_10_top is
   attribute C_WRITE_ACCEPTANCE of Electric_hook_bd_axi_smc_1_0_sc_exit_v1_0_10_top : entity is 32;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of Electric_hook_bd_axi_smc_1_0_sc_exit_v1_0_10_top : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_sc_exit_v1_0_10_top : entity is "sc_exit_v1_0_10_top";
   attribute P_BYPASS : integer;
   attribute P_BYPASS of Electric_hook_bd_axi_smc_1_0_sc_exit_v1_0_10_top : entity is 0;
   attribute P_FULLY_PIPELINED : integer;
@@ -54675,8 +54627,6 @@ entity Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_fifo is
     m_sc_recv : in STD_LOGIC_VECTOR ( 0 to 0 );
     \count_r_reg[1]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_fifo : entity is "sc_node_v1_0_11_fifo";
 end Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_fifo;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_fifo is
@@ -54903,8 +54853,6 @@ entity Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_wrap_narrow is
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     m_axi_arready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_wrap_narrow : entity is "sc_si_converter_v1_0_9_wrap_narrow";
 end Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_wrap_narrow;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_wrap_narrow is
@@ -57060,8 +57008,6 @@ entity Electric_hook_bd_axi_smc_1_0_sc_transaction_regulator_v1_0_8_top is
   attribute C_WRITE_ACCEPTANCE of Electric_hook_bd_axi_smc_1_0_sc_transaction_regulator_v1_0_8_top : entity is 32;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of Electric_hook_bd_axi_smc_1_0_sc_transaction_regulator_v1_0_8_top : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_sc_transaction_regulator_v1_0_8_top : entity is "sc_transaction_regulator_v1_0_8_top";
   attribute P_FULLY_PIPELINED : integer;
   attribute P_FULLY_PIPELINED of Electric_hook_bd_axi_smc_1_0_sc_transaction_regulator_v1_0_8_top : entity is 2;
   attribute P_ID_BUFFER_WIDTH : integer;
@@ -62389,8 +62335,6 @@ entity Electric_hook_bd_axi_smc_1_0_bd_becb_m00e_0 is
     M00_AXI_rlast : in STD_LOGIC;
     M00_AXI_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_bd_becb_m00e_0 : entity is "bd_becb_m00e_0";
 end Electric_hook_bd_axi_smc_1_0_bd_becb_m00e_0;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_bd_becb_m00e_0 is
@@ -62662,8 +62606,6 @@ entity Electric_hook_bd_axi_smc_1_0_bd_becb_s00tr_0 is
     S00_AXI_rlast : in STD_LOGIC;
     S00_AXI_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_bd_becb_s00tr_0 : entity is "bd_becb_s00tr_0";
 end Electric_hook_bd_axi_smc_1_0_bd_becb_s00tr_0;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_bd_becb_s00tr_0 is
@@ -62857,8 +62799,6 @@ entity Electric_hook_bd_axi_smc_1_0_clk_map_imp_76XHYH is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_clk_map_imp_76XHYH : entity is "clk_map_imp_76XHYH";
 end Electric_hook_bd_axi_smc_1_0_clk_map_imp_76XHYH;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_clk_map_imp_76XHYH is
@@ -62888,8 +62828,6 @@ entity Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_mi_handler is
     s_sc_valid : in STD_LOGIC;
     m_sc_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_mi_handler : entity is "sc_node_v1_0_11_mi_handler";
 end Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_mi_handler;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_mi_handler is
@@ -63339,8 +63277,6 @@ entity Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_top is
   attribute C_WRITE_ACCEPTANCE of Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_top : entity is 32;
   attribute C_WRITE_WATERMARK : integer;
   attribute C_WRITE_WATERMARK of Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_top : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_top : entity is "sc_si_converter_v1_0_9_top";
   attribute P_EXOK : string;
   attribute P_EXOK of Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_top : entity is "2'b01";
   attribute P_FULLY_PIPELINED : integer;
@@ -68657,8 +68593,6 @@ entity Electric_hook_bd_axi_smc_1_0_bd_becb_s00sic_0 is
     m_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_bd_becb_s00sic_0 : entity is "bd_becb_s00sic_0";
 end Electric_hook_bd_axi_smc_1_0_bd_becb_s00sic_0;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_bd_becb_s00sic_0 is
@@ -68951,8 +68885,6 @@ entity Electric_hook_bd_axi_smc_1_0_m00_exit_pipeline_imp_1QI30TU is
     M00_AXI_rlast : in STD_LOGIC;
     M00_AXI_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_m00_exit_pipeline_imp_1QI30TU : entity is "m00_exit_pipeline_imp_1QI30TU";
 end Electric_hook_bd_axi_smc_1_0_m00_exit_pipeline_imp_1QI30TU;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_m00_exit_pipeline_imp_1QI30TU is
@@ -69167,8 +69099,6 @@ entity Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_top is
   attribute LP_S_STATIC_DWIDTH of Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_top : entity is 1;
   attribute LP_ZERO_ROUTE_WIDTH : integer;
   attribute LP_ZERO_ROUTE_WIDTH of Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_top : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_top : entity is "sc_node_v1_0_11_top";
   attribute P_NUM_OUTSTANDING : integer;
   attribute P_NUM_OUTSTANDING of Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_top : entity is 16;
 end Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_top;
@@ -70527,8 +70457,6 @@ entity Electric_hook_bd_axi_smc_1_0_bd_becb_sarn_0 is
     S_SC_AR_payld : in STD_LOGIC_VECTOR ( 78 downto 0 );
     M_SC_AR_recv : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_bd_becb_sarn_0 : entity is "bd_becb_sarn_0";
 end Electric_hook_bd_axi_smc_1_0_bd_becb_sarn_0;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_bd_becb_sarn_0 is
@@ -70704,8 +70632,6 @@ entity Electric_hook_bd_axi_smc_1_0_bd_becb_sawn_0 is
     S_SC_AW_payld : in STD_LOGIC_VECTOR ( 78 downto 0 );
     M_SC_AW_recv : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_bd_becb_sawn_0 : entity is "bd_becb_sawn_0";
 end Electric_hook_bd_axi_smc_1_0_bd_becb_sawn_0;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_bd_becb_sawn_0 is
@@ -70881,8 +70807,6 @@ entity Electric_hook_bd_axi_smc_1_0_bd_becb_sbn_0 is
     S_SC_B_payld : in STD_LOGIC_VECTOR ( 2 downto 0 );
     M_SC_B_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_bd_becb_sbn_0 : entity is "bd_becb_sbn_0";
 end Electric_hook_bd_axi_smc_1_0_bd_becb_sbn_0;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_bd_becb_sbn_0 is
@@ -71048,8 +70972,6 @@ entity Electric_hook_bd_axi_smc_1_0_bd_becb_srn_0 is
     S_SC_R_payld : in STD_LOGIC_VECTOR ( 48 downto 0 );
     M_SC_R_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_bd_becb_srn_0 : entity is "bd_becb_srn_0";
 end Electric_hook_bd_axi_smc_1_0_bd_becb_srn_0;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_bd_becb_srn_0 is
@@ -71219,8 +71141,6 @@ entity Electric_hook_bd_axi_smc_1_0_bd_becb_swn_0 is
     S_SC_W_payld : in STD_LOGIC_VECTOR ( 50 downto 0 );
     M_SC_W_recv : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_bd_becb_swn_0 : entity is "bd_becb_swn_0";
 end Electric_hook_bd_axi_smc_1_0_bd_becb_swn_0;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_bd_becb_swn_0 is
@@ -71446,8 +71366,6 @@ entity Electric_hook_bd_axi_smc_1_0_s00_entry_pipeline_imp_RB28Z5 is
     m_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_s00_entry_pipeline_imp_RB28Z5 : entity is "s00_entry_pipeline_imp_RB28Z5";
 end Electric_hook_bd_axi_smc_1_0_s00_entry_pipeline_imp_RB28Z5;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_s00_entry_pipeline_imp_RB28Z5 is
@@ -71795,8 +71713,6 @@ entity Electric_hook_bd_axi_smc_1_0_s00_nodes_imp_X8WXKB is
     S_SC_W_payld : in STD_LOGIC_VECTOR ( 50 downto 0 );
     M_SC_W_recv : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_s00_nodes_imp_X8WXKB : entity is "s00_nodes_imp_X8WXKB";
 end Electric_hook_bd_axi_smc_1_0_s00_nodes_imp_X8WXKB;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_s00_nodes_imp_X8WXKB is
@@ -71948,8 +71864,6 @@ entity Electric_hook_bd_axi_smc_1_0_bd_becb is
   );
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of Electric_hook_bd_axi_smc_1_0_bd_becb : entity is "Electric_hook_bd_axi_smc_1_0.hwdef";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Electric_hook_bd_axi_smc_1_0_bd_becb : entity is "bd_becb";
 end Electric_hook_bd_axi_smc_1_0_bd_becb;
 
 architecture STRUCTURE of Electric_hook_bd_axi_smc_1_0_bd_becb is

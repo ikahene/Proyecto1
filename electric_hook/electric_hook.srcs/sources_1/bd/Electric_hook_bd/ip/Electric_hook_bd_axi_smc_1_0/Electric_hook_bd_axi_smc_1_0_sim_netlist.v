@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Tue Oct 14 14:57:51 2025
+// Date        : Tue Oct 14 14:57:48 2025
 // Host        : BenjaUni running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/byane/OneDrive/Escritorio/Proyecto1/Electric_Hook/Electric_Hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/Electric_hook_bd_axi_smc_1_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Electric_hook_bd_axi_smc_1_0 -prefix
+//               Electric_hook_bd_axi_smc_1_0_ Electric_hook_bd_axi_smc_1_0_sim_netlist.v
 // Design      : Electric_hook_bd_axi_smc_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -325,7 +325,7 @@ module Electric_hook_bd_axi_smc_1_0
         .aresetn(aresetn));
 endmodule
 
-(* HW_HANDOFF = "Electric_hook_bd_axi_smc_1_0.hwdef" *) (* ORIG_REF_NAME = "bd_becb" *) 
+(* HW_HANDOFF = "Electric_hook_bd_axi_smc_1_0.hwdef" *) 
 module Electric_hook_bd_axi_smc_1_0_bd_becb
    (M00_AXI_araddr,
     M00_AXI_arburst,
@@ -934,7 +934,6 @@ module Electric_hook_bd_axi_smc_1_0_bd_becb
         .interconnect_aresetn(aresetn_2));
 endmodule
 
-(* ORIG_REF_NAME = "bd_becb_m00e_0" *) 
 module Electric_hook_bd_axi_smc_1_0_bd_becb_m00e_0
    (s_axi_awready,
     s_axi_wready,
@@ -1275,7 +1274,6 @@ module Electric_hook_bd_axi_smc_1_0_bd_becb_m00e_0
         .s_axi_wvalid(m_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "bd_becb_m00s2a_0" *) 
 module Electric_hook_bd_axi_smc_1_0_bd_becb_m00s2a_0
    (S_SC_R_send,
     S_SC_R_payld,
@@ -1541,7 +1539,6 @@ module Electric_hook_bd_axi_smc_1_0_bd_becb_m00s2a_0
         .s_sc_w_send(M_SC_W_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_becb_psr_aclk_0" *) 
 module Electric_hook_bd_axi_smc_1_0_bd_becb_psr_aclk_0
    (interconnect_aresetn,
     aclk,
@@ -1560,7 +1557,6 @@ module Electric_hook_bd_axi_smc_1_0_bd_becb_psr_aclk_0
         .interconnect_aresetn(interconnect_aresetn));
 endmodule
 
-(* ORIG_REF_NAME = "bd_becb_s00a2s_0" *) 
 module Electric_hook_bd_axi_smc_1_0_bd_becb_s00a2s_0
    (M_SC_R_recv,
     M_SC_B_recv,
@@ -1814,7 +1810,6 @@ module Electric_hook_bd_axi_smc_1_0_bd_becb_s00a2s_0
         .s_sc_r_send(M_SC_R_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_becb_s00mmu_0" *) 
 module Electric_hook_bd_axi_smc_1_0_bd_becb_s00mmu_0
    (S00_AXI_awready,
     S00_AXI_wready,
@@ -2197,7 +2192,6 @@ module Electric_hook_bd_axi_smc_1_0_bd_becb_s00mmu_0
         .s_axi_wvalid(S00_AXI_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "bd_becb_s00sic_0" *) 
 module Electric_hook_bd_axi_smc_1_0_bd_becb_s00sic_0
    (s_axi_awready,
     s_axi_wready,
@@ -2537,7 +2531,6 @@ module Electric_hook_bd_axi_smc_1_0_bd_becb_s00sic_0
         .s_axi_wvalid(\w_accum_reg[data][0] ));
 endmodule
 
-(* ORIG_REF_NAME = "bd_becb_s00tr_0" *) 
 module Electric_hook_bd_axi_smc_1_0_bd_becb_s00tr_0
    (s_axi_awready,
     s_axi_wready,
@@ -2888,7 +2881,6 @@ module Electric_hook_bd_axi_smc_1_0_bd_becb_s00tr_0
         .s_axi_wvalid(\w_accum_reg[data][0] ));
 endmodule
 
-(* ORIG_REF_NAME = "bd_becb_sarn_0" *) 
 module Electric_hook_bd_axi_smc_1_0_bd_becb_sarn_0
    (S_SC_AR_recv,
     M_SC_AR_send,
@@ -3003,7 +2995,6 @@ module Electric_hook_bd_axi_smc_1_0_bd_becb_sarn_0
         .s_sc_send(S_SC_AR_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_becb_sawn_0" *) 
 module Electric_hook_bd_axi_smc_1_0_bd_becb_sawn_0
    (S_SC_AW_recv,
     M_SC_AW_send,
@@ -3118,7 +3109,6 @@ module Electric_hook_bd_axi_smc_1_0_bd_becb_sawn_0
         .s_sc_send(S_SC_AW_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_becb_sbn_0" *) 
 module Electric_hook_bd_axi_smc_1_0_bd_becb_sbn_0
    (S_SC_B_recv,
     M_SC_B_send,
@@ -3233,7 +3223,6 @@ module Electric_hook_bd_axi_smc_1_0_bd_becb_sbn_0
         .s_sc_send(S_SC_B_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_becb_srn_0" *) 
 module Electric_hook_bd_axi_smc_1_0_bd_becb_srn_0
    (S_SC_R_recv,
     M_SC_R_send,
@@ -3348,7 +3337,6 @@ module Electric_hook_bd_axi_smc_1_0_bd_becb_srn_0
         .s_sc_send(S_SC_R_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_becb_swn_0" *) 
 module Electric_hook_bd_axi_smc_1_0_bd_becb_swn_0
    (S_SC_W_recv,
     M_SC_W_send,
@@ -3463,7 +3451,6 @@ module Electric_hook_bd_axi_smc_1_0_bd_becb_swn_0
         .s_sc_send(S_SC_W_send));
 endmodule
 
-(* ORIG_REF_NAME = "cdc_sync" *) 
 module Electric_hook_bd_axi_smc_1_0_cdc_sync
    (scndry_out,
     aresetn,
@@ -3531,7 +3518,6 @@ module Electric_hook_bd_axi_smc_1_0_cdc_sync
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "clk_map_imp_76XHYH" *) 
 module Electric_hook_bd_axi_smc_1_0_clk_map_imp_76XHYH
    (interconnect_aresetn,
     aclk,
@@ -3550,7 +3536,6 @@ module Electric_hook_bd_axi_smc_1_0_clk_map_imp_76XHYH
         .interconnect_aresetn(interconnect_aresetn));
 endmodule
 
-(* ORIG_REF_NAME = "lpf" *) 
 module Electric_hook_bd_axi_smc_1_0_lpf
    (lpf_int,
     aclk,
@@ -3609,7 +3594,6 @@ module Electric_hook_bd_axi_smc_1_0_lpf
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "m00_exit_pipeline_imp_1QI30TU" *) 
 module Electric_hook_bd_axi_smc_1_0_m00_exit_pipeline_imp_1QI30TU
    (s_axi_awready,
     s_axi_wready,
@@ -3885,7 +3869,6 @@ module Electric_hook_bd_axi_smc_1_0_m00_exit_pipeline_imp_1QI30TU
         .s_axi_wready(s_axi_wready));
 endmodule
 
-(* ORIG_REF_NAME = "proc_sys_reset" *) 
 module Electric_hook_bd_axi_smc_1_0_proc_sys_reset
    (interconnect_aresetn,
     aclk,
@@ -3922,7 +3905,6 @@ module Electric_hook_bd_axi_smc_1_0_proc_sys_reset
         .lpf_int(lpf_int));
 endmodule
 
-(* ORIG_REF_NAME = "s00_entry_pipeline_imp_RB28Z5" *) 
 module Electric_hook_bd_axi_smc_1_0_s00_entry_pipeline_imp_RB28Z5
    (S00_AXI_awready,
     S00_AXI_wready,
@@ -4420,7 +4402,6 @@ module Electric_hook_bd_axi_smc_1_0_s00_entry_pipeline_imp_RB28Z5
         .\w_accum_reg[strb][3] (s00_mmu_M_AXI_WSTRB));
 endmodule
 
-(* ORIG_REF_NAME = "s00_nodes_imp_X8WXKB" *) 
 module Electric_hook_bd_axi_smc_1_0_s00_nodes_imp_X8WXKB
    (S_SC_AR_recv,
     M_SC_AR_send,
@@ -4572,7 +4553,6 @@ module Electric_hook_bd_axi_smc_1_0_s00_nodes_imp_X8WXKB
         .interconnect_aresetn(interconnect_aresetn));
 endmodule
 
-(* ORIG_REF_NAME = "sequence_psr" *) 
 module Electric_hook_bd_axi_smc_1_0_sequence_psr
    (bsr_reg_0,
     lpf_int,
@@ -4748,7 +4728,6 @@ module Electric_hook_bd_axi_smc_1_0_sequence_psr
         .R(lpf_int));
 endmodule
 
-(* ORIG_REF_NAME = "upcnt_n" *) 
 module Electric_hook_bd_axi_smc_1_0_upcnt_n
    (Q,
     seq_clr,
@@ -4875,25 +4854,24 @@ endmodule
 (* CLOCKING_MODE = "0" *) (* ECC_MODE = "0" *) (* MAX_NUM_CHAR = "0" *) 
 (* MEMORY_INIT_FILE = "none" *) (* MEMORY_INIT_PARAM = "" *) (* MEMORY_OPTIMIZATION = "true" *) 
 (* MEMORY_PRIMITIVE = "1" *) (* MEMORY_SIZE = "5216" *) (* MEMORY_TYPE = "1" *) 
-(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* ORIG_REF_NAME = "xpm_memory_base" *) 
-(* P_ECC_MODE = "no_ecc" *) (* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) 
-(* P_MAX_DEPTH_DATA = "32" *) (* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "distributed" *) 
-(* P_MIN_WIDTH_DATA = "163" *) (* P_MIN_WIDTH_DATA_A = "163" *) (* P_MIN_WIDTH_DATA_B = "163" *) 
-(* P_MIN_WIDTH_DATA_ECC = "163" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "163" *) 
-(* P_NUM_COLS_WRITE_A = "1" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) 
-(* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) 
-(* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
-(* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "5" *) 
-(* P_WIDTH_ADDR_READ_B = "5" *) (* P_WIDTH_ADDR_WRITE_A = "5" *) (* P_WIDTH_ADDR_WRITE_B = "5" *) 
-(* P_WIDTH_COL_WRITE_A = "163" *) (* P_WIDTH_COL_WRITE_B = "163" *) (* READ_DATA_WIDTH_A = "163" *) 
-(* READ_DATA_WIDTH_B = "163" *) (* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "1" *) 
-(* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "0" *) (* RST_MODE_A = "SYNC" *) 
-(* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) 
-(* USE_MEM_INIT = "0" *) (* USE_MEM_INIT_MMI = "0" *) (* VERSION = "0" *) 
-(* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "163" *) (* WRITE_DATA_WIDTH_B = "163" *) 
-(* WRITE_MODE_A = "1" *) (* WRITE_MODE_B = "1" *) (* WRITE_PROTECT = "1" *) 
-(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* rsta_loop_iter = "164" *) 
-(* rstb_loop_iter = "164" *) 
+(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* P_ECC_MODE = "no_ecc" *) 
+(* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) (* P_MAX_DEPTH_DATA = "32" *) 
+(* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "distributed" *) (* P_MIN_WIDTH_DATA = "163" *) 
+(* P_MIN_WIDTH_DATA_A = "163" *) (* P_MIN_WIDTH_DATA_B = "163" *) (* P_MIN_WIDTH_DATA_ECC = "163" *) 
+(* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "163" *) (* P_NUM_COLS_WRITE_A = "1" *) 
+(* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) (* P_NUM_ROWS_READ_B = "1" *) 
+(* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) (* P_SDP_WRITE_MODE = "yes" *) 
+(* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) 
+(* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "5" *) (* P_WIDTH_ADDR_READ_B = "5" *) 
+(* P_WIDTH_ADDR_WRITE_A = "5" *) (* P_WIDTH_ADDR_WRITE_B = "5" *) (* P_WIDTH_COL_WRITE_A = "163" *) 
+(* P_WIDTH_COL_WRITE_B = "163" *) (* READ_DATA_WIDTH_A = "163" *) (* READ_DATA_WIDTH_B = "163" *) 
+(* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "1" *) (* READ_RESET_VALUE_A = "0" *) 
+(* READ_RESET_VALUE_B = "0" *) (* RST_MODE_A = "SYNC" *) (* RST_MODE_B = "SYNC" *) 
+(* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) (* USE_MEM_INIT = "0" *) 
+(* USE_MEM_INIT_MMI = "0" *) (* VERSION = "0" *) (* WAKEUP_TIME = "0" *) 
+(* WRITE_DATA_WIDTH_A = "163" *) (* WRITE_DATA_WIDTH_B = "163" *) (* WRITE_MODE_A = "1" *) 
+(* WRITE_MODE_B = "1" *) (* WRITE_PROTECT = "1" *) (* XPM_MODULE = "TRUE" *) 
+(* keep_hierarchy = "soft" *) (* rsta_loop_iter = "164" *) (* rstb_loop_iter = "164" *) 
 module Electric_hook_bd_axi_smc_1_0_xpm_memory_base
    (sleep,
     clka,
@@ -12804,14 +12782,13 @@ endmodule
 (* BYTE_WRITE_WIDTH_A = "163" *) (* CASCADE_HEIGHT = "0" *) (* CLOCKING_MODE = "0" *) 
 (* ECC_MODE = "0" *) (* MEMORY_INIT_FILE = "none" *) (* MEMORY_INIT_PARAM = "" *) 
 (* MEMORY_OPTIMIZATION = "true" *) (* MEMORY_PRIMITIVE = "1" *) (* MEMORY_SIZE = "5216" *) 
-(* MESSAGE_CONTROL = "0" *) (* ORIG_REF_NAME = "xpm_memory_sdpram" *) (* P_CLOCKING_MODE = "0" *) 
-(* P_ECC_MODE = "0" *) (* P_MEMORY_OPTIMIZATION = "1" *) (* P_MEMORY_PRIMITIVE = "1" *) 
-(* P_WAKEUP_TIME = "0" *) (* P_WRITE_MODE_B = "1" *) (* READ_DATA_WIDTH_B = "163" *) 
-(* READ_LATENCY_B = "1" *) (* READ_RESET_VALUE_B = "0" *) (* RST_MODE_A = "SYNC" *) 
-(* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) 
-(* USE_MEM_INIT = "0" *) (* USE_MEM_INIT_MMI = "0" *) (* WAKEUP_TIME = "0" *) 
-(* WRITE_DATA_WIDTH_A = "163" *) (* WRITE_MODE_B = "1" *) (* WRITE_PROTECT = "1" *) 
-(* XPM_MODULE = "TRUE" *) 
+(* MESSAGE_CONTROL = "0" *) (* P_CLOCKING_MODE = "0" *) (* P_ECC_MODE = "0" *) 
+(* P_MEMORY_OPTIMIZATION = "1" *) (* P_MEMORY_PRIMITIVE = "1" *) (* P_WAKEUP_TIME = "0" *) 
+(* P_WRITE_MODE_B = "1" *) (* READ_DATA_WIDTH_B = "163" *) (* READ_LATENCY_B = "1" *) 
+(* READ_RESET_VALUE_B = "0" *) (* RST_MODE_A = "SYNC" *) (* RST_MODE_B = "SYNC" *) 
+(* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) (* USE_MEM_INIT = "0" *) 
+(* USE_MEM_INIT_MMI = "0" *) (* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "163" *) 
+(* WRITE_MODE_B = "1" *) (* WRITE_PROTECT = "1" *) (* XPM_MODULE = "TRUE" *) 
 module Electric_hook_bd_axi_smc_1_0_xpm_memory_sdpram
    (sleep,
     clka,
@@ -13628,11 +13605,10 @@ endmodule
 (* C_SC_RUSER_BITS_PER_BYTE = "0" *) (* C_SC_WDATA_WIDTH = "32" *) (* C_SC_WUSER_BITS_PER_BYTE = "0" *) 
 (* C_SSC_ROUTE_WIDTH = "1" *) (* C_WPAYLD_WIDTH = "52" *) (* LP_NZ_AXI_ID_WIDTH = "1" *) 
 (* LP_NZ_RUBPB = "1" *) (* LP_NZ_WUBPB = "1" *) (* LP_RUSER_INDEX = "0" *) 
-(* LP_WUSER_INDEX = "0" *) (* ORIG_REF_NAME = "sc_axi2sc_v1_0_7_top" *) (* T_SC_ADDR_WIDTH = "32" *) 
-(* T_SC_ARUSER_WIDTH = "8" *) (* T_SC_AWUSER_WIDTH = "8" *) (* T_SC_BUSER_WIDTH = "1" *) 
-(* T_SC_ID_WIDTH = "1" *) (* T_SC_MSC_ROUTE_WIDTH = "1" *) (* T_SC_RDATA_WIDTH = "32" *) 
-(* T_SC_RUSER_BITS_PER_BYTE = "0" *) (* T_SC_SSC_ROUTE_WIDTH = "1" *) (* T_SC_WDATA_WIDTH = "32" *) 
-(* T_SC_WUSER_BITS_PER_BYTE = "0" *) 
+(* LP_WUSER_INDEX = "0" *) (* T_SC_ADDR_WIDTH = "32" *) (* T_SC_ARUSER_WIDTH = "8" *) 
+(* T_SC_AWUSER_WIDTH = "8" *) (* T_SC_BUSER_WIDTH = "1" *) (* T_SC_ID_WIDTH = "1" *) 
+(* T_SC_MSC_ROUTE_WIDTH = "1" *) (* T_SC_RDATA_WIDTH = "32" *) (* T_SC_RUSER_BITS_PER_BYTE = "0" *) 
+(* T_SC_SSC_ROUTE_WIDTH = "1" *) (* T_SC_WDATA_WIDTH = "32" *) (* T_SC_WUSER_BITS_PER_BYTE = "0" *) 
 module Electric_hook_bd_axi_smc_1_0_sc_axi2sc_v1_0_7_top
    (aclk,
     s_sc_r_req,
@@ -16026,7 +16002,6 @@ module Electric_hook_bd_axi_smc_1_0_sc_axi2sc_v1_0_7_top
        (.G(\<const0> ));
 endmodule
 
-(* ORIG_REF_NAME = "sc_exit_v1_0_10_exit" *) 
 module Electric_hook_bd_axi_smc_1_0_sc_exit_v1_0_10_exit
    (m_axi_arvalid,
     m_axi_awvalid,
@@ -16154,9 +16129,8 @@ endmodule
 (* C_NUM_WRITE_OUTSTANDING = "7" *) (* C_RDATA_WIDTH = "32" *) (* C_READ_ACCEPTANCE = "32" *) 
 (* C_SINGLE_ISSUING = "0" *) (* C_SSC_ROUTE_ARRAY = "2'b10" *) (* C_SSC_ROUTE_WIDTH = "1" *) 
 (* C_S_ID_WIDTH = "1" *) (* C_WDATA_WIDTH = "32" *) (* C_WRITE_ACCEPTANCE = "32" *) 
-(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "sc_exit_v1_0_10_top" *) (* P_BYPASS = "0" *) 
-(* P_FULLY_PIPELINED = "2" *) (* P_NUM_READ_OUTSTANDING = "16" *) (* P_NUM_WRITE_OUTSTANDING = "16" *) 
-(* P_ZERO_LATENCY = "1" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* P_BYPASS = "0" *) (* P_FULLY_PIPELINED = "2" *) 
+(* P_NUM_READ_OUTSTANDING = "16" *) (* P_NUM_WRITE_OUTSTANDING = "16" *) (* P_ZERO_LATENCY = "1" *) 
 module Electric_hook_bd_axi_smc_1_0_sc_exit_v1_0_10_top
    (aclk,
     aclken,
@@ -18681,13 +18655,13 @@ endmodule
 (* C_SUPPORTS_WRITE_DECERR = "0" *) (* C_S_ARUSER_WIDTH = "8" *) (* C_S_AWUSER_WIDTH = "8" *) 
 (* C_S_BUSER_WIDTH = "0" *) (* C_S_PROTOCOL = "0" *) (* C_S_RUSER_WIDTH = "0" *) 
 (* C_S_WUSER_WIDTH = "0" *) (* C_WDATA_WIDTH = "32" *) (* C_WRITE_ACCEPTANCE = "32" *) 
-(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "sc_mmu_v1_0_9_top" *) (* P_AXI3 = "1" *) 
-(* P_AXI4 = "0" *) (* P_AXILITE = "2" *) (* P_BYPASS = "0" *) 
-(* P_DECERR = "2'b11" *) (* P_FIXED = "2'b00" *) (* P_FULLY_PIPELINED = "2" *) 
-(* P_INCR = "2'b01" *) (* P_NUM_MSC_LOG = "1" *) (* P_NUM_SEG_LOG = "1" *) 
-(* P_R_DWBYTES = "4" *) (* P_R_DWSIZE = "2" *) (* P_R_QUEUE_SIZE = "4" *) 
-(* P_WRAP = "2'b10" *) (* P_W_DWBYTES = "4" *) (* P_W_DWSIZE = "2" *) 
-(* P_W_QUEUE_SIZE = "4" *) (* P_ZERO_LATENCY = "1" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* P_AXI3 = "1" *) (* P_AXI4 = "0" *) 
+(* P_AXILITE = "2" *) (* P_BYPASS = "0" *) (* P_DECERR = "2'b11" *) 
+(* P_FIXED = "2'b00" *) (* P_FULLY_PIPELINED = "2" *) (* P_INCR = "2'b01" *) 
+(* P_NUM_MSC_LOG = "1" *) (* P_NUM_SEG_LOG = "1" *) (* P_R_DWBYTES = "4" *) 
+(* P_R_DWSIZE = "2" *) (* P_R_QUEUE_SIZE = "4" *) (* P_WRAP = "2'b10" *) 
+(* P_W_DWBYTES = "4" *) (* P_W_DWSIZE = "2" *) (* P_W_QUEUE_SIZE = "4" *) 
+(* P_ZERO_LATENCY = "1" *) 
 module Electric_hook_bd_axi_smc_1_0_sc_mmu_v1_0_9_top
    (aclk,
     aresetn,
@@ -22633,7 +22607,6 @@ module Electric_hook_bd_axi_smc_1_0_sc_mmu_v1_0_9_top
         .O(s_axi_wready));
 endmodule
 
-(* ORIG_REF_NAME = "sc_node_v1_0_11_fifo" *) 
 module Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_fifo
    (m_sc_payld,
     \gen_wr.afull_r ,
@@ -22888,7 +22861,6 @@ module Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_fifo__xdcDup__1
         .s_sc_valid(s_sc_valid));
 endmodule
 
-(* ORIG_REF_NAME = "sc_node_v1_0_11_mi_handler" *) 
 module Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_mi_handler
    (m_sc_payld,
     \gen_wr.afull_r ,
@@ -23233,7 +23205,6 @@ module Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_mi_handler__parameterized3
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "sc_node_v1_0_11_si_handler" *) 
 module Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_si_handler
    (arb_stall_r,
     s_sc_valid,
@@ -23481,7 +23452,7 @@ endmodule
 (* LP_NODE_ROUTE_WIDTH = "1" *) (* LP_NODE_USER_WIDTH = "8" *) (* LP_SYNCHRONIZATION_STAGES = "2" *) 
 (* LP_S_AXIS_REG_SLICE_CONFIG = "0" *) (* LP_S_MAX_NUM_BYTES = "4" *) (* LP_S_MIN_NUM_BYTES = "4" *) 
 (* LP_S_PIPELINE = "0" *) (* LP_S_STATIC_DWIDTH = "1" *) (* LP_ZERO_ROUTE_WIDTH = "1" *) 
-(* ORIG_REF_NAME = "sc_node_v1_0_11_top" *) (* P_NUM_OUTSTANDING = "16" *) 
+(* P_NUM_OUTSTANDING = "16" *) 
 module Electric_hook_bd_axi_smc_1_0_sc_node_v1_0_11_top
    (s_sc_aclk,
     s_sc_aclken,
@@ -24466,11 +24437,10 @@ endmodule
 (* C_SC_RUSER_BITS_PER_BYTE = "0" *) (* C_SC_WDATA_WIDTH = "32" *) (* C_SC_WUSER_BITS_PER_BYTE = "0" *) 
 (* C_SSC_ROUTE_WIDTH = "1" *) (* C_WPAYLD_WIDTH = "52" *) (* LP_NZ_AXI_ID_WIDTH = "1" *) 
 (* LP_NZ_RUBPB = "1" *) (* LP_NZ_WUBPB = "1" *) (* LP_RUSER_INDEX = "0" *) 
-(* LP_WUSER_INDEX = "0" *) (* ORIG_REF_NAME = "sc_sc2axi_v1_0_7_top" *) (* T_SC_ADDR_WIDTH = "32" *) 
-(* T_SC_ARUSER_WIDTH = "8" *) (* T_SC_AWUSER_WIDTH = "8" *) (* T_SC_BUSER_WIDTH = "1" *) 
-(* T_SC_ID_WIDTH = "1" *) (* T_SC_MSC_ROUTE_WIDTH = "1" *) (* T_SC_RDATA_WIDTH = "32" *) 
-(* T_SC_RUSER_BITS_PER_BYTE = "0" *) (* T_SC_SSC_ROUTE_WIDTH = "1" *) (* T_SC_WDATA_WIDTH = "32" *) 
-(* T_SC_WUSER_BITS_PER_BYTE = "0" *) 
+(* LP_WUSER_INDEX = "0" *) (* T_SC_ADDR_WIDTH = "32" *) (* T_SC_ARUSER_WIDTH = "8" *) 
+(* T_SC_AWUSER_WIDTH = "8" *) (* T_SC_BUSER_WIDTH = "1" *) (* T_SC_ID_WIDTH = "1" *) 
+(* T_SC_MSC_ROUTE_WIDTH = "1" *) (* T_SC_RDATA_WIDTH = "32" *) (* T_SC_RUSER_BITS_PER_BYTE = "0" *) 
+(* T_SC_SSC_ROUTE_WIDTH = "1" *) (* T_SC_WDATA_WIDTH = "32" *) (* T_SC_WUSER_BITS_PER_BYTE = "0" *) 
 module Electric_hook_bd_axi_smc_1_0_sc_sc2axi_v1_0_7_top
    (aclk,
     m_sc_r_req,
@@ -27707,7 +27677,6 @@ module Electric_hook_bd_axi_smc_1_0_sc_sc2axi_v1_0_7_top
        (.G(\<const0> ));
 endmodule
 
-(* ORIG_REF_NAME = "sc_si_converter_v1_0_9_offset_fifo" *) 
 module Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_offset_fifo
    (D,
     r_payld_valid,
@@ -30520,7 +30489,6 @@ module Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_offset_fifo__paramete
         .O(w_payld_push_reg));
 endmodule
 
-(* ORIG_REF_NAME = "sc_si_converter_v1_0_9_splitter" *) 
 module Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_splitter
    (\gen_no_wsplitter.gen_endpoint_woffset.w_burst_continue ,
     \gen_no_wsplitter.gen_endpoint_woffset.woffset_valid ,
@@ -30620,12 +30588,12 @@ endmodule
 (* C_READ_WATERMARK = "0" *) (* C_SEP_PROTOCOL_ARRAY = "0" *) (* C_SEP_RDATA_WIDTH_ARRAY = "32" *) 
 (* C_SEP_WDATA_WIDTH_ARRAY = "32" *) (* C_SINGLE_ISSUING = "0" *) (* C_SUPPORTS_NARROW = "1" *) 
 (* C_S_RUSER_BITS_PER_BYTE = "0" *) (* C_S_WUSER_BITS_PER_BYTE = "0" *) (* C_WDATA_WIDTH = "32" *) 
-(* C_WRITE_ACCEPTANCE = "32" *) (* C_WRITE_WATERMARK = "0" *) (* ORIG_REF_NAME = "sc_si_converter_v1_0_9_top" *) 
-(* P_EXOK = "2'b01" *) (* P_FULLY_PIPELINED = "2" *) (* P_ID_WIDTH = "1" *) 
-(* P_MAX_RUSER_BITS_PER_BYTE = "1" *) (* P_MAX_WUSER_BITS_PER_BYTE = "1" *) (* P_NUM_READ_OUTSTANDING = "16" *) 
-(* P_NUM_WRITE_OUTSTANDING = "16" *) (* P_R_DWBYTES = "4" *) (* P_R_DWSIZE = "2" *) 
-(* P_S_RUSER_BITS_PER_BYTE = "1" *) (* P_S_WUSER_BITS_PER_BYTE = "1" *) (* P_W_DWBYTES = "4" *) 
-(* P_W_DWSIZE = "2" *) (* P_ZERO_LATENCY = "1" *) 
+(* C_WRITE_ACCEPTANCE = "32" *) (* C_WRITE_WATERMARK = "0" *) (* P_EXOK = "2'b01" *) 
+(* P_FULLY_PIPELINED = "2" *) (* P_ID_WIDTH = "1" *) (* P_MAX_RUSER_BITS_PER_BYTE = "1" *) 
+(* P_MAX_WUSER_BITS_PER_BYTE = "1" *) (* P_NUM_READ_OUTSTANDING = "16" *) (* P_NUM_WRITE_OUTSTANDING = "16" *) 
+(* P_R_DWBYTES = "4" *) (* P_R_DWSIZE = "2" *) (* P_S_RUSER_BITS_PER_BYTE = "1" *) 
+(* P_S_WUSER_BITS_PER_BYTE = "1" *) (* P_W_DWBYTES = "4" *) (* P_W_DWSIZE = "2" *) 
+(* P_ZERO_LATENCY = "1" *) 
 module Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_top
    (aclk,
     aclken,
@@ -36017,7 +35985,6 @@ module Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_top
         .m_vector({m_axi_awaddr[6:0],\^m_axi_awuser [185:179]}));
 endmodule
 
-(* ORIG_REF_NAME = "sc_si_converter_v1_0_9_wrap_narrow" *) 
 module Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_wrap_narrow
    (last_reg_reg,
     conv_wvalid,
@@ -37677,7 +37644,6 @@ module Electric_hook_bd_axi_smc_1_0_sc_si_converter_v1_0_9_wrap_narrow
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "sc_transaction_regulator_v1_0_8_singleorder" *) 
 module Electric_hook_bd_axi_smc_1_0_sc_transaction_regulator_v1_0_8_singleorder
    (s_axi_rid,
     s_axi_arready,
@@ -37782,10 +37748,9 @@ endmodule
 (* C_READ_ACCEPTANCE = "32" *) (* C_SEP_ROUTE_WIDTH = "1" *) (* C_SINGLE_ISSUING = "0" *) 
 (* C_SUPPORTS_READ_DEADLOCK = "0" *) (* C_SUPPORTS_WRITE_DEADLOCK = "0" *) (* C_S_ID_WIDTH = "1" *) 
 (* C_WDATA_WIDTH = "32" *) (* C_WRITE_ACCEPTANCE = "32" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
-(* ORIG_REF_NAME = "sc_transaction_regulator_v1_0_8_top" *) (* P_FULLY_PIPELINED = "2" *) (* P_ID_BUFFER_WIDTH = "1" *) 
-(* P_M_THREAD_ID_WIDTH = "1" *) (* P_NUM_READ_OUTSTANDING = "16" *) (* P_NUM_WRITE_OUTSTANDING = "16" *) 
-(* P_R_QUEUE_SIZE = "4" *) (* P_S_ID_WIDTH = "1" *) (* P_W_QUEUE_SIZE = "4" *) 
-(* P_ZERO_LATENCY = "1" *) 
+(* P_FULLY_PIPELINED = "2" *) (* P_ID_BUFFER_WIDTH = "1" *) (* P_M_THREAD_ID_WIDTH = "1" *) 
+(* P_NUM_READ_OUTSTANDING = "16" *) (* P_NUM_WRITE_OUTSTANDING = "16" *) (* P_R_QUEUE_SIZE = "4" *) 
+(* P_S_ID_WIDTH = "1" *) (* P_W_QUEUE_SIZE = "4" *) (* P_ZERO_LATENCY = "1" *) 
 module Electric_hook_bd_axi_smc_1_0_sc_transaction_regulator_v1_0_8_top
    (mep_identifier,
     aclk,
@@ -47030,7 +46995,6 @@ module Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_axi_reg_stall__parameterized0
         .R(areset));
 endmodule
 
-(* ORIG_REF_NAME = "sc_util_v1_0_4_axic_reg_srl_fifo" *) 
 module Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_axic_reg_srl_fifo
    (m_axi_arvalid,
     s_axi_arready,
@@ -52511,7 +52475,6 @@ module Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_axic_reg_srl_fifo__parameteri
         .O(s_axi_arready));
 endmodule
 
-(* ORIG_REF_NAME = "sc_util_v1_0_4_counter" *) 
 module Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_counter
    (Q,
     rd_addrb_incr,
@@ -55731,7 +55694,6 @@ module Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_counter__parameterized0_9
         .O(\gen_wr.full_r_inv_i_2_n_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "sc_util_v1_0_4_srl_rtl" *) 
 module Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_srl_rtl
    (\S00_AXI_awid[0] ,
     s_axi_awid,
@@ -62883,7 +62845,6 @@ module Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_srl_rtl__parameterized0_99
         .Q31(\NLW_shift_reg_reg[0]_srl32_Q31_UNCONNECTED ));
 endmodule
 
-(* ORIG_REF_NAME = "sc_util_v1_0_4_xpm_memory_fifo" *) 
 module Electric_hook_bd_axi_smc_1_0_sc_util_v1_0_4_xpm_memory_fifo
    (m_sc_payld,
     \gen_wr.afull_r ,

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="Electric_hook_bd_clk_wiz_0_synth_1" LaunchDir="C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/Electric_hook_bd_clk_wiz_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Electric_hook_bd_vio_0_0_synth_1" LaunchDir="C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/Electric_hook_bd_vio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Electric_hook_bd_c_accum_0_0_synth_1" LaunchDir="C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/Electric_hook_bd_c_accum_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Electric_hook_bd_puntaje_0_0_synth_1" LaunchDir="C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/Electric_hook_bd_puntaje_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Electric_hook_bd_ila_0_0_synth_1" LaunchDir="C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/Electric_hook_bd_ila_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Electric_hook_bd_axi_traffic_gen_2_0_synth_1" LaunchDir="C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/Electric_hook_bd_axi_traffic_gen_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Electric_hook_bd_pull_fish_0_1_synth_1" LaunchDir="C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/Electric_hook_bd_pull_fish_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Electric_hook_bd_main_0_1_synth_1" LaunchDir="C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/Electric_hook_bd_main_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="Electric_hook_bd_clk_wiz_0_synth_1"/>
+		<Parent Id="Electric_hook_bd_vio_0_0_synth_1"/>
+		<Parent Id="Electric_hook_bd_c_accum_0_0_synth_1"/>
+		<Parent Id="Electric_hook_bd_puntaje_0_0_synth_1"/>
+		<Parent Id="Electric_hook_bd_ila_0_0_synth_1"/>
+		<Parent Id="Electric_hook_bd_axi_traffic_gen_2_0_synth_1"/>
+		<Parent Id="Electric_hook_bd_pull_fish_0_1_synth_1"/>
+		<Parent Id="Electric_hook_bd_main_0_1_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="Electric_hook_bd_clk_wiz_0_synth_1"/>
+		<Parent Id="Electric_hook_bd_vio_0_0_synth_1"/>
+		<Parent Id="Electric_hook_bd_c_accum_0_0_synth_1"/>
+		<Parent Id="Electric_hook_bd_puntaje_0_0_synth_1"/>
+		<Parent Id="Electric_hook_bd_ila_0_0_synth_1"/>
+		<Parent Id="Electric_hook_bd_axi_traffic_gen_2_0_synth_1"/>
+		<Parent Id="Electric_hook_bd_pull_fish_0_1_synth_1"/>
+		<Parent Id="Electric_hook_bd_main_0_1_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

@@ -159,7 +159,7 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set btn [ create_bd_port -dir I -from 3 -to 0 btn ]
-  set clk [ create_bd_port -dir I -type clk -freq_hz 125000000 clk ]
+  set clk [ create_bd_port -dir I -type clk -freq_hz 100000000 clk ]
   set led [ create_bd_port -dir O -from 3 -to 0 led ]
   set rgb [ create_bd_port -dir O -from 2 -to 0 rgb ]
   set sw [ create_bd_port -dir I -from 3 -to 0 sw ]
@@ -192,25 +192,60 @@ proc create_root_design { parentCell } {
   # Create instance: axi_traffic_gen_1, and set properties
   set axi_traffic_gen_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_traffic_gen:3.0 axi_traffic_gen_1 ]
 
+  # Create instance: axi_traffic_gen_2, and set properties
+  set axi_traffic_gen_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_traffic_gen:3.0 axi_traffic_gen_2 ]
+  set_property -dict [ list \
+   CONFIG.C_ATG_MODE {AXI4-Lite} \
+   CONFIG.C_ATG_SYSINIT_MODES {System_Test} \
+   CONFIG.C_ATG_SYSTEM_CMD_MAX_RETRY {2147483647} \
+   CONFIG.C_ATG_SYSTEM_INIT_ADDR_MIF {../../../../../../../../../../Downloads/COE/COE_FILES/addr.coe} \
+   CONFIG.C_ATG_SYSTEM_INIT_CTRL_MIF {../../../../../../../../../../Downloads/COE/COE_FILES/ctrl.coe} \
+   CONFIG.C_ATG_SYSTEM_INIT_DATA_MIF {../../../../../../../../../../Downloads/COE/COE_FILES/data.coe} \
+   CONFIG.C_ATG_SYSTEM_INIT_MASK_MIF {../../../../../../../../../../Downloads/COE/COE_FILES/mask.coe} \
+ ] $axi_traffic_gen_2
+
+  # Create instance: c_accum_0, and set properties
+  set c_accum_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:c_accum:12.0 c_accum_0 ]
+  set_property -dict [ list \
+   CONFIG.Bypass {false} \
+   CONFIG.CE {true} \
+   CONFIG.Input_Type {Unsigned} \
+   CONFIG.Input_Width {8} \
+   CONFIG.Output_Width {8} \
+   CONFIG.SCLR {true} \
+ ] $c_accum_0
+
   # Create instance: catch_fish_0, and set properties
   set catch_fish_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:catch_fish:1.0 catch_fish_0 ]
 
   # Create instance: clk_wiz, and set properties
   set clk_wiz [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz ]
   set_property -dict [ list \
-   CONFIG.CLKIN1_JITTER_PS {80.0} \
-   CONFIG.CLKOUT1_JITTER {124.615} \
-   CONFIG.CLKOUT1_PHASE_ERROR {96.948} \
-   CONFIG.MMCM_CLKFBOUT_MULT_F {8.000} \
-   CONFIG.MMCM_CLKIN1_PERIOD {8.000} \
-   CONFIG.PRIM_IN_FREQ {125.000} \
+   CONFIG.CLKIN1_JITTER_PS {100.0} \
+   CONFIG.CLKOUT1_JITTER {130.958} \
+   CONFIG.CLKOUT1_PHASE_ERROR {98.575} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {10.000} \
+   CONFIG.MMCM_CLKIN1_PERIOD {10.000} \
+   CONFIG.PRIM_IN_FREQ {100.000} \
  ] $clk_wiz
+
+  # Create instance: ila_0, and set properties
+  set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
+  set_property -dict [ list \
+   CONFIG.C_ENABLE_ILA_AXI_MON {false} \
+   CONFIG.C_MONITOR_TYPE {Native} \
+   CONFIG.C_NUM_OF_PROBES {1} \
+   CONFIG.C_PROBE0_WIDTH {16} \
+ ] $ila_0
 
   # Create instance: main_0, and set properties
   set main_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:main:1.0 main_0 ]
 
   # Create instance: pull_fish_0, and set properties
   set pull_fish_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:pull_fish:1.0 pull_fish_0 ]
+
+  # Create instance: puntaje_0, and set properties
+  set puntaje_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:puntaje:1.0 puntaje_0 ]
 
   # Create instance: ram_pull_fish_0, and set properties
   set ram_pull_fish_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:ram_pull_fish:1.0 ram_pull_fish_0 ]
@@ -225,38 +260,54 @@ proc create_root_design { parentCell } {
    CONFIG.C_NUM_PROBE_IN {0} \
  ] $vio_0
 
+  # Create instance: xlconstant_0, and set properties
+  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
+  set_property -dict [ list \
+   CONFIG.CONST_WIDTH {8} \
+ ] $xlconstant_0
+
   # Create interface connections
   connect_bd_intf_net -intf_net axi_smc_1_M00_AXI [get_bd_intf_pins axi_smc_1/M00_AXI] [get_bd_intf_pins ram_pull_fish_0/S00_pull_fish_AXI]
   connect_bd_intf_net -intf_net axi_smc_M00_AXI [get_bd_intf_pins axi_smc/M00_AXI] [get_bd_intf_pins axi_traffic_gen_1/S_AXI]
   connect_bd_intf_net -intf_net axi_traffic_gen_0_M_AXI_LITE_CH1 [get_bd_intf_pins axi_smc/S00_AXI] [get_bd_intf_pins axi_traffic_gen_0/M_AXI_LITE_CH1]
   connect_bd_intf_net -intf_net axi_traffic_gen_1_M_AXI [get_bd_intf_pins axi_smc_1/S00_AXI] [get_bd_intf_pins axi_traffic_gen_1/M_AXI]
+  connect_bd_intf_net -intf_net axi_traffic_gen_2_M_AXI_LITE_CH1 [get_bd_intf_pins axi_traffic_gen_2/M_AXI_LITE_CH1] [get_bd_intf_pins puntaje_0/S00_AXI]
 
   # Create port connections
   connect_bd_net -net btn_0_1 [get_bd_ports btn] [get_bd_pins main_0/btn]
+  connect_bd_net -net c_accum_0_Q [get_bd_pins c_accum_0/Q] [get_bd_pins puntaje_0/racha_in]
   connect_bd_net -net catch_fish_0_game_end [get_bd_pins catch_fish_0/game_end] [get_bd_pins main_0/game_end_catch_fish]
   connect_bd_net -net catch_fish_0_led_out [get_bd_pins catch_fish_0/led_out] [get_bd_pins main_0/led_catch_fish]
-  connect_bd_net -net clk_in1_0_1 [get_bd_ports clk] [get_bd_pins catch_fish_0/clk] [get_bd_pins clk_wiz/clk_in1] [get_bd_pins main_0/clk] [get_bd_pins pull_fish_0/clk] [get_bd_pins vio_0/clk]
-  connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins axi_smc/aclk] [get_bd_pins axi_smc_1/aclk] [get_bd_pins axi_traffic_gen_0/s_axi_aclk] [get_bd_pins axi_traffic_gen_1/s_axi_aclk] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins ram_pull_fish_0/s00_pull_fish_axi_aclk] [get_bd_pins rst_clk_wiz_100M/slowest_sync_clk]
+  connect_bd_net -net clk_in1_0_1 [get_bd_ports clk] [get_bd_pins c_accum_0/CLK] [get_bd_pins catch_fish_0/clk] [get_bd_pins clk_wiz/clk_in1] [get_bd_pins ila_0/clk] [get_bd_pins main_0/clk] [get_bd_pins pull_fish_0/clk] [get_bd_pins puntaje_0/clk] [get_bd_pins vio_0/clk]
+  connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins axi_smc/aclk] [get_bd_pins axi_smc_1/aclk] [get_bd_pins axi_traffic_gen_0/s_axi_aclk] [get_bd_pins axi_traffic_gen_1/s_axi_aclk] [get_bd_pins axi_traffic_gen_2/s_axi_aclk] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins puntaje_0/s00_axi_aclk] [get_bd_pins ram_pull_fish_0/s00_pull_fish_axi_aclk] [get_bd_pins rst_clk_wiz_100M/slowest_sync_clk]
   connect_bd_net -net clk_wiz_locked [get_bd_pins clk_wiz/locked] [get_bd_pins rst_clk_wiz_100M/dcm_locked]
   connect_bd_net -net main_0_btn_debounced [get_bd_pins catch_fish_0/btn] [get_bd_pins main_0/btn_debounced] [get_bd_pins pull_fish_0/btn]
   connect_bd_net -net main_0_clk_div_catch_fish [get_bd_pins catch_fish_0/clk_div] [get_bd_pins main_0/clk_div_catch_fish]
   connect_bd_net -net main_0_enable_catch_fish [get_bd_pins catch_fish_0/enable] [get_bd_pins main_0/enable_catch_fish]
   connect_bd_net -net main_0_enable_pull_fish [get_bd_pins main_0/enable_pull_fish] [get_bd_pins pull_fish_0/enable]
+  connect_bd_net -net main_0_enable_puntaje [get_bd_pins main_0/enable_puntaje] [get_bd_pins puntaje_0/enable_puntaje]
+  connect_bd_net -net main_0_estado_pull [get_bd_pins main_0/estado_pull] [get_bd_pins puntaje_0/game_won_pull_fish]
   connect_bd_net -net main_0_led [get_bd_ports led] [get_bd_pins main_0/led]
+  connect_bd_net -net main_0_num [get_bd_pins main_0/num] [get_bd_pins puntaje_0/num]
+  connect_bd_net -net main_0_racha_reiniciar [get_bd_pins c_accum_0/SCLR] [get_bd_pins main_0/racha_reiniciar]
+  connect_bd_net -net main_0_racha_sumar [get_bd_pins c_accum_0/CE] [get_bd_pins main_0/racha_sumar]
   connect_bd_net -net main_0_rgb [get_bd_ports rgb] [get_bd_pins main_0/rgb]
   connect_bd_net -net pull_fish_0_led [get_bd_pins main_0/led_pull_fish] [get_bd_pins pull_fish_0/led]
   connect_bd_net -net pull_fish_0_lost [get_bd_pins main_0/game_lost_pull_fish] [get_bd_pins pull_fish_0/lost]
   connect_bd_net -net pull_fish_0_rgb_color [get_bd_pins main_0/rgb_pull_fish] [get_bd_pins pull_fish_0/rgb_color]
-  connect_bd_net -net pull_fish_0_seq_addr [get_bd_pins pull_fish_0/seq_addr] [get_bd_pins ram_pull_fish_0/addr]
+  connect_bd_net -net pull_fish_0_seq_addr [get_bd_pins main_0/seq_adress] [get_bd_pins pull_fish_0/seq_addr] [get_bd_pins ram_pull_fish_0/addr]
   connect_bd_net -net pull_fish_0_won [get_bd_pins main_0/game_won_pull_fish] [get_bd_pins pull_fish_0/won]
-  connect_bd_net -net ram_pull_fish_0_seq [get_bd_pins pull_fish_0/seq] [get_bd_pins ram_pull_fish_0/seq]
+  connect_bd_net -net puntaje_0_leds [get_bd_pins main_0/led_puntaje] [get_bd_pins puntaje_0/leds]
+  connect_bd_net -net ram_pull_fish_0_seq [get_bd_pins ila_0/probe0] [get_bd_pins pull_fish_0/seq] [get_bd_pins ram_pull_fish_0/seq]
   connect_bd_net -net reset_0_1 [get_bd_pins clk_wiz/reset] [get_bd_pins rst_clk_wiz_100M/ext_reset_in] [get_bd_pins vio_0/probe_out0]
-  connect_bd_net -net rst_clk_wiz_100M_peripheral_aresetn [get_bd_pins axi_smc/aresetn] [get_bd_pins axi_smc_1/aresetn] [get_bd_pins axi_traffic_gen_0/s_axi_aresetn] [get_bd_pins axi_traffic_gen_1/s_axi_aresetn] [get_bd_pins ram_pull_fish_0/s00_pull_fish_axi_aresetn] [get_bd_pins rst_clk_wiz_100M/peripheral_aresetn]
+  connect_bd_net -net rst_clk_wiz_100M_peripheral_aresetn [get_bd_pins axi_smc/aresetn] [get_bd_pins axi_smc_1/aresetn] [get_bd_pins axi_traffic_gen_0/s_axi_aresetn] [get_bd_pins axi_traffic_gen_1/s_axi_aresetn] [get_bd_pins axi_traffic_gen_2/s_axi_aresetn] [get_bd_pins puntaje_0/s00_axi_aresetn] [get_bd_pins ram_pull_fish_0/s00_pull_fish_axi_aresetn] [get_bd_pins rst_clk_wiz_100M/peripheral_aresetn]
   connect_bd_net -net sw_0_1 [get_bd_ports sw] [get_bd_pins catch_fish_0/sw] [get_bd_pins main_0/sw]
+  connect_bd_net -net xlconstant_0_dout [get_bd_pins c_accum_0/B] [get_bd_pins xlconstant_0/dout]
 
   # Create address segments
   assign_bd_address -offset 0x44A00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces axi_traffic_gen_0/Reg1] [get_bd_addr_segs axi_traffic_gen_1/S_AXI/Reg0] -force
   assign_bd_address -offset 0x76000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces axi_traffic_gen_1/Data] [get_bd_addr_segs ram_pull_fish_0/S00_pull_fish_AXI/S00_pull_fish_AXI_mem] -force
+  assign_bd_address -offset 0x44A00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces axi_traffic_gen_2/Reg1] [get_bd_addr_segs puntaje_0/S00_AXI/S00_AXI_reg] -force
 
 
   # Restore current instance

@@ -4,6 +4,89 @@
   <spirit:library>customized_ip</spirit:library>
   <spirit:name>Electric_hook_bd_pull_fish_0_1</spirit:name>
   <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_TOLERANCE_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.FREQ_TOLERANCE_HZ">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.CLK_DOMAIN"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_BUSIF"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_RESET"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.CLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
   <spirit:model>
     <spirit:views>
       <spirit:view>
@@ -17,11 +100,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Oct 14 17:55:52 UTC 2025</spirit:value>
+            <spirit:value>Tue Oct 14 19:52:55 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:cbf9b0cf</spirit:value>
+            <spirit:value>9:f6c393a3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -32,7 +115,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:cbf9b0cf</spirit:value>
+            <spirit:value>9:f6c393a3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -48,11 +131,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Oct 14 17:55:52 UTC 2025</spirit:value>
+            <spirit:value>Tue Oct 14 19:52:55 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:cbf9b0cf</spirit:value>
+            <spirit:value>9:f6c393a3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -67,11 +150,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Oct 14 17:55:52 UTC 2025</spirit:value>
+            <spirit:value>Tue Oct 14 19:52:55 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2a586489</spirit:value>
+            <spirit:value>9:661efaf3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -87,11 +170,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Oct 14 17:55:52 UTC 2025</spirit:value>
+            <spirit:value>Tue Oct 14 19:52:55 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:2a586489</spirit:value>
+            <spirit:value>9:661efaf3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -105,11 +188,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Oct 14 17:57:00 UTC 2025</spirit:value>
+            <spirit:value>Tue Oct 14 20:03:38 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:cbf9b0cf</spirit:value>
+            <spirit:value>9:f6c393a3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -253,16 +336,23 @@
         </spirit:wire>
       </spirit:port>
     </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>segundos</spirit:name>
+        <spirit:displayName>Segundos</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.segundos">2</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
   </spirit:model>
   <spirit:fileSets>
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/873f/src/random_number.vhd</spirit:name>
+        <spirit:name>../../ipshared/0849/src/random_number.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/873f/src/pull_fish.vhd</spirit:name>
+        <spirit:name>../../ipshared/0849/src/pull_fish.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -277,11 +367,11 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/873f/src/random_number.vhd</spirit:name>
+        <spirit:name>../../ipshared/0849/src/random_number.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/873f/src/pull_fish.vhd</spirit:name>
+        <spirit:name>../../ipshared/0849/src/pull_fish.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -336,12 +426,17 @@
       <spirit:name>Component_Name</spirit:name>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">Electric_hook_bd_pull_fish_0_1</spirit:value>
     </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>segundos</spirit:name>
+      <spirit:displayName>Segundos</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.segundos">2</spirit:value>
+    </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>pull_fish_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
+      <xilinx:coreRevision>4</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@57e4436_ARCHIVE_LOCATION">c:/Users/byane/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@1a938539_ARCHIVE_LOCATION">c:/Users/byane/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
@@ -349,13 +444,46 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@365886a0_ARCHIVE_LOCATION">c:/Users/byane/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@73429988_ARCHIVE_LOCATION">c:/Users/byane/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@77b0644_ARCHIVE_LOCATION">c:/Users/byane/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79455224_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68262e0c_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@783ed661_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30a0b019_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@421da1db_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47850cd_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d77f705_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6edbc2fd_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54ef4415_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21834517_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@144cd6f6_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b3bea8c_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45a9e0c2_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@625018f7_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d81102_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32b689d0_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1505ab05_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d6ad12e_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20859026_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ecc4613_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@745c7be6_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@505fe681_ARCHIVE_LOCATION">c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores/Pull_fish</xilinx:tag>
       </xilinx:tags>
+      <xilinx:configElementInfos>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.ASSOCIATED_BUSIF" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.ASSOCIATED_RESET" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CLK_DOMAIN" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.FREQ_HZ" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.FREQ_TOLERANCE_HZ" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.INSERT_VIP" xilinx:valueSource="constant"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.PHASE" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+      </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="422bc387"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="a88d4390"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="dcf4bf2e"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="a5dce840"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="c39da5d2"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="07b319ac"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="0cf69ea7"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

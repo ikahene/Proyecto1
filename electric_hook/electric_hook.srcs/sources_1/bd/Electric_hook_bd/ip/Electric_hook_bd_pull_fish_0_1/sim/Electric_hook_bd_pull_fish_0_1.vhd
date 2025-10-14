@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:user:pull_fish:1.0
--- IP Revision: 2
+-- IP Revision: 4
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -71,6 +71,9 @@ ARCHITECTURE Electric_hook_bd_pull_fish_0_1_arch OF Electric_hook_bd_pull_fish_0
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF Electric_hook_bd_pull_fish_0_1_arch: ARCHITECTURE IS "yes";
   COMPONENT pull_fish IS
+    GENERIC (
+      segundos : INTEGER
+    );
     PORT (
       clk : IN STD_LOGIC;
       btn : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -85,8 +88,15 @@ ARCHITECTURE Electric_hook_bd_pull_fish_0_1_arch OF Electric_hook_bd_pull_fish_0
   END COMPONENT pull_fish;
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF Electric_hook_bd_pull_fish_0_1_arch: ARCHITECTURE IS "package_project";
+  ATTRIBUTE X_INTERFACE_INFO : STRING;
+  ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
+  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
 BEGIN
   U0 : pull_fish
+    GENERIC MAP (
+      segundos => 2
+    )
     PORT MAP (
       clk => clk,
       btn => btn,

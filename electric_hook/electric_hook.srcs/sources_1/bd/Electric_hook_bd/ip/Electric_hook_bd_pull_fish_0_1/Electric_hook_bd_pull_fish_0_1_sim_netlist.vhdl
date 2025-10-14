@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Tue Oct 14 14:57:00 2025
--- Host        : BenjaUni running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/byane/OneDrive/Escritorio/Proyecto1/Electric_Hook/Electric_Hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_pull_fish_0_1/Electric_hook_bd_pull_fish_0_1_sim_netlist.vhdl
+-- Date        : Tue Oct 14 17:03:37 2025
+-- Host        : DESKTOP-MSDSPQ7 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim {c:/Users/Gabriela
+--               Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_pull_fish_0_1/Electric_hook_bd_pull_fish_0_1_sim_netlist.vhdl}
 -- Design      : Electric_hook_bd_pull_fish_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -58,8 +58,8 @@ architecture STRUCTURE of Electric_hook_bd_pull_fish_0_1_random_number is
   signal \i__carry_i_5_n_0\ : STD_LOGIC;
   signal \i__carry_i_6_n_0\ : STD_LOGIC;
   signal \led_sig[3]_i_4_n_0\ : STD_LOGIC;
+  signal lfsr_out : STD_LOGIC_VECTOR ( 0 to 0 );
   signal max_boton : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal next_lfsr_state : STD_LOGIC_VECTOR ( 3 to 3 );
   signal seq_state0_carry_i_9_n_0 : STD_LOGIC;
   signal start_game_counter0_carry_i_6_n_0 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
@@ -358,7 +358,7 @@ begin
         port map (
       I0 => \^q\(0),
       I1 => \^q\(3),
-      O => next_lfsr_state(3)
+      O => lfsr_out(0)
     );
 \lfsr_state_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -367,7 +367,7 @@ begin
         port map (
       C => clk,
       CE => E(0),
-      D => next_lfsr_state(3),
+      D => lfsr_out(0),
       Q => \^q\(0),
       R => '0'
     );
@@ -8432,6 +8432,10 @@ entity Electric_hook_bd_pull_fish_0_1 is
 end Electric_hook_bd_pull_fish_0_1;
 
 architecture STRUCTURE of Electric_hook_bd_pull_fish_0_1 is
+  attribute x_interface_info : string;
+  attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
+  attribute x_interface_parameter : string;
+  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, INSERT_VIP 0";
 begin
 U0: entity work.Electric_hook_bd_pull_fish_0_1_pull_fish
      port map (

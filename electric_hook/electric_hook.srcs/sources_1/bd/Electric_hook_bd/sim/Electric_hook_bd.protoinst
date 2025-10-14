@@ -264,6 +264,57 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
+				"/axi_traffic_gen_2/M_AXI_LITE_CH1": {
+					"interface": "xilinx.com:interface:aximm:1.0",
+					"ports": {
+						"ACLK": { "actual": "s_axi_aclk"},
+						"ARADDR": { "actual": "m_axi_lite_ch1_araddr"},
+						"ARESETN": { "actual": "s_axi_aresetn"},
+						"ARREADY": { "actual": "m_axi_lite_ch1_arready"},
+						"ARVALID": { "actual": "m_axi_lite_ch1_arvalid"},
+						"AWADDR": { "actual": "m_axi_lite_ch1_awaddr"},
+						"AWPROT": { "actual": "m_axi_lite_ch1_awprot"},
+						"AWREADY": { "actual": "m_axi_lite_ch1_awready"},
+						"AWVALID": { "actual": "m_axi_lite_ch1_awvalid"},
+						"BREADY": { "actual": "m_axi_lite_ch1_bready"},
+						"BRESP": { "actual": "m_axi_lite_ch1_bresp"},
+						"BVALID": { "actual": "m_axi_lite_ch1_bvalid"},
+						"RDATA": { "actual": "m_axi_lite_ch1_rdata"},
+						"RREADY": { "actual": "m_axi_lite_ch1_rready"},
+						"RRESP": { "actual": "m_axi_lite_ch1_rresp"},
+						"RVALID": { "actual": "m_axi_lite_ch1_rvalid"},
+						"WDATA": { "actual": "m_axi_lite_ch1_wdata"},
+						"WREADY": { "actual": "m_axi_lite_ch1_wready"},
+						"WSTRB": { "actual": "m_axi_lite_ch1_wstrb"},
+						"WVALID": { "actual": "m_axi_lite_ch1_wvalid"}
+					}
+				},
+				"/puntaje_0/S00_AXI": {
+					"interface": "xilinx.com:interface:aximm:1.0",
+					"ports": {
+						"ACLK": { "actual": "s00_axi_aclk"},
+						"ARADDR": { "actual": "s00_axi_araddr"},
+						"ARESETN": { "actual": "s00_axi_aresetn"},
+						"ARPROT": { "actual": "s00_axi_arprot"},
+						"ARREADY": { "actual": "s00_axi_arready"},
+						"ARVALID": { "actual": "s00_axi_arvalid"},
+						"AWADDR": { "actual": "s00_axi_awaddr"},
+						"AWPROT": { "actual": "s00_axi_awprot"},
+						"AWREADY": { "actual": "s00_axi_awready"},
+						"AWVALID": { "actual": "s00_axi_awvalid"},
+						"BREADY": { "actual": "s00_axi_bready"},
+						"BRESP": { "actual": "s00_axi_bresp"},
+						"BVALID": { "actual": "s00_axi_bvalid"},
+						"RDATA": { "actual": "s00_axi_rdata"},
+						"RREADY": { "actual": "s00_axi_rready"},
+						"RRESP": { "actual": "s00_axi_rresp"},
+						"RVALID": { "actual": "s00_axi_rvalid"},
+						"WDATA": { "actual": "s00_axi_wdata"},
+						"WREADY": { "actual": "s00_axi_wready"},
+						"WSTRB": { "actual": "s00_axi_wstrb"},
+						"WVALID": { "actual": "s00_axi_wvalid"}
+					}
+				},
 				"/ram_pull_fish_0/S00_pull_fish_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {

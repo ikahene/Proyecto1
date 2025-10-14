@@ -1,53 +1,67 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.19294",
-   "Default View_TopLeft":"346,-305",
+   "Default View_ScaleFactor":"0.79322",
+   "Default View_TopLeft":"-97,-381",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
 preplace port clk -pg 1 -lvl 0 -x 0 -y -90 -defaultsOSRD
 preplace portBus btn -pg 1 -lvl 0 -x 0 -y 330 -defaultsOSRD
 preplace portBus sw -pg 1 -lvl 0 -x 0 -y 360 -defaultsOSRD
-preplace portBus led -pg 1 -lvl 6 -x 1860 -y 340 -defaultsOSRD
-preplace portBus rgb -pg 1 -lvl 6 -x 1860 -y 370 -defaultsOSRD
-preplace inst ram_pull_fish_0 -pg 1 -lvl 4 -x 1170 -y 160 -defaultsOSRD
+preplace portBus led -pg 1 -lvl 7 -x 2330 -y 340 -defaultsOSRD
+preplace portBus rgb -pg 1 -lvl 7 -x 2330 -y 370 -defaultsOSRD
+preplace inst ram_pull_fish_0 -pg 1 -lvl 4 -x 1180 -y 160 -defaultsOSRD
 preplace inst axi_traffic_gen_0 -pg 1 -lvl 2 -x 460 -y 130 -defaultsOSRD
-preplace inst axi_traffic_gen_1 -pg 1 -lvl 3 -x 820 -y -20 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 5 -x 1590 -y -230 -defaultsOSRD
+preplace inst axi_traffic_gen_1 -pg 1 -lvl 3 -x 820 -y -150 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 5 -x 1630 -y -230 -defaultsOSRD
 preplace inst clk_wiz -pg 1 -lvl 2 -x 460 -y -180 -defaultsOSRD
-preplace inst rst_clk_wiz_100M -pg 1 -lvl 3 -x 820 -y -190 -defaultsOSRD
-preplace inst axi_smc_1 -pg 1 -lvl 4 -x 1170 -y -200 -defaultsOSRD
-preplace inst main_0 -pg 1 -lvl 5 -x 1590 -y 400 -defaultsOSRD
-preplace inst catch_fish_0 -pg 1 -lvl 5 -x 1590 -y 150 -defaultsOSRD
-preplace inst pull_fish_0 -pg 1 -lvl 5 -x 1590 -y 650 -defaultsOSRD
+preplace inst rst_clk_wiz_100M -pg 1 -lvl 3 -x 820 -y -320 -defaultsOSRD
+preplace inst axi_smc_1 -pg 1 -lvl 4 -x 1180 -y -200 -defaultsOSRD
+preplace inst catch_fish_0 -pg 1 -lvl 5 -x 1630 -y 150 -defaultsOSRD
 preplace inst vio_0 -pg 1 -lvl 1 -x 150 -y -260 -defaultsOSRD
-preplace netloc clk_wiz_clk_out1 1 1 4 250 40 620 -290 990 -290 1340J
-preplace netloc clk_wiz_locked 1 2 1 630 -170n
-preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 1 4 260 50 640 80 1000 -300 1390J
-preplace netloc reset_0_1 1 1 2 250 -250 630
-preplace netloc clk_in1_0_1 1 0 5 20 -90 250 30 600 70 N 70 1320
-preplace netloc btn_0_1 1 0 5 NJ 330 260 340 NJ 340 NJ 340 NJ
-preplace netloc sw_0_1 1 0 5 NJ 360 N 360 NJ 360 NJ 360 1330J
-preplace netloc main_0_led 1 5 1 1840 340n
-preplace netloc main_0_rgb 1 5 1 N 370
-preplace netloc main_0_clk_div_catch_fish 1 4 2 1380 550 1750
-preplace netloc main_0_enable_catch_fish 1 4 2 1410 260 1750
-preplace netloc main_0_btn_debounced 1 4 2 1350 20 1770
-preplace netloc catch_fish_0_led_out 1 4 2 1420 250 1750
-preplace netloc catch_fish_0_game_end 1 4 2 1420 540 1760
-preplace netloc ram_pull_fish_0_seq 1 4 1 1310 160n
-preplace netloc pull_fish_0_seq_addr 1 3 3 1030 -10 NJ -10 1830
-preplace netloc pull_fish_0_won 1 4 2 1400 50 1800
-preplace netloc pull_fish_0_lost 1 4 2 1370 30 1820
-preplace netloc main_0_enable_pull_fish 1 4 2 1340 10 1780
-preplace netloc pull_fish_0_rgb_color 1 4 2 1390 40 1790
-preplace netloc pull_fish_0_led 1 4 2 1360 0 1810
-preplace netloc axi_traffic_gen_0_M_AXI_LITE_CH1 1 2 3 610 -310 NJ -310 1400J
-preplace netloc axi_smc_M00_AXI 1 2 4 640 -320 NJ -320 NJ -320 1750
-preplace netloc axi_traffic_gen_1_M_AXI 1 3 1 1010 -220n
-preplace netloc axi_smc_1_M00_AXI 1 3 2 1020 -280 1310
-levelinfo -pg 1 0 150 460 820 1170 1590 1860
-pagesize -pg 1 -db -bbox -sgen -100 -480 1960 750
+preplace inst c_accum_0 -pg 1 -lvl 6 -x 2150 -y 430 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 6 -x 2150 -y 560 -defaultsOSRD
+preplace inst puntaje_0 -pg 1 -lvl 6 -x 2150 -y 210 -defaultsOSRD
+preplace inst axi_traffic_gen_2 -pg 1 -lvl 6 -x 2150 -y 0 -defaultsOSRD
+preplace inst main_0 -pg 1 -lvl 5 -x 1630 -y 400 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 6 -x 2150 -y -290 -defaultsOSRD
+preplace inst pull_fish_0 -pg 1 -lvl 5 -x 1630 -y 650 -defaultsOSRD
+preplace netloc clk_wiz_clk_out1 1 1 5 250 20 620 20 1020 -110 1350J -110 1940
+preplace netloc clk_wiz_locked 1 2 1 610 -280n
+preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 1 5 260 30 630 30 1000 -120 1380J -120 1950
+preplace netloc reset_0_1 1 1 2 250 -340 N
+preplace netloc clk_in1_0_1 1 0 6 20 -90 250 -50 N -50 N -50 1350 -60 1960
+preplace netloc btn_0_1 1 0 5 NJ 330 260 320 NJ 320 NJ 320 NJ
+preplace netloc sw_0_1 1 0 5 NJ 360 N 360 NJ 360 NJ 360 1340J
+preplace netloc main_0_led 1 5 2 1900 630 2310
+preplace netloc main_0_rgb 1 5 2 1910 340 2290
+preplace netloc main_0_clk_div_catch_fish 1 4 2 1440 -30 1890
+preplace netloc main_0_enable_catch_fish 1 4 2 1450 -20 1860
+preplace netloc main_0_btn_debounced 1 4 2 1370 -50 1870
+preplace netloc catch_fish_0_led_out 1 4 2 1400 -40 1830
+preplace netloc catch_fish_0_game_end 1 4 2 1410 0 1790
+preplace netloc ram_pull_fish_0_seq 1 4 2 1330 -310 2000
+preplace netloc pull_fish_0_seq_addr 1 3 3 1030 250 1360J 50 1800
+preplace netloc pull_fish_0_won 1 4 2 1430 30 1850
+preplace netloc pull_fish_0_lost 1 4 2 1420 20 1880
+preplace netloc main_0_enable_pull_fish 1 4 2 1390 -10 1820
+preplace netloc pull_fish_0_rgb_color 1 4 2 1470 40 1810
+preplace netloc pull_fish_0_led 1 4 2 1460 10 1840
+preplace netloc main_0_enable_puntaje 1 5 1 1920 180n
+preplace netloc main_0_estado_pull 1 5 1 1930 200n
+preplace netloc main_0_num 1 5 1 1970 220n
+preplace netloc c_accum_0_Q 1 5 2 2000 620 2300
+preplace netloc puntaje_0_leds 1 4 3 1380 -70 1800J -80 2310
+preplace netloc main_0_racha_reiniciar 1 5 1 1990 460n
+preplace netloc main_0_racha_sumar 1 5 1 1980 440n
+preplace netloc xlconstant_0_dout 1 5 2 2010 640 2290
+preplace netloc axi_traffic_gen_1_M_AXI 1 3 1 990 -220n
+preplace netloc axi_smc_1_M00_AXI 1 3 2 1030 -100 1320
+preplace netloc axi_smc_M00_AXI 1 2 4 640 -60 1010J -80 NJ -80 1790
+preplace netloc axi_traffic_gen_0_M_AXI_LITE_CH1 1 2 3 600 -420 NJ -420 1380J
+preplace netloc axi_traffic_gen_2_M_AXI_LITE_CH1 1 5 2 2000 80 2290
+levelinfo -pg 1 0 150 460 820 1180 1630 2150 2330
+pagesize -pg 1 -db -bbox -sgen -100 -580 2430 750
 "
 }
 {

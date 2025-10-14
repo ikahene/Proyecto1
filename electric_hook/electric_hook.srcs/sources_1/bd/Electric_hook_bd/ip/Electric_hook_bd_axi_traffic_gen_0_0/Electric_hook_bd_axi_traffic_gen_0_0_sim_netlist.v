@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Tue Oct 14 14:58:06 2025
+// Date        : Tue Oct 14 14:58:05 2025
 // Host        : BenjaUni running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/byane/OneDrive/Escritorio/Proyecto1/Electric_Hook/Electric_Hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_traffic_gen_0_0/Electric_hook_bd_axi_traffic_gen_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Electric_hook_bd_axi_traffic_gen_0_0 -prefix
+//               Electric_hook_bd_axi_traffic_gen_0_0_ Electric_hook_bd_axi_traffic_gen_0_0_sim_netlist.v
 // Design      : Electric_hook_bd_axi_traffic_gen_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -486,7 +486,7 @@ module Electric_hook_bd_axi_traffic_gen_0_0
         .status(status));
 endmodule
 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_7_asynch_rst_ff" *) (* dont_touch = "true" *) 
+(* dont_touch = "true" *) 
 module Electric_hook_bd_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_asynch_rst_ff
    (data,
     clk,
@@ -598,7 +598,6 @@ module Electric_hook_bd_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_asynch_rst_ff
         .Q(q));
 endmodule
 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_7_systeminit_dmg" *) 
 module Electric_hook_bd_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_systeminit_dmg
    (douta,
     S,
@@ -866,7 +865,6 @@ module Electric_hook_bd_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_systeminit_dm
         .s_axi_aclk(s_axi_aclk));
 endmodule
 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_7_systeminit_mrdwr" *) 
 module Electric_hook_bd_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_systeminit_mrdwr
    (s_axi_aresetn_0,
     done,
@@ -4715,7 +4713,6 @@ module Electric_hook_bd_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_systeminit_mr
         .O(addra[0]));
 endmodule
 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_7_systeminit_top" *) 
 module Electric_hook_bd_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_systeminit_top
    (arvalid_m_reg,
     awvalid_m_reg,
@@ -5028,7 +5025,6 @@ endmodule
 (* C_SRAM_F = "none" *) (* C_STRM_DATA_SEED = "43981" *) (* C_S_AXI_ARUSER_WIDTH = "8" *) 
 (* C_S_AXI_AWUSER_WIDTH = "8" *) (* C_S_AXI_DATA_WIDTH = "32" *) (* C_S_AXI_ID_WIDTH = "1" *) 
 (* C_WRITE_ONLY = "0" *) (* C_ZERO_INVALID = "1" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
-(* ORIG_REF_NAME = "axi_traffic_gen_v3_0_7_top" *) 
 module Electric_hook_bd_axi_traffic_gen_0_0_axi_traffic_gen_v3_0_7_top
    (s_axi_aclk,
     s_axi_aresetn,
@@ -5987,25 +5983,24 @@ endmodule
 (* CLOCKING_MODE = "0" *) (* ECC_MODE = "0" *) (* MAX_NUM_CHAR = "0" *) 
 (* MEMORY_INIT_FILE = "Electric_hook_bd_axi_traffic_gen_0_0_mask.mem" *) (* MEMORY_INIT_PARAM = "" *) (* MEMORY_OPTIMIZATION = "true" *) 
 (* MEMORY_PRIMITIVE = "1" *) (* MEMORY_SIZE = "1024" *) (* MEMORY_TYPE = "0" *) 
-(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* ORIG_REF_NAME = "xpm_memory_base" *) 
-(* P_ECC_MODE = "no_ecc" *) (* P_ENABLE_BYTE_WRITE_A = "1" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) 
-(* P_MAX_DEPTH_DATA = "32" *) (* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "distributed" *) 
-(* P_MIN_WIDTH_DATA = "32" *) (* P_MIN_WIDTH_DATA_A = "32" *) (* P_MIN_WIDTH_DATA_B = "32" *) 
-(* P_MIN_WIDTH_DATA_ECC = "32" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "32" *) 
-(* P_NUM_COLS_WRITE_A = "4" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) 
-(* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) 
-(* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
-(* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "5" *) 
-(* P_WIDTH_ADDR_READ_B = "5" *) (* P_WIDTH_ADDR_WRITE_A = "5" *) (* P_WIDTH_ADDR_WRITE_B = "5" *) 
-(* P_WIDTH_COL_WRITE_A = "8" *) (* P_WIDTH_COL_WRITE_B = "32" *) (* READ_DATA_WIDTH_A = "32" *) 
-(* READ_DATA_WIDTH_B = "32" *) (* READ_LATENCY_A = "1" *) (* READ_LATENCY_B = "1" *) 
-(* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "0" *) (* RST_MODE_A = "SYNC" *) 
-(* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) 
-(* USE_MEM_INIT = "1" *) (* USE_MEM_INIT_MMI = "0" *) (* VERSION = "0" *) 
-(* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "32" *) (* WRITE_DATA_WIDTH_B = "32" *) 
-(* WRITE_MODE_A = "1" *) (* WRITE_MODE_B = "1" *) (* WRITE_PROTECT = "1" *) 
-(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* rsta_loop_iter = "32" *) 
-(* rstb_loop_iter = "32" *) 
+(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* P_ECC_MODE = "no_ecc" *) 
+(* P_ENABLE_BYTE_WRITE_A = "1" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) (* P_MAX_DEPTH_DATA = "32" *) 
+(* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "distributed" *) (* P_MIN_WIDTH_DATA = "32" *) 
+(* P_MIN_WIDTH_DATA_A = "32" *) (* P_MIN_WIDTH_DATA_B = "32" *) (* P_MIN_WIDTH_DATA_ECC = "32" *) 
+(* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "32" *) (* P_NUM_COLS_WRITE_A = "4" *) 
+(* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) (* P_NUM_ROWS_READ_B = "1" *) 
+(* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) (* P_SDP_WRITE_MODE = "yes" *) 
+(* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) 
+(* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "5" *) (* P_WIDTH_ADDR_READ_B = "5" *) 
+(* P_WIDTH_ADDR_WRITE_A = "5" *) (* P_WIDTH_ADDR_WRITE_B = "5" *) (* P_WIDTH_COL_WRITE_A = "8" *) 
+(* P_WIDTH_COL_WRITE_B = "32" *) (* READ_DATA_WIDTH_A = "32" *) (* READ_DATA_WIDTH_B = "32" *) 
+(* READ_LATENCY_A = "1" *) (* READ_LATENCY_B = "1" *) (* READ_RESET_VALUE_A = "0" *) 
+(* READ_RESET_VALUE_B = "0" *) (* RST_MODE_A = "SYNC" *) (* RST_MODE_B = "SYNC" *) 
+(* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) (* USE_MEM_INIT = "1" *) 
+(* USE_MEM_INIT_MMI = "0" *) (* VERSION = "0" *) (* WAKEUP_TIME = "0" *) 
+(* WRITE_DATA_WIDTH_A = "32" *) (* WRITE_DATA_WIDTH_B = "32" *) (* WRITE_MODE_A = "1" *) 
+(* WRITE_MODE_B = "1" *) (* WRITE_PROTECT = "1" *) (* XPM_MODULE = "TRUE" *) 
+(* keep_hierarchy = "soft" *) (* rsta_loop_iter = "32" *) (* rstb_loop_iter = "32" *) 
 module Electric_hook_bd_axi_traffic_gen_0_0_xpm_memory_base
    (sleep,
     clka,
@@ -9740,7 +9735,6 @@ module Electric_hook_bd_axi_traffic_gen_0_0_xpm_memory_base__parameterized2
         .WE(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "xpm_memory_spram" *) 
 module Electric_hook_bd_axi_traffic_gen_0_0_xpm_memory_spram
    (douta,
     S,
