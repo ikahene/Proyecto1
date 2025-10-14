@@ -198,10 +198,10 @@ proc create_root_design { parentCell } {
    CONFIG.C_ATG_MODE {AXI4-Lite} \
    CONFIG.C_ATG_SYSINIT_MODES {System_Test} \
    CONFIG.C_ATG_SYSTEM_CMD_MAX_RETRY {2147483647} \
-   CONFIG.C_ATG_SYSTEM_INIT_ADDR_MIF {../../../../../../../../../../Downloads/COE/COE_FILES/addr.coe} \
-   CONFIG.C_ATG_SYSTEM_INIT_CTRL_MIF {../../../../../../../../../../Downloads/COE/COE_FILES/ctrl.coe} \
-   CONFIG.C_ATG_SYSTEM_INIT_DATA_MIF {../../../../../../../../../../Downloads/COE/COE_FILES/data.coe} \
-   CONFIG.C_ATG_SYSTEM_INIT_MASK_MIF {../../../../../../../../../../Downloads/COE/COE_FILES/mask.coe} \
+   CONFIG.C_ATG_SYSTEM_INIT_ADDR_MIF {../../../../../../../COE/COE_FILES/addr.coe} \
+   CONFIG.C_ATG_SYSTEM_INIT_CTRL_MIF {../../../../../../../COE/COE_FILES/ctrl.coe} \
+   CONFIG.C_ATG_SYSTEM_INIT_DATA_MIF {../../../../../../../COE/COE_FILES/data.coe} \
+   CONFIG.C_ATG_SYSTEM_INIT_MASK_MIF {../../../../../../../COE/COE_FILES/mask.coe} \
  ] $axi_traffic_gen_2
 
   # Create instance: c_accum_0, and set properties

@@ -377,16 +377,16 @@
             "value": "2147483647"
           },
           "C_ATG_SYSTEM_INIT_ADDR_MIF": {
-            "value": "../../../../../../../../../../Downloads/COE/COE_FILES/addr.coe"
+            "value": "../../../../../../../COE/COE_FILES/addr.coe"
           },
           "C_ATG_SYSTEM_INIT_CTRL_MIF": {
-            "value": "../../../../../../../../../../Downloads/COE/COE_FILES/ctrl.coe"
+            "value": "../../../../../../../COE/COE_FILES/ctrl.coe"
           },
           "C_ATG_SYSTEM_INIT_DATA_MIF": {
-            "value": "../../../../../../../../../../Downloads/COE/COE_FILES/data.coe"
+            "value": "../../../../../../../COE/COE_FILES/data.coe"
           },
           "C_ATG_SYSTEM_INIT_MASK_MIF": {
-            "value": "../../../../../../../../../../Downloads/COE/COE_FILES/mask.coe"
+            "value": "../../../../../../../COE/COE_FILES/mask.coe"
           }
         },
         "addressing": {
@@ -436,10 +436,10 @@
       }
     },
     "interface_nets": {
-      "axi_traffic_gen_2_M_AXI_LITE_CH1": {
+      "axi_smc_1_M00_AXI": {
         "interface_ports": [
-          "axi_traffic_gen_2/M_AXI_LITE_CH1",
-          "puntaje_0/S00_AXI"
+          "axi_smc_1/M00_AXI",
+          "ram_pull_fish_0/S00_pull_fish_AXI"
         ]
       },
       "axi_traffic_gen_0_M_AXI_LITE_CH1": {
@@ -448,10 +448,10 @@
           "axi_smc/S00_AXI"
         ]
       },
-      "axi_smc_1_M00_AXI": {
+      "axi_traffic_gen_2_M_AXI_LITE_CH1": {
         "interface_ports": [
-          "axi_smc_1/M00_AXI",
-          "ram_pull_fish_0/S00_pull_fish_AXI"
+          "axi_traffic_gen_2/M_AXI_LITE_CH1",
+          "puntaje_0/S00_AXI"
         ]
       },
       "axi_traffic_gen_1_M_AXI": {

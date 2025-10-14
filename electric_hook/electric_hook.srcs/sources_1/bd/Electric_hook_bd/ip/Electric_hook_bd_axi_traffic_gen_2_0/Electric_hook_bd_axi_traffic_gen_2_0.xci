@@ -407,10 +407,10 @@
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_ATG_SYSTEM_CH5_HIGH">0x000004FF</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_ATG_SYSTEM_CH5_LOW">0x00000400</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_ATG_SYSTEM_CMD_MAX_RETRY">2147483647</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_ATG_SYSTEM_INIT_ADDR_MIF">../../../../../../../../../../Downloads/COE/COE_FILES/addr.coe</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_ATG_SYSTEM_INIT_CTRL_MIF">../../../../../../../../../../Downloads/COE/COE_FILES/ctrl.coe</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_ATG_SYSTEM_INIT_DATA_MIF">../../../../../../../../../../Downloads/COE/COE_FILES/data.coe</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_ATG_SYSTEM_INIT_MASK_MIF">../../../../../../../../../../Downloads/COE/COE_FILES/mask.coe</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_ATG_SYSTEM_INIT_ADDR_MIF">../../../../../../../COE/COE_FILES/addr.coe</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_ATG_SYSTEM_INIT_CTRL_MIF">../../../../../../../COE/COE_FILES/ctrl.coe</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_ATG_SYSTEM_INIT_DATA_MIF">../../../../../../../COE/COE_FILES/data.coe</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_ATG_SYSTEM_INIT_MASK_MIF">../../../../../../../COE/COE_FILES/mask.coe</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_ATG_SYSTEM_MAX_CHANNELS">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_ATG_SYSTEM_TEST_MAX_CLKS">5000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C_AXIS1_HAS_TKEEP">true</spirit:configurableElementValue>

@@ -1,0 +1,328 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Oct 14 17:49:07 2025
+# Process ID: 19608
+# Current directory: C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1
+# Command line: vivado.exe -log Electric_hook_bd_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Electric_hook_bd_wrapper.tcl
+# Log file: C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/Electric_hook_bd_wrapper.vds
+# Journal file: C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Electric_hook_bd_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/ip_repo/puntaje_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Ip_cores'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.cache/ip 
+add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1064.801 ; gain = 0.000
+Command: synth_design -top Electric_hook_bd_wrapper -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 28984
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1064.801 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_wrapper' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/hdl/Electric_hook_bd_wrapper.vhd:24]
+INFO: [Synth 8-3491] module 'Electric_hook_bd' declared at 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:14' bound to instance 'Electric_hook_bd_i' of component 'Electric_hook_bd' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/hdl/Electric_hook_bd_wrapper.vhd:35]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:28]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_axi_smc_0' declared at 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_axi_smc_0_stub.vhdl:5' bound to instance 'axi_smc' of component 'Electric_hook_bd_axi_smc_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:666]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_axi_smc_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_axi_smc_0_stub.vhdl:65]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_axi_smc_1_0' declared at 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_axi_smc_1_0_stub.vhdl:5' bound to instance 'axi_smc_1' of component 'Electric_hook_bd_axi_smc_1_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:723]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_axi_smc_1_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_axi_smc_1_0_stub.vhdl:87]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_axi_traffic_gen_0_0' declared at 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_axi_traffic_gen_0_0_stub.vhdl:5' bound to instance 'axi_traffic_gen_0' of component 'Electric_hook_bd_axi_traffic_gen_0_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:802]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_axi_traffic_gen_0_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_axi_traffic_gen_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_axi_traffic_gen_1_0' declared at 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_axi_traffic_gen_1_0_stub.vhdl:5' bound to instance 'axi_traffic_gen_1' of component 'Electric_hook_bd_axi_traffic_gen_1_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:827]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_axi_traffic_gen_1_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_axi_traffic_gen_1_0_stub.vhdl:88]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_axi_traffic_gen_2_0' declared at 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_axi_traffic_gen_2_0_stub.vhdl:5' bound to instance 'axi_traffic_gen_2' of component 'Electric_hook_bd_axi_traffic_gen_2_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:907]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_axi_traffic_gen_2_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_axi_traffic_gen_2_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_c_accum_0_0' declared at 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_c_accum_0_0_stub.vhdl:5' bound to instance 'c_accum_0' of component 'Electric_hook_bd_c_accum_0_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:932]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_c_accum_0_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_c_accum_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_catch_fish_0_0' declared at 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_catch_fish_0_0_stub.vhdl:5' bound to instance 'catch_fish_0' of component 'Electric_hook_bd_catch_fish_0_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:940]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_catch_fish_0_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_catch_fish_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_clk_wiz_0' declared at 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_clk_wiz_0_stub.vhdl:5' bound to instance 'clk_wiz' of component 'Electric_hook_bd_clk_wiz_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:950]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_clk_wiz_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_clk_wiz_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_ila_0_0' declared at 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_ila_0_0_stub.vhdl:5' bound to instance 'ila_0' of component 'Electric_hook_bd_ila_0_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:957]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_ila_0_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_ila_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_main_0_1' declared at 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_main_0_1_stub.vhdl:5' bound to instance 'main_0' of component 'Electric_hook_bd_main_0_1' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:962]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_main_0_1' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_main_0_1_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_pull_fish_0_1' declared at 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_pull_fish_0_1_stub.vhdl:5' bound to instance 'pull_fish_0' of component 'Electric_hook_bd_pull_fish_0_1' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:987]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_pull_fish_0_1' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_pull_fish_0_1_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_puntaje_0_0' declared at 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_puntaje_0_0_stub.vhdl:5' bound to instance 'puntaje_0' of component 'Electric_hook_bd_puntaje_0_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:999]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_puntaje_0_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_puntaje_0_0_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_ram_pull_fish_0_0' declared at 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_ram_pull_fish_0_0_stub.vhdl:5' bound to instance 'ram_pull_fish_0' of component 'Electric_hook_bd_ram_pull_fish_0_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1029]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_ram_pull_fish_0_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_ram_pull_fish_0_0_stub.vhdl:52]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_rst_clk_wiz_100M_0' declared at 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_rst_clk_wiz_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_100M' of component 'Electric_hook_bd_rst_clk_wiz_100M_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1073]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_rst_clk_wiz_100M_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_rst_clk_wiz_100M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_vio_0_0' declared at 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_vio_0_0_stub.vhdl:5' bound to instance 'vio_0' of component 'Electric_hook_bd_vio_0_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1086]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_vio_0_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-19608-DESKTOP-MSDSPQ7/realtime/Electric_hook_bd_vio_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_xlconstant_0_0' declared at 'c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_xlconstant_0_0/synth/Electric_hook_bd_xlconstant_0_0.v:57' bound to instance 'xlconstant_0' of component 'Electric_hook_bd_xlconstant_0_0' [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1091]
+INFO: [Synth 8-6157] synthesizing module 'Electric_hook_bd_xlconstant_0_0' [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_xlconstant_0_0/synth/Electric_hook_bd_xlconstant_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+	Parameter CONST_VAL bound to: 1 - type: integer 
+	Parameter CONST_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (1#1) [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Electric_hook_bd_xlconstant_0_0' (2#1) [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_xlconstant_0_0/synth/Electric_hook_bd_xlconstant_0_0.v:57]
+INFO: [Synth 8-256] done synthesizing module 'Electric_hook_bd' (3#1) [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'Electric_hook_bd_wrapper' (4#1) [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/hdl/Electric_hook_bd_wrapper.vhd:24]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1084.059 ; gain = 19.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1084.059 ; gain = 19.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1084.059 ; gain = 19.258
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1084.059 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_ram_pull_fish_0_0/Electric_hook_bd_ram_pull_fish_0_0/Electric_hook_bd_ram_pull_fish_0_0_in_context.xdc] for cell 'Electric_hook_bd_i/ram_pull_fish_0'
+Finished Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_ram_pull_fish_0_0/Electric_hook_bd_ram_pull_fish_0_0/Electric_hook_bd_ram_pull_fish_0_0_in_context.xdc] for cell 'Electric_hook_bd_i/ram_pull_fish_0'
+Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_traffic_gen_0_0/Electric_hook_bd_axi_traffic_gen_0_0/Electric_hook_bd_axi_traffic_gen_0_0_in_context.xdc] for cell 'Electric_hook_bd_i/axi_traffic_gen_0'
+Finished Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_traffic_gen_0_0/Electric_hook_bd_axi_traffic_gen_0_0/Electric_hook_bd_axi_traffic_gen_0_0_in_context.xdc] for cell 'Electric_hook_bd_i/axi_traffic_gen_0'
+Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_traffic_gen_1_0/Electric_hook_bd_axi_traffic_gen_1_0/Electric_hook_bd_axi_traffic_gen_1_0_in_context.xdc] for cell 'Electric_hook_bd_i/axi_traffic_gen_1'
+Finished Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_traffic_gen_1_0/Electric_hook_bd_axi_traffic_gen_1_0/Electric_hook_bd_axi_traffic_gen_1_0_in_context.xdc] for cell 'Electric_hook_bd_i/axi_traffic_gen_1'
+Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/Electric_hook_bd_axi_smc_0/Electric_hook_bd_axi_smc_0_in_context.xdc] for cell 'Electric_hook_bd_i/axi_smc'
+Finished Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/Electric_hook_bd_axi_smc_0/Electric_hook_bd_axi_smc_0_in_context.xdc] for cell 'Electric_hook_bd_i/axi_smc'
+Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_clk_wiz_0/Electric_hook_bd_clk_wiz_0/Electric_hook_bd_clk_wiz_0_in_context.xdc] for cell 'Electric_hook_bd_i/clk_wiz'
+WARNING: [Vivado 12-584] No ports matched ''. [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_clk_wiz_0/Electric_hook_bd_clk_wiz_0/Electric_hook_bd_clk_wiz_0_in_context.xdc:1]
+WARNING: [Vivado 12-584] No ports matched ''. [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_clk_wiz_0/Electric_hook_bd_clk_wiz_0/Electric_hook_bd_clk_wiz_0_in_context.xdc:4]
+Finished Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_clk_wiz_0/Electric_hook_bd_clk_wiz_0/Electric_hook_bd_clk_wiz_0_in_context.xdc] for cell 'Electric_hook_bd_i/clk_wiz'
+Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_rst_clk_wiz_100M_0/Electric_hook_bd_rst_clk_wiz_100M_0/Electric_hook_bd_rst_clk_wiz_100M_0_in_context.xdc] for cell 'Electric_hook_bd_i/rst_clk_wiz_100M'
+Finished Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_rst_clk_wiz_100M_0/Electric_hook_bd_rst_clk_wiz_100M_0/Electric_hook_bd_rst_clk_wiz_100M_0_in_context.xdc] for cell 'Electric_hook_bd_i/rst_clk_wiz_100M'
+Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/Electric_hook_bd_axi_smc_1_0/Electric_hook_bd_axi_smc_1_0_in_context.xdc] for cell 'Electric_hook_bd_i/axi_smc_1'
+Finished Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/Electric_hook_bd_axi_smc_1_0/Electric_hook_bd_axi_smc_1_0_in_context.xdc] for cell 'Electric_hook_bd_i/axi_smc_1'
+Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_main_0_1/Electric_hook_bd_main_0_1/Electric_hook_bd_main_0_1_in_context.xdc] for cell 'Electric_hook_bd_i/main_0'
+Finished Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_main_0_1/Electric_hook_bd_main_0_1/Electric_hook_bd_main_0_1_in_context.xdc] for cell 'Electric_hook_bd_i/main_0'
+Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_catch_fish_0_0/Electric_hook_bd_catch_fish_0_0/Electric_hook_bd_catch_fish_0_0_in_context.xdc] for cell 'Electric_hook_bd_i/catch_fish_0'
+Finished Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_catch_fish_0_0/Electric_hook_bd_catch_fish_0_0/Electric_hook_bd_catch_fish_0_0_in_context.xdc] for cell 'Electric_hook_bd_i/catch_fish_0'
+Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_pull_fish_0_1/Electric_hook_bd_pull_fish_0_1/Electric_hook_bd_pull_fish_0_1_in_context.xdc] for cell 'Electric_hook_bd_i/pull_fish_0'
+Finished Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_pull_fish_0_1/Electric_hook_bd_pull_fish_0_1/Electric_hook_bd_pull_fish_0_1_in_context.xdc] for cell 'Electric_hook_bd_i/pull_fish_0'
+Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_vio_0_0/Electric_hook_bd_vio_0_0/Electric_hook_bd_vio_0_0_in_context.xdc] for cell 'Electric_hook_bd_i/vio_0'
+Finished Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_vio_0_0/Electric_hook_bd_vio_0_0/Electric_hook_bd_vio_0_0_in_context.xdc] for cell 'Electric_hook_bd_i/vio_0'
+Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_c_accum_0_0/Electric_hook_bd_c_accum_0_0/Electric_hook_bd_c_accum_0_0_in_context.xdc] for cell 'Electric_hook_bd_i/c_accum_0'
+Finished Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_c_accum_0_0/Electric_hook_bd_c_accum_0_0/Electric_hook_bd_c_accum_0_0_in_context.xdc] for cell 'Electric_hook_bd_i/c_accum_0'
+Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_puntaje_0_0/Electric_hook_bd_puntaje_0_0/Electric_hook_bd_puntaje_0_0_in_context.xdc] for cell 'Electric_hook_bd_i/puntaje_0'
+Finished Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_puntaje_0_0/Electric_hook_bd_puntaje_0_0/Electric_hook_bd_puntaje_0_0_in_context.xdc] for cell 'Electric_hook_bd_i/puntaje_0'
+Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_traffic_gen_2_0/Electric_hook_bd_axi_traffic_gen_2_0/Electric_hook_bd_axi_traffic_gen_2_0_in_context.xdc] for cell 'Electric_hook_bd_i/axi_traffic_gen_2'
+Finished Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_traffic_gen_2_0/Electric_hook_bd_axi_traffic_gen_2_0/Electric_hook_bd_axi_traffic_gen_2_0_in_context.xdc] for cell 'Electric_hook_bd_i/axi_traffic_gen_2'
+Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_ila_0_0/Electric_hook_bd_ila_0_0/Electric_hook_bd_ila_0_0_in_context.xdc] for cell 'Electric_hook_bd_i/ila_0'
+Finished Parsing XDC File [c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_ila_0_0/Electric_hook_bd_ila_0_0/Electric_hook_bd_ila_0_0_in_context.xdc] for cell 'Electric_hook_bd_i/ila_0'
+Parsing XDC File [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/constrs_1/imports/Proyecto1/Zybo-Z7-Master.xdc]
+Finished Parsing XDC File [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/constrs_1/imports/Proyecto1/Zybo-Z7-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/constrs_1/imports/Proyecto1/Zybo-Z7-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Electric_hook_bd_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Electric_hook_bd_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1158.883 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1158.883 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1158.883 ; gain = 94.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1158.883 ; gain = 94.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  {c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_clk_wiz_0/Electric_hook_bd_clk_wiz_0/Electric_hook_bd_clk_wiz_0_in_context.xdc}, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  {c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_clk_wiz_0/Electric_hook_bd_clk_wiz_0/Electric_hook_bd_clk_wiz_0_in_context.xdc}, line 6).
+Applied set_property DONT_TOUCH = true for Electric_hook_bd_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Electric_hook_bd_i/ram_pull_fish_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Electric_hook_bd_i/axi_traffic_gen_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Electric_hook_bd_i/axi_traffic_gen_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Electric_hook_bd_i/axi_smc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Electric_hook_bd_i/clk_wiz. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Electric_hook_bd_i/rst_clk_wiz_100M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Electric_hook_bd_i/axi_smc_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Electric_hook_bd_i/main_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Electric_hook_bd_i/catch_fish_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Electric_hook_bd_i/pull_fish_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Electric_hook_bd_i/vio_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Electric_hook_bd_i/c_accum_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Electric_hook_bd_i/xlconstant_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Electric_hook_bd_i/puntaje_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Electric_hook_bd_i/axi_traffic_gen_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for Electric_hook_bd_i/ila_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1158.883 ; gain = 94.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1158.883 ; gain = 94.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1158.883 ; gain = 94.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1158.883 ; gain = 94.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1158.883 ; gain = 94.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1177.484 ; gain = 112.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1182.270 ; gain = 117.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1182.270 ; gain = 117.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1182.270 ; gain = 117.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1182.270 ; gain = 117.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1182.270 ; gain = 117.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1182.270 ; gain = 117.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------------------------+----------+
+|      |BlackBox name                        |Instances |
++------+-------------------------------------+----------+
+|1     |Electric_hook_bd_axi_smc_0           |         1|
+|2     |Electric_hook_bd_axi_smc_1_0         |         1|
+|3     |Electric_hook_bd_axi_traffic_gen_0_0 |         1|
+|4     |Electric_hook_bd_axi_traffic_gen_1_0 |         1|
+|5     |Electric_hook_bd_axi_traffic_gen_2_0 |         1|
+|6     |Electric_hook_bd_c_accum_0_0         |         1|
+|7     |Electric_hook_bd_catch_fish_0_0      |         1|
+|8     |Electric_hook_bd_clk_wiz_0           |         1|
+|9     |Electric_hook_bd_ila_0_0             |         1|
+|10    |Electric_hook_bd_main_0_1            |         1|
+|11    |Electric_hook_bd_pull_fish_0_1       |         1|
+|12    |Electric_hook_bd_puntaje_0_0         |         1|
+|13    |Electric_hook_bd_ram_pull_fish_0_0   |         1|
+|14    |Electric_hook_bd_rst_clk_wiz_100M_0  |         1|
+|15    |Electric_hook_bd_vio_0_0             |         1|
++------+-------------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------------------+------+
+|      |Cell                                      |Count |
++------+------------------------------------------+------+
+|1     |Electric_hook_bd_axi_smc_0_bbox           |     1|
+|2     |Electric_hook_bd_axi_smc_1_0_bbox         |     1|
+|3     |Electric_hook_bd_axi_traffic_gen_0_0_bbox |     1|
+|4     |Electric_hook_bd_axi_traffic_gen_1_0_bbox |     1|
+|5     |Electric_hook_bd_axi_traffic_gen_2_0_bbox |     1|
+|6     |Electric_hook_bd_c_accum_0_0_bbox         |     1|
+|7     |Electric_hook_bd_catch_fish_0_0_bbox      |     1|
+|8     |Electric_hook_bd_clk_wiz_0_bbox           |     1|
+|9     |Electric_hook_bd_ila_0_0_bbox             |     1|
+|10    |Electric_hook_bd_main_0_1_bbox            |     1|
+|11    |Electric_hook_bd_pull_fish_0_1_bbox       |     1|
+|12    |Electric_hook_bd_puntaje_0_0_bbox         |     1|
+|13    |Electric_hook_bd_ram_pull_fish_0_0_bbox   |     1|
+|14    |Electric_hook_bd_rst_clk_wiz_100M_0_bbox  |     1|
+|15    |Electric_hook_bd_vio_0_0_bbox             |     1|
+|16    |IBUF                                      |     8|
+|17    |OBUF                                      |     7|
++------+------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1182.270 ; gain = 117.469
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:43 . Memory (MB): peak = 1182.270 ; gain = 42.645
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 1182.270 ; gain = 117.469
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1189.004 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1198.176 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+57 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:01:03 . Memory (MB): peak = 1198.176 ; gain = 133.375
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/synth_1/Electric_hook_bd_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Electric_hook_bd_wrapper_utilization_synth.rpt -pb Electric_hook_bd_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 14 17:50:32 2025...
