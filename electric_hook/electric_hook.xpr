@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="49" Path="C:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.xpr">
+<Project Version="7" Minor="49" Path="C:/Users/byane/OneDrive/Escritorio/Proyecto1/Electric_Hook/Electric_Hook.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="78170e69573d441f8755914014f933d4"/>
+    <Option Name="Id" Val="17e249618ed946fd9fda7a301795cf21"/>
     <Option Name="Part" Val="xc7z010clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -69,32 +69,47 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/bd/design_electric_hook/design_electric_hook.bd">
+      <File Path="$PSRCDIR/sources_1/bd/Electric_hook_bd/Electric_hook_bd.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_electric_hook.bd" FileRelPathName="ip/design_electric_hook_ram_pull_fish_0_0/design_electric_hook_ram_pull_fish_0_0.xci">
-          <Proxy FileSetName="design_electric_hook_ram_pull_fish_0_0"/>
+        <CompFileExtendedInfo CompFileName="Electric_hook_bd.bd" FileRelPathName="ip/Electric_hook_bd_main_0_1/Electric_hook_bd_main_0_1.xci">
+          <Proxy FileSetName="Electric_hook_bd_main_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_electric_hook.bd" FileRelPathName="ip/design_electric_hook_main_0_0/design_electric_hook_main_0_0.xci">
-          <Proxy FileSetName="design_electric_hook_main_0_0"/>
+        <CompFileExtendedInfo CompFileName="Electric_hook_bd.bd" FileRelPathName="ip/Electric_hook_bd_pull_fish_0_1/Electric_hook_bd_pull_fish_0_1.xci">
+          <Proxy FileSetName="Electric_hook_bd_pull_fish_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_electric_hook.bd" FileRelPathName="ip/design_electric_hook_pull_fish_0_0/design_electric_hook_pull_fish_0_0.xci">
-          <Proxy FileSetName="design_electric_hook_pull_fish_0_0"/>
+        <CompFileExtendedInfo CompFileName="Electric_hook_bd.bd" FileRelPathName="ip/Electric_hook_bd_catch_fish_0_0/Electric_hook_bd_catch_fish_0_0.xci">
+          <Proxy FileSetName="Electric_hook_bd_catch_fish_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_electric_hook.bd" FileRelPathName="ip/design_electric_hook_catch_fish_0_0/design_electric_hook_catch_fish_0_0.xci">
-          <Proxy FileSetName="design_electric_hook_catch_fish_0_0"/>
+        <CompFileExtendedInfo CompFileName="Electric_hook_bd.bd" FileRelPathName="ip/Electric_hook_bd_rst_clk_wiz_100M_0/Electric_hook_bd_rst_clk_wiz_100M_0.xci">
+          <Proxy FileSetName="Electric_hook_bd_rst_clk_wiz_100M_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_electric_hook.bd" FileRelPathName="ip/design_electric_hook_ila_0_0/design_electric_hook_ila_0_0.xci">
-          <Proxy FileSetName="design_electric_hook_ila_0_0"/>
+        <CompFileExtendedInfo CompFileName="Electric_hook_bd.bd" FileRelPathName="ip/Electric_hook_bd_axi_smc_1_0/Electric_hook_bd_axi_smc_1_0.xci">
+          <Proxy FileSetName="Electric_hook_bd_axi_smc_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_electric_hook.bd" FileRelPathName="ip/design_electric_hook_vio_0_0/design_electric_hook_vio_0_0.xci">
-          <Proxy FileSetName="design_electric_hook_vio_0_0"/>
+        <CompFileExtendedInfo CompFileName="Electric_hook_bd.bd" FileRelPathName="ip/Electric_hook_bd_clk_wiz_0/Electric_hook_bd_clk_wiz_0.xci">
+          <Proxy FileSetName="Electric_hook_bd_clk_wiz_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Electric_hook_bd.bd" FileRelPathName="ip/Electric_hook_bd_ram_pull_fish_0_0/Electric_hook_bd_ram_pull_fish_0_0.xci">
+          <Proxy FileSetName="Electric_hook_bd_ram_pull_fish_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Electric_hook_bd.bd" FileRelPathName="ip/Electric_hook_bd_vio_0_0/Electric_hook_bd_vio_0_0.xci">
+          <Proxy FileSetName="Electric_hook_bd_vio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Electric_hook_bd.bd" FileRelPathName="ip/Electric_hook_bd_axi_traffic_gen_0_0/Electric_hook_bd_axi_traffic_gen_0_0.xci">
+          <Proxy FileSetName="Electric_hook_bd_axi_traffic_gen_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Electric_hook_bd.bd" FileRelPathName="ip/Electric_hook_bd_axi_traffic_gen_1_0/Electric_hook_bd_axi_traffic_gen_1_0.xci">
+          <Proxy FileSetName="Electric_hook_bd_axi_traffic_gen_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Electric_hook_bd.bd" FileRelPathName="ip/Electric_hook_bd_axi_smc_0/Electric_hook_bd_axi_smc_0.xci">
+          <Proxy FileSetName="Electric_hook_bd_axi_smc_0"/>
         </CompFileExtendedInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/bd/design_electric_hook/hdl/design_electric_hook_wrapper.vhd">
+      <File Path="$PSRCDIR/sources_1/bd/Electric_hook_bd/hdl/Electric_hook_bd_wrapper.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -126,7 +141,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="design_electric_hook_wrapper"/>
+        <Option Name="TopModule" Val="Electric_hook_bd_wrapper"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
@@ -135,7 +150,7 @@
       <File Path="$PSRCDIR/constrs_1/imports/Proyecto1/Zybo-Z7-Master.xdc">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../Zybo-Z7-Master.xdc"/>
-          <Attr Name="ImportTime" Val="1756083901"/>
+          <Attr Name="ImportTime" Val="1758379495"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
@@ -145,10 +160,9 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
-      <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="design_electric_hook_wrapper"/>
+        <Option Name="TopModule" Val="Electric_hook_bd_wrapper"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
@@ -167,39 +181,69 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_electric_hook_catch_fish_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_electric_hook_catch_fish_0_0">
+    <FileSet Name="Electric_hook_bd_main_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Electric_hook_bd_main_0_1">
       <Config>
-        <Option Name="TopModule" Val="design_electric_hook_catch_fish_0_0"/>
+        <Option Name="TopModule" Val="Electric_hook_bd_main_0_1"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_electric_hook_main_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_electric_hook_main_0_0">
+    <FileSet Name="Electric_hook_bd_pull_fish_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Electric_hook_bd_pull_fish_0_1">
       <Config>
-        <Option Name="TopModule" Val="design_electric_hook_main_0_0"/>
+        <Option Name="TopModule" Val="Electric_hook_bd_pull_fish_0_1"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_electric_hook_pull_fish_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_electric_hook_pull_fish_0_0">
+    <FileSet Name="Electric_hook_bd_catch_fish_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Electric_hook_bd_catch_fish_0_0">
       <Config>
-        <Option Name="TopModule" Val="design_electric_hook_pull_fish_0_0"/>
+        <Option Name="TopModule" Val="Electric_hook_bd_catch_fish_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_electric_hook_ram_pull_fish_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_electric_hook_ram_pull_fish_0_0">
+    <FileSet Name="Electric_hook_bd_rst_clk_wiz_100M_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Electric_hook_bd_rst_clk_wiz_100M_0">
       <Config>
-        <Option Name="TopModule" Val="design_electric_hook_ram_pull_fish_0_0"/>
+        <Option Name="TopModule" Val="Electric_hook_bd_rst_clk_wiz_100M_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_electric_hook_vio_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_electric_hook_vio_0_0">
+    <FileSet Name="Electric_hook_bd_axi_smc_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Electric_hook_bd_axi_smc_1_0">
       <Config>
-        <Option Name="TopModule" Val="design_electric_hook_vio_0_0"/>
+        <Option Name="TopModule" Val="Electric_hook_bd_axi_smc_1_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_electric_hook_ila_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_electric_hook_ila_0_0">
+    <FileSet Name="Electric_hook_bd_clk_wiz_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Electric_hook_bd_clk_wiz_0">
       <Config>
-        <Option Name="TopModule" Val="design_electric_hook_ila_0_0"/>
+        <Option Name="TopModule" Val="Electric_hook_bd_clk_wiz_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="Electric_hook_bd_ram_pull_fish_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Electric_hook_bd_ram_pull_fish_0_0">
+      <Config>
+        <Option Name="TopModule" Val="Electric_hook_bd_ram_pull_fish_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="Electric_hook_bd_vio_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Electric_hook_bd_vio_0_0">
+      <Config>
+        <Option Name="TopModule" Val="Electric_hook_bd_vio_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="Electric_hook_bd_axi_traffic_gen_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Electric_hook_bd_axi_traffic_gen_0_0">
+      <Config>
+        <Option Name="TopModule" Val="Electric_hook_bd_axi_traffic_gen_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="Electric_hook_bd_axi_traffic_gen_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Electric_hook_bd_axi_traffic_gen_1_0">
+      <Config>
+        <Option Name="TopModule" Val="Electric_hook_bd_axi_traffic_gen_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="Electric_hook_bd_axi_smc_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Electric_hook_bd_axi_smc_0">
+      <Config>
+        <Option Name="TopModule" Val="Electric_hook_bd_axi_smc_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -225,7 +269,9 @@
   <Runs Version="1" Minor="11">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -233,37 +279,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_electric_hook_catch_fish_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_electric_hook_catch_fish_0_0" Part="xc7z010clg400-1" ConstrsSet="design_electric_hook_catch_fish_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_electric_hook_catch_fish_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_electric_hook_main_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_electric_hook_main_0_0" Part="xc7z010clg400-1" ConstrsSet="design_electric_hook_main_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_electric_hook_main_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_electric_hook_pull_fish_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_electric_hook_pull_fish_0_0" Part="xc7z010clg400-1" ConstrsSet="design_electric_hook_pull_fish_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_electric_hook_pull_fish_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_electric_hook_ram_pull_fish_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_electric_hook_ram_pull_fish_0_0" Part="xc7z010clg400-1" ConstrsSet="design_electric_hook_ram_pull_fish_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_electric_hook_ram_pull_fish_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="Electric_hook_bd_main_0_1_synth_1" Type="Ft3:Synth" SrcSet="Electric_hook_bd_main_0_1" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_main_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Electric_hook_bd_main_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -275,7 +291,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_electric_hook_vio_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_electric_hook_vio_0_0" Part="xc7z010clg400-1" ConstrsSet="design_electric_hook_vio_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_electric_hook_vio_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="Electric_hook_bd_pull_fish_0_1_synth_1" Type="Ft3:Synth" SrcSet="Electric_hook_bd_pull_fish_0_1" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_pull_fish_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Electric_hook_bd_pull_fish_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -287,7 +303,103 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_electric_hook_ila_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_electric_hook_ila_0_0" Part="xc7z010clg400-1" ConstrsSet="design_electric_hook_ila_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_electric_hook_ila_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="Electric_hook_bd_catch_fish_0_0_synth_1" Type="Ft3:Synth" SrcSet="Electric_hook_bd_catch_fish_0_0" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_catch_fish_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Electric_hook_bd_catch_fish_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Electric_hook_bd_rst_clk_wiz_100M_0_synth_1" Type="Ft3:Synth" SrcSet="Electric_hook_bd_rst_clk_wiz_100M_0" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_rst_clk_wiz_100M_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Electric_hook_bd_rst_clk_wiz_100M_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Electric_hook_bd_axi_smc_1_0_synth_1" Type="Ft3:Synth" SrcSet="Electric_hook_bd_axi_smc_1_0" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_axi_smc_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Electric_hook_bd_axi_smc_1_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Electric_hook_bd_clk_wiz_0_synth_1" Type="Ft3:Synth" SrcSet="Electric_hook_bd_clk_wiz_0" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_clk_wiz_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Electric_hook_bd_clk_wiz_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Electric_hook_bd_ram_pull_fish_0_0_synth_1" Type="Ft3:Synth" SrcSet="Electric_hook_bd_ram_pull_fish_0_0" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_ram_pull_fish_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Electric_hook_bd_ram_pull_fish_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Electric_hook_bd_vio_0_0_synth_1" Type="Ft3:Synth" SrcSet="Electric_hook_bd_vio_0_0" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_vio_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Electric_hook_bd_vio_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Electric_hook_bd_axi_traffic_gen_0_0_synth_1" Type="Ft3:Synth" SrcSet="Electric_hook_bd_axi_traffic_gen_0_0" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_axi_traffic_gen_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Electric_hook_bd_axi_traffic_gen_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Electric_hook_bd_axi_traffic_gen_1_0_synth_1" Type="Ft3:Synth" SrcSet="Electric_hook_bd_axi_traffic_gen_1_0" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_axi_traffic_gen_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Electric_hook_bd_axi_traffic_gen_1_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Electric_hook_bd_axi_smc_0_synth_1" Type="Ft3:Synth" SrcSet="Electric_hook_bd_axi_smc_0" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_axi_smc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Electric_hook_bd_axi_smc_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -301,7 +413,9 @@
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -317,58 +431,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_electric_hook_catch_fish_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="design_electric_hook_catch_fish_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_electric_hook_catch_fish_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_electric_hook_main_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="design_electric_hook_main_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_electric_hook_main_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_electric_hook_pull_fish_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="design_electric_hook_pull_fish_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_electric_hook_pull_fish_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="design_electric_hook_ram_pull_fish_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="design_electric_hook_ram_pull_fish_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_electric_hook_ram_pull_fish_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="Electric_hook_bd_main_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_main_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Electric_hook_bd_main_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
           <Desc>Default settings for Implementation.</Desc>
@@ -387,7 +450,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_electric_hook_vio_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="design_electric_hook_vio_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_electric_hook_vio_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="Electric_hook_bd_pull_fish_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_pull_fish_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Electric_hook_bd_pull_fish_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
           <Desc>Default settings for Implementation.</Desc>
@@ -406,7 +469,159 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_electric_hook_ila_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="design_electric_hook_ila_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_electric_hook_ila_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="Electric_hook_bd_catch_fish_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_catch_fish_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Electric_hook_bd_catch_fish_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Electric_hook_bd_rst_clk_wiz_100M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_rst_clk_wiz_100M_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Electric_hook_bd_rst_clk_wiz_100M_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Electric_hook_bd_axi_smc_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_axi_smc_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Electric_hook_bd_axi_smc_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Electric_hook_bd_clk_wiz_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_clk_wiz_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Electric_hook_bd_clk_wiz_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Electric_hook_bd_ram_pull_fish_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_ram_pull_fish_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Electric_hook_bd_ram_pull_fish_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Electric_hook_bd_vio_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_vio_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Electric_hook_bd_vio_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Electric_hook_bd_axi_traffic_gen_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_axi_traffic_gen_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Electric_hook_bd_axi_traffic_gen_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Electric_hook_bd_axi_traffic_gen_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_axi_traffic_gen_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Electric_hook_bd_axi_traffic_gen_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Electric_hook_bd_axi_smc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="Electric_hook_bd_axi_smc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Electric_hook_bd_axi_smc_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
           <Desc>Default settings for Implementation.</Desc>

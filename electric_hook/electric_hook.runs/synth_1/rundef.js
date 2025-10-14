@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log design_electric_hook_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_electric_hook_wrapper.tcl" );
+         "-log Electric_hook_bd_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Electric_hook_bd_wrapper.tcl" );
 
 
 

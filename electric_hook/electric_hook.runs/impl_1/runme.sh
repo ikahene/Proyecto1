@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/byane/OneDrive/Escritorio/Proyecto1/electric_hook/electric_hook.runs/impl_1'
+HD_PWD='C:/Users/byane/OneDrive/Escritorio/Proyecto1/Electric_Hook/Electric_Hook.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log design_electric_hook_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_electric_hook_wrapper.tcl -notrace
+EAStep vivado -log Electric_hook_bd_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Electric_hook_bd_wrapper.tcl -notrace
 
 

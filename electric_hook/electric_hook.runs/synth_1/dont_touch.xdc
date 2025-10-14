@@ -3,43 +3,40 @@
 
 # XDC: imports/Proyecto1/Zybo-Z7-Master.xdc
 
-# Block Designs: bd/design_electric_hook/design_electric_hook.bd
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_electric_hook || ORIG_REF_NAME==design_electric_hook} -quiet] -quiet
+# Block Designs: bd/Electric_hook_bd/Electric_hook_bd.bd
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Electric_hook_bd || ORIG_REF_NAME==Electric_hook_bd} -quiet] -quiet
 
-# IP: bd/design_electric_hook/ip/design_electric_hook_axi_traffic_gen_0_0/design_electric_hook_axi_traffic_gen_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_electric_hook_axi_traffic_gen_0_0 || ORIG_REF_NAME==design_electric_hook_axi_traffic_gen_0_0} -quiet] -quiet
+# IP: bd/Electric_hook_bd/ip/Electric_hook_bd_ram_pull_fish_0_0/Electric_hook_bd_ram_pull_fish_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Electric_hook_bd_ram_pull_fish_0_0 || ORIG_REF_NAME==Electric_hook_bd_ram_pull_fish_0_0} -quiet] -quiet
 
-# IP: bd/design_electric_hook/ip/design_electric_hook_axi_traffic_gen_1_0/design_electric_hook_axi_traffic_gen_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_electric_hook_axi_traffic_gen_1_0 || ORIG_REF_NAME==design_electric_hook_axi_traffic_gen_1_0} -quiet] -quiet
+# IP: bd/Electric_hook_bd/ip/Electric_hook_bd_axi_traffic_gen_0_0/Electric_hook_bd_axi_traffic_gen_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Electric_hook_bd_axi_traffic_gen_0_0 || ORIG_REF_NAME==Electric_hook_bd_axi_traffic_gen_0_0} -quiet] -quiet
 
-# IP: bd/design_electric_hook/ip/design_electric_hook_ram_pull_fish_0_0/design_electric_hook_ram_pull_fish_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_electric_hook_ram_pull_fish_0_0 || ORIG_REF_NAME==design_electric_hook_ram_pull_fish_0_0} -quiet] -quiet
+# IP: bd/Electric_hook_bd/ip/Electric_hook_bd_axi_traffic_gen_1_0/Electric_hook_bd_axi_traffic_gen_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Electric_hook_bd_axi_traffic_gen_1_0 || ORIG_REF_NAME==Electric_hook_bd_axi_traffic_gen_1_0} -quiet] -quiet
 
-# IP: bd/design_electric_hook/ip/design_electric_hook_axi_smc_0/design_electric_hook_axi_smc_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_electric_hook_axi_smc_0 || ORIG_REF_NAME==design_electric_hook_axi_smc_0} -quiet] -quiet
+# IP: bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/Electric_hook_bd_axi_smc_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Electric_hook_bd_axi_smc_0 || ORIG_REF_NAME==Electric_hook_bd_axi_smc_0} -quiet] -quiet
 
-# IP: bd/design_electric_hook/ip/design_electric_hook_clk_wiz_0/design_electric_hook_clk_wiz_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_electric_hook_clk_wiz_0 || ORIG_REF_NAME==design_electric_hook_clk_wiz_0} -quiet] -quiet
+# IP: bd/Electric_hook_bd/ip/Electric_hook_bd_clk_wiz_0/Electric_hook_bd_clk_wiz_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Electric_hook_bd_clk_wiz_0 || ORIG_REF_NAME==Electric_hook_bd_clk_wiz_0} -quiet] -quiet
 
-# IP: bd/design_electric_hook/ip/design_electric_hook_rst_clk_wiz_100M_0/design_electric_hook_rst_clk_wiz_100M_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_electric_hook_rst_clk_wiz_100M_0 || ORIG_REF_NAME==design_electric_hook_rst_clk_wiz_100M_0} -quiet] -quiet
+# IP: bd/Electric_hook_bd/ip/Electric_hook_bd_rst_clk_wiz_100M_0/Electric_hook_bd_rst_clk_wiz_100M_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Electric_hook_bd_rst_clk_wiz_100M_0 || ORIG_REF_NAME==Electric_hook_bd_rst_clk_wiz_100M_0} -quiet] -quiet
 
-# IP: bd/design_electric_hook/ip/design_electric_hook_axi_smc_1_0/design_electric_hook_axi_smc_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_electric_hook_axi_smc_1_0 || ORIG_REF_NAME==design_electric_hook_axi_smc_1_0} -quiet] -quiet
+# IP: bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/Electric_hook_bd_axi_smc_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Electric_hook_bd_axi_smc_1_0 || ORIG_REF_NAME==Electric_hook_bd_axi_smc_1_0} -quiet] -quiet
 
-# IP: bd/design_electric_hook/ip/design_electric_hook_main_0_0/design_electric_hook_main_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_electric_hook_main_0_0 || ORIG_REF_NAME==design_electric_hook_main_0_0} -quiet] -quiet
+# IP: bd/Electric_hook_bd/ip/Electric_hook_bd_main_0_1/Electric_hook_bd_main_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Electric_hook_bd_main_0_1 || ORIG_REF_NAME==Electric_hook_bd_main_0_1} -quiet] -quiet
 
-# IP: bd/design_electric_hook/ip/design_electric_hook_catch_fish_0_0/design_electric_hook_catch_fish_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_electric_hook_catch_fish_0_0 || ORIG_REF_NAME==design_electric_hook_catch_fish_0_0} -quiet] -quiet
+# IP: bd/Electric_hook_bd/ip/Electric_hook_bd_catch_fish_0_0/Electric_hook_bd_catch_fish_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Electric_hook_bd_catch_fish_0_0 || ORIG_REF_NAME==Electric_hook_bd_catch_fish_0_0} -quiet] -quiet
 
-# IP: bd/design_electric_hook/ip/design_electric_hook_pull_fish_0_0/design_electric_hook_pull_fish_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_electric_hook_pull_fish_0_0 || ORIG_REF_NAME==design_electric_hook_pull_fish_0_0} -quiet] -quiet
+# IP: bd/Electric_hook_bd/ip/Electric_hook_bd_pull_fish_0_1/Electric_hook_bd_pull_fish_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Electric_hook_bd_pull_fish_0_1 || ORIG_REF_NAME==Electric_hook_bd_pull_fish_0_1} -quiet] -quiet
 
-# IP: bd/design_electric_hook/ip/design_electric_hook_ila_0_0/design_electric_hook_ila_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_electric_hook_ila_0_0 || ORIG_REF_NAME==design_electric_hook_ila_0_0} -quiet] -quiet
+# IP: bd/Electric_hook_bd/ip/Electric_hook_bd_vio_0_0/Electric_hook_bd_vio_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Electric_hook_bd_vio_0_0 || ORIG_REF_NAME==Electric_hook_bd_vio_0_0} -quiet] -quiet
 
-# IP: bd/design_electric_hook/ip/design_electric_hook_vio_0_0/design_electric_hook_vio_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_electric_hook_vio_0_0 || ORIG_REF_NAME==design_electric_hook_vio_0_0} -quiet] -quiet
-
-# XDC: bd/design_electric_hook/design_electric_hook_ooc.xdc
+# XDC: bd/Electric_hook_bd/Electric_hook_bd_ooc.xdc
