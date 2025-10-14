@@ -20,17 +20,15 @@ architecture Behavioral_Final of random_number is
     signal game_num   : std_logic_vector(3 downto 0);
 
 --------------------------------------------------------------------------------------------
-    -- FUNCIÓN 1: calcula el siguiente estado del LFSR.
+    -- PROCEDURE 1: calcula el siguiente estado del LFSR.
 --------------------------------------------------------------------------------------------
 -- Inspirado en https://nandland.com/lfsr-linear-feedback-shift-register/#google_vignette
-    function next_lfsr_state(
-    lfsr : in std_logic_vector(3 downto 0)) 
-    return std_logic_vector is
+    procedure next_lfsr_state(signal lfsr : inout std_logic_vector(3 downto 0)) is
         variable feedback : std_logic;
     begin
         feedback := lfsr(3) xor lfsr(0); 
-        return lfsr(2 downto 0) & feedback;
-    end function next_lfsr_state;
+        lfsr <= lfsr(2 downto 0) & feedback; -- Se asigna directamente a la señal
+    end procedure next_lfsr_state;
 
 --------------------------------------------------------------------------------------------
     -- Función 2: Para convertir el número de juego al patrón de LEDs
@@ -52,7 +50,7 @@ begin
     begin
         if rising_edge(clk) then
             if active = '1' then
-                lfsr_state <= next_lfsr_state(lfsr_state);
+                next_lfsr_state(lfsr_state);
             end if;
         end if;
     end process actualizar_lfsr;

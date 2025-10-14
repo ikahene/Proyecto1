@@ -3,6 +3,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
 
 entity pull_fish is
+    generic (
+        segundos : integer := 2
+    );
     Port (clk: in std_logic; -- clk de la Zybo
           btn: in std_logic_vector(3 downto 0); -- señales de botones desde el main
           led: out std_logic_vector(3 downto 0); -- señales de leds de salida
@@ -45,7 +48,6 @@ signal dificultad : std_logic_vector(3 downto 0); -- Valor de la dificultad 0001
 signal addr : std_logic_vector(3 downto 0); -- Address que sale del generador de numeros aleatorios
 
 ------------Señales del pull fish ----------------
-constant segundos: integer := 2; --Segundos disponible para presionar el boton
 constant max_count: integer := 125_000_000; -- hasta cuanto se debe contar para hacer 1 segundo
 signal contador_clk : integer := 0; -- contador de ciclos de clock
 signal contador_segundos : integer := 0; -- contador de segundos
