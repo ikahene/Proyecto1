@@ -238,6 +238,12 @@ proc create_root_design { parentCell } {
    CONFIG.C_PROBE0_WIDTH {16} \
  ] $ila_0
 
+  # Create instance: ila_1, and set properties
+  set ila_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_1 ]
+
+  # Create instance: ila_2, and set properties
+  set ila_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_2 ]
+
   # Create instance: main_0, and set properties
   set main_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:main:1.0 main_0 ]
 
@@ -268,10 +274,12 @@ proc create_root_design { parentCell } {
 
   # Create interface connections
   connect_bd_intf_net -intf_net axi_smc_1_M00_AXI [get_bd_intf_pins axi_smc_1/M00_AXI] [get_bd_intf_pins ram_pull_fish_0/S00_pull_fish_AXI]
+connect_bd_intf_net -intf_net [get_bd_intf_nets axi_smc_1_M00_AXI] [get_bd_intf_pins axi_smc_1/M00_AXI] [get_bd_intf_pins ila_1/SLOT_0_AXI]
   connect_bd_intf_net -intf_net axi_smc_M00_AXI [get_bd_intf_pins axi_smc/M00_AXI] [get_bd_intf_pins axi_traffic_gen_1/S_AXI]
   connect_bd_intf_net -intf_net axi_traffic_gen_0_M_AXI_LITE_CH1 [get_bd_intf_pins axi_smc/S00_AXI] [get_bd_intf_pins axi_traffic_gen_0/M_AXI_LITE_CH1]
   connect_bd_intf_net -intf_net axi_traffic_gen_1_M_AXI [get_bd_intf_pins axi_smc_1/S00_AXI] [get_bd_intf_pins axi_traffic_gen_1/M_AXI]
   connect_bd_intf_net -intf_net axi_traffic_gen_2_M_AXI_LITE_CH1 [get_bd_intf_pins axi_traffic_gen_2/M_AXI_LITE_CH1] [get_bd_intf_pins puntaje_0/S00_AXI]
+connect_bd_intf_net -intf_net [get_bd_intf_nets axi_traffic_gen_2_M_AXI_LITE_CH1] [get_bd_intf_pins axi_traffic_gen_2/M_AXI_LITE_CH1] [get_bd_intf_pins ila_2/SLOT_0_AXI]
 
   # Create port connections
   connect_bd_net -net btn_0_1 [get_bd_ports btn] [get_bd_pins main_0/btn]
@@ -279,7 +287,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net catch_fish_0_game_end [get_bd_pins catch_fish_0/game_end] [get_bd_pins main_0/game_end_catch_fish]
   connect_bd_net -net catch_fish_0_led_out [get_bd_pins catch_fish_0/led_out] [get_bd_pins main_0/led_catch_fish]
   connect_bd_net -net clk_in1_0_1 [get_bd_ports clk] [get_bd_pins c_accum_0/CLK] [get_bd_pins catch_fish_0/clk] [get_bd_pins clk_wiz/clk_in1] [get_bd_pins ila_0/clk] [get_bd_pins main_0/clk] [get_bd_pins pull_fish_0/clk] [get_bd_pins puntaje_0/clk] [get_bd_pins vio_0/clk]
-  connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins axi_smc/aclk] [get_bd_pins axi_smc_1/aclk] [get_bd_pins axi_traffic_gen_0/s_axi_aclk] [get_bd_pins axi_traffic_gen_1/s_axi_aclk] [get_bd_pins axi_traffic_gen_2/s_axi_aclk] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins puntaje_0/s00_axi_aclk] [get_bd_pins ram_pull_fish_0/s00_pull_fish_axi_aclk] [get_bd_pins rst_clk_wiz_100M/slowest_sync_clk]
+  connect_bd_net -net clk_wiz_clk_out1 [get_bd_pins axi_smc/aclk] [get_bd_pins axi_smc_1/aclk] [get_bd_pins axi_traffic_gen_0/s_axi_aclk] [get_bd_pins axi_traffic_gen_1/s_axi_aclk] [get_bd_pins axi_traffic_gen_2/s_axi_aclk] [get_bd_pins clk_wiz/clk_out1] [get_bd_pins ila_1/clk] [get_bd_pins ila_2/clk] [get_bd_pins puntaje_0/s00_axi_aclk] [get_bd_pins ram_pull_fish_0/s00_pull_fish_axi_aclk] [get_bd_pins rst_clk_wiz_100M/slowest_sync_clk]
   connect_bd_net -net clk_wiz_locked [get_bd_pins clk_wiz/locked] [get_bd_pins rst_clk_wiz_100M/dcm_locked]
   connect_bd_net -net main_0_btn_debounced [get_bd_pins catch_fish_0/btn] [get_bd_pins main_0/btn_debounced] [get_bd_pins pull_fish_0/btn]
   connect_bd_net -net main_0_clk_div_catch_fish [get_bd_pins catch_fish_0/clk_div] [get_bd_pins main_0/clk_div_catch_fish]

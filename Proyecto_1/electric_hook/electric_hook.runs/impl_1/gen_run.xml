@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1760624516">
+  <File Type="BITSTR-BMM" Name="Electric_hook_bd_wrapper_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Electric_hook_bd_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Electric_hook_bd_wrapper_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="Electric_hook_bd_wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="Electric_hook_bd_wrapper.tcl"/>
+  <File Type="OPT-TIMING" Name="Electric_hook_bd_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="Electric_hook_bd_wrapper_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="Electric_hook_bd_wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="Electric_hook_bd_wrapper_reports.tcl"/>
+  <File Type="OPT-DRC" Name="Electric_hook_bd_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Electric_hook_bd_wrapper.hwdef"/>
+  <File Type="PWROPT-DCP" Name="Electric_hook_bd_wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="Electric_hook_bd_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="Electric_hook_bd_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="Electric_hook_bd_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="Electric_hook_bd_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Electric_hook_bd_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="Electric_hook_bd_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Electric_hook_bd_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="Electric_hook_bd_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Electric_hook_bd_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Electric_hook_bd_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="Electric_hook_bd_wrapper_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Electric_hook_bd_wrapper_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="Electric_hook_bd_wrapper.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Electric_hook_bd_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="Electric_hook_bd_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="Electric_hook_bd_wrapper_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="Electric_hook_bd_wrapper.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="Electric_hook_bd_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Electric_hook_bd_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="Electric_hook_bd_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Electric_hook_bd_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="Electric_hook_bd_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="Electric_hook_bd_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="Electric_hook_bd_wrapper_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="Electric_hook_bd_wrapper.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Electric_hook_bd_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Electric_hook_bd_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Electric_hook_bd_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="Electric_hook_bd_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="Electric_hook_bd_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Electric_hook_bd_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Electric_hook_bd_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="Electric_hook_bd_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Electric_hook_bd_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="Electric_hook_bd_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="Electric_hook_bd_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Electric_hook_bd_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="Electric_hook_bd_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="Electric_hook_bd_wrapper_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Electric_hook_bd_wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Electric_hook_bd_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Electric_hook_bd_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Electric_hook_bd_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Electric_hook_bd_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Electric_hook_bd_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Electric_hook_bd_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="Electric_hook_bd_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Electric_hook_bd_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="Electric_hook_bd_wrapper.rbt"/>
+  <File Type="BITSTR-NKY" Name="Electric_hook_bd_wrapper.nky"/>
+  <File Type="PDI-FILE" Name="Electric_hook_bd_wrapper.pdi"/>
+  <File Type="RCFI_FILE" Name="Electric_hook_bd_wrapper.rcfi"/>
+  <File Type="CFI_FILE" Name="Electric_hook_bd_wrapper.cfi"/>
+  <File Type="RNPI_FILE" Name="Electric_hook_bd_wrapper.rnpi"/>
+  <File Type="NPI_FILE" Name="Electric_hook_bd_wrapper.npi"/>
+  <File Type="RBD_FILE" Name="Electric_hook_bd_wrapper.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="Electric_hook_bd_wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="Electric_hook_bd_wrapper.sysdef"/>
+  <File Type="BG-BGN" Name="Electric_hook_bd_wrapper.bgn"/>
+  <File Type="BG-DRC" Name="Electric_hook_bd_wrapper.drc"/>
+  <File Type="RDI-RDI" Name="Electric_hook_bd_wrapper.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/Electric_hook_bd/Electric_hook_bd.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/Electric_hook_bd/hdl/Electric_hook_bd_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Ip_cores/coe_files_pull_fish/data.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Ip_cores/coe_files_pull_fish/addr.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Ip_cores/coe_files_pull_fish/mask.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Ip_cores/coe_files_pull_fish/ctrl.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Ip_cores/coe_test_mode/COE_FILES/ctrl.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Ip_cores/coe_test_mode/COE_FILES/data.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Ip_cores/coe_test_mode/COE_FILES/addr.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Ip_cores/coe_test_mode/COE_FILES/mask.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Electric_hook_bd_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Proyecto1/Zybo-Z7-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Zybo-Z7-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1758379495"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="Electric_hook_bd_ram_pull_fish_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Electric_hook_bd_puntaje_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Electric_hook_bd_rst_clk_wiz_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Electric_hook_bd_catch_fish_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Electric_hook_bd_axi_traffic_gen_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Electric_hook_bd_clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Electric_hook_bd_vio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Electric_hook_bd_c_accum_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Electric_hook_bd_ila_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Electric_hook_bd_pull_fish_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="Electric_hook_bd_axi_traffic_gen_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Electric_hook_bd_main_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="Electric_hook_bd_ila_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Electric_hook_bd_ila_2_0"/>
+</GenRun>

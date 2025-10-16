@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.runs/synth_1/Electric_hook_bd_wrapper.tcl"
+  variable script "C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/Electric_hook_bd_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -77,76 +77,77 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir {C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.xpr} [current_project]
+set_property webtalk.parent_dir C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.cache/wt [current_project]
+set_property parent.project_path C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:zybo-z7-10:part0:1.2 [current_project]
 set_property ip_repo_paths {
-  {c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/ip_repo/puntaje_1.0}
-  {c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/Ip_cores}
+  c:/Users/byane/OneDrive/Escritorio/Proyecto1/ip_repo/puntaje_1.0
+  c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/Ip_cores
 } [current_project]
 update_ip_catalog
-set_property ip_output_repo {c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.cache/ip} [current_project]
+set_property ip_output_repo c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files {{C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/Ip_cores/coe_files_pull_fish/data.coe}}
-add_files {{C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/Ip_cores/coe_files_pull_fish/addr.coe}}
-add_files {{C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/Ip_cores/coe_files_pull_fish/mask.coe}}
-add_files {{C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/Ip_cores/coe_files_pull_fish/ctrl.coe}}
-add_files {{C:/Users/Gabriela Rivera/Downloads/COE/COE_FILES/data.coe}}
-add_files {{C:/Users/Gabriela Rivera/Downloads/COE/COE_FILES/addr.coe}}
-add_files {{C:/Users/Gabriela Rivera/Downloads/COE/COE_FILES/mask.coe}}
-add_files {{C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Proyecto_1/Ip_cores/coe_test_mode/COE_FILES/ctrl.coe}}
-add_files {{C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Proyecto_1/Ip_cores/coe_test_mode/COE_FILES/data.coe}}
-add_files {{C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Proyecto_1/Ip_cores/coe_test_mode/COE_FILES/addr.coe}}
-add_files {{C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto1/Proyecto_1/Ip_cores/coe_test_mode/COE_FILES/mask.coe}}
-add_files {{C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/Ip_cores/coe_test_mode/COE_FILES/data.coe}}
-add_files {{C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/Ip_cores/coe_test_mode/COE_FILES/addr.coe}}
-add_files {{C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/Ip_cores/coe_test_mode/COE_FILES/mask.coe}}
-add_files {{C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/Ip_cores/coe_test_mode/COE_FILES/ctrl.coe}}
-read_vhdl -library xil_defaultlib {{C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/hdl/Electric_hook_bd_wrapper.vhd}}
-add_files {{C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/Electric_hook_bd.bd}}
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_traffic_gen_0_0/Electric_hook_bd_axi_traffic_gen_0_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_traffic_gen_1_0/Electric_hook_bd_axi_traffic_gen_1_0.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_traffic_gen_1_0/Electric_hook_bd_axi_traffic_gen_1_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/bd_0/ip/ip_1/bd_9987_psr_aclk_0_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/bd_0/ip/ip_1/bd_9987_psr_aclk_0.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/bd_0/ip/ip_5/bd_9987_s00a2s_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/bd_0/ip/ip_6/bd_9987_sarn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/bd_0/ip/ip_7/bd_9987_srn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/bd_0/ip/ip_8/bd_9987_sawn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/bd_0/ip/ip_9/bd_9987_swn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/bd_0/ip/ip_10/bd_9987_sbn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/bd_0/ip/ip_11/bd_9987_m00s2a_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_clk_wiz_0/Electric_hook_bd_clk_wiz_0_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_clk_wiz_0/Electric_hook_bd_clk_wiz_0.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_clk_wiz_0/Electric_hook_bd_clk_wiz_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_rst_clk_wiz_100M_0/Electric_hook_bd_rst_clk_wiz_100M_0_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_rst_clk_wiz_100M_0/Electric_hook_bd_rst_clk_wiz_100M_0.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_rst_clk_wiz_100M_0/Electric_hook_bd_rst_clk_wiz_100M_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/bd_0/ip/ip_1/bd_becb_psr_aclk_0_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/bd_0/ip/ip_1/bd_becb_psr_aclk_0.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/bd_0/ip/ip_5/bd_becb_s00a2s_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/bd_0/ip/ip_6/bd_becb_sarn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/bd_0/ip/ip_7/bd_becb_srn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/bd_0/ip/ip_8/bd_becb_sawn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/bd_0/ip/ip_9/bd_becb_swn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/bd_0/ip/ip_10/bd_becb_sbn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/bd_0/ip/ip_11/bd_becb_m00s2a_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_vio_0_0/Electric_hook_bd_vio_0_0.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_vio_0_0/Electric_hook_bd_vio_0_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_c_accum_0_0/Electric_hook_bd_c_accum_0_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_traffic_gen_2_0/Electric_hook_bd_axi_traffic_gen_2_0_ooc.xdc}}]
-set_property used_in_synthesis false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_ila_0_0/ila_v6_2/constraints/ila_impl.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_ila_0_0/ila_v6_2/constraints/ila_impl.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_ila_0_0/ila_v6_2/constraints/ila.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_ila_0_0/Electric_hook_bd_ila_0_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/Electric_hook_bd_ooc.xdc}}]
+add_files C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/Ip_cores/coe_files_pull_fish/data.coe
+add_files C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/Ip_cores/coe_files_pull_fish/addr.coe
+add_files C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/Ip_cores/coe_files_pull_fish/mask.coe
+add_files C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/Ip_cores/coe_files_pull_fish/ctrl.coe
+add_files C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/Ip_cores/coe_test_mode/COE_FILES/ctrl.coe
+add_files C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/Ip_cores/coe_test_mode/COE_FILES/data.coe
+add_files C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/Ip_cores/coe_test_mode/COE_FILES/addr.coe
+add_files C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/Ip_cores/coe_test_mode/COE_FILES/mask.coe
+read_vhdl -library xil_defaultlib C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/hdl/Electric_hook_bd_wrapper.vhd
+add_files C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/Electric_hook_bd.bd
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_traffic_gen_0_0/Electric_hook_bd_axi_traffic_gen_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_traffic_gen_1_0/Electric_hook_bd_axi_traffic_gen_1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_traffic_gen_1_0/Electric_hook_bd_axi_traffic_gen_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/bd_0/ip/ip_1/bd_9987_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/bd_0/ip/ip_1/bd_9987_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/bd_0/ip/ip_5/bd_9987_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/bd_0/ip/ip_6/bd_9987_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/bd_0/ip/ip_7/bd_9987_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/bd_0/ip/ip_8/bd_9987_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/bd_0/ip/ip_9/bd_9987_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/bd_0/ip/ip_10/bd_9987_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/bd_0/ip/ip_11/bd_9987_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_clk_wiz_0/Electric_hook_bd_clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_clk_wiz_0/Electric_hook_bd_clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_clk_wiz_0/Electric_hook_bd_clk_wiz_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_rst_clk_wiz_100M_0/Electric_hook_bd_rst_clk_wiz_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_rst_clk_wiz_100M_0/Electric_hook_bd_rst_clk_wiz_100M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_rst_clk_wiz_100M_0/Electric_hook_bd_rst_clk_wiz_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/bd_0/ip/ip_1/bd_becb_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/bd_0/ip/ip_1/bd_becb_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/bd_0/ip/ip_5/bd_becb_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/bd_0/ip/ip_6/bd_becb_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/bd_0/ip/ip_7/bd_becb_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/bd_0/ip/ip_8/bd_becb_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/bd_0/ip/ip_9/bd_becb_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/bd_0/ip/ip_10/bd_becb_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/bd_0/ip/ip_11/bd_becb_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_smc_1_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_vio_0_0/Electric_hook_bd_vio_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_vio_0_0/Electric_hook_bd_vio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_c_accum_0_0/Electric_hook_bd_c_accum_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_axi_traffic_gen_2_0/Electric_hook_bd_axi_traffic_gen_2_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_ila_0_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_ila_0_0/Electric_hook_bd_ila_0_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_ila_1_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_ila_1_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_ila_1_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_ila_1_0/Electric_hook_bd_ila_1_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_ila_2_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_ila_2_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_ila_2_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_ila_2_0/Electric_hook_bd_ila_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/Electric_hook_bd_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -157,8 +158,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/constrs_1/imports/Proyecto1/Zybo-Z7-Master.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/constrs_1/imports/Proyecto1/Zybo-Z7-Master.xdc}}]
+read_xdc C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/constrs_1/imports/Proyecto1/Zybo-Z7-Master.xdc
+set_property used_in_implementation false [get_files C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/constrs_1/imports/Proyecto1/Zybo-Z7-Master.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

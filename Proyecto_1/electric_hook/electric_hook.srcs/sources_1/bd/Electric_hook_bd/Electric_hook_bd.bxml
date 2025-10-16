@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="Electric_hook_bd" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1760478628"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1760478628"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1760478628"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1760478628"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1760624512"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1760624512"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1760624512"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1760624512"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\Electric_hook_bd_ram_pull_fish_0_0\Electric_hook_bd_ram_pull_fish_0_0.xci" Type="IP">
         <Instance HierarchyPath="ram_pull_fish_0"/>
@@ -143,6 +143,22 @@
       <File Name="sim\Electric_hook_bd.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\Electric_hook_bd_ila_1_0\Electric_hook_bd_ila_1_0.xci" Type="IP">
+        <Instance HierarchyPath="ila_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\Electric_hook_bd_ila_2_0\Electric_hook_bd_ila_2_0.xci" Type="IP">
+        <Instance HierarchyPath="ila_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="Electric_hook_bd_ooc.xdc" Type="XDC">

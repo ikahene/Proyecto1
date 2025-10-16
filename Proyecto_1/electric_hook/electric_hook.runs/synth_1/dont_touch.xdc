@@ -54,4 +54,10 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Electric_hook_b
 # IP: bd/Electric_hook_bd/ip/Electric_hook_bd_ila_0_0/Electric_hook_bd_ila_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Electric_hook_bd_ila_0_0 || ORIG_REF_NAME==Electric_hook_bd_ila_0_0} -quiet] -quiet
 
+# IP: bd/Electric_hook_bd/ip/Electric_hook_bd_ila_1_0/Electric_hook_bd_ila_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Electric_hook_bd_ila_1_0 || ORIG_REF_NAME==Electric_hook_bd_ila_1_0} -quiet] -quiet
+
+# IP: bd/Electric_hook_bd/ip/Electric_hook_bd_ila_2_0/Electric_hook_bd_ila_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Electric_hook_bd_ila_2_0 || ORIG_REF_NAME==Electric_hook_bd_ila_2_0} -quiet] -quiet
+
 # XDC: bd/Electric_hook_bd/Electric_hook_bd_ooc.xdc

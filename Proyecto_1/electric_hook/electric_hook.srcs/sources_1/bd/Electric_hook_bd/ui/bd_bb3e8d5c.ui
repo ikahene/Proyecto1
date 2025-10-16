@@ -1,67 +1,69 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.79322",
-   "Default View_TopLeft":"1020,-66",
+   "Default View_ScaleFactor":"0.345219",
+   "Default View_TopLeft":"-96,-287",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port clk -pg 1 -lvl 0 -x 0 -y -90 -defaultsOSRD
+preplace port clk -pg 1 -lvl 0 -x 0 -y 1100 -defaultsOSRD
 preplace portBus btn -pg 1 -lvl 0 -x 0 -y 330 -defaultsOSRD
-preplace portBus sw -pg 1 -lvl 0 -x 0 -y 360 -defaultsOSRD
-preplace portBus led -pg 1 -lvl 7 -x 2340 -y 340 -defaultsOSRD
-preplace portBus rgb -pg 1 -lvl 7 -x 2340 -y 370 -defaultsOSRD
-preplace inst ram_pull_fish_0 -pg 1 -lvl 4 -x 1180 -y 160 -defaultsOSRD
-preplace inst axi_traffic_gen_0 -pg 1 -lvl 2 -x 460 -y 130 -defaultsOSRD
-preplace inst axi_traffic_gen_1 -pg 1 -lvl 3 -x 820 -y -150 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 5 -x 1640 -y -230 -defaultsOSRD
-preplace inst clk_wiz -pg 1 -lvl 2 -x 460 -y -180 -defaultsOSRD
-preplace inst rst_clk_wiz_100M -pg 1 -lvl 3 -x 820 -y -320 -defaultsOSRD
-preplace inst axi_smc_1 -pg 1 -lvl 4 -x 1180 -y -200 -defaultsOSRD
-preplace inst vio_0 -pg 1 -lvl 1 -x 150 -y -260 -defaultsOSRD
-preplace inst c_accum_0 -pg 1 -lvl 6 -x 2160 -y 430 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 6 -x 2160 -y 560 -defaultsOSRD
-preplace inst axi_traffic_gen_2 -pg 1 -lvl 6 -x 2160 -y 0 -defaultsOSRD
-preplace inst main_0 -pg 1 -lvl 5 -x 1640 -y 400 -defaultsOSRD
-preplace inst ila_0 -pg 1 -lvl 6 -x 2160 -y -290 -defaultsOSRD
-preplace inst pull_fish_0 -pg 1 -lvl 5 -x 1640 -y 650 -defaultsOSRD
-preplace inst puntaje_0 -pg 1 -lvl 6 -x 2160 -y 210 -defaultsOSRD
-preplace inst catch_fish_0 -pg 1 -lvl 5 -x 1640 -y 150 -defaultsOSRD
-preplace netloc clk_wiz_clk_out1 1 1 5 250 20 620 20 1020 -110 1350J -110 1950
-preplace netloc clk_wiz_locked 1 2 1 610 -280n
-preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 1 5 260 30 630 30 1000 -120 1380J -120 1960
-preplace netloc reset_0_1 1 1 2 250 -340 N
-preplace netloc clk_in1_0_1 1 0 6 20 -90 250 -50 N -50 N -50 1350 -60 1970
-preplace netloc btn_0_1 1 0 5 NJ 330 260 320 NJ 320 NJ 320 NJ
-preplace netloc sw_0_1 1 0 5 NJ 360 N 360 NJ 360 NJ 360 1340J
-preplace netloc main_0_led 1 5 2 1910 630 2320
-preplace netloc main_0_rgb 1 5 2 1920 340 2300
-preplace netloc main_0_clk_div_catch_fish 1 4 2 1440 -30 1900
-preplace netloc main_0_enable_catch_fish 1 4 2 1450 -20 1870
-preplace netloc main_0_btn_debounced 1 4 2 1370 -50 1880
-preplace netloc catch_fish_0_led_out 1 4 2 1400 -40 1840
-preplace netloc catch_fish_0_game_end 1 4 2 1410 0 1800
-preplace netloc ram_pull_fish_0_seq 1 4 2 1330 -310 2010
-preplace netloc pull_fish_0_seq_addr 1 3 3 1030 250 1360J 50 1810
-preplace netloc pull_fish_0_won 1 4 2 1430 30 1860
-preplace netloc pull_fish_0_lost 1 4 2 1420 20 1890
-preplace netloc main_0_enable_pull_fish 1 4 2 1390 -10 1830
-preplace netloc pull_fish_0_rgb_color 1 4 2 1470 40 1820
-preplace netloc pull_fish_0_led 1 4 2 1460 10 1850
-preplace netloc main_0_enable_puntaje 1 5 1 1930 180n
-preplace netloc main_0_estado_pull 1 5 1 1940 200n
-preplace netloc main_0_num 1 5 1 1980 220n
-preplace netloc c_accum_0_Q 1 5 2 2010 620 2310
-preplace netloc puntaje_0_leds 1 4 3 1380 -70 1810J -80 2320
-preplace netloc main_0_racha_reiniciar 1 5 1 2000 460n
-preplace netloc main_0_racha_sumar 1 5 1 1990 440n
-preplace netloc xlconstant_0_dout 1 5 2 2020 640 2300
-preplace netloc axi_traffic_gen_1_M_AXI 1 3 1 990 -220n
-preplace netloc axi_smc_M00_AXI 1 2 4 640 -60 1010J -80 NJ -80 1800
-preplace netloc axi_traffic_gen_0_M_AXI_LITE_CH1 1 2 3 600 -420 NJ -420 1380J
-preplace netloc axi_smc_1_M00_AXI 1 3 2 1030 -100 1320
-preplace netloc axi_traffic_gen_2_M_AXI_LITE_CH1 1 5 2 2010 80 2300
-levelinfo -pg 1 0 150 460 820 1180 1640 2160 2340
-pagesize -pg 1 -db -bbox -sgen -100 -580 2440 750
+preplace portBus sw -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace portBus led -pg 1 -lvl 11 -x 2940 -y 300 -defaultsOSRD
+preplace portBus rgb -pg 1 -lvl 11 -x 2940 -y 330 -defaultsOSRD
+preplace inst ram_pull_fish_0 -pg 1 -lvl 8 -x 2010 -y 1140 -defaultsOSRD
+preplace inst axi_traffic_gen_0 -pg 1 -lvl 4 -x 920 -y 1220 -defaultsOSRD
+preplace inst axi_traffic_gen_1 -pg 1 -lvl 6 -x 1450 -y 1250 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 5 -x 1200 -y 1220 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 2 -x 320 -y 1150 -defaultsOSRD
+preplace inst rst_clk_wiz_100M -pg 1 -lvl 3 -x 600 -y 1240 -defaultsOSRD
+preplace inst axi_smc_1 -pg 1 -lvl 7 -x 1700 -y 1250 -defaultsOSRD
+preplace inst vio_0 -pg 1 -lvl 1 -x 120 -y 1100 -defaultsOSRD
+preplace inst c_accum_0 -pg 1 -lvl 8 -x 2010 -y 950 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 7 -x 1700 -y 920 -defaultsOSRD
+preplace inst axi_traffic_gen_2 -pg 1 -lvl 8 -x 2010 -y 1330 -defaultsOSRD
+preplace inst main_0 -pg 1 -lvl 10 -x 2690 -y 410 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 9 -x 2350 -y 1120 -defaultsOSRD
+preplace inst pull_fish_0 -pg 1 -lvl 9 -x 2350 -y 680 -defaultsOSRD
+preplace inst puntaje_0 -pg 1 -lvl 9 -x 2350 -y 920 -defaultsOSRD
+preplace inst catch_fish_0 -pg 1 -lvl 9 -x 2350 -y 100 -defaultsOSRD
+preplace inst ila_1 -pg 1 -lvl 8 -x 2010 -y 1460 -defaultsOSRD
+preplace inst ila_2 -pg 1 -lvl 9 -x 2350 -y 1240 -defaultsOSRD
+preplace netloc clk_wiz_clk_out1 1 2 7 420 1340 770 1310 1060 1310 1340 1160 1560 1330 1860 1230 2160
+preplace netloc clk_wiz_locked 1 2 1 410 1160n
+preplace netloc rst_clk_wiz_100M_peripheral_aresetn 1 3 6 780 1300 1070 1300 1330 1150 1570 1150 1830 1040 2190
+preplace netloc reset_0_1 1 1 2 230 1080 430
+preplace netloc clk_in1_0_1 1 0 10 20 1040 220 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 1830 860 2170 310 N
+preplace netloc btn_0_1 1 0 10 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ
+preplace netloc sw_0_1 1 0 10 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 2150 350 NJ
+preplace netloc main_0_led 1 10 1 2920J 300n
+preplace netloc main_0_rgb 1 10 1 NJ 330
+preplace netloc main_0_clk_div_catch_fish 1 8 3 2210 230 NJ 230 2900
+preplace netloc main_0_enable_catch_fish 1 8 3 2220 200 NJ 200 2910
+preplace netloc main_0_btn_debounced 1 8 3 2180 240 NJ 240 2870
+preplace netloc catch_fish_0_led_out 1 9 1 2510 90n
+preplace netloc catch_fish_0_game_end 1 9 1 2500 110n
+preplace netloc ram_pull_fish_0_seq 1 8 1 2150 690n
+preplace netloc pull_fish_0_seq_addr 1 7 3 1850 580 NJ 580 2520
+preplace netloc pull_fish_0_won 1 9 1 2500 470n
+preplace netloc pull_fish_0_lost 1 9 1 2530 490n
+preplace netloc main_0_enable_pull_fish 1 8 3 2220 250 NJ 250 2850
+preplace netloc pull_fish_0_rgb_color 1 9 1 2490 410n
+preplace netloc pull_fish_0_led 1 9 1 2480 390n
+preplace netloc main_0_enable_puntaje 1 8 3 2200 1050 NJ 1050 2890
+preplace netloc main_0_estado_pull 1 8 3 2210 1310 NJ 1310 2880
+preplace netloc main_0_num 1 8 3 2220 1320 NJ 1320 2870
+preplace netloc c_accum_0_Q 1 8 1 N 950
+preplace netloc puntaje_0_leds 1 9 1 2510 430n
+preplace netloc main_0_racha_reiniciar 1 7 4 1870 790 NJ 790 NJ 790 2850
+preplace netloc main_0_racha_sumar 1 7 4 1860 780 NJ 780 NJ 780 2860
+preplace netloc xlconstant_0_dout 1 7 1 NJ 920
+preplace netloc axi_smc_M00_AXI 1 5 1 N 1220
+preplace netloc axi_traffic_gen_0_M_AXI_LITE_CH1 1 4 1 N 1200
+preplace netloc axi_smc_1_M00_AXI 1 7 1 1840 1110n
+preplace netloc axi_traffic_gen_2_M_AXI_LITE_CH1 1 8 1 2180 850n
+preplace netloc axi_traffic_gen_1_M_AXI 1 6 1 N 1230
+levelinfo -pg 1 0 120 320 600 920 1200 1450 1700 2010 2350 2690 2940
+pagesize -pg 1 -db -bbox -sgen -100 0 3040 1530
 "
 }
 {

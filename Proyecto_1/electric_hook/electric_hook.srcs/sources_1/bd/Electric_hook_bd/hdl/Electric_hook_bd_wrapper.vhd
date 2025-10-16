@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Tue Oct 14 18:50:19 2025
---Host        : DESKTOP-MSDSPQ7 running 64-bit major release  (build 9200)
+--Date        : Thu Oct 16 11:21:45 2025
+--Host        : BenjaUni running 64-bit major release  (build 9200)
 --Command     : generate_target Electric_hook_bd_wrapper.bd
 --Design      : Electric_hook_bd_wrapper
 --Purpose     : IP block netlist

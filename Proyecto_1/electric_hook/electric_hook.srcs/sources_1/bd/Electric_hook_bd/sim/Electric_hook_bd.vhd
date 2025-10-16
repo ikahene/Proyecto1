@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Tue Oct 14 18:50:19 2025
---Host        : DESKTOP-MSDSPQ7 running 64-bit major release  (build 9200)
+--Date        : Thu Oct 16 11:21:45 2025
+--Host        : BenjaUni running 64-bit major release  (build 9200)
 --Command     : generate_target Electric_hook_bd.bd
 --Design      : Electric_hook_bd
 --Purpose     : IP block netlist
@@ -20,7 +20,7 @@ entity Electric_hook_bd is
     sw : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of Electric_hook_bd : entity is "Electric_hook_bd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Electric_hook_bd,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=16,numReposBlks=16,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of Electric_hook_bd : entity is "Electric_hook_bd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Electric_hook_bd,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=18,numReposBlks=18,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of Electric_hook_bd : entity is "Electric_hook_bd.hwdef";
 end Electric_hook_bd;
@@ -471,6 +471,79 @@ architecture STRUCTURE of Electric_hook_bd is
     enable : in STD_LOGIC
   );
   end component Electric_hook_bd_catch_fish_0_0;
+  component Electric_hook_bd_ila_1_0 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe5 : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    probe6 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe7 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe8 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe9 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe10 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    probe11 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe12 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe13 : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    probe14 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    probe15 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe16 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe17 : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    probe18 : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    probe19 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe20 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe21 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe22 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe23 : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    probe24 : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    probe25 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe26 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe27 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe28 : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    probe29 : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    probe30 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe31 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe32 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe33 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe34 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe35 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe36 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe37 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe38 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe39 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe40 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe41 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe42 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe43 : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component Electric_hook_bd_ila_1_0;
+  component Electric_hook_bd_ila_2_0 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe5 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    probe6 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe7 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe8 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe9 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe10 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    probe11 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe12 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe13 : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    probe14 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    probe15 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe16 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe17 : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    probe18 : in STD_LOGIC_VECTOR ( 2 downto 0 )
+  );
+  end component Electric_hook_bd_ila_2_0;
   signal axi_smc_1_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal axi_smc_1_M00_AXI_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_smc_1_M00_AXI_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -958,6 +1031,77 @@ ila_0: component Electric_hook_bd_ila_0_0
      port map (
       clk => clk_in1_0_1,
       probe0(15 downto 0) => ram_pull_fish_0_seq(15 downto 0)
+    );
+ila_1: component Electric_hook_bd_ila_1_0
+     port map (
+      clk => clk_wiz_clk_out1,
+      probe0(0) => axi_smc_1_M00_AXI_WREADY,
+      probe1(5 downto 0) => axi_smc_1_M00_AXI_AWADDR(5 downto 0),
+      probe10(31 downto 0) => axi_smc_1_M00_AXI_RDATA(31 downto 0),
+      probe11(0) => axi_smc_1_M00_AXI_AWVALID,
+      probe12(0) => axi_smc_1_M00_AXI_AWREADY,
+      probe13(1 downto 0) => axi_smc_1_M00_AXI_RRESP(1 downto 0),
+      probe14(31 downto 0) => axi_smc_1_M00_AXI_WDATA(31 downto 0),
+      probe15(3 downto 0) => axi_smc_1_M00_AXI_WSTRB(3 downto 0),
+      probe16(0) => axi_smc_1_M00_AXI_RVALID,
+      probe17(2 downto 0) => axi_smc_1_M00_AXI_ARPROT(2 downto 0),
+      probe18(2 downto 0) => axi_smc_1_M00_AXI_AWPROT(2 downto 0),
+      probe19(0) => '0',
+      probe2(1 downto 0) => axi_smc_1_M00_AXI_BRESP(1 downto 0),
+      probe20(0) => '0',
+      probe21(7 downto 0) => axi_smc_1_M00_AXI_AWLEN(7 downto 0),
+      probe22(0) => '0',
+      probe23(2 downto 0) => axi_smc_1_M00_AXI_AWSIZE(2 downto 0),
+      probe24(1 downto 0) => axi_smc_1_M00_AXI_AWBURST(1 downto 0),
+      probe25(0) => '0',
+      probe26(0) => axi_smc_1_M00_AXI_AWLOCK(0),
+      probe27(7 downto 0) => axi_smc_1_M00_AXI_ARLEN(7 downto 0),
+      probe28(2 downto 0) => axi_smc_1_M00_AXI_ARSIZE(2 downto 0),
+      probe29(1 downto 0) => axi_smc_1_M00_AXI_ARBURST(1 downto 0),
+      probe3(0) => axi_smc_1_M00_AXI_BVALID,
+      probe30(0) => axi_smc_1_M00_AXI_ARLOCK(0),
+      probe31(3 downto 0) => axi_smc_1_M00_AXI_ARCACHE(3 downto 0),
+      probe32(3 downto 0) => axi_smc_1_M00_AXI_AWCACHE(3 downto 0),
+      probe33(3 downto 0) => B"0000",
+      probe34(3 downto 0) => axi_smc_1_M00_AXI_ARQOS(3 downto 0),
+      probe35(7 downto 0) => axi_smc_1_M00_AXI_ARUSER(7 downto 0),
+      probe36(3 downto 0) => B"0000",
+      probe37(3 downto 0) => axi_smc_1_M00_AXI_AWQOS(3 downto 0),
+      probe38(0) => '0',
+      probe39(7 downto 0) => axi_smc_1_M00_AXI_AWUSER(7 downto 0),
+      probe4(0) => axi_smc_1_M00_AXI_BREADY,
+      probe40(0) => axi_smc_1_M00_AXI_RLAST,
+      probe41(0) => '0',
+      probe42(0) => axi_smc_1_M00_AXI_WLAST,
+      probe43(0) => '0',
+      probe5(5 downto 0) => axi_smc_1_M00_AXI_ARADDR(5 downto 0),
+      probe6(0) => axi_smc_1_M00_AXI_RREADY,
+      probe7(0) => axi_smc_1_M00_AXI_WVALID,
+      probe8(0) => axi_smc_1_M00_AXI_ARVALID,
+      probe9(0) => axi_smc_1_M00_AXI_ARREADY
+    );
+ila_2: component Electric_hook_bd_ila_2_0
+     port map (
+      clk => clk_wiz_clk_out1,
+      probe0(0) => axi_traffic_gen_2_M_AXI_LITE_CH1_WREADY,
+      probe1(31 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_AWADDR(31 downto 0),
+      probe10(31 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_RDATA(31 downto 0),
+      probe11(0) => axi_traffic_gen_2_M_AXI_LITE_CH1_AWVALID,
+      probe12(0) => axi_traffic_gen_2_M_AXI_LITE_CH1_AWREADY,
+      probe13(1 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_RRESP(1 downto 0),
+      probe14(31 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_WDATA(31 downto 0),
+      probe15(3 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_WSTRB(3 downto 0),
+      probe16(0) => axi_traffic_gen_2_M_AXI_LITE_CH1_RVALID,
+      probe17(2 downto 0) => B"000",
+      probe18(2 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_AWPROT(2 downto 0),
+      probe2(1 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_BRESP(1 downto 0),
+      probe3(0) => axi_traffic_gen_2_M_AXI_LITE_CH1_BVALID,
+      probe4(0) => axi_traffic_gen_2_M_AXI_LITE_CH1_BREADY,
+      probe5(31 downto 0) => axi_traffic_gen_2_M_AXI_LITE_CH1_ARADDR(31 downto 0),
+      probe6(0) => axi_traffic_gen_2_M_AXI_LITE_CH1_RREADY,
+      probe7(0) => axi_traffic_gen_2_M_AXI_LITE_CH1_WVALID,
+      probe8(0) => axi_traffic_gen_2_M_AXI_LITE_CH1_ARVALID,
+      probe9(0) => axi_traffic_gen_2_M_AXI_LITE_CH1_ARREADY
     );
 main_0: component Electric_hook_bd_main_0_1
      port map (
