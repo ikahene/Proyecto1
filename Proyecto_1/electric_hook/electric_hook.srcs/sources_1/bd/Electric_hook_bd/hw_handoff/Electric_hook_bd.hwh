@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Oct 16 11:21:52 2025" VIVADOVERSION="2020.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Oct 16 18:18:34 2025" VIVADOVERSION="2020.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.2" DEVICE="7z010" NAME="Electric_hook_bd" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -2350,7 +2350,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="4" FULLNAME="/catch_fish_0" HWVERSION="1.0" INSTANCE="catch_fish_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="catch_fish" VLNV="xilinx.com:user:catch_fish:1.0">
+    <MODULE COREREVISION="5" FULLNAME="/catch_fish_0" HWVERSION="1.0" INSTANCE="catch_fish_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="catch_fish" VLNV="xilinx.com:user:catch_fish:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="Electric_hook_bd_catch_fish_0_0"/>

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Oct 16 15:06:57 2025
+# Process ID: 11556
+# Current directory: C:/Users/byane/OneDrive/Escritorio/Proyecto1/catch_fish/catch_fish.sim/sim_1/impl/timing/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/byane/OneDrive/Escritorio/Proyecto1/catch_fish/catch_fish.sim/sim_1/impl/timing/xsim/xsim.dir/catch_fish_tb_time_impl/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/byane/OneDrive/Escritorio/Proyecto1/catch_fish/catch_fish.sim/sim_1/impl/timing/xsim/webtalk.log
+# Journal file: C:/Users/byane/OneDrive/Escritorio/Proyecto1/catch_fish/catch_fish.sim/sim_1/impl/timing/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/byane/OneDrive/Escritorio/Proyecto1/catch_fish/catch_fish.sim/sim_1/impl/timing/xsim/xsim.dir/catch_fish_tb_time_impl/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Oct 16 15:06:57 2025...

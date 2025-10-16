@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Thu Oct 16 11:23:31 2025
-# Process ID: 2196
+# Start of session at: Thu Oct 16 18:19:10 2025
+# Process ID: 18720
 # Current directory: C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1
 # Command line: vivado.exe -log Electric_hook_bd_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Electric_hook_bd_wrapper.tcl
 # Log file: C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/Electric_hook_bd_wrapper.vds
@@ -24,47 +24,47 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 6116
+INFO: [Synth 8-7075] Helper process launched with PID 20424
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1062.008 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1063.047 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_wrapper' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/hdl/Electric_hook_bd_wrapper.vhd:24]
 INFO: [Synth 8-3491] module 'Electric_hook_bd' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:14' bound to instance 'Electric_hook_bd_i' of component 'Electric_hook_bd' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/hdl/Electric_hook_bd_wrapper.vhd:35]
 INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:28]
-INFO: [Synth 8-3491] module 'Electric_hook_bd_axi_smc_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_axi_smc_0_stub.vhdl:5' bound to instance 'axi_smc' of component 'Electric_hook_bd_axi_smc_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:739]
-INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_axi_smc_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_axi_smc_0_stub.vhdl:65]
-INFO: [Synth 8-3491] module 'Electric_hook_bd_axi_smc_1_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_axi_smc_1_0_stub.vhdl:5' bound to instance 'axi_smc_1' of component 'Electric_hook_bd_axi_smc_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:796]
-INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_axi_smc_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_axi_smc_1_0_stub.vhdl:87]
-INFO: [Synth 8-3491] module 'Electric_hook_bd_axi_traffic_gen_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_axi_traffic_gen_0_0_stub.vhdl:5' bound to instance 'axi_traffic_gen_0' of component 'Electric_hook_bd_axi_traffic_gen_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:875]
-INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_axi_traffic_gen_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_axi_traffic_gen_0_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'Electric_hook_bd_axi_traffic_gen_1_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_axi_traffic_gen_1_0_stub.vhdl:5' bound to instance 'axi_traffic_gen_1' of component 'Electric_hook_bd_axi_traffic_gen_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:900]
-INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_axi_traffic_gen_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_axi_traffic_gen_1_0_stub.vhdl:88]
-INFO: [Synth 8-3491] module 'Electric_hook_bd_axi_traffic_gen_2_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_axi_traffic_gen_2_0_stub.vhdl:5' bound to instance 'axi_traffic_gen_2' of component 'Electric_hook_bd_axi_traffic_gen_2_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:980]
-INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_axi_traffic_gen_2_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_axi_traffic_gen_2_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'Electric_hook_bd_c_accum_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_c_accum_0_0_stub.vhdl:5' bound to instance 'c_accum_0' of component 'Electric_hook_bd_c_accum_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1005]
-INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_c_accum_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_c_accum_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'Electric_hook_bd_catch_fish_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_catch_fish_0_0_stub.vhdl:5' bound to instance 'catch_fish_0' of component 'Electric_hook_bd_catch_fish_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1013]
-INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_catch_fish_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_catch_fish_0_0_stub.vhdl:18]
-INFO: [Synth 8-3491] module 'Electric_hook_bd_clk_wiz_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_clk_wiz_0_stub.vhdl:5' bound to instance 'clk_wiz' of component 'Electric_hook_bd_clk_wiz_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1023]
-INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_clk_wiz_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_clk_wiz_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'Electric_hook_bd_ila_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_ila_0_0_stub.vhdl:5' bound to instance 'ila_0' of component 'Electric_hook_bd_ila_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1030]
-INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_ila_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_ila_0_0_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'Electric_hook_bd_ila_1_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_ila_1_0_stub.vhdl:5' bound to instance 'ila_1' of component 'Electric_hook_bd_ila_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1035]
-INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_ila_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_ila_1_0_stub.vhdl:56]
-INFO: [Synth 8-3491] module 'Electric_hook_bd_ila_2_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_ila_2_0_stub.vhdl:5' bound to instance 'ila_2' of component 'Electric_hook_bd_ila_2_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1083]
-INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_ila_2_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_ila_2_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'Electric_hook_bd_main_0_1' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_main_0_1_stub.vhdl:5' bound to instance 'main_0' of component 'Electric_hook_bd_main_0_1' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1106]
-INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_main_0_1' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_main_0_1_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'Electric_hook_bd_pull_fish_0_1' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_pull_fish_0_1_stub.vhdl:5' bound to instance 'pull_fish_0' of component 'Electric_hook_bd_pull_fish_0_1' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1131]
-INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_pull_fish_0_1' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_pull_fish_0_1_stub.vhdl:20]
-INFO: [Synth 8-3491] module 'Electric_hook_bd_puntaje_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_puntaje_0_0_stub.vhdl:5' bound to instance 'puntaje_0' of component 'Electric_hook_bd_puntaje_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1143]
-INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_puntaje_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_puntaje_0_0_stub.vhdl:38]
-INFO: [Synth 8-3491] module 'Electric_hook_bd_ram_pull_fish_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_ram_pull_fish_0_0_stub.vhdl:5' bound to instance 'ram_pull_fish_0' of component 'Electric_hook_bd_ram_pull_fish_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1173]
-INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_ram_pull_fish_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_ram_pull_fish_0_0_stub.vhdl:52]
-INFO: [Synth 8-3491] module 'Electric_hook_bd_rst_clk_wiz_100M_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_rst_clk_wiz_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_100M' of component 'Electric_hook_bd_rst_clk_wiz_100M_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1217]
-INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_rst_clk_wiz_100M_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_rst_clk_wiz_100M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'Electric_hook_bd_vio_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_vio_0_0_stub.vhdl:5' bound to instance 'vio_0' of component 'Electric_hook_bd_vio_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1230]
-INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_vio_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-2196-BenjaUni/realtime/Electric_hook_bd_vio_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_axi_smc_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_axi_smc_0_stub.vhdl:5' bound to instance 'axi_smc' of component 'Electric_hook_bd_axi_smc_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:739]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_axi_smc_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_axi_smc_0_stub.vhdl:65]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_axi_smc_1_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_axi_smc_1_0_stub.vhdl:5' bound to instance 'axi_smc_1' of component 'Electric_hook_bd_axi_smc_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:796]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_axi_smc_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_axi_smc_1_0_stub.vhdl:87]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_axi_traffic_gen_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_axi_traffic_gen_0_0_stub.vhdl:5' bound to instance 'axi_traffic_gen_0' of component 'Electric_hook_bd_axi_traffic_gen_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:875]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_axi_traffic_gen_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_axi_traffic_gen_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_axi_traffic_gen_1_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_axi_traffic_gen_1_0_stub.vhdl:5' bound to instance 'axi_traffic_gen_1' of component 'Electric_hook_bd_axi_traffic_gen_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:900]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_axi_traffic_gen_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_axi_traffic_gen_1_0_stub.vhdl:88]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_axi_traffic_gen_2_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_axi_traffic_gen_2_0_stub.vhdl:5' bound to instance 'axi_traffic_gen_2' of component 'Electric_hook_bd_axi_traffic_gen_2_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:980]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_axi_traffic_gen_2_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_axi_traffic_gen_2_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_c_accum_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_c_accum_0_0_stub.vhdl:5' bound to instance 'c_accum_0' of component 'Electric_hook_bd_c_accum_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1005]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_c_accum_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_c_accum_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_catch_fish_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_catch_fish_0_0_stub.vhdl:5' bound to instance 'catch_fish_0' of component 'Electric_hook_bd_catch_fish_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1013]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_catch_fish_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_catch_fish_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_clk_wiz_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_clk_wiz_0_stub.vhdl:5' bound to instance 'clk_wiz' of component 'Electric_hook_bd_clk_wiz_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1023]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_clk_wiz_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_clk_wiz_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_ila_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_ila_0_0_stub.vhdl:5' bound to instance 'ila_0' of component 'Electric_hook_bd_ila_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1030]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_ila_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_ila_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_ila_1_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_ila_1_0_stub.vhdl:5' bound to instance 'ila_1' of component 'Electric_hook_bd_ila_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1035]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_ila_1_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_ila_1_0_stub.vhdl:56]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_ila_2_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_ila_2_0_stub.vhdl:5' bound to instance 'ila_2' of component 'Electric_hook_bd_ila_2_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1083]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_ila_2_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_ila_2_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_main_0_1' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_main_0_1_stub.vhdl:5' bound to instance 'main_0' of component 'Electric_hook_bd_main_0_1' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1106]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_main_0_1' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_main_0_1_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_pull_fish_0_1' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_pull_fish_0_1_stub.vhdl:5' bound to instance 'pull_fish_0' of component 'Electric_hook_bd_pull_fish_0_1' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1131]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_pull_fish_0_1' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_pull_fish_0_1_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_puntaje_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_puntaje_0_0_stub.vhdl:5' bound to instance 'puntaje_0' of component 'Electric_hook_bd_puntaje_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1143]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_puntaje_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_puntaje_0_0_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_ram_pull_fish_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_ram_pull_fish_0_0_stub.vhdl:5' bound to instance 'ram_pull_fish_0' of component 'Electric_hook_bd_ram_pull_fish_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1173]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_ram_pull_fish_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_ram_pull_fish_0_0_stub.vhdl:52]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_rst_clk_wiz_100M_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_rst_clk_wiz_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_100M' of component 'Electric_hook_bd_rst_clk_wiz_100M_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1217]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_rst_clk_wiz_100M_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_rst_clk_wiz_100M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'Electric_hook_bd_vio_0_0' declared at 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_vio_0_0_stub.vhdl:5' bound to instance 'vio_0' of component 'Electric_hook_bd_vio_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1230]
+INFO: [Synth 8-638] synthesizing module 'Electric_hook_bd_vio_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/.Xil/Vivado-18720-BenjaUni/realtime/Electric_hook_bd_vio_0_0_stub.vhdl:13]
 INFO: [Synth 8-3491] module 'Electric_hook_bd_xlconstant_0_0' declared at 'c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_xlconstant_0_0/synth/Electric_hook_bd_xlconstant_0_0.v:57' bound to instance 'xlconstant_0' of component 'Electric_hook_bd_xlconstant_0_0' [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:1235]
 INFO: [Synth 8-6157] synthesizing module 'Electric_hook_bd_xlconstant_0_0' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_xlconstant_0_0/synth/Electric_hook_bd_xlconstant_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
@@ -75,18 +75,18 @@ INFO: [Synth 8-6155] done synthesizing module 'Electric_hook_bd_xlconstant_0_0' 
 INFO: [Synth 8-256] done synthesizing module 'Electric_hook_bd' (3#1) [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/synth/Electric_hook_bd.vhd:28]
 INFO: [Synth 8-256] done synthesizing module 'Electric_hook_bd_wrapper' (4#1) [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/hdl/Electric_hook_bd_wrapper.vhd:24]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1098.793 ; gain = 36.785
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1099.035 ; gain = 35.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1098.793 ; gain = 36.785
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1099.035 ; gain = 35.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1098.793 ; gain = 36.785
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1099.035 ; gain = 35.988
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1098.793 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1099.035 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -135,20 +135,20 @@ Parsing XDC File [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electr
 Finished Parsing XDC File [C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1171.168 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1169.086 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1171.168 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1169.086 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1171.168 ; gain = 109.160
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1169.086 ; gain = 106.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1171.168 ; gain = 109.160
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1169.086 ; gain = 106.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -175,10 +175,10 @@ Applied set_property DONT_TOUCH = true for Electric_hook_bd_i/ila_0. (constraint
 Applied set_property DONT_TOUCH = true for Electric_hook_bd_i/ila_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Electric_hook_bd_i/ila_2. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1171.168 ; gain = 109.160
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1169.086 ; gain = 106.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1171.168 ; gain = 109.160
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1169.086 ; gain = 106.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -200,25 +200,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1171.168 ; gain = 109.160
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1169.086 ; gain = 106.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1172.414 ; gain = 110.406
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1176.926 ; gain = 113.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1172.562 ; gain = 110.555
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1177.074 ; gain = 114.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1192.203 ; gain = 130.195
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1196.715 ; gain = 133.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -236,37 +236,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1197.949 ; gain = 135.941
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1203.465 ; gain = 140.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1197.949 ; gain = 135.941
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1203.465 ; gain = 140.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1197.949 ; gain = 135.941
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1203.465 ; gain = 140.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1197.949 ; gain = 135.941
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1203.465 ; gain = 140.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1197.949 ; gain = 135.941
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1203.465 ; gain = 140.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1197.949 ; gain = 135.941
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1203.465 ; gain = 140.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -321,23 +321,23 @@ Report Cell Usage:
 |20    |OBUF                                      |     7|
 +------+------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1197.949 ; gain = 135.941
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1203.465 ; gain = 140.418
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1197.949 ; gain = 63.566
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1197.949 ; gain = 135.941
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1203.465 ; gain = 70.367
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1203.465 ; gain = 140.418
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1197.949 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1203.465 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1213.953 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1219.477 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 60 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1213.953 ; gain = 151.945
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1219.477 ; gain = 156.430
 INFO: [Common 17-1381] The checkpoint 'C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/Electric_hook_bd_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Electric_hook_bd_wrapper_utilization_synth.rpt -pb Electric_hook_bd_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Oct 16 11:24:03 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 16 18:19:42 2025...

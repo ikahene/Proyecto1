@@ -19,38 +19,45 @@ end catch_fish;
 -------- ARQUITECTURA : definición de variables y comportamiento ---------
 architecture Behavioral of catch_fish is
 
+--signal estado: integer := 0; -- Máquina de estado para el cambio de leds
+signal led: std_logic_vector(3 downto 0) := "0001";
+--signal catched: std_logic:='0'; -- Señal que avisa si el pez fue atrapado o no
+
+
 begin
-    process(clk_div, clk)
-    variable catched: std_logic:='0'; -- Señal que avisa si el pez fue atrapado o no
-    variable led: std_logic_vector(3 downto 0) := "0001"; -- Definimos la secuencia de leds que se enciende
+    process(clk_div)
     variable estado: integer := 0; -- Máquina de estado para el cambio de leds
-    
-    
 ---------- FSM leds 
     begin
         if (rising_edge(clk_div) and enable = '1') then
                 if estado = 0 then
-                    led := "0001";
+                    led <= "0001";
                     estado := 1;
                 elsif estado = 1 then
-                    led := "0010";
+                    led <= "0010";
                     estado := 2;
                 elsif estado = 2 then
-                    led := "0100";
+                    led <= "0100";
                     estado := 3;
                 elsif estado = 3 then
-                    led := "1000";
+                    led <= "1000";
                     estado := 4;
                 elsif estado = 4 then
-                    led := "0100";
+                    led <= "0100";
                     estado := 5;
                 elsif estado = 5 then
-                    led := "0010";
+                    led <= "0010";
                     estado := 0;
                 end if;
+                
             end if;
+            
+end process;
 ---------- fin FSM leds
 
+    process(clk)
+    variable catched: std_logic:='0'; -- Señal que avisa si el pez fue atrapado o no
+    begin
 ---------- Lógica de atrapar
             -- si el switch correspondiente al botón está encendido
             if (rising_edge(clk) and enable = '1') then
@@ -62,10 +69,9 @@ begin
                else
                     catched := '0';
                end if; 
+               game_end <= catched;
             end if;
-    game_end <= catched;
-    led_out <= led;
     end process;
-             
+    led_out <= led;
 end Behavioral;
 --------- FIN ARQUITECTURA ----------

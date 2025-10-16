@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Tue Oct 14 18:51:51 2025
-// Host        : DESKTOP-MSDSPQ7 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim {c:/Users/Gabriela
-//               Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_catch_fish_0_0/Electric_hook_bd_catch_fish_0_0_sim_netlist.v}
+// Date        : Thu Oct 16 18:19:08 2025
+// Host        : BenjaUni running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_catch_fish_0_0/Electric_hook_bd_catch_fish_0_0_sim_netlist.v
 // Design      : Electric_hook_bd_catch_fish_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -71,14 +71,14 @@ module Electric_hook_bd_catch_fish_0_0_catch_fish
 
   wire \FSM_onehot_estado[0]_i_1_n_0 ;
   wire [3:0]btn;
-  wire catched_i_1_n_0;
-  wire catched_i_2_n_0;
-  wire catched_i_3_n_0;
   wire clk;
   wire clk_div;
   wire enable;
   wire [5:0]estado;
   wire game_end;
+  wire game_end_i_1_n_0;
+  wire game_end_i_2_n_0;
+  wire game_end_i_3_n_0;
   wire led0;
   wire \led[1]_i_1_n_0 ;
   wire \led[2]_i_1_n_0 ;
@@ -144,38 +144,36 @@ module Electric_hook_bd_catch_fish_0_0_catch_fish
         .R(1'b0));
   LUT4 #(
     .INIT(16'hEFE0)) 
-    catched_i_1
-       (.I0(catched_i_2_n_0),
-        .I1(catched_i_3_n_0),
+    game_end_i_1
+       (.I0(game_end_i_2_n_0),
+        .I1(game_end_i_3_n_0),
         .I2(enable),
         .I3(game_end),
-        .O(catched_i_1_n_0));
+        .O(game_end_i_1_n_0));
   LUT6 #(
     .INIT(64'hFF80808080808080)) 
-    catched_i_2
+    game_end_i_2
        (.I0(sw[0]),
         .I1(led_out[0]),
         .I2(btn[0]),
         .I3(sw[3]),
         .I4(\led_reg[3]_0 ),
         .I5(btn[3]),
-        .O(catched_i_2_n_0));
+        .O(game_end_i_2_n_0));
   LUT6 #(
     .INIT(64'hFF80808080808080)) 
-    catched_i_3
+    game_end_i_3
        (.I0(sw[2]),
         .I1(led_out[2]),
         .I2(btn[2]),
         .I3(sw[1]),
         .I4(led_out[1]),
         .I5(btn[1]),
-        .O(catched_i_3_n_0));
-  FDRE #(
-    .INIT(1'b0)) 
-    catched_reg
+        .O(game_end_i_3_n_0));
+  FDRE game_end_reg
        (.C(clk),
         .CE(1'b1),
-        .D(catched_i_1_n_0),
+        .D(game_end_i_1_n_0),
         .Q(game_end),
         .R(1'b0));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 

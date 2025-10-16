@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"catch_fish_tb_func_impl.vhd" \
+"../../../../../catch_fish.srcs/sim_1/new/catch_fish_tb.vhd" \
+
+# Do not sort compile order
+nosort

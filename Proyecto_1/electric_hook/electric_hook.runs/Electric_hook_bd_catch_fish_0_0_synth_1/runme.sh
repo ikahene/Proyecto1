@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Gabriela Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.runs/Electric_hook_bd_catch_fish_0_0_synth_1'
+HD_PWD='C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/Electric_hook_bd_catch_fish_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

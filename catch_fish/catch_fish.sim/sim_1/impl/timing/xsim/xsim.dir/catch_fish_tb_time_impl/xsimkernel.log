@@ -1,0 +1,7 @@
+Running: xsim.dir/catch_fish_tb_time_impl/xsimk.exe -simmode gui -wdb catch_fish_tb_time_impl.wdb -simrunnum 0 -socket 55889
+Design successfully loaded
+Design Loading Memory Usage: 8132 KB (Peak: 8132 KB)
+Design Loading CPU Usage: 61 ms
+Simulation completed
+Simulation Memory Usage: 9260 KB (Peak: 9260 KB)
+Simulation CPU Usage: 77 ms

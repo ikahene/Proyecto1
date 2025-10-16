@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Thu Oct 16 11:23:31 2025
-# Process ID: 2196
+# Start of session at: Thu Oct 16 18:19:10 2025
+# Process ID: 18720
 # Current directory: C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1
 # Command line: vivado.exe -log Electric_hook_bd_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Electric_hook_bd_wrapper.tcl
 # Log file: C:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.runs/synth_1/Electric_hook_bd_wrapper.vds

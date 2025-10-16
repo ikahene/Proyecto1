@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:user:catch_fish:1.0
--- IP Revision: 4
+-- IP Revision: 5
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -84,7 +84,7 @@ ARCHITECTURE Electric_hook_bd_catch_fish_0_0_arch OF Electric_hook_bd_catch_fish
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF Electric_hook_bd_catch_fish_0_0_arch : ARCHITECTURE IS "Electric_hook_bd_catch_fish_0_0,catch_fish,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF Electric_hook_bd_catch_fish_0_0_arch: ARCHITECTURE IS "Electric_hook_bd_catch_fish_0_0,catch_fish,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=catch_fish,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
+  ATTRIBUTE CORE_GENERATION_INFO OF Electric_hook_bd_catch_fish_0_0_arch: ARCHITECTURE IS "Electric_hook_bd_catch_fish_0_0,catch_fish,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=catch_fish,x_ipVersion=1.0,x_ipCoreRevision=5,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF Electric_hook_bd_catch_fish_0_0_arch: ARCHITECTURE IS "package_project";
   ATTRIBUTE X_INTERFACE_INFO : STRING;

@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Tue Oct 14 18:51:51 2025
--- Host        : DESKTOP-MSDSPQ7 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim {c:/Users/Gabriela
---               Rivera/OneDrive/Escritorio/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_catch_fish_0_0/Electric_hook_bd_catch_fish_0_0_sim_netlist.vhdl}
+-- Date        : Thu Oct 16 18:19:08 2025
+-- Host        : BenjaUni running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/Users/byane/OneDrive/Escritorio/Proyecto1/Proyecto_1/electric_hook/electric_hook.srcs/sources_1/bd/Electric_hook_bd/ip/Electric_hook_bd_catch_fish_0_0/Electric_hook_bd_catch_fish_0_0_sim_netlist.vhdl
 -- Design      : Electric_hook_bd_catch_fish_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -31,11 +31,11 @@ end Electric_hook_bd_catch_fish_0_0_catch_fish;
 
 architecture STRUCTURE of Electric_hook_bd_catch_fish_0_0_catch_fish is
   signal \FSM_onehot_estado[0]_i_1_n_0\ : STD_LOGIC;
-  signal catched_i_1_n_0 : STD_LOGIC;
-  signal catched_i_2_n_0 : STD_LOGIC;
-  signal catched_i_3_n_0 : STD_LOGIC;
   signal estado : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal \^game_end\ : STD_LOGIC;
+  signal game_end_i_1_n_0 : STD_LOGIC;
+  signal game_end_i_2_n_0 : STD_LOGIC;
+  signal game_end_i_3_n_0 : STD_LOGIC;
   signal led0 : STD_LOGIC;
   signal \led[1]_i_1_n_0\ : STD_LOGIC;
   signal \led[2]_i_1_n_0\ : STD_LOGIC;
@@ -122,18 +122,18 @@ begin
       Q => estado(5),
       R => '0'
     );
-catched_i_1: unisim.vcomponents.LUT4
+game_end_i_1: unisim.vcomponents.LUT4
     generic map(
       INIT => X"EFE0"
     )
         port map (
-      I0 => catched_i_2_n_0,
-      I1 => catched_i_3_n_0,
+      I0 => game_end_i_2_n_0,
+      I1 => game_end_i_3_n_0,
       I2 => enable,
       I3 => \^game_end\,
-      O => catched_i_1_n_0
+      O => game_end_i_1_n_0
     );
-catched_i_2: unisim.vcomponents.LUT6
+game_end_i_2: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FF80808080808080"
     )
@@ -144,9 +144,9 @@ catched_i_2: unisim.vcomponents.LUT6
       I3 => sw(3),
       I4 => \^led_reg[3]_0\,
       I5 => btn(3),
-      O => catched_i_2_n_0
+      O => game_end_i_2_n_0
     );
-catched_i_3: unisim.vcomponents.LUT6
+game_end_i_3: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FF80808080808080"
     )
@@ -157,16 +157,13 @@ catched_i_3: unisim.vcomponents.LUT6
       I3 => sw(1),
       I4 => \^led_out\(1),
       I5 => btn(1),
-      O => catched_i_3_n_0
+      O => game_end_i_3_n_0
     );
-catched_reg: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
+game_end_reg: unisim.vcomponents.FDRE
+     port map (
       C => clk,
       CE => '1',
-      D => catched_i_1_n_0,
+      D => game_end_i_1_n_0,
       Q => \^game_end\,
       R => '0'
     );

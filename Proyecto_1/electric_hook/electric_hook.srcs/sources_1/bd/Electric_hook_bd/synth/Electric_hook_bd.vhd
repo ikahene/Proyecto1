@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Thu Oct 16 11:21:45 2025
+--Date        : Thu Oct 16 18:18:29 2025
 --Host        : BenjaUni running 64-bit major release  (build 9200)
 --Command     : generate_target Electric_hook_bd.bd
 --Design      : Electric_hook_bd
@@ -460,17 +460,6 @@ architecture STRUCTURE of Electric_hook_bd is
     s00_axi_rready : in STD_LOGIC
   );
   end component Electric_hook_bd_puntaje_0_0;
-  component Electric_hook_bd_catch_fish_0_0 is
-  port (
-    btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    clk : in STD_LOGIC;
-    sw : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    clk_div : in STD_LOGIC;
-    led_out : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    game_end : out STD_LOGIC;
-    enable : in STD_LOGIC
-  );
-  end component Electric_hook_bd_catch_fish_0_0;
   component Electric_hook_bd_ila_1_0 is
   port (
     clk : in STD_LOGIC;
@@ -544,6 +533,17 @@ architecture STRUCTURE of Electric_hook_bd is
     probe18 : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   end component Electric_hook_bd_ila_2_0;
+  component Electric_hook_bd_catch_fish_0_0 is
+  port (
+    btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    clk : in STD_LOGIC;
+    sw : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    clk_div : in STD_LOGIC;
+    led_out : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    game_end : out STD_LOGIC;
+    enable : in STD_LOGIC
+  );
+  end component Electric_hook_bd_catch_fish_0_0;
   signal axi_smc_1_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal axi_smc_1_M00_AXI_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_smc_1_M00_AXI_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
